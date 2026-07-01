@@ -1,0 +1,462 @@
+:root {
+    --esip-green-dark: #00331e;
+    --esip-green: #005433;
+    --esip-green-light: #008f4c;
+    --esip-orange: #f26522;
+    --esip-orange-dark: #d44d0e;
+    --gray-dark: #1a202c;
+    --gray-muted: #718096;
+    --font-premium: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* CORREGIDO: Se habilita el scroll vertical en todo el documento */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ffffff;
+    font-family: var(--font-premium);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* CORREGIDO: Se elimina 'overflow: hidden' para que el contenido inferior fluya */
+.split-creative-viewport {
+    width: 100vw; 
+    height: 100vh;
+    display: grid; 
+    grid-template-columns: 1.1fr 0.9fr; 
+    position: relative;
+}
+
+/* ==========================================================================
+   SECCIÓN IZQUIERDA: PANELES RECTANGULARES EDITORIALES
+   ========================================================================== */
+.visual-canvas {
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    background: var(--esip-green-dark);
+    z-index: 2; 
+    overflow: hidden;
+}
+
+/* Imagen base de fondo (Más visible) */
+.industrial-bg-src {
+    position: absolute; 
+    inset: 0;
+    background-size: cover; 
+    background-position: center;
+    mix-blend-mode: luminosity; 
+    opacity: 0.25;
+}
+
+/* MODIFICADO: Imagen secundaria con degradado verde MUCHO más imponente y visible */
+.industrial-gradient-image {
+    position: absolute; 
+    inset: 0;
+    background-size: cover; 
+    background-position: center;
+    mix-blend-mode: hard-light;
+    opacity: 0.75; 
+    
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+    pointer-events: none;
+}
+
+/* Capa de fusión cromática */
+.gradient-overlay-fluid {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 84, 51, 0.85) 0%, 
+        rgba(0, 51, 30, 0.75) 60%, 
+        rgba(242, 101, 34, 0.05) 100
+    );
+    z-index: 1;
+}
+
+/* Contenedor estructural de los paneles arquitectónicos */
+.tech-panel-cluster {
+    position: relative;
+    width: 100%; height: 80%;
+    max-width: 550px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    z-index: 3;
+    transform: translateX(40px);
+}
+
+/* Estilo base de los paneles técnicos rígidos */
+.editorial-panel {
+    position: relative;
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+}
+
+.panel-window {
+    width: 100%; height: 100%;
+    background: #ffffff;
+    padding: 5px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.highlighted-orange-frame {
+    padding: 6px;
+    background: linear-gradient(135deg, #ffffff 0%, var(--esip-orange) 100%);
+}
+
+.panel-img {
+    width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* Maquetación milimétrica asimétrica mediante Grid */
+.panel-alpha { grid-column: 1 / span 6; grid-row: 1 / span 5; z-index: 2; }
+.panel-beta { grid-column: 2 / span 5; grid-row: 6 / span 6; z-index: 1; }
+.panel-prime { grid-column: 6 / span 7; grid-row: 3 / span 6; z-index: 3; }
+.panel-gamma { grid-column: 8 / span 5; grid-row: 9 / span 4; z-index: 2; }
+
+.editorial-panel:hover .panel-img { transform: scale(1.1); }
+.editorial-panel:hover .panel-window { box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+
+/* ==========================================================================
+   SECCIÓN DERECHA: CORPORATIVA Y BOTÓN
+   ========================================================================== */
+.content-canvas {
+    background: #ffffff; padding: 6vh 6vw 8vh 3vw;
+    display: flex; flex-direction: column; justify-content: space-between;
+    align-items: flex-end; text-align: right; z-index: 3;
+}
+
+.corporate-identity { display: flex; flex-direction: column; align-items: flex-end; }
+.brand-flex-align { display: flex; align-items: center; gap: 12px; }
+.logo-wrapper-svg { position: relative; width: 65px; height: 65px; }
+.derrick-logo-vector { width: 100%; height: 100%; }
+.logo-text-a {
+    position: absolute; font-size: 28px; font-weight: 900;
+    color: var(--esip-green); bottom: 3px; left: 50%; transform: translateX(-50%);
+}
+
+.brand-name-main { font-size: 85px; font-weight: 900; color: var(--esip-green); line-height: 0.8; letter-spacing: -3px; }
+.brand-subtext { font-size: 13px; font-weight: 700; color: var(--esip-orange); margin-top: 14px; letter-spacing: 0.3px; }
+.brand-nit { font-size: 11px; color: var(--gray-muted); font-weight: 600; margin-top: 3px; }
+
+.marketing-titles { margin: 25px 0; }
+.title-green { font-size: 36px; font-weight: 900; color: var(--esip-green); }
+.title-light { font-size: 28px; font-weight: 300; color: var(--gray-dark); letter-spacing: 2px; margin: 4px 0; }
+.title-orange { font-size: 52px; font-weight: 900; color: var(--esip-orange); }
+
+/* --- BOTÓN CORPORATIVO PREMIUM --- */
+.interactive-action-zone { margin-bottom: 25px; width: 100%; display: flex; justify-content: flex-end; }
+.btn-creative-esip {
+    position: relative; display: flex; align-items: center; gap: 20px; padding: 16px 38px;
+    background: linear-gradient(135deg, var(--esip-orange) 0%, var(--esip-orange-dark) 100%);
+    color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 700;
+    letter-spacing: 1.5px; border-radius: 3px; overflow: hidden;
+    box-shadow: 0 8px 22px rgba(242, 101, 34, 0.3); transition: all 0.3s ease;
+}
+.btn-txt, .btn-arrow { position: relative; z-index: 2; }
+.btn-arrow { transition: transform 0.3s ease; }
+.btn-shimmer {
+    position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-25deg); z-index: 1;
+}
+.btn-creative-esip:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(242, 101, 34, 0.45); }
+.btn-creative-esip:hover .btn-shimmer { left: 150%; transition: left 0.7s ease-in-out; }
+.btn-creative-esip:hover .btn-arrow { transform: translateX(5px); }
+
+/* --- GRILLA ATRIBUTOS --- */
+.features-minimal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; width: 100%; max-width: 520px; }
+.feature-card-item { display: flex; align-items: center; justify-content: flex-end; gap: 15px; }
+.badge-icon {
+    width: 48px; height: 48px; border-radius: 4px; background: #f8fafc;
+    display: flex; align-items: center; justify-content: center; font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04); transition: all 0.3s ease; order: 2;
+}
+.badge-meta { order: 1; }
+.badge-meta h4 { font-size: 13px; font-weight: 700; color: var(--gray-dark); }
+.badge-meta p { font-size: 11px; color: var(--gray-muted); font-weight: 600; white-space: nowrap; }
+
+.feature-card-item:hover .badge-icon { transform: scale(1.1); background-color: #1a202c; color: #fff; }
+
+/* --- PIE DE PÁGINA --- */
+.asymmetric-footer-curves { position: absolute; bottom: 0; right: 0; width: 55%; height: 60px; pointer-events: none; z-index: 10; }
+.layer-curve { position: absolute; bottom: 0; right: 0; width: 100%; border-top-left-radius: 100% 150px; }
+.curve-orange { height: 42px; background-color: var(--esip-orange); width: 85%; }
+.curve-green { height: 22px; background-color: var(--esip-green-light); }
+
+/* ==========================================================================
+   SECCIÓN INFERIOR: ÍNDICE DE CONTENIDOS
+   ========================================================================== */
+.content-section-viewport {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* --- BLOQUE IZQUIERDO: LISTADO --- */
+.index-text-canvas {
+    padding: 8vh 4vw 8vh 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-index-header { margin-bottom: 40px; }
+.index-main-title { font-size: 32px; font-weight: 900; color: var(--esip-green); letter-spacing: -0.5px; }
+.index-title-underline { width: 60px; height: 4px; background-color: var(--esip-orange); margin-top: 8px; }
+
+.technical-index-list { display: flex; flex-direction: column; gap: 16px; max-width: 580px; }
+.index-item { display: flex; align-items: center; cursor: pointer; transition: all 0.25s ease; }
+.item-icon { font-size: 18px; margin-right: 15px; width: 24px; text-align: center; }
+
+.item-badge {
+    font-size: 11px; font-weight: 700; padding: 3px 6px; border-radius: 50%;
+    margin-right: 15px; width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+}
+.badge-orange { border: 2px solid var(--esip-orange); color: var(--esip-orange); }
+.badge-green { border: 2px solid var(--esip-green-light); color: var(--esip-green-light); }
+
+.item-name { font-size: 14px; color: var(--gray-dark); font-weight: 500; transition: color 0.2s ease; }
+.fontweight-bold { font-weight: 700; }
+
+.item-dots { flex-grow: 1; border-bottom: 2px dotted #e2e8f0; margin: 0 15px; position: relative; top: -4px; }
+.item-page { font-size: 14px; font-weight: 700; color: var(--esip-green); }
+
+.index-item:hover .item-name { color: var(--esip-orange); transform: translateX(5px); }
+.index-item:hover .item-page { color: var(--esip-orange); }
+
+/* --- BLOQUE DERECHO: DETALLES --- */
+.index-visual-canvas { position: relative; background-color: #050b14; overflow: hidden; }
+.asymmetric-wave-divider {
+    position: absolute; top: 0; left: -1px; width: 120px; height: 100%;
+    background: #ffffff; clip-path: polygon(0 0, 30% 0, 100% 100%, 0 100%); z-index: 4;
+}
+
+.machinery-preview-wrapper { position: absolute; inset: 0; width: 100%; height: 100%; }
+.machinery-img {
+    position: absolute; inset: 0; background-size: cover; background-position: center;
+    opacity: 0; transform: scale(1.08); transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; z-index: 1;
+}
+.machinery-img.active { opacity: 0.9; transform: scale(1); z-index: 2; }
+
+.dark-machinery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0, 51, 30, 0.4) 0%, rgba(5, 11, 20, 0.7) 100%);
+    z-index: 3; pointer-events: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE (REORGANIZADO PARA EVITAR CONFLICTOS)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .split-creative-viewport { grid-template-columns: 1fr; grid-template-rows: 45vh 55vh; height: auto; min-height: 100vh; }
+    .visual-canvas { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+    .tech-panel-cluster { transform: translateX(0); padding: 20px; height: 90%; }
+    .content-canvas { align-items: center; text-align: center; padding: 30px 20px 80px 20px; }
+    .corporate-identity, .interactive-action-zone, .features-minimal-grid { align-items: center; justify-content: center; }
+    .brand-flex-align { justify-content: center; } .feature-card-item { justify-content: center; }
+    .badge-icon { order: 0; } .badge-meta { order: 1; text-align: left; }
+    .asymmetric-footer-curves { width: 100%; }
+
+    .content-section-viewport { grid-template-columns: 1fr; grid-template-rows: auto 40vh; height: auto; }
+    .index-text-canvas { padding: 60px 20px; }
+    .asymmetric-wave-divider { display: none; }
+}
+
+@media (max-width: 480px) {
+    .split-creative-viewport { grid-template-rows: 38vh 62vh; }
+    .brand-name-main { font-size: 60px; }
+    .title-green { font-size: 24px; } .title-light { font-size: 20px; } .title-orange { font-size: 34px; }
+    .features-minimal-grid { grid-template-columns: 1fr; gap: 15px; }
+}
+
+@media (max-width: 1024px) {
+    /* --- ESTRUCTURA GENERAL Y PRIMERA SECCIÓN --- */
+    .split-creative-viewport { 
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto; /* Permite que el contenido defina su propia altura */
+        height: auto; 
+        min-height: 100vh; 
+    }
+
+    /* Ajuste del contenedor visual izquierdo */
+    .visual-canvas { 
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%); 
+        padding: 60px 20px;
+        height: 50vh; /* Altura controlada en tabletas */
+        min-height: 400px;
+    }
+
+    .tech-panel-cluster { 
+        transform: translateX(0); 
+        margin: 0 auto;
+        width: 100%;
+        max-width: 450px;
+        height: 100%;
+    }
+
+    /* Ajuste del contenedor de texto derecho */
+    .content-canvas { 
+        align-items: center; 
+        text-align: center; 
+        padding: 60px 4vw 100px 4vw; /* Espacio extra abajo por las curvas decorativas */
+    }
+
+    .corporate-identity { 
+        align-items: center; 
+    }
+
+    .brand-flex-align { 
+        justify-content: center; 
+    }
+
+    .interactive-action-zone { 
+        justify-content: center; 
+        margin: 35px 0;
+    }
+
+    /* Grilla de atributos en modo tableta (centrada) */
+    .features-minimal-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px 20px; 
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .feature-card-item { 
+        justify-content: center; 
+        flex-direction: column; /* Icono arriba, texto abajo para mejor lectura */
+        gap: 10px;
+        text-align: center;
+    }
+
+    .badge-icon { 
+        order: -1; /* Forzamos el icono arriba */
+    }
+
+    .badge-meta {
+        text-align: center;
+    }
+
+    .asymmetric-footer-curves { 
+        width: 100%; 
+    }
+
+    /* --- SEGUNDA SECCIÓN: ÍNDICE --- */
+    .content-section-viewport { 
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto; 
+        height: auto; 
+        min-height: 100vh;
+    }
+
+    .index-text-canvas { 
+        padding: 80px 6vw; 
+    }
+
+    .technical-index-list {
+        max-width: 100%; /* Ocupa todo el ancho disponible de forma fluida */
+    }
+
+    /* Bloque visual del índice en la parte inferior */
+    .index-visual-canvas {
+        height: 45vh;
+        min-height: 350px;
+    }
+
+    .asymmetric-wave-divider { 
+        display: none; /* Eliminamos el corte diagonal que rompe el diseño horizontal */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajuste de títulos en pantallas medianas/pequeñas */
+    .brand-name-main { font-size: 70px; }
+    .title-green { font-size: 30px; } 
+    .title-light { font-size: 24px; } 
+    .title-orange { font-size: 44px; }
+
+    /* Los elementos de la lista técnica reducen los espacios tipográficos */
+    .item-dots {
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* --- PANTALLAS MÓVILES --- */
+    .visual-canvas { 
+        height: 40vh; /* Reducimos el área visual para dar prioridad al texto */
+        min-height: 320px;
+    }
+
+    .brand-name-main { 
+        font-size: 56px; 
+    }
+    
+    .brand-subtext {
+        font-size: 11px;
+    }
+
+    .title-green { font-size: 22px; } 
+    .title-light { font-size: 18px; letter-spacing: 1px; } 
+    .title-orange { font-size: 34px; }
+
+    /* La grilla de atributos pasa a ser de 1 sola columna rígida */
+    .features-minimal-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    .feature-card-item {
+        flex-direction: row; /* En móviles vuelve a ser horizontal para ahorrar espacio vertical */
+        justify-content: flex-start;
+        text-align: left;
+        background: #f8fafc;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .badge-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .badge-meta {
+        text-align: left;
+    }
+
+    .badge-meta p {
+        white-space: normal; /* Permite saltos de línea si el texto es largo */
+    }
+
+    /* Índice técnico en móvil */
+    .index-item {
+        font-size: 13px;
+    }
+    
+    .item-name {
+        font-size: 13px;
+    }
+}
