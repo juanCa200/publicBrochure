@@ -217,7 +217,153 @@
         </div>
 
     </section>
+
+    <section id="catalogo" class="catalog-dashboard-section">
     
+    <div class="dashboard-control-panel">
+        <header class="control-panel-header">
+            <h2>CATÁLOGO TÉCNICO</h2>
+            <p>Selecciona un recuadro para desplegar la ficha de especificaciones técnicas y dimensiones del material.</p>
+        </header>
+        
+        <div class="category-filter-pills">
+            <div class="filter-pill active" onclick="filterCat('all', event)">Todos</div>
+            <div class="filter-pill" onclick="filterCat('tuberia', event)">Tuberías e Instrumentación</div>
+            <div class="filter-pill" onclick="filterCat('valvulas', event)">Válvulas & Manifolds</div>
+        </div>
+
+        <div class="materials-grid-container">
+            <div class="material-nav-card active" data-target="mat-weco" data-cat="tuberia" onclick="switchMaterial(this)">
+                <div class="card-num-badge">01</div>
+                <div class="card-meta-info">
+                    <h4>Tubería WECO®</h4>
+                    <p>Modelos LS Weco® y TSI Weco®</p>
+                </div>
+            </div>
+            <div class="material-nav-card" data-target="mat-coflexip" data-cat="tuberia" onclick="switchMaterial(this)">
+                <div class="card-num-badge">02</div>
+                <div class="card-meta-info">
+                    <h4>Líneas Coflexip®</h4>
+                    <p>Conexiones Co-flex de Alta Presión</p>
+                </div>
+            </div>
+            <div class="material-nav-card" data-target="mat-valves200" data-cat="valvulas" onclick="switchMaterial(this)">
+                <div class="card-num-badge">03</div>
+                <div class="card-meta-info">
+                    <h4>Válvulas Compuerta Serie 200</h4>
+                    <p>Gate Valves para Control de Fluidos</p>
+                </div>
+            </div>
+            <div class="material-nav-card" data-target="mat-choke300" data-cat="valvulas" onclick="switchMaterial(this)">
+                <div class="card-num-badge">04</div>
+                <div class="card-meta-info">
+                    <h4>Válvulas Choke Serie 300</h4>
+                    <p>Control Estrangulador de Caudal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-viewer-canvas">
+        
+        <div id="mat-weco" class="spec-sheet-container active-sheet">
+            <header class="sheet-header">
+                <div class="sheet-title-area">
+                    <h3>TUBERÍA <span>WECO®</span></h3>
+                    <p>Modelos LS Weco® y TSI Weco®</p>
+                </div>
+                <span class="sheet-tag-pill">PÁGINA 8</span>
+            </header>
+            
+            <div class="sheet-visual-showcase">
+                <div class="product-render-placeholder">
+                    <span>LÍNEA DE CONEXIÓN ESTILO 50-10 / 50-50</span>
+                </div>
+                <div class="style-labels-flex">
+                    <div class="style-pill-box"><strong>Estilo 50-10</strong>Cinco Juntas de Giro / Mayor Flexibilidad</div>
+                    <div class="style-pill-box"><strong>Estilo 50-50</strong>Cuatro Juntas de Giro Rígidas</div>
+                </div>
+            </div>
+
+            <div class="sheet-features-grid">
+                <div class="spec-block-card">
+                    <h5>Tamaños</h5>
+                    <p>• Diseño LS en <strong>2"</strong><br>• Diseño TSI en <strong>3", 4"</strong></p>
+                </div>
+                <div class="spec-block-card">
+                    <h5>Rangos de Presión</h5>
+                    <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                </div>
+                <div class="spec-block-card">
+                    <h5>Tipos de Servicio</h5>
+                    <p>• Estándar<br>• Gas Agrio H2S<br><small style="color:var(--gray-muted)">(Cumple NACE - API MR-01-75)</small></p>
+                </div>
+                <div class="spec-block-card">
+                    <h5>Extremos de Conexión</h5>
+                    <p>Tuerca Aleteada Weco Retirable para acople mecánico de alta resistencia.</p>
+                </div>
+                <div class="spec-block-card">
+                    <h5>Aplicación</h5>
+                    <p>Procesos críticos industriales de Alta Presión y transporte de fluidos abrasivos.</p>
+                </div>
+                <div class="spec-block-card">
+                    <h5>Otras Calidades</h5>
+                    <p>Altamente durable, coeficiente de fricción interno óptimo y funcionamiento confiable.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="mat-coflexip" class="spec-sheet-container">
+            <header class="sheet-header">
+                <div class="sheet-title-area">
+                    <h3>LÍNEAS <span>COFLEXIP®</span></h3>
+                    <p>Mangueras Flexibles de Acero Multicapa</p>
+                </div>
+                <span class="sheet-tag-pill">PÁGINA 6</span>
+            </header>
+            <div class="sheet-visual-showcase">
+                <div class="product-render-placeholder" style="background: linear-gradient(90deg, #334155 0%, #1e293b 100%);">
+                    <span>COFLEXIP LÍNEA REFORZADA DE ALTA PRESIÓN</span>
+                </div>
+            </div>
+            <div class="sheet-features-grid">
+                <div class="spec-block-card"><h5>Estructura</h5><p>Espirales continuos de acero inoxidable trenzado con barrera elastomérica.</p></div>
+                <div class="spec-block-card"><h5>Presiones</h5><p>Pruebas operacionales continuas de hasta <strong>15,000 PSI</strong> sin deformación.</p></div>
+                <div class="spec-block-card"><h5>Ventajas</h5><p>Amortiguación absoluta de vibraciones extremas en cabezales de pozo (Well Testing).</p></div>
+            </div>
+        </div>
+
+        <div id="mat-valves200" class="spec-sheet-container">
+            <header class="sheet-header">
+                <div class="sheet-title-area">
+                    <h3>SERIE 200 <span>GATE VALVES</span></h3>
+                    <p>Válvulas de Compuerta de Sello Técnico</p>
+                </div>
+                <span class="sheet-tag-pill">PÁGINA 7</span>
+            </header>
+            <div class="sheet-features-grid">
+                <div class="spec-block-card"><h5>Diseño</h5><p>Compuerta de losa maciza rectificada para un aislamiento hermético ascendente.</p></div>
+                <div class="spec-block-card"><h5>Mantenimiento</h5><p>Alineadores de grasa externos para reacondicionamiento rápido en campo.</p></div>
+            </div>
+        </div>
+
+        <div id="mat-choke300" class="spec-sheet-container">
+            <header class="sheet-header">
+                <div class="sheet-title-area">
+                    <h3>SERIE 300 <span>CHOKE VALVES</span></h3>
+                    <p>Válvulas Reguladoras y Estranguladoras</p>
+                </div>
+                <span class="sheet-tag-pill">PÁGINA 7</span>
+            </header>
+            <div class="sheet-features-grid">
+                <div class="spec-block-card"><h5>Regulación</h5><p>Calibración y estrangulación milimétrica del fluido mediante vástago cónico.</p></div>
+                <div class="spec-block-card"><h5>Materiales</h5><p>Insertos internos de carburo de tungsteno resistentes a cavitación y erosión severa.</p></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
     <script src="script.js"></script>
 </body>
 </html>

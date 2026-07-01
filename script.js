@@ -21,3 +21,25 @@ document.addEventListener("mousemove", function(e) {
         panel.style.transform = `translate3d(${x}px, ${y}px, 0px)`;
     });
 });
+
+ function switchMaterial(element) {
+        document.querySelectorAll('.material-nav-card').forEach(card => card.classList.remove('active'));
+        document.querySelectorAll('.spec-sheet-container').forEach(sheet => sheet.classList.remove('active-sheet'));
+        
+        element.classList.add('active');
+        const targetId = element.getAttribute('data-target');
+        document.getElementById(targetId).classList.add('active-sheet');
+    }
+
+    function filterCat(cat, event) {
+        document.querySelectorAll('.filter-pill').forEach(pill => pill.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        document.querySelectorAll('.material-nav-card').forEach(card => {
+            if(cat === 'all' || card.getAttribute('data-cat') === cat) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
