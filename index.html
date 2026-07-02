@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,82 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-    <main class="split-creative-viewport">
+<div id="welcome-announcement-overlay" class="announcement-overlay">
+    <div class="announcement-card">
         
+        <button class="close-announcement-btn" onclick="closeAnnouncement()">&times;</button>
+        
+        <div class="announcement-body-content">
+            <header class="announcement-header">
+                <span class="announcement-badge">NUEVO LANZAMIENTO</span>
+                <h1>ESIP S.A.S. </h1>
+                <h2>Evolución Digital en Equipos de Alta Presión</h2>
+            </header>
+            
+            <div class="announcement-divider"></div>
+            
+            <p class="announcement-description">
+                Bienvenido a nuestra plataforma interactiva. Hemos digitalizado todo nuestro portafolio técnico para que cotices, explores dimensiones, capacidades de PSI y especificaciones API / NACE en tiempo real y a un solo clic.
+            </p>
+            
+            <div class="announcement-actions-flex">
+                <button class="btn-announcement-primary" onclick="closeAnnouncement()">
+                    <span>EXPLORAR BROCHURE</span>
+                    <svg viewBox="0 0 24 24" class="btn-arrow-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </button>
+                <a href="URL_DE_TU_PDF_SI_TIENES_UNO" target="_blank" class="btn-announcement-secondary">
+                    Descargar PDF Estático
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    <main class="split-creative-viewport">
+
         <section class="visual-canvas">
             <div class="industrial-bg-src" style="background-image: url('img/enviroment.jpg');"></div>
             <div class="industrial-gradient-image" style="background-image: url('img/enviroment.jpg');"></div>
             <div class="gradient-overlay-fluid"></div>
 
             <div class="tech-panel-cluster">
-                
+
                 <div class="editorial-panel panel-alpha tech-layer" data-speed="-3">
                     <div class="panel-window">
-                        <div class="panel-img" style="background-image: url('https://images.unsplash.com/photo-1518745994840-d5ea9bdcc6a5?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="panel-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1518745994840-d5ea9bdcc6a5?auto=format&fit=crop&w=600&q=80');">
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="editorial-panel panel-beta tech-layer" data-speed="2">
                     <div class="panel-window">
-                        <div class="panel-img" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="panel-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80');">
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="editorial-panel panel-prime tech-layer" data-speed="-5">
                     <div class="panel-window highlighted-orange-frame">
-                        <div class="panel-img" style="background-image: url('https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="panel-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?auto=format&fit=crop&w=600&q=80');">
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="editorial-panel panel-gamma tech-layer" data-speed="4">
                     <div class="panel-window">
-                        <div class="panel-img" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="panel-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80');">
+                        </div>
                     </div>
                 </div>
 
@@ -48,16 +91,16 @@
         </section>
 
         <section class="content-canvas">
-            
+
             <header class="corporate-identity">
                 <div class="brand-flex-align">
                     <div class="logo-wrapper-svg">
                         <svg viewBox="0 0 100 100" class="derrick-logo-vector">
-                            <polygon points="50,6 16,95 84,95" fill="none" stroke="#005433" stroke-width="7"/>
-                            <line x1="50" y1="6" x2="50" y2="95" stroke="#005433" stroke-width="5"/>
-                            <line x1="33" y1="51" x2="67" y2="51" stroke="#005433" stroke-width="4"/>
-                            <line x1="24" y1="75" x2="76" y2="75" stroke="#005433" stroke-width="4"/>
-                            <path d="M50,6 Q58,0 54,-10 Q50,6 46,-10 Q50,6 50,6" fill="#005433"/>
+                            <polygon points="50,6 16,95 84,95" fill="none" stroke="#005433" stroke-width="7" />
+                            <line x1="50" y1="6" x2="50" y2="95" stroke="#005433" stroke-width="5" />
+                            <line x1="33" y1="51" x2="67" y2="51" stroke="#005433" stroke-width="4" />
+                            <line x1="24" y1="75" x2="76" y2="75" stroke="#005433" stroke-width="4" />
+                            <path d="M50,6 Q58,0 54,-10 Q50,6 46,-10 Q50,6 50,6" fill="#005433" />
                         </svg>
                         <span class="logo-text-a">A</span>
                     </div>
@@ -121,7 +164,7 @@
     </main>
 
     <section id="contenido" class="content-section-viewport">
-        
+
         <div class="index-text-canvas">
             <header class="section-index-header">
                 <h2 class="index-main-title">CONTENIDO</h2>
@@ -129,88 +172,282 @@
             </header>
 
             <nav class="technical-index-list">
-                
-                <div class="index-item" data-preview="img-valves">
-                    <span class="item-icon">⚙️</span>
-                    <span class="item-name">World proven equipment</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">5</span>
-                </div>
 
-                <div class="index-item" data-preview="img-pipes">
-                    <span class="item-icon">📦</span>
-                    <span class="item-name">Coflexip®</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">6</span>
-                </div>
-
-                <div class="index-item" data-preview="img-valves">
-                    <span class="item-icon">🚰</span>
-                    <span class="item-name">Valves and manifolds</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">7</span>
-                </div>
-
-                <div class="index-item" data-preview="img-valves">
-                    <span class="item-badge badge-orange">200</span>
-                    <span class="item-name">200 Series gate valves</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">7</span>
-                </div>
-
-                <div class="index-item" data-preview="img-valves">
-                    <span class="item-badge badge-green">300</span>
-                    <span class="item-name">300 Series choke valves</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">7</span>
-                </div>
-
-                <div class="index-item" data-preview="img-pipes">
-                    <span class="item-icon">🏗️</span>
-                    <span class="item-name">Manifold systems</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">7</span>
-                </div>
-
-                <div class="index-item" data-preview="img-drilling">
-                    <span class="item-icon">🛤️</span>
-                    <span class="item-name fontweight-bold">Flowline</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">8</span>
-                </div>
-
-                <div class="index-item" data-preview="img-pipes">
-                    <span class="item-icon">🚛</span>
-                    <span class="item-name">Manifold trailers</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">9</span>
-                </div>
-
-                <div class="index-item" data-preview="img-drilling">
-                    <span class="item-icon">⚓</span>
-                    <span class="item-name fontweight-bold">Well service pumps</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">10</span>
-                </div>
-
+                <!-- NUEVO ÍTEM: QUIÉNES SOMOS -->
                 <div class="index-item" data-preview="img-support">
-                    <span class="item-icon">🌐</span>
-                    <span class="item-name">Global service and aftersales support</span>
-                    <span class="item-dots"></span>
-                    <span class="item-page">11</span>
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🏢</span>
+                        <span class="item-name fontweight-bold">¿Quiénes somos?</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">4</span>
+                    </div>
+                    <!-- Opciones desplegables -->
+                    <div class="index-item-submenu">
+                        <a href="#mision">Nuestra Misión</a>
+                        <a href="#vision">Visión 2030</a>
+                        <a href="#certificaciones">Políticas de Calidad HSEQ</a>
+                    </div>
                 </div>
+
+                <!-- Item 1 -->
+                <div class="index-item" data-preview="img-valves">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">⚙️</span>
+                        <span class="item-name">Tuberia Weco</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">5</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#eventTuberiaWeco">Diseño Integral</a>
+                        <a href="#garantias">Diseño NPST</a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="index-item" data-preview="img-pipes">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">📦</span>
+                        <span class="item-name">Juntas Giratorias</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">6</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#especificaciones-coflexip">Diseño LS</a>
+                        <a href="#certificados-coflexip">Diseño Tsi</a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="index-item" data-preview="img-valves">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🚰</span>
+                        <span class="item-name">Mangueras Metalicas</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">7</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#bloques-man">Carácteristicas de las Mangueras Flexibles</a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="index-item" data-preview="img-valves">
+                    <div class="index-item-trigger">
+                        <span class="item-badge badge-orange">200</span>
+                        <span class="item-name">Mangueras Coflexip®</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">7</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#repuestos-val">Carácteristicas de las Mangueras Coflexip</a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="index-item" data-preview="img-valves">
+                    <div class="index-item-trigger">
+                        <span class="item-badge badge-green">300</span>
+                        <span class="item-name">Válvulas de Tapón</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">7</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#compuerta-200">Modelo ULT</a>
+                        <a href="#mantenimiento-200">Modelo DR</a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="index-item" data-preview="img-pipes">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🏗️</span>
+                        <span class="item-name">Válvulas de Retención</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">7</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#configuraciones-m">Esquemas de Configuración</a>
+                        <a href="#pruebas-hidro">Registros de Pruebas Hidrostáticas</a>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="index-item" data-preview="img-drilling">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🛤️</span>
+                        <span class="item-name fontweight-bold">Válvulas de Alivio de Presión</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">8</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#lineas-weco">Tuberías Express Weco®</a>
+                        <a href="#acoples-mecanicos">Sistemas de Acople Rápido</a>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="index-item" data-preview="img-pipes">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🚛</span>
+                        <span class="item-name">Válvulas de Estrangulación</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">9</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#unidades-moviles">Unidades de Transporte Móvil</a>
+                        <a href="#planos-dimensiones">Planos y Dimensiones del Tráiler</a>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="index-item" data-preview="img-drilling">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">⚓</span>
+                        <span class="item-name fontweight-bold">Válvulas Mariposa</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">10</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#bombas-triplex">Bombas Triplex y Quintuplex</a>
+                        <a href="#potencia-hidraulica">Curvas de Rendimiento Hidráulico</a>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Accesorios de Conexión</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">11</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Adaptadores de Conexión</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">12</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+
+                <!-- Item 12 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Uniones de Golpe</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">13</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+                <!-- Item 13 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Restrictores de Seguridad</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">14</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+                <!-- Item 14 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Juntas de Brida API 6A</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">14</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+                <!-- Item 15 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Manifolds de Superficie</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">14</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+                <!-- Item 16 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Bombas Reciprocantes</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">14</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+                <!-- Item 17 -->
+                <div class="index-item" data-preview="img-support">
+                    <div class="index-item-trigger">
+                        <span class="item-icon">🌐</span>
+                        <span class="item-name">Kits De Repuestos</span>
+                        <span class="item-dots"></span>
+                        <span class="item-page">14</span>
+                    </div>
+                    <div class="index-item-submenu">
+                        <a href="#cobertura">Centros de Servicio en Campo</a>
+                        <a href="#contacto-soporte">Línea de Emergencia Técnica</a>
+                    </div>
+                </div>
+
+
 
             </nav>
         </div>
 
+        <!-- Panel derecho de previsualización visual (Se conserva intacto) -->
         <div class="index-visual-canvas">
             <div class="asymmetric-wave-divider"></div>
-            
+
             <div class="machinery-preview-wrapper">
-                <div id="img-valves" class="machinery-img active" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1000&q=80');"></div>
-                <div id="img-pipes" class="machinery-img" style="background-image: url('https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=1000&q=80');"></div>
-                <div id="img-drilling" class="machinery-img" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80');"></div>
-                <div id="img-support" class="machinery-img" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80');"></div>
+                <div id="img-valves" class="machinery-img active"
+                    style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1000&q=80');">
+                </div>
+                <div id="img-pipes" class="machinery-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=1000&q=80');">
+                </div>
+                <div id="img-drilling" class="machinery-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80');">
+                </div>
+                <div id="img-support" class="machinery-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80');">
+                </div>
             </div>
 
             <div class="dark-machinery-overlay"></div>
@@ -219,151 +456,231 @@
     </section>
 
     <section id="catalogo" class="catalog-dashboard-section">
+
+        <div class="dashboard-control-panel">
+            <header class="control-panel-header">
+                <h2>CATÁLOGO TÉCNICO</h2>
+                <p>Selecciona un recuadro para desplegar la ficha de especificaciones técnicas y dimensiones del
+                    material.</p>
+            </header>
+
+            <div class="category-filter-pills">
+                <div class="filter-pill active" onclick="filterCat('all', event)">Todos</div>
+                <div id="eventTuberiaWeco" class="filter-pill" onclick="filterCat('tuberia', event)">Tuberia Weco</div>
+                <div class="filter-pill" onclick="filterCat('giratorias', event)">Juntas Giratorias</div>
+                <div class="filter-pill" onclick="filterCat('valvulas', event)">Mangueras Metalicas</div>
+                <div class="filter-pill" onclick="filterCat('valvulas', event)">Mangueras Coflexip</div>
+                <div class="filter-pill" onclick="filterCat('valvulas', event)">Válvulas de Tapon</div>
+                <div class="filter-pill" onclick="filterCat('valvulas', event)">Válvulas de Retención</div>
+
+
+            </div>
+
+            <div class="materials-grid-container">
+                <div class="material-nav-card active" data-target="mat-weco" data-cat="tuberia"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">01</div>
+                    <div class="card-meta-info">
+                        <h4>Tubería WECO Diseño Integral</h4>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-coflexip" data-cat="tuberia"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">02</div>
+                    <div class="card-meta-info">
+                        <h4>Tuberia Weco Diseño NPST</h4>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valves200" data-cat="giratorias"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">03</div>
+                    <div class="card-meta-info">
+                        <h4>Juntas Giratorias Modelo LS</h4>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-choke300" data-cat="giratorias"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">04</div>
+                    <div class="card-meta-info">
+                        <h4>Juntas Giratorias Modelo Tsi</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-viewer-canvas">
+
+            <!-- FICHA 01: TUBERÍA WECO (CON GALERÍA) -->
+            <div id="mat-weco" class="spec-sheet-container active-sheet">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>TUBERÍA <span>WECO® Integral</span></h3>
+                        <p>El Cuerpo del Tubo y sus Extremos de Conexión Forjados a partir de una sola pieza</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 8</span>
+                </header>
+
+                <!-- NUEVA GALERÍA MULTI-IMAGEN -->
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="product-render-placeholder main-gallery-display"
+                        style="background-image: url('img/TuberiaWecoIntegral.png');">
+                    </div>
+
+                    <!-- Miniaturas para alternar (3 a 4 imágenes) -->
+                    <div class="gallery-thumbnails-grid">
+                        <div class="thumb-item active"
+                            style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="thumb-item"
+                            style="background-image: url('https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="thumb-item"
+                            style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="thumb-item"
+                            style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                    </div>
+
+                    <div class="style-labels-flex">
+                        <div class="style-pill-box"><strong>Estilo 50-10</strong>Cinco Juntas de Giro / Mayor
+                            Flexibilidad</div>
+                        <div class="style-pill-box"><strong>Estilo 50-50</strong>Cuatro Juntas de Giro Rígidas</div>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>• 1”, 1-1/2”, 2”, 3”, 4”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Longitudes</h5>
+                        <p>• De 1 a 20 pies</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>• Tuerca Aleteada Weco Retirable</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Tuerca Aleteada Weco Retirable<br>
+                            • Manufactura Integral Forjada de Una Sola Pieza<br>
+                            • Muy Durable y de Funcionamiento Confiable y Seguro</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Procesos de Alta Presión y Muy Abrasivos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FICHA 02: Tuberia Weco NSPT (CON GALERÍA) -->
+            <div id="mat-coflexip" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Tuberia Weco<span>Diseño NPST®</span></h3>
+                        <p>Los Extremos de Conexión son Roscados al Tubo</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 6</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="product-render-placeholder main-gallery-display"
+                        style="background-image: url('img/TuberiaWecoNPST.png');">
+                        <span>COFLEXIP LÍNEA REFORZADA DE ALTA PRESIÓN</span>
+                    </div>
+
+                    <div class="gallery-thumbnails-grid">
+                        <div class="thumb-item active"
+                            style="background-image: url('https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="thumb-item"
+                            style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="thumb-item"
+                            style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>• 1”, 1-1/2”, 2”, 3”, 4”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Longitudes</h5>
+                        <p>• De 1 a 20 pies</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>• Tuerca Aleteada Weco No Retirable</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Tuerca Aleteada Weco No Retirable<br>
+                            • Manufactura Compuesta No Integral<br>
+                            • Peso Ligero y Precio Económico</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Procesos de Alta Presión No Tan Críticos</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FICHAS 03 Y 04 QUEDAN IGUAL O SE LES AGREGA EL MISMO BLOQUE DE GALERÍA DE ARRIBA -->
+
+        </div>
+    </section>
+
+
+
+<div class="whatsapp-floating-container">
+    <div class="whatsapp-tooltip-box">
+        <span class="tooltip-status-dot"></span>
+        <p>¿Necesitas cotización técnica o soporte inmediato?</p>
+    </div>
     
-    <div class="dashboard-control-panel">
-        <header class="control-panel-header">
-            <h2>CATÁLOGO TÉCNICO</h2>
-            <p>Selecciona un recuadro para desplegar la ficha de especificaciones técnicas y dimensiones del material.</p>
-        </header>
-        
-        <div class="category-filter-pills">
-            <div class="filter-pill active" onclick="filterCat('all', event)">Todos</div>
-            <div class="filter-pill" onclick="filterCat('tuberia', event)">Tuberías e Instrumentación</div>
-            <div class="filter-pill" onclick="filterCat('valvulas', event)">Válvulas & Manifolds</div>
-        </div>
-
-        <div class="materials-grid-container">
-            <div class="material-nav-card active" data-target="mat-weco" data-cat="tuberia" onclick="switchMaterial(this)">
-                <div class="card-num-badge">01</div>
-                <div class="card-meta-info">
-                    <h4>Tubería WECO®</h4>
-                    <p>Modelos LS Weco® y TSI Weco®</p>
-                </div>
-            </div>
-            <div class="material-nav-card" data-target="mat-coflexip" data-cat="tuberia" onclick="switchMaterial(this)">
-                <div class="card-num-badge">02</div>
-                <div class="card-meta-info">
-                    <h4>Líneas Coflexip®</h4>
-                    <p>Conexiones Co-flex de Alta Presión</p>
-                </div>
-            </div>
-            <div class="material-nav-card" data-target="mat-valves200" data-cat="valvulas" onclick="switchMaterial(this)">
-                <div class="card-num-badge">03</div>
-                <div class="card-meta-info">
-                    <h4>Válvulas Compuerta Serie 200</h4>
-                    <p>Gate Valves para Control de Fluidos</p>
-                </div>
-            </div>
-            <div class="material-nav-card" data-target="mat-choke300" data-cat="valvulas" onclick="switchMaterial(this)">
-                <div class="card-num-badge">04</div>
-                <div class="card-meta-info">
-                    <h4>Válvulas Choke Serie 300</h4>
-                    <p>Control Estrangulador de Caudal</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="dashboard-viewer-canvas">
-        
-        <div id="mat-weco" class="spec-sheet-container active-sheet">
-            <header class="sheet-header">
-                <div class="sheet-title-area">
-                    <h3>TUBERÍA <span>WECO®</span></h3>
-                    <p>Modelos LS Weco® y TSI Weco®</p>
-                </div>
-                <span class="sheet-tag-pill">PÁGINA 8</span>
-            </header>
-            
-            <div class="sheet-visual-showcase">
-                <div class="product-render-placeholder">
-                    <span>LÍNEA DE CONEXIÓN ESTILO 50-10 / 50-50</span>
-                </div>
-                <div class="style-labels-flex">
-                    <div class="style-pill-box"><strong>Estilo 50-10</strong>Cinco Juntas de Giro / Mayor Flexibilidad</div>
-                    <div class="style-pill-box"><strong>Estilo 50-50</strong>Cuatro Juntas de Giro Rígidas</div>
-                </div>
-            </div>
-
-            <div class="sheet-features-grid">
-                <div class="spec-block-card">
-                    <h5>Tamaños</h5>
-                    <p>• Diseño LS en <strong>2"</strong><br>• Diseño TSI en <strong>3", 4"</strong></p>
-                </div>
-                <div class="spec-block-card">
-                    <h5>Rangos de Presión</h5>
-                    <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
-                </div>
-                <div class="spec-block-card">
-                    <h5>Tipos de Servicio</h5>
-                    <p>• Estándar<br>• Gas Agrio H2S<br><small style="color:var(--gray-muted)">(Cumple NACE - API MR-01-75)</small></p>
-                </div>
-                <div class="spec-block-card">
-                    <h5>Extremos de Conexión</h5>
-                    <p>Tuerca Aleteada Weco Retirable para acople mecánico de alta resistencia.</p>
-                </div>
-                <div class="spec-block-card">
-                    <h5>Aplicación</h5>
-                    <p>Procesos críticos industriales de Alta Presión y transporte de fluidos abrasivos.</p>
-                </div>
-                <div class="spec-block-card">
-                    <h5>Otras Calidades</h5>
-                    <p>Altamente durable, coeficiente de fricción interno óptimo y funcionamiento confiable.</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="mat-coflexip" class="spec-sheet-container">
-            <header class="sheet-header">
-                <div class="sheet-title-area">
-                    <h3>LÍNEAS <span>COFLEXIP®</span></h3>
-                    <p>Mangueras Flexibles de Acero Multicapa</p>
-                </div>
-                <span class="sheet-tag-pill">PÁGINA 6</span>
-            </header>
-            <div class="sheet-visual-showcase">
-                <div class="product-render-placeholder" style="background: linear-gradient(90deg, #334155 0%, #1e293b 100%);">
-                    <span>COFLEXIP LÍNEA REFORZADA DE ALTA PRESIÓN</span>
-                </div>
-            </div>
-            <div class="sheet-features-grid">
-                <div class="spec-block-card"><h5>Estructura</h5><p>Espirales continuos de acero inoxidable trenzado con barrera elastomérica.</p></div>
-                <div class="spec-block-card"><h5>Presiones</h5><p>Pruebas operacionales continuas de hasta <strong>15,000 PSI</strong> sin deformación.</p></div>
-                <div class="spec-block-card"><h5>Ventajas</h5><p>Amortiguación absoluta de vibraciones extremas en cabezales de pozo (Well Testing).</p></div>
-            </div>
-        </div>
-
-        <div id="mat-valves200" class="spec-sheet-container">
-            <header class="sheet-header">
-                <div class="sheet-title-area">
-                    <h3>SERIE 200 <span>GATE VALVES</span></h3>
-                    <p>Válvulas de Compuerta de Sello Técnico</p>
-                </div>
-                <span class="sheet-tag-pill">PÁGINA 7</span>
-            </header>
-            <div class="sheet-features-grid">
-                <div class="spec-block-card"><h5>Diseño</h5><p>Compuerta de losa maciza rectificada para un aislamiento hermético ascendente.</p></div>
-                <div class="spec-block-card"><h5>Mantenimiento</h5><p>Alineadores de grasa externos para reacondicionamiento rápido en campo.</p></div>
-            </div>
-        </div>
-
-        <div id="mat-choke300" class="spec-sheet-container">
-            <header class="sheet-header">
-                <div class="sheet-title-area">
-                    <h3>SERIE 300 <span>CHOKE VALVES</span></h3>
-                    <p>Válvulas Reguladoras y Estranguladoras</p>
-                </div>
-                <span class="sheet-tag-pill">PÁGINA 7</span>
-            </header>
-            <div class="sheet-features-grid">
-                <div class="spec-block-card"><h5>Regulación</h5><p>Calibración y estrangulación milimétrica del fluido mediante vástago cónico.</p></div>
-                <div class="spec-block-card"><h5>Materiales</h5><p>Insertos internos de carburo de tungsteno resistentes a cavitación y erosión severa.</p></div>
-            </div>
-        </div>
-
-    </div>
-</section>
+    <a href="https://wa.me/573000000000?text=Hola%20ESIP%20S.A.S.,%20estoy%20visitando%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20sus%20equipos." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-main-button"
+       aria-label="Chat de WhatsApp con ESIP S.A.S.">
+        <svg viewBox="0 0 24 24" class="whatsapp-svg-icon">
+            <path fill="#ffffff" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.12c-.24.12-1.44.71-1.66.79-.22.08-.39.12-.56-.12-.17-.25-.66-.83-.81-.99-.15-.16-.3-.2-.54-.08-.24.12-1 .37-1.91 1.18-.71.63-1.19 1.42-1.33 1.66-.14.24-.02.37.1.49.11.11.24.28.37.42.12.14.17.24.25.41.08.17.04.31-.02.43-.06.12-.56 1.35-.77 1.84-.2.48-.42.41-.56.41-.14 0-.31-.02-.48-.02-.17 0-.44.06-.68.31-.24.25-.91.89-.91 2.17 0 1.28.93 2.51 1.06 2.69.13.17 1.83 2.79 4.43 3.92.62.27 1.1.43 1.48.55.62.2 1.19.17 1.64.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.12-.24-.18-.48-.3z"/>
+        </svg>
+    </a>
+</div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -43,3 +43,61 @@ document.addEventListener("mousemove", function(e) {
             }
         });
     }
+
+
+
+
+    document.querySelectorAll('.index-item').forEach(item => {
+        const trigger = item.querySelector('.index-item-trigger');
+        
+        trigger.addEventListener('click', (e) => {
+            // 1. Manejo del Menú Desplegable (Acordeón)
+            const isAlreadyOpen = item.classList.contains('menu-open');
+            
+            // Cerramos todos los otros menús abiertos
+            document.querySelectorAll('.index-item').forEach(el => el.classList.remove('menu-open'));
+            
+            // Si no estaba abierto, lo abrimos
+            if (!isAlreadyOpen) {
+                item.classList.add('menu-open');
+            }
+            
+            // 2. Manejo del Cambio de Imagen de Fondo (Lógica previa)
+            const targetImageId = item.getAttribute('data-preview');
+            if (targetImageId) {
+                document.querySelectorAll('.machinery-img').forEach(img => img.classList.remove('active'));
+                const activeImg = document.getElementById(targetImageId);
+                if (activeImg) activeImg.classList.add('active');
+            }
+        });
+    });
+
+    function changeGalleryImage(thumbnailElement, newImageUrl) {
+    // Localizar el contenedor "showcase" donde se hizo clic
+    const showcase = thumbnailElement.closest('.sheet-visual-showcase');
+    
+    // Cambiar la imagen de fondo del contenedor principal con un ligero efecto de transición
+    const mainDisplay = showcase.querySelector('.main-gallery-display');
+    mainDisplay.style.backgroundImage = `url('${newImageUrl}')`;
+    
+    // Quitar la clase activa de las otras miniaturas de ESTA misma ficha
+    showcase.querySelectorAll('.thumb-item').forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    
+    // Añadir clase activa a la miniatura seleccionada
+    thumbnailElement.classList.add('active');
+}
+
+function closeAnnouncement() {
+    const overlay = document.getElementById('welcome-announcement-overlay');
+    if (overlay) {
+        overlay.style.opacity = '0';
+        overlay.style.visibility = 'hidden';
+        
+        // Eliminamos el elemento después de la animación para optimizar rendimiento
+        setTimeout(() => {
+            overlay.remove();
+        }, 400);
+    }
+}
