@@ -10,41 +10,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
         rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
 
-<div id="welcome-announcement-overlay" class="announcement-overlay">
-    <div class="announcement-card">
-        
-        <button class="close-announcement-btn" onclick="closeAnnouncement()">&times;</button>
-        
-        <div class="announcement-body-content">
-            <header class="announcement-header">
-                <span class="announcement-badge">NUEVO LANZAMIENTO</span>
-                <h1>ESIP S.A.S. </h1>
-                <h2>Evolución Digital en Equipos de Alta Presión</h2>
-            </header>
-            
-            <div class="announcement-divider"></div>
-            
-            <p class="announcement-description">
-                Bienvenido a nuestra plataforma interactiva. Hemos digitalizado todo nuestro portafolio técnico para que cotices, explores dimensiones, capacidades de PSI y especificaciones API / NACE en tiempo real y a un solo clic.
-            </p>
-            
-            <div class="announcement-actions-flex">
-                <button class="btn-announcement-primary" onclick="closeAnnouncement()">
-                    <span>EXPLORAR BROCHURE</span>
-                    <svg viewBox="0 0 24 24" class="btn-arrow-icon"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                </button>
-                <a href="URL_DE_TU_PDF_SI_TIENES_UNO" target="_blank" class="btn-announcement-secondary">
-                    Descargar PDF Estático
-                </a>
+    <div id="welcome-announcement-overlay" class="announcement-overlay">
+        <div class="announcement-card">
+
+            <button class="close-announcement-btn" onclick="closeAnnouncement()">&times;</button>
+
+            <div class="announcement-body-content">
+                <header class="announcement-header">
+                    <span class="announcement-badge">NUEVO LANZAMIENTO</span>
+                    <h1>ESIP S.A.S. </h1>
+                    <h2>Evolución Digital en Equipos de Alta Presión</h2>
+                </header>
+
+                <div class="announcement-divider"></div>
+
+                <p class="announcement-description">
+                    Bienvenido a nuestra plataforma interactiva. Hemos digitalizado todo nuestro portafolio técnico para
+                    que cotices, explores dimensiones, capacidades de PSI y especificaciones API / NACE en tiempo real y
+                    a un solo clic.
+                </p>
+
+                <div class="announcement-actions-flex">
+                    <button class="btn-announcement-primary" onclick="closeAnnouncement()">
+                        <span>EXPLORAR BROCHURE</span>
+                        <svg viewBox="0 0 24 24" class="btn-arrow-icon">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" />
+                        </svg>
+                    </button>
+                    <a href="URL_DE_TU_PDF_SI_TIENES_UNO" target="_blank" class="btn-announcement-secondary">
+                        Descargar PDF Estático
+                    </a>
+                </div>
             </div>
+
         </div>
-        
     </div>
-</div>
 
     <main class="split-creative-viewport">
 
@@ -524,9 +529,11 @@
 
                 <!-- NUEVA GALERÍA MULTI-IMAGEN -->
                 <div class="sheet-visual-showcase gallery-mode">
-                    <div class="product-render-placeholder main-gallery-display"
-                        style="background-image: url('img/TuberiaWecoIntegral.png');">
-                    </div>
+
+                    <model-viewer src="img/tuberia.glb" alt="Tubería Weco Integral" camera-controls
+                        auto-rotate shadow-intensity="1" exposure="1" environment-image="neutral" ar
+                        style="width:100%; height:500px; background:#f8f8f8; border-radius:20px;">
+                    </model-viewer>
 
                     <!-- Miniaturas para alternar (3 a 4 imágenes) -->
                     <div class="gallery-thumbnails-grid">
@@ -663,22 +670,21 @@
 
 
 
-<div class="whatsapp-floating-container">
-    <div class="whatsapp-tooltip-box">
-        <span class="tooltip-status-dot"></span>
-        <p>¿Necesitas cotización técnica o soporte inmediato?</p>
+    <div class="whatsapp-floating-container">
+        <div class="whatsapp-tooltip-box">
+            <span class="tooltip-status-dot"></span>
+            <p>¿Necesitas cotización técnica o soporte inmediato?</p>
+        </div>
+
+        <a href="https://wa.me/573000000000?text=Hola%20ESIP%20S.A.S.,%20estoy%20visitando%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20sus%20equipos."
+            target="_blank" rel="noopener noreferrer" class="whatsapp-main-button"
+            aria-label="Chat de WhatsApp con ESIP S.A.S.">
+            <svg viewBox="0 0 24 24" class="whatsapp-svg-icon">
+                <path fill="#ffffff"
+                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.12c-.24.12-1.44.71-1.66.79-.22.08-.39.12-.56-.12-.17-.25-.66-.83-.81-.99-.15-.16-.3-.2-.54-.08-.24.12-1 .37-1.91 1.18-.71.63-1.19 1.42-1.33 1.66-.14.24-.02.37.1.49.11.11.24.28.37.42.12.14.17.24.25.41.08.17.04.31-.02.43-.06.12-.56 1.35-.77 1.84-.2.48-.42.41-.56.41-.14 0-.31-.02-.48-.02-.17 0-.44.06-.68.31-.24.25-.91.89-.91 2.17 0 1.28.93 2.51 1.06 2.69.13.17 1.83 2.79 4.43 3.92.62.27 1.1.43 1.48.55.62.2 1.19.17 1.64.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.12-.24-.18-.48-.3z" />
+            </svg>
+        </a>
     </div>
-    
-    <a href="https://wa.me/573000000000?text=Hola%20ESIP%20S.A.S.,%20estoy%20visitando%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20sus%20equipos." 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="whatsapp-main-button"
-       aria-label="Chat de WhatsApp con ESIP S.A.S.">
-        <svg viewBox="0 0 24 24" class="whatsapp-svg-icon">
-            <path fill="#ffffff" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.12c-.24.12-1.44.71-1.66.79-.22.08-.39.12-.56-.12-.17-.25-.66-.83-.81-.99-.15-.16-.3-.2-.54-.08-.24.12-1 .37-1.91 1.18-.71.63-1.19 1.42-1.33 1.66-.14.24-.02.37.1.49.11.11.24.28.37.42.12.14.17.24.25.41.08.17.04.31-.02.43-.06.12-.56 1.35-.77 1.84-.2.48-.42.41-.56.41-.14 0-.31-.02-.48-.02-.17 0-.44.06-.68.31-.24.25-.91.89-.91 2.17 0 1.28.93 2.51 1.06 2.69.13.17 1.83 2.79 4.43 3.92.62.27 1.1.43 1.48.55.62.2 1.19.17 1.64.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.12-.24-.18-.48-.3z"/>
-        </svg>
-    </a>
-</div>
 
     <script src="script.js"></script>
 </body>
