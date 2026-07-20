@@ -42,7 +42,10 @@ body {
     cursor: crosshair;
 }
 
-a, button, .thumb-item, .material-nav-card {
+a,
+button,
+.thumb-item,
+.material-nav-card {
     cursor: pointer;
 }
 
@@ -440,35 +443,97 @@ a, button, .thumb-item, .material-nav-card {
 }
 
 .section-index-header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .index-main-title {
     font-size: 32px;
     font-weight: 900;
-    color: var(--esip-green);
+    color: var(--esip-green, #005433);
     letter-spacing: -0.5px;
 }
 
 .index-title-underline {
     width: 60px;
     height: 4px;
-    background-color: var(--esip-orange);
+    background-color: var(--esip-orange, #f26522);
     margin-top: 8px;
 }
 
+/* ==========================================================================
+   NUEVO: SCROLLBAR Y CONTENEDOR DE LA LISTA
+   ========================================================================== */
 .technical-index-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
+    /* Reducido un poco para acomodar más ítems */
     max-width: 580px;
+    max-height: 65vh;
+    /* Controla la altura máxima para activar el scroll */
+    overflow-y: auto;
+    /* Activa el scroll vertical */
+    padding-right: 15px;
+    /* Espacio para que el scroll no monte el texto */
+    margin-right: -15px;
+    /* Compensación visual */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
 }
 
+/* Scrollbar personalizado Webkit (Chrome, Edge, Safari) */
+.technical-index-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.technical-index-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.technical-index-list::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+.technical-index-list::-webkit-scrollbar-thumb:hover {
+    background-color: var(--esip-green, #005433);
+}
+
+/* ==========================================================================
+   NUEVO: DIVISORES DE CATEGORÍA
+   ========================================================================== */
+.category-divider {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--esip-green, #005433);
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.category-divider:first-child {
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   ÍTEMS Y MENÚ ACORDEÓN (UNIFICADO)
+   ========================================================================== */
 .index-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* Columna para albergar el menú oculto abajo */
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s ease;
+}
+
+.index-item-trigger {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 6px 0;
 }
 
 .item-icon {
@@ -492,20 +557,20 @@ a, button, .thumb-item, .material-nav-card {
 }
 
 .badge-orange {
-    border: 2px solid var(--esip-orange);
-    color: var(--esip-orange);
+    border: 2px solid var(--esip-orange, #f26522);
+    color: var(--esip-orange, #f26522);
 }
 
 .badge-green {
-    border: 2px solid var(--esip-green-light);
-    color: var(--esip-green-light);
+    border: 2px solid var(--esip-green-light, #00b050);
+    color: var(--esip-green-light, #00b050);
 }
 
 .item-name {
     font-size: 14px;
-    color: var(--gray-dark);
+    color: var(--gray-dark, #333);
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .fontweight-bold {
@@ -523,16 +588,68 @@ a, button, .thumb-item, .material-nav-card {
 .item-page {
     font-size: 14px;
     font-weight: 700;
-    color: var(--esip-green);
+    color: var(--esip-green, #005433);
+    transition: color 0.2s ease;
 }
 
+/* Efectos Hover unificados */
 .index-item:hover .item-name {
-    color: var(--esip-orange);
-    transform: translateX(5px);
+    color: var(--esip-orange, #f26522);
+    transform: translateX(4px);
 }
 
 .index-item:hover .item-page {
-    color: var(--esip-orange);
+    color: var(--esip-orange, #f26522);
+}
+
+/* Modificación del submenú para dar espacio real */
+.index-item-submenu {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* Pequeño espacio entre enlaces */
+    padding-left: 39px;
+    margin-top: 0;
+    transition: max-height 0.35s ease, margin 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.index-item-submenu a {
+    font-size: 13px;
+    color: #718096;
+    text-decoration: none;
+    font-weight: 500;
+    /* Damos más aire arriba y abajo para que se vean separados */
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f9fa;
+    /* Línea separadora muy suave opcional */
+    display: block;
+    /* Forzamos el salto de línea al ocupar el 100% */
+    width: 100%;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.index-item-submenu a:hover {
+    color: var(--esip-orange, #f26522);
+    padding-left: 10px;
+    /* Un pequeño efecto de desplazamiento lateral al pasar el mouse */
+}
+
+/* Ajustamos el estado abierto */
+.index-item.menu-open .index-item-submenu {
+    max-height: 300px;
+    /* Aumentamos por si son muchos modelos */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* Más espacio al cerrar el bloque */
+    opacity: 1;
+}
+
+.index-item.menu-open .item-name {
+    color: var(--esip-green, #005433);
+    font-weight: 700;
 }
 
 /* --- BLOQUE DERECHO: DETALLES --- */
@@ -586,181 +703,10 @@ a, button, .thumb-item, .material-nav-card {
 }
 
 /* ==========================================================================
-   RESPONSIVE (REORGANIZADO PARA EVITAR CONFLICTOS)
+   RESPONSIVE (Limpio de duplicados)
    ========================================================================== */
-@media (max-width: 1024px) {
-    .split-creative-viewport {
-        grid-template-columns: 1fr;
-        grid-template-rows: 45vh 55vh;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .visual-canvas {
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    }
-
-    .tech-panel-cluster {
-        transform: translateX(0);
-        padding: 20px;
-        height: 90%;
-    }
-
-    .content-canvas {
-        align-items: center;
-        text-align: center;
-        padding: 30px 20px 80px 20px;
-    }
-
-    .corporate-identity,
-    .interactive-action-zone,
-    .features-minimal-grid {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .brand-flex-align {
-        justify-content: center;
-    }
-
-    .feature-card-item {
-        justify-content: center;
-    }
-
-    .badge-icon {
-        order: 0;
-    }
-
-    .badge-meta {
-        order: 1;
-        text-align: left;
-    }
-
-    .asymmetric-footer-curves {
-        width: 100%;
-    }
-
-    .content-section-viewport {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 40vh;
-        height: auto;
-    }
-
-    .index-text-canvas {
-        padding: 60px 20px;
-    }
-
-    .asymmetric-wave-divider {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .split-creative-viewport {
-        grid-template-rows: 38vh 62vh;
-    }
-
-    .brand-name-main {
-        font-size: 60px;
-    }
-
-    .title-green {
-        font-size: 24px;
-    }
-
-    .title-light {
-        font-size: 20px;
-    }
-
-    .title-orange {
-        font-size: 34px;
-    }
-
-    .features-minimal-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-}
 
 @media (max-width: 1024px) {
-
-    /* --- ESTRUCTURA GENERAL Y PRIMERA SECCIÓN --- */
-    .split-creative-viewport {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        /* Permite que el contenido defina su propia altura */
-        height: auto;
-        min-height: 100vh;
-    }
-
-    /* Ajuste del contenedor visual izquierdo */
-    .visual-canvas {
-        clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
-        padding: 60px 20px;
-        height: 50vh;
-        /* Altura controlada en tabletas */
-        min-height: 400px;
-    }
-
-    .tech-panel-cluster {
-        transform: translateX(0);
-        margin: 0 auto;
-        width: 100%;
-        max-width: 450px;
-        height: 100%;
-    }
-
-    /* Ajuste del contenedor de texto derecho */
-    .content-canvas {
-        align-items: center;
-        text-align: center;
-        padding: 60px 4vw 100px 4vw;
-        /* Espacio extra abajo por las curvas decorativas */
-    }
-
-    .corporate-identity {
-        align-items: center;
-    }
-
-    .brand-flex-align {
-        justify-content: center;
-    }
-
-    .interactive-action-zone {
-        justify-content: center;
-        margin: 35px 0;
-    }
-
-    /* Grilla de atributos en modo tableta (centrada) */
-    .features-minimal-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px 20px;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .feature-card-item {
-        justify-content: center;
-        flex-direction: column;
-        /* Icono arriba, texto abajo para mejor lectura */
-        gap: 10px;
-        text-align: center;
-    }
-
-    .badge-icon {
-        order: -1;
-        /* Forzamos el icono arriba */
-    }
-
-    .badge-meta {
-        text-align: center;
-    }
-
-    .asymmetric-footer-curves {
-        width: 100%;
-    }
-
-    /* --- SEGUNDA SECCIÓN: ÍNDICE --- */
     .content-section-viewport {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -769,15 +715,15 @@ a, button, .thumb-item, .material-nav-card {
     }
 
     .index-text-canvas {
-        padding: 80px 6vw;
+        padding: 60px 20px;
     }
 
     .technical-index-list {
         max-width: 100%;
-        /* Ocupa todo el ancho disponible de forma fluida */
+        max-height: 50vh;
+        /* Ajuste para tablets */
     }
 
-    /* Bloque visual del índice en la parte inferior */
     .index-visual-canvas {
         height: 45vh;
         min-height: 350px;
@@ -785,176 +731,133 @@ a, button, .thumb-item, .material-nav-card {
 
     .asymmetric-wave-divider {
         display: none;
-        /* Eliminamos el corte diagonal que rompe el diseño horizontal */
     }
 }
 
 @media (max-width: 768px) {
-
-    /* Ajuste de títulos en pantallas medianas/pequeñas */
-    .brand-name-main {
-        font-size: 70px;
-    }
-
-    .title-green {
-        font-size: 30px;
-    }
-
-    .title-light {
-        font-size: 24px;
-    }
-
-    .title-orange {
-        font-size: 44px;
-    }
-
-    /* Los elementos de la lista técnica reducen los espacios tipográficos */
     .item-dots {
         margin: 0 8px;
     }
 }
 
 @media (max-width: 480px) {
-
-    /* --- PANTALLAS MÓVILES --- */
-    .visual-canvas {
-        height: 40vh;
-        /* Reducimos el área visual para dar prioridad al texto */
-        min-height: 320px;
+    .index-text-canvas {
+        padding: 40px 15px;
     }
 
-    .brand-name-main {
-        font-size: 56px;
-    }
-
-    .brand-subtext {
-        font-size: 11px;
-    }
-
-    .title-green {
-        font-size: 22px;
-    }
-
-    .title-light {
-        font-size: 18px;
-        letter-spacing: 1px;
-    }
-
-    .title-orange {
-        font-size: 34px;
-    }
-
-    /* La grilla de atributos pasa a ser de 1 sola columna rígida */
-    .features-minimal-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .feature-card-item {
-        flex-direction: row;
-        /* En móviles vuelve a ser horizontal para ahorrar espacio vertical */
-        justify-content: flex-start;
-        text-align: left;
-        background: #f8fafc;
-        padding: 12px;
-        border-radius: 6px;
-    }
-
-    .badge-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .badge-meta {
-        text-align: left;
-    }
-
-    .badge-meta p {
-        white-space: normal;
-        /* Permite saltos de línea si el texto es largo */
-    }
-
-    /* Índice técnico en móvil */
-    .index-item {
-        font-size: 13px;
-    }
-
+    .index-item,
     .item-name {
         font-size: 13px;
     }
 }
 
 
-/* ==========================================================================
-   ESTILOS ADICIONALES PARA ÍTEMS CON SUBMENÚ
-   ========================================================================== */
+.esip-premium-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 11, 20, .98);
+    display: none;
+    z-index: 9999;
 
-/* Contenedor del disparador (Mantiene el diseño de fila clásico) */
-.index-item {
-    display: flex;
-    flex-direction: column;
-    /* Cambia a columna para albergar el menú abajo */
-    cursor: pointer;
-    margin-bottom: 14px;
-    transition: all 0.3s ease;
+    overflow-y: auto;
+    padding: 40px;
 }
 
-.index-item-trigger {
-    display: flex;
-    align-items: center;
+.modal-inner {
     width: 100%;
+    max-width: 1400px;
+
+    min-height: 100%;
+    margin: auto;
+
+    background: #fff;
+    position: relative;
+
+    overflow: visible;
 }
 
-/* Ajustes de tipografía heredados de tu layout */
-.fontweight-bold {
-    font-weight: 700;
+.premium-grid {
+    display: grid;
+    grid-template-columns: .4fr .6fr;
 }
 
-/* El menú oculto por defecto */
-.index-item-submenu {
-    max-height: 0;
-    overflow: hidden;
+.visual-pane {
+    position: relative;
+    background: #000;
+}
+
+.visual-pane img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.content-pane {
+    padding: 80px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-left: 36px;
-    /* Alineado pasando el ícono */
-    margin-top: 0;
-    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), margin 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
+    justify-content: flex-start;
 }
 
-/* Opciones individuales del submenú */
-.index-item-submenu a {
-    font-size: 13px;
-    color: #718096;
-    /* Color gris suave */
-    text-decoration: none;
-    font-weight: 500;
-    padding: 4px 0;
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-block;
-    width: fit-content;
+.eyebrow {
+    color: var(--esip-orange);
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 12px;
 }
 
-.index-item-submenu a:hover {
-    color: #f26522;
-    transform: translateX(4px);
+.content-pane h1 {
+    font-size: 64px;
+    line-height: 0.9;
+    color: var(--esip-green);
+    margin: 20px 0;
 }
 
-.index-item.menu-open .index-item-submenu {
-    max-height: 200px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    opacity: 1;
+.content-pane h1 span {
+    font-weight: 300;
+    color: #333;
 }
 
-.index-item.menu-open .item-name {
-    color: #005433;
-    /* Resalta el título en verde ESIP al abrirse */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.story-item h4 {
+    border-top: 2px solid var(--esip-orange);
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+.story-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 10;
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
     font-weight: 700;
+    transition: 0.3s;
 }
+
+.close-modal-btn:hover {
+    background: var(--esip-green);
+    color: white;
+    border-color: var(--esip-green);
+}
+
+
 
 
 .catalog-dashboard-section {
@@ -1138,12 +1041,12 @@ a, button, .thumb-item, .material-nav-card {
 .sheet-title-area h3 {
     font-size: 38px;
     font-weight: 900;
-    color: var(--gray-dark);
+    color: var(--esip-green);
     line-height: 1;
 }
 
 .sheet-title-area h3 span {
-    color: red;
+    color: #ff0000;
     display: block;
 }
 
@@ -1264,6 +1167,7 @@ a, button, .thumb-item, .material-nav-card {
     }
 }
 
+
 /* --- RESPONSIVE OPTIMIZADO PARA EL CATALOGO --- */
 @media (max-width: 1024px) {
     .catalog-dashboard-section {
@@ -1304,6 +1208,38 @@ a, button, .thumb-item, .material-nav-card {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+
+/* Estilo para los grupos de navegación */
+.index-group {
+    margin-bottom: 25px;
+}
+
+.group-title {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--esip-orange);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* Ajuste del ítem principal para que no parezca desordenado */
+.index-item-trigger {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.index-item-submenu {
+    background: #fcfcfc;
+    border-left: 2px solid var(--esip-green);
+    margin-left: 10px;
+}
+
+/* Mejora la transición para que el "acordeón" sea fluido */
+.index-item.menu-open .index-item-submenu {
+    padding: 10px 15px;
 }
 
 /* ==========================================================================
@@ -1537,7 +1473,8 @@ a, button, .thumb-item, .material-nav-card {
 /* Forzar que el visualizador principal soporte imágenes de fondo limpias */
 .main-gallery-display {
     width: 100%;
-    height: 260px; /* Ajusta según tu layout actual */
+    height: 260px;
+    /* Ajusta según tu layout actual */
     background-size: cover;
     background-position: center;
     border-radius: 6px;
@@ -1550,7 +1487,8 @@ a, button, .thumb-item, .material-nav-card {
 /* Contenedor de las miniaturas */
 .gallery-thumbnails-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas iguales */
     gap: 10px;
     width: 100%;
 }
@@ -1575,7 +1513,8 @@ a, button, .thumb-item, .material-nav-card {
 
 /* Miniatura seleccionada actualmente */
 .thumb-item.active {
-    border-color: #f26522; /* Color naranja o el tono corporativo de tu marca */
+    border-color: #f26522;
+    /* Color naranja o el tono corporativo de tu marca */
     opacity: 1;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -1590,7 +1529,8 @@ a, button, .thumb-item, .material-nav-card {
     right: 30px;
     display: flex;
     align-items: center;
-    z-index: 9999; /* Asegura que siempre esté por encima de todo el contenido */
+    z-index: 9999;
+    /* Asegura que siempre esté por encima de todo el contenido */
     font-family: inherit;
 }
 
@@ -1638,7 +1578,8 @@ a, button, .thumb-item, .material-nav-card {
 .whatsapp-tooltip-box {
     background: #ffffff;
     padding: 12px 18px;
-    border-radius: 8px 8px 0px 8px; /* Esquina inferior derecha recta hacia el botón */
+    border-radius: 8px 8px 0px 8px;
+    /* Esquina inferior derecha recta hacia el botón */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-right: 15px;
     border: 1px solid #e2e8f0;
@@ -1646,13 +1587,15 @@ a, button, .thumb-item, .material-nav-card {
     display: flex;
     align-items: center;
     gap: 10px;
-    pointer-events: none; /* No estorba clics traseros */
-    
+    pointer-events: none;
+    /* No estorba clics traseros */
+
     /* Animación de entrada con retraso (Delay) */
     opacity: 0;
     transform: translateX(20px);
     animation: whatsappTooltipFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: 2.5s; /* Aparece 2.5 segundos después de cargar la web */
+    animation-delay: 2.5s;
+    /* Aparece 2.5 segundos después de cargar la web */
 }
 
 .whatsapp-tooltip-box p {
@@ -1681,6 +1624,7 @@ a, button, .thumb-item, .material-nav-card {
         transform: scale(1);
         opacity: 0.4;
     }
+
     100% {
         transform: scale(1.4);
         opacity: 0;
@@ -1700,20 +1644,288 @@ a, button, .thumb-item, .material-nav-card {
         bottom: 20px;
         right: 20px;
     }
+
     .whatsapp-main-button {
         width: 52px;
         height: 52px;
     }
+
     .whatsapp-svg-icon {
         width: 28px;
         height: 28px;
     }
+
     /* En teléfonos pequeños ocultamos la burbuja de texto para que no tape la pantalla */
     .whatsapp-tooltip-box {
         display: none;
     }
 }
 
+/* Nuevo Botón Flotante Premium */
+.btn-trigger-modal-premium {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Efecto Esmerilado (Glassmorphism) */
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #ffffff;
+    padding: 10px 18px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 5;
+}
+
+/* Comportamiento al pasar el cursor (Hover) */
+.btn-trigger-modal-premium:hover {
+    background: var(--esip-orange, #f26522);
+    border-color: var(--esip-orange, #f26522);
+    box-shadow: 0 6px 16px rgba(242, 101, 34, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Efecto de clic pulsado (Active) */
+.btn-trigger-modal-premium:active {
+    transform: translateY(0);
+}
+
+/* Animación del Icono SVG Cúbico */
+.icon-3d {
+    transition: transform 0.3s ease;
+}
+
+.btn-trigger-modal-premium:hover .icon-3d {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Asegurar que el contenedor padre no corte el botón */
+.main-gallery-display {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estructura Base del Modal */
+.custom-specs-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    display: none;
+    /* Controlado por JS */
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-specs-modal.modal-active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.modal-window-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón de Cierre */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #f1f5f9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #64748b;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.modal-close-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Layout en Dos Columnas */
+.modal-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+/* Columna Izquierda (3D) */
+.modal-left-3d-pane {
+    background: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+}
+
+.modal-left-3d-pane model-viewer {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.pane-title-tag {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+/* Columna Derecha (Especificaciones) */
+.modal-right-specs-pane {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.modal-right-specs-pane h4 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--esip-orange, #f26522);
+    padding-bottom: 10px;
+}
+
+.specs-table-container {
+    flex-grow: 1;
+}
+
+.technical-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.technical-data-table th {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.technical-data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13.5px;
+    color: #475569;
+}
+
+.technical-data-table tr:hover td {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.technical-data-table td:first-child {
+    font-weight: 700;
+    color: #334155;
+    width: 40%;
+}
+
+/* Ajustes de Galería Sin 3D de fondo */
+.gallery-thumbnails-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumb-item {
+    width: 70px;
+    height: 50px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.thumb-item.active {
+    border-color: var(--esip-orange, #f26522);
+}
+
+/* Responsivo para el Modal */
+@media (max-width: 868px) {
+    .modal-split-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .modal-window-wrapper {
+        height: 90vh;
+    }
+
+    .modal-left-3d-pane {
+        padding: 20px;
+        height: 300px;
+    }
+
+    .modal-left-3d-pane model-viewer {
+        min-height: auto;
+    }
+
+    .modal-right-specs-pane {
+        padding: 20px;
+    }
+}
 
 /* ==========================================================================
    ANUNCIO DE PRIMERAZO (WELCOME MODAL OVERLAY)
@@ -1724,20 +1936,24 @@ a, button, .thumb-item, .material-nav-card {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(15, 23, 42, 0.7); /* Fondo oscuro semitransparente */
-    backdrop-filter: blur(12px); /* Desenfoque premium del fondo */
+    background-color: rgba(15, 23, 42, 0.7);
+    /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(12px);
+    /* Desenfoque premium del fondo */
     -webkit-backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100000; /* Por encima de absolutamente todo, incluido WhatsApp */
+    z-index: 100000;
+    /* Por encima de absolutamente todo, incluido WhatsApp */
     opacity: 1;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 /* Tarjeta del anuncio */
 .announcement-card {
-    background-color: #0c1a13; /* Verde ultra oscuro industrial */
+    background-color: #0c1a13;
+    /* Verde ultra oscuro industrial */
     /* OPCIÓN CON IMÁGENES: Si quieres usar una imagen de fondo, descomenta la línea de abajo y ajusta la ruta */
     /* background-image: linear-gradient(to right, rgba(12,26,19,0.95) 40%, rgba(12,26,19,0.4)), url('img/tu-fondo-industrial.jpg'); */
     background-size: cover;
@@ -1745,7 +1961,8 @@ a, button, .thumb-item, .material-nav-card {
     width: 90%;
     max-width: 680px;
     border-radius: 16px;
-    border: 1px solid rgba(242, 101, 34, 0.3); /* Sutil borde con tu naranja corporativo */
+    border: 1px solid rgba(242, 101, 34, 0.3);
+    /* Sutil borde con tu naranja corporativo */
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(242, 101, 34, 0.1);
     overflow: hidden;
@@ -1781,7 +1998,8 @@ a, button, .thumb-item, .material-nav-card {
 
 .announcement-badge {
     background: rgba(242, 101, 34, 0.15);
-    color: #f26522; /* Tu naranja */
+    color: #f26522;
+    /* Tu naranja */
     font-size: 11px;
     font-weight: 700;
     padding: 6px 12px;
@@ -1801,7 +2019,8 @@ a, button, .thumb-item, .material-nav-card {
 }
 
 .announcement-header h1 span {
-    color: #008f53; /* Tu verde brillante */
+    color: #008f53;
+    /* Tu verde brillante */
     font-weight: 800;
 }
 
@@ -1888,6 +2107,7 @@ a, button, .thumb-item, .material-nav-card {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -1896,9 +2116,27 @@ a, button, .thumb-item, .material-nav-card {
 
 /* RESPONSIVE PARA MÓVILES */
 @media (max-width: 480px) {
-    .announcement-body-content { padding: 40px 24px; }
-    .announcement-header h2 { font-size: 24px; }
-    .announcement-description { font-size: 14px; }
-    .announcement-actions-flex { flex-direction: column; align-items: flex-start; gap: 16px; width: 100%; }
-    .btn-announcement-primary { width: 100%; justify-content: center; }
+    .announcement-body-content {
+        padding: 40px 24px;
+    }
+
+    .announcement-header h2 {
+        font-size: 24px;
+    }
+
+    .announcement-description {
+        font-size: 14px;
+    }
+
+    .announcement-actions-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .btn-announcement-primary {
+        width: 100%;
+        justify-content: center;
+    }
 }
