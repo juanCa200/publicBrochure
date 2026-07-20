@@ -42,6 +42,31 @@ body {
     cursor: crosshair;
 }
 
+.cursor-glow{
+    position: fixed;
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,0,0,.18) 0%,
+        rgba(255,0,0,.08) 40%,
+        transparent 75%
+    );
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    filter: blur(50px);
+
+    z-index: 0;
+
+    transition: transform .08s linear;
+}
+
 a,
 button,
 .thumb-item,
@@ -2139,4 +2164,80 @@ button,
         width: 100%;
         justify-content: center;
     }
+}
+
+.comparador-section {
+    padding: 60px 10%;
+    background: #f9f9f9;
+}
+
+.tabla-esip {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+.tabla-esip th, .tabla-esip td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.tabla-esip th {
+    background: #005433; /* Color corporativo */
+    color: white;
+}
+
+.hidden { display: none; }
+
+
+
+.technical-data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.technical-data-table tbody tr:hover {
+    background-color: rgba(255, 204, 0, 0.2); /* Color de resaltado */
+    color: var(--esip-orange);
+}
+
+
+
+.footer-industrial-heavy {
+    background: #1e252b; /* Acero oscuro */
+    color: #cbd5e0;
+    padding: 60px 5%;
+    border-top: 5px solid #2d3748; /* Línea de borde pesada */
+    font-family: 'Courier New', monospace; /* Estilo terminal/técnico */
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    border-bottom: 1px solid #4a5568;
+    padding-bottom: 40px;
+}
+
+.box-spec {
+    border: 1px solid #4a5568;
+    padding: 20px;
+    background: #252d35;
+}
+
+.box-spec h5 {
+    color: #ff9f43; /* Naranja industrial para contraste */
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #4a5568;
+    padding-bottom: 10px;
+}
+
+.footer-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 0.7rem;
 }

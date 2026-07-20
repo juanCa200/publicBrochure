@@ -101,16 +101,40 @@ function closeAnnouncement() {
 // Base de datos relacional para rellenar la tabla del modal dinámicamente
 const databaseEspecificaciones = {
     'mat-weco': {
-        titulo: "Tubería WECO® Diseño Integral",
-        tabla: [
-            { propiedad: "Presión de Trabajo (CWP)", valor: "6,000 a 20,000 PSI" },
-            { propiedad: "Construcción", valor: "Forjada de Una Sola Pieza (Integral)" },
-            { propiedad: "Extremos Disponibles", valor: "Tuerca Aleteada Weco Retirable" },
-            { propiedad: "Diámetros Nominales", valor: "1”, 1-1/2 Rastros, 2”, 3”, 4”" },
-            { propiedad: "Tipo de Servicio", valor: "Estándar y Gas Agrio (NACE MR-01-75)" },
-            { propiedad: "Longitudes Estándar", valor: "Desde 1 pie hasta 20 pies" }
-        ]
-    },
+    titulo: "Tubería WECO® Diseño Integral",
+    tabla: [
+        { 
+            propiedad: "Presión de Trabajo (CWP)", 
+            valor: "6,000 a 20,000 PSI", 
+            posicion: "0m 0m 0m" // Centro general
+        },
+        { 
+            propiedad: "Construcción", 
+            valor: "Forjada de Una Sola Pieza (Integral)", 
+            posicion: "0m 0.5m 0m" // Parte superior del cuerpo
+        },
+        { 
+            propiedad: "Extremos Disponibles", 
+            valor: "Tuerca Aleteada Weco Retirable", 
+            posicion: "0m -0.8m 0m" // Extremo inferior (Tuerca)
+        },
+        { 
+            propiedad: "Diámetros Nominales", 
+            valor: "1”, 1-1/2”, 2”, 3”, 4”", 
+            posicion: "0m 0m 0m" 
+        },
+        { 
+            propiedad: "Tipo de Servicio", 
+            valor: "Estándar y Gas Agrio (NACE MR-01-75)", 
+            posicion: "0m 0m 0m" 
+        },
+        { 
+            propiedad: "Longitudes Estándar", 
+            valor: "Desde 1 pie hasta 20 pies", 
+            posicion: "0m 0m 0m" 
+        }
+    ]
+},
     'mat-coflexip': {
         titulo: "Tubería Weco® Diseño NPST®",
         tabla: [
@@ -237,50 +261,39 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
     const tableBody = document.getElementById('modalSpecsTableBody');
     const contenedorVisor = document.getElementById('contenedorVisor3D');
 
-    contenedorVisor.innerHTML = '<span class="pane-title-tag">VISTA INTERACTIVA 3D</span>';
-
+    contenedorVisor.innerHTML = '';
     const datos = databaseEspecificaciones[keyDatabase];
-    if (datos) {
-        title.innerText = datos.titulo;
-        tableBody.innerHTML = "";
-        datos.tabla.forEach(fila => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${fila.propiedad}</td><td>${fila.valor}</td>`;
-            tableBody.appendChild(tr);
-        });
-    }
-
-    modal.classList.add('modal-active');
-
-    // --- NUEVO: Configuración del Visor 3D con AR ---
+    
+    // Crear el visor 3D
     const nuevoViewer = document.createElement('model-viewer');
     nuevoViewer.id = "modalViewer3D";
     nuevoViewer.src = glbUrl;
-
-    // Atributos de visualización
     nuevoViewer.setAttribute('camera-controls', '');
     nuevoViewer.setAttribute('auto-rotate', 'true');
-    nuevoViewer.setAttribute('interaction-prompt', 'none');
-    nuevoViewer.setAttribute('shadow-intensity', '1');
-    nuevoViewer.setAttribute('bounds', 'tight');
-
-    // Atributos de Realidad Aumentada
-    nuevoViewer.setAttribute('ar', ''); // Habilita AR
-    nuevoViewer.setAttribute('ar-modes', 'webxr scene-viewer quick-look'); // Compatibilidad total
-    nuevoViewer.setAttribute('xr-environment', ''); // Mejora la iluminación en AR
-
-    // Creamos el botón personalizado de AR dentro del visor
-    const arButton = document.createElement('button');
-    arButton.slot = "ar-button";
-    arButton.innerText = "Ver en Realidad Aumentada";
-    arButton.style.cssText = "background: var(--esip-orange); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; position: absolute; bottom: 20px; left: 20px;";
-    nuevoViewer.appendChild(arButton);
-
     nuevoViewer.style.width = "100%";
     nuevoViewer.style.height = "100%";
-    nuevoViewer.style.display = "block";
-
     contenedorVisor.appendChild(nuevoViewer);
+
+    if (datos) {
+        title.innerText = datos.titulo;
+        tableBody.innerHTML = "";
+        
+        datos.tabla.forEach(fila => {
+            const tr = document.createElement('tr');
+            tr.style.cursor = "pointer"; // Indica que es clickeable
+            tr.innerHTML = `<td>${fila.propiedad}</td><td>${fila.valor}</td>`;
+            
+            // Lógica de clic: mover cámara al target definido
+            tr.onclick = () => {
+                if (fila.posicion) {
+                    nuevoViewer.cameraTarget = fila.posicion;
+                    nuevoViewer.cameraOrbit = "45deg 55deg 2m"; // Ajusta la distancia (2m) según tu modelo
+                }
+            };
+            tableBody.appendChild(tr);
+        });
+    }
+    modal.classList.add('modal-active');
 }
 
 function cerrarModal3DSpecs() {
@@ -321,3 +334,22 @@ window.onclick = (event) => {
         event.target.style.display = 'none';
     }
 }
+
+
+
+window.addEventListener("click", function(event){
+
+    const modal1 = document.getElementById("modalQuienes");
+    if(event.target === modal1){
+        cerrarModal();
+    }
+
+    const modal2 = document.getElementById("modal-quienes-somos");
+    if(event.target === modal2){
+        modal2.style.display="none";
+    }
+
+});
+
+
+
