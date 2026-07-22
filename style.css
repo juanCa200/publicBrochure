@@ -32,39 +32,13 @@ html {
     overflow-y: auto;
     background-color: #ffffff;
     font-family: var(--font-premium);
-    cursor: crosshair;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    cursor: crosshair;
-}
 
-.cursor-glow{
-    position: fixed;
-    width: 300px;
-    height: 300px;
-
-    border-radius: 50%;
-
-    background: radial-gradient(
-        circle,
-        rgba(255,0,0,.18) 0%,
-        rgba(255,0,0,.08) 40%,
-        transparent 75%
-    );
-
-    pointer-events: none;
-
-    transform: translate(-50%, -50%);
-
-    filter: blur(50px);
-
-    z-index: 0;
-
-    transition: transform .08s linear;
 }
 
 a,
@@ -2204,40 +2178,473 @@ button,
 
 
 
-.footer-industrial-heavy {
-    background: #1e252b; /* Acero oscuro */
-    color: #cbd5e0;
-    padding: 60px 5%;
-    border-top: 5px solid #2d3748; /* Línea de borde pesada */
-    font-family: 'Courier New', monospace; /* Estilo terminal/técnico */
-}
 
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    border-bottom: 1px solid #4a5568;
-    padding-bottom: 40px;
+/* Bandeja Flotante Inferior */
+.comparison-tray {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111827;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: bottom 0.3s ease-in-out;
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
 }
-
-.box-spec {
-    border: 1px solid #4a5568;
-    padding: 20px;
-    background: #252d35;
+.comparison-tray:not(.hidden) {
+    bottom: 25px;
 }
-
-.box-spec h5 {
-    color: #ff9f43; /* Naranja industrial para contraste */
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #4a5568;
-    padding-bottom: 10px;
-}
-
-.footer-footer {
+.tray-content {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    font-size: 0.7rem;
+    align-items: center;
+    gap: 15px;
+}
+.btn-compare-action {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.btn-compare-action:disabled {
+    background: #4b5563;
+    cursor: not-allowed;
+}
+.btn-tray-close {
+    background: transparent;
+    color: #9ca3af;
+    border: none;
+    cursor: pointer;
+}
+.hidden { display: none !important; }
+
+/* Modal de Comparación */
+.comparison-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.comparison-modal-container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    border-radius: 16px;
+    overflow-y: auto;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+.comparison-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+.btn-close-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4b5563;
+}
+/* Estilo de la tabla comparativa */
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.compare-table th, .compare-table td {
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 14px;
+}
+.compare-table th {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+/* ==========================================
+   PALETA ESTRICTA: #00331e, #f26522, Blanco
+   ========================================== */
+
+/* --- BOTÓN DE AÑADIR A COMPARAR (EN LAS TARJETAS) --- */
+.btn-toggle-compare {
+    background-color: #ffffff;
+    color: #00331e;
+    border: 2px solid #00331e;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Efecto al pasar el mouse por encima */
+.btn-toggle-compare:hover {
+    background-color: #00331e;
+    color: #ffffff;
+}
+
+/* Estado cuando el producto YA está seleccionado (activado por JavaScript) */
+.btn-toggle-compare.active {
+    background-color: #f26522;
+    color: #ffffff;
+    border-color: #f26522;
+}
+
+.btn-toggle-compare.active:hover {
+    background-color: #d8571b;
+    border-color: #d8571b;
+}
+
+/* --- 1. BANDEJA FLOTANTE DE COMPARACIÓN --- */
+.comparison-tray {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    color: #00331e;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: 2px solid #00331e;
+    box-shadow: 0 15px 35px rgba(0, 51, 30, 0.15);
+    transition: bottom 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    width: 90%;
+    max-width: 550px;
+}
+.comparison-tray:not(.hidden) {
+    bottom: 30px;
+}
+.tray-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.tray-info {
+    color: #00331e;
+    font-weight: 600;
+    font-size: 14px;
+}
+#selectedCount {
+    color: #f26522;
+    font-weight: 800;
+}
+.btn-compare-action {
+    background: #00331e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.btn-compare-action:hover {
+    background: #f26522;
+}
+.btn-compare-action:disabled {
+    background: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+.btn-tray-close {
+    background: transparent;
+    color: #00331e;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+.hidden { display: none !important; }
+
+/* Modal del Comparador */
+.comparison-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 51, 30, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.comparison-modal-container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 950px;
+    max-height: 85vh;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    overflow-y: auto;
+    padding: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.comparison-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f26522;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.comparison-modal-header h3 {
+    color: #00331e;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+.btn-close-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00331e;
+}
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.compare-table th, .compare-table td {
+    padding: 14px 18px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 14px;
+}
+.compare-table th {
+    background: #00331e;
+    color: #ffffff;
+    font-weight: 700;
+}
+.compare-table td {
+    background: #ffffff;
+    color: #00331e;
+}
+.compare-table td strong {
+    color: #00331e;
+    font-weight: 700;
+}
+
+
+---
+
+/* --- 2. FOOTER ELEGANTE Y PROFESIONAL --- */
+
+.industrial-footer {
+    background-color: #ffffff;
+    color: #00331e;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 4px solid #00331e;
+}
+
+/* Franja Superior CTA */
+.footer-top-cta {
+    background: #00331e;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+.footer-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-cta-text h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.footer-cta-text p {
+    color: #ffffff;
+    opacity: 0.9;
+    margin: 0;
+    font-size: 15px;
+}
+.btn-footer-cta {
+    background: #f26522;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-footer-cta:hover {
+    background: #d8571b;
+    transform: translateY(-2px);
+}
+
+/* Contenido Principal del Footer */
+.footer-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 40px 20px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+.footer-col h4 {
+    color: #00331e;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 3px;
+    background-color: #f26522;
+}
+.brand-col .footer-logo h2 {
+    color: #00331e;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+.brand-col .footer-logo span {
+    color: #f26522;
+}
+.footer-brand-desc {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #374151;
+}
+.footer-social-icons {
+    display: flex;
+    gap: 12px;
+}
+.footer-social-icons a {
+    background: #f3f4f6;
+    color: #00331e;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+.footer-social-icons a:hover {
+    background: #f26522;
+    color: #ffffff;
+}
+
+/* Enlaces y Listas del Footer */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
+.footer-links a, .footer-links span {
+    color: #374151;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 13px;
+    font-weight: 500;
+}
+.footer-links a:hover {
+    color: #f26522;
+    font-weight: 700;
+}
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #374151;
+}
+.footer-contact-info svg {
+    color: #f26522;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* Barra Inferior */
+.footer-bottom-bar {
+    border-top: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    padding: 20px 0;
+}
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+    color: #4b5563;
+}
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+.footer-bottom-links a {
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-bottom-links a:hover {
+    color: #f26522;
+}
+
+@media (max-width: 768px) {
+    .footer-cta-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-bottom-links {
+        justify-content: center;
+    }
 }

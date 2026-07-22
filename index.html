@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
         rel="stylesheet">
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 </head>
 
 <body>
@@ -459,29 +459,43 @@
                 <div class="filter-pill" onclick="filterCat('manguera_metalicas', event)">Mangueras Metalicas</div>
                 <div class="filter-pill" onclick="filterCat('manguera_coflexip', event)">Mangueras Coflexip</div>
                 <div class="filter-pill" onclick="filterCat('valvulas_tapon', event)">Válvulas de Tapon</div>
-                <div class="filter-pill" onclick="filterCat('valvulas', event)">Válvulas de Retención</div>
+                <div class="filter-pill" onclick="filterCat('valvulas_retencion', event)">Válvulas de Retención</div>
 
 
             </div>
 
             <div class="materials-grid-container">
-                <div class="material-nav-card active" data-target="mat-weco" data-cat="tuberia"
+                <div class="material-nav-card active" data-target="mat-tuberias-main" data-cat="tuberia"
                     onclick="switchMaterial(this)">
                     <div class="card-num-badge">01</div>
+                    <div class="card-meta-info">
+                        <h4>Tuberias (Pup Joints Weco® – Straight Joints Weco®)</h4>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-weco" data-cat="tuberia" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">02</div>
                     <div class="card-meta-info">
                         <h4>Tubería WECO Diseño Integral</h4>
                     </div>
                 </div>
-                <div class="material-nav-card" data-target="mat-coflexip" data-cat="tuberia"
+                <div class="material-nav-card" data-target="mat-npst" data-cat="tuberia"
                     onclick="switchMaterial(this)">
-                    <div class="card-num-badge">02</div>
+                    <div class="card-num-badge">03</div>
                     <div class="card-meta-info">
                         <h4>Tuberia Weco Diseño NPST</h4>
                     </div>
                 </div>
+                <div class="material-nav-card" data-target="mat-juntasGiratorias-main" data-cat="giratorias"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">04</div>
+                    <div class="card-meta-info">
+                        <h4>Juntas Giratorias (Swivel Joint - Chiksan Weco®)</h4>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
                 <div class="material-nav-card" data-target="mat-valves200" data-cat="giratorias"
                     onclick="switchMaterial(this)">
-                    <div class="card-num-badge">03</div>
+                    <div class="card-num-badge">05</div>
                     <div class="card-meta-info">
                         <h4>Juntas Giratorias Modelo LS</h4>
                         <p>Lorem Ipsum</p>
@@ -489,31 +503,55 @@
                 </div>
                 <div class="material-nav-card" data-target="mat-choke300" data-cat="giratorias"
                     onclick="switchMaterial(this)">
-                    <div class="card-num-badge">04</div>
+                    <div class="card-num-badge">06</div>
                     <div class="card-meta-info">
                         <h4>Juntas Giratorias Modelo Tsi</h4>
                         <p>Lorem Ipsun</p>
                     </div>
                 </div>
+                <div class="material-nav-card" data-target="mat-manguerasMetalicas-main" data-cat="manguera_metalicas"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">07</div>
+                    <div class="card-meta-info">
+                        <h4>Manguera Metálica de Cementación y Circulación(C&C Hose Weco®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
                 <div class="material-nav-card" data-target="mat-manguerametalica" data-cat="manguera_metalicas"
                     onclick="switchMaterial(this)">
-                    <div class="card-num-badge">05</div>
+                    <div class="card-num-badge">08</div>
                     <div class="card-meta-info">
                         <h4>Manguera Metalica Modelos LS Weco® y Tsi Weco®</h4>
                         <p>Lorem Ipsun</p>
                     </div>
                 </div>
+                <div class="material-nav-card" data-target="mat-coflexip-main" data-cat="manguera_coflexip"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">09</div>
+                    <div class="card-meta-info">
+                        <h4>Mangueras Coflexip® DIFERENTES MODELOS </h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
                 <div class="material-nav-card" data-target="mat-coflexip-manguera" data-cat="manguera_coflexip"
                     onclick="switchMaterial(this)">
-                    <div class="card-num-badge">06</div>
+                    <div class="card-num-badge">10</div>
                     <div class="card-meta-info">
                         <h4>Manguera Coflexip</h4>
                         <p>Lorem Ipsun</p>
                     </div>
                 </div>
+                <div class="material-nav-card" data-target="mat-valvulaTapon-main" data-cat="valvulas_tapon"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">11</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula de Tapón(Plug Valve Weco®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
                 <div class="material-nav-card" data-target="mat-valvula-tapon" data-cat="valvulas_tapon"
                     onclick="switchMaterial(this)">
-                    <div class="card-num-badge">07</div>
+                    <div class="card-num-badge">12</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Tapon Modelo ULT</h4>
                         <p>Lorem Ipsun</p>
@@ -521,9 +559,41 @@
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-tapon-dr" data-cat="valvulas_tapon"
                     onclick="switchMaterial(this)">
-                    <div class="card-num-badge">08</div>
+                    <div class="card-num-badge">13</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Tapon Modelo DR</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvulaRetencion-main" data-cat="valvulas_retencion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">14</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula de Retención(Check Valve Weco®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-retencion-veleta" data-cat="valvulas_retencion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">15</div>
+                    <div class="card-meta-info">
+                        <h4>Valvula de Retención Diseño Veleta</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-retencion-entrada-superior" data-cat="valvulas_retencion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">16</div>
+                    <div class="card-meta-info">
+                        <h4>Valvula de Retención Veleta con Entrada Superior</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-retencion-dardo" data-cat="valvulas_retencion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">17</div>
+                    <div class="card-meta-info">
+                        <h4>Valvula de Retención Dardo Weco</h4>
                         <p>Lorem Ipsun</p>
                     </div>
                 </div>
@@ -531,12 +601,64 @@
         </div>
         <div class="dashboard-viewer-canvas">
 
+            <!--PRINCIPAL TUBERIAS -->
+            <div id="mat-tuberias-main" class="spec-sheet-container active-sheet">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Tubería <span>(Pup Joints Weco® – Straight Joints Weco®)</span></h3>
+                        <p>Líneas de Tratamiento de Flujo de Alta Presión para Operaciones de Servicio a Pozos
+                            Petroleros y de Gas</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/TuberiaWecoIntegral.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción e Información General basada en la imagen -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La Tubería (Pup Joints / Straight Joints Weco®) de Alta Presión es utilizada en Líneas de
+                            Tratamiento de Flujo de Alta Presión aplicables en Operaciones de Servicio a Pozos
+                            Petroleros y de Gas con Diseño de Conexión Temporal (Tuerca Aleteada WECO).</p>
+                        <p style="margin-top: 10px;"><strong>Disponible en Dos Diseños:</strong></p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 8px;">❑ <strong>Diseño INTEGRAL Weco®:</strong> El Cuerpo del Tubo
+                                y sus Extremos de Conexión Forjados a partir de una sola pieza.</li>
+                            <li>❑ <strong>Diseño NPST Weco®:</strong> Los Extremos de Conexión son Roscados al Tubo.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las dos fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-weco')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Tubería WECO Integral (Pág. 8)
+                    </button>
+                </div>
+            </div>
+
             <!-- FICHA 01: TUBERÍA WECO (CON GALERÍA) -->
-            <div id="mat-weco" class="spec-sheet-container active-sheet">
+            <div id="mat-weco" class="spec-sheet-container">
                 <header class="sheet-header">
                     <div class="sheet-title-area">
                         <h3>TUBERÍA <span>WECO® Integral</span></h3>
-                        <p>El Cuerpo del Tubo y sus Extremos de Conexión Forjados a partir de una sola pieza</p>
+                        <p>El Cuerpo del Tubo y sus Extremos de Conexión Forjados a Partir de Una Sola Pieza</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 8</span>
                 </header>
@@ -567,6 +689,11 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-weco', 'Tubería WECO Integral', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
 
                     <!-- Miniaturas -->
@@ -584,34 +711,31 @@
                             onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80')">
                         </div>
                     </div>
-
-                    <div class="style-labels-flex">
-                        <div class="style-pill-box"><strong>Estilo 50-10</strong>Cinco Juntas de Giro / Mayor
-                            Flexibilidad</div>
-                        <div class="style-pill-box"><strong>Estilo 50-50</strong>Cuatro Juntas de Giro Rígidas</div>
-                    </div>
                 </div>
 
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
-                        <p>• 1”, 1-1/2”, 2”, 3”, 4”</p>
+                        <p>1", 1-1/2", 2", 3", 4"</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Longitudes</h5>
-                        <p>• De 1 a 20 pies</p>
+                        <p>De 1 a 20 pies</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Tipos de Servicio</h5>
-                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br>Gas Agrio (NACE – API
+                            MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar:</span> 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio:</span> 10000, 15000 CWP
+                        </p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Extremos de Conexión</h5>
-                        <p>• Tuerca Aleteada Weco Retirable</p>
+                        <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
@@ -620,16 +744,25 @@
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Procesos de Alta Presión y Muy Abrasivos</p>
+                        <p>Procesos de Alta Presión y Muy Abrasivos</p>
                     </div>
+                </div>
+
+                <!-- Botones de navegación corregidos para no encimarse -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-npst')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Tubería Weco Diseño NPST (Pág. 6)
+                    </button>
                 </div>
             </div>
 
             <!-- FICHA 02: Tuberia Weco NPST (CON GALERÍA) -->
-            <div id="mat-coflexip" class="spec-sheet-container">
+            <div id="mat-npst" class="spec-sheet-container">
                 <header class="sheet-header">
                     <div class="sheet-title-area">
-                        <h3>Tuberia Weco<span>Diseño NPST®</span></h3>
+                        <h3>Tuberia Weco <span>Diseño NPST®</span></h3>
                         <p>Los Extremos de Conexión son Roscados al Tubo</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 6</span>
@@ -642,7 +775,7 @@
 
                         <!-- BOTÓN FLOTANTE PREMIUM REUBICADO -->
                         <button class="btn-trigger-modal-premium"
-                            onclick="abrirModal3DSpecs('img/tuberia-optimized.glb', 'mat-coflexip')">
+                            onclick="abrirModal3DSpecs('img/tuberia-optimized.glb', 'mat-npst')">
                             <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -652,6 +785,11 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-npst', 'Tuberia Weco Diseño NPST', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
 
@@ -675,23 +813,26 @@
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
-                        <p>• 1”, 1-1/2”, 2”, 3”, 4”</p>
+                        <p>1", 1-1/2", 2", 3", 4"</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Longitudes</h5>
-                        <p>• De 1 a 20 pies</p>
+                        <p>De 1 a 20 pies</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Tipos de Servicio</h5>
-                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br>Gas Agrio (NACE – API
+                            MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar:</span> 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio:</span> 10000, 15000 CWP
+                        </p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Extremos de Conexión</h5>
-                        <p>• Tuorca Aleteada Weco No Retirable</p>
+                        <p>Tuerca Aleteada Weco No Retirable</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
@@ -700,8 +841,62 @@
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Procesos de Alta Presión No Tan Críticos</p>
+                        <p>Procesos de Alta Presión No Tan Críticos</p>
                     </div>
+                </div>
+            </div>
+
+            <!--PRINCIPAL JUNTAS GIRATORIAS-->
+            <div id="mat-juntasGiratorias-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Junta Giratoria <span>(Swivel Joint - Chiksan Weco®)</span></h3>
+                        <p>Equipo de Acoplamiento Mecánico de Alta Ingeniería utilizado en Líneas de Tratamiento de
+                            Flujo de Alta Presión</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/juntasGiratorias.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción e Información General basada en la imagen -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La Junta Giratoria (Swivel Joint Weco®) es un Equipo de Acoplamiento Mecánico de Alta
+                            Ingeniería utilizado en Líneas de Tratamiento de Flujo de Alta Presión en la Industria de
+                            Petróleo y Gas. Proporciona Flexibilidad de Conexión y Libertad de Rotación de 360 grados en
+                            la Línea de Flujo, así como el Tránsito Continuo y sin Fugas de los mismos.</p>
+                        <p style="margin-top: 10px;"><strong>Disponible en Dos Modelos:</strong></p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 8px;">❑ <strong>Modelo LS (LongSweep) Weco®:</strong> Diseño de
+                                Articulaciones Convencionales con Codos de Barrido Largo para Tamaño de Líneas de 2"
+                            </li>
+                            <li>❑ <strong>Modelo TSi (Triple Step) Weco®:</strong> Diseño Cónico Patentado de las
+                                Articulaciones con Codos de Barrido Largo para Tamaños de Líneas de 3" y 4"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas de Juntas Giratorias -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valves200')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Modelo LS (LongSweep)
+                    </button>
                 </div>
             </div>
 
@@ -709,8 +904,8 @@
             <div id="mat-valves200" class="spec-sheet-container">
                 <header class="sheet-header">
                     <div class="sheet-title-area">
-                        <h3>JUNTAS GIRATORIAS <span>Modelo LS</span></h3>
-                        <p>Diseño de bajo torque con rodamiento de doble hilera para servicio pesado</p>
+                        <h3>Junta Giratoria <span>(Swivel Joint)</span></h3>
+                        <p>Características Generales del Modelo LS</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 12</span>
                 </header>
@@ -760,32 +955,44 @@
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
-                        <p>• 1” hasta 4” (Flujo Completo)</p>
+                        <p>2"</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Estilos Disponibles</h5>
-                        <p>• Estilos 10, 20, 30, 40, 50, 60, 70, 80</p>
+                        <h5>Estilos</h5>
+                        <p>10, 20, 30, 40, 50, 60, 70, 80, 100</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Tipo de Servicio</h5>
-                        <p>• Estándar e Hidrógeno Sulfurado (Gas Agrio)</p>
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• Hasta 15,000 CWP (Cold Working Pressure)</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar:</span> 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio:</span> 10000, 15000 CWP
+                        </p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Empaquetadura</h5>
-                        <p>• Elastómero energizado con anillo de respaldo metálico</p>
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Cualidades Clave</h5>
-                        <p>• Rotación suave de 360 grados<br>• Pistas de rodamiento endurecidas por inducción</p>
+                        <h5>Otras Cualidades</h5>
+                        <p>• Configuración Convencional de Tres Pistas de Balines<br>• Codos de Barrido Largo para
+                            Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Durable y de
+                            Funcionamiento Confiable</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Líneas de cementación, fracturamiento y pruebas de pozos</p>
+                        <p>Diversos Procesos No Críticos</p>
                     </div>
+                </div>
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-choke300')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Modelo TSI (Triple Step)
+                    </button>
                 </div>
             </div>
 
@@ -793,20 +1000,28 @@
             <div id="mat-choke300" class="spec-sheet-container">
                 <header class="sheet-header">
                     <div class="sheet-title-area">
-                        <h3>JUNTAS GIRATORIAS <span>Modelo Tsi</span></h3>
-                        <p>Tecnología de sellado superior para aislamiento total contra fluidos corrosivos</p>
+                        <h3>Junta Giratoria <span>MODELO TSI</span></h3>
+                        <p>Características Generales del Modelo TSi</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 14</span>
                 </header>
 
                 <div class="sheet-visual-showcase gallery-mode">
                     <!-- Contenedor de la imagen principal con botón flotante premium -->
-                    <div class="main-gallery-display"
-                        style="background-image: url('https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=800&q=80'); width:100%; height:320px; background-size: cover; background-position: center; border-radius:12px; transition: background-image 0.3s ease; position: relative;">
+                    <div class="main-gallery-display" style="background-image: url('img/juntaGiratoria2.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
 
                         <!-- BOTÓN FLOTANTE PREMIUM REUBICADO -->
                         <button class="btn-trigger-modal-premium"
-                            onclick="abrirModal3DSpecs('img/junta-tsi-placeholder.glb', 'mat-choke300')">
+                            onclick="abrirModal3DSpecs('img/juntaGiratoriaTSI.glb', 'mat-choke300')">
                             <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -836,32 +1051,91 @@
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
-                        <p>• 2”, 3” y 4”</p>
+                        <p>3", 4"</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Diseño de Cámara</h5>
-                        <p>• Cojinetes aislados para evitar la entrada de arena y lodos</p>
+                        <h5>Estilos</h5>
+                        <p>10, 20, 30, 40, 50, 60, 70, 80, 100</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Tipo de Servicio</h5>
-                        <p>• Crítico / Altamente Corrosivo y Abrasivo</p>
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• 10,000 a 20,000 PSI CWP</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar:</span> 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio:</span> 10000, 15000 CWP
+                        </p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Extremos</h5>
-                        <p>• Unión Weco Integral o Extremos Bridados</p>
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Mantenimiento</h5>
-                        <p>• Puertos de engrase externos para lubricación rápida en campo</p>
+                        <h5>Otras Cualidades</h5>
+                        <p>• Diseño Cónico Patentado de Gran Grosor de Pistas de Balines<br>• Pistas de Balines
+                            Altamente Resistentes a la Corrosión<br>• Codos de Barrido Largo para Minimizar
+                            Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Mayor Capacidad de Carga en
+                            las Juntas de Giro<br>• Mayor Durabilidad y Funcionamiento Confiable y Seguro</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Distribución de manifold de lodos y perforación direccional de alta exigencia</p>
+                        <p>Procesos de Alta Presión y Abrasivos</p>
                     </div>
+                </div>
+            </div>
+
+            <!--PRINCIPAL MANGUERAS METALICAS-->
+            <div id="mat-manguerasMetalicas-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Manguera Metálica de Cementación y Circulación <span>(C&C Hose Weco®)</span></h3>
+                        <p>Equipo Utilizado en Líneas de Tratamiento de Flujo de Alta Presión en Operaciones de Servicio
+                            a Pozos Petroleros y de Gas</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/MangueraMetalica.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción e Información General basada en la imagen -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La Manguera de Cementación y Circulación (C&C Hoses Weco®) es un Equipo utilizado en Líneas
+                            de Tratamiento de Flujo de Alta Presión en Operaciones de Servicio a Pozos Petroleros y de
+                            Gas. Consta de Secciones Articuladas de Tubería de Acero unidas mediante Juntas Giratorias
+                            que proporcionan Flexibilidad y Resistencia Estructural a Presiones Extremas.</p>
+                        <p style="margin-top: 10px;"><strong>Disponible en Dos Estilos Modelos y Estilos:</strong></p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 8px;">❑ <strong>Modelo LS (LongSweep Weco®)</strong> Estilo 50-50
+                                y 50-10 para Tamaño de Líneas de 2"</li>
+                            <li>❑ <strong>Modelo TSi (Triple Step Weco®)</strong> Estilo 50-50 y 50-10 para Tamaños de
+                                Líneas de 3" y 4"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-manguerametalica')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Modelo LS y TSI
+                    </button>
                 </div>
             </div>
 
@@ -870,7 +1144,7 @@
                 <header class="sheet-header">
                     <div class="sheet-title-area">
                         <h3>LOOPS <span>Modelos LS Weco® y Tsi Weco®</span></h3>
-                        <p>Líneas de manguera metálica configuradas para alta flexibilidad y resistencia en campo</p>
+                        <p>Características Generales</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 16</span>
                 </header>
@@ -907,7 +1181,7 @@
                     <div class="gallery-thumbnails-grid">
                         <div class="thumb-item active"
                             style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=200&q=80');"
-                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1541888946425-d81tdb19240f5?auto=format&fit=crop&w=800&q=80')">
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80')">
                         </div>
                         <div class="thumb-item"
                             style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=200&q=80');"
@@ -921,9 +1195,10 @@
 
                     <!-- Píldoras informativas de estilo extraídas de la imagen -->
                     <div class="style-labels-flex">
-                        <div class="style-pill-box"><strong>Estilo 50-10</strong>Cinco Juntas de Giro / Mayor
-                            Flexibilidad de Conexión</div>
-                        <div class="style-pill-box"><strong>Estilo 50-50</strong>Cuatro Juntas de Giro</div>
+                        <div class="style-pill-box"><strong style="color: #e53e3e;">Estilo 50-10</strong> (Cinco Juntas
+                            de Giro / Mayor Flexibilidad de Conexión)</div>
+                        <div class="style-pill-box"><strong style="color: #e53e3e;">Estilo 50-50</strong> (Cuatro Juntas
+                            de Giro)</div>
                     </div>
                 </div>
 
@@ -931,32 +1206,158 @@
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
-                        <p>• Diseño LS en 2”<br>• Diseño TSi en 3”, 4”</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Diseño LS</span> en 2” / <span
+                                style="color: #e53e3e; font-weight: bold;">Diseño TSi</span> en 3”, 4”</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Estilos</h5>
-                        <p>• 50-10, 50-50</p>
+                        <p>50-10, 50-50</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Tipos de Servicio</h5>
-                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar:</span> 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio:</span> 10000, 15000 CWP
+                        </p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Extremos de Conexión</h5>
-                        <p>• Tuerca Aleteada Weco Retirable</p>
+                        <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
-                        <p>• Muy Durable y de Funcionamiento Confiable y Seguro</p>
+                        <p>Muy Durable y de Funcionamiento Confiable y Seguro</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Procesos de Alta Presión y Abrasivos</p>
+                        <p>Procesos de Alta Presión y Abrasivos</p>
                     </div>
+                </div>
+            </div>
+
+            <!--PRINCIPAL MANGUERAS COFLEXIP-->
+            <div id="mat-coflexip-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Mangueras Coflexip®</h3>
+                        <p>Dispositivos de transporte de fluidos a presiones y temperaturas extremadamente altas</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/manguerasCoflexipPrincipal.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General con estilo moderno -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>Las Mangueras Coflexip consisten en dispositivos de transporte de fluidos a presiones y
+                            temperaturas extremadamente altas y en condiciones críticas de operación dentro de la
+                            industria petrolera y de gas. Actúan como líneas de flujo flexibles y seguras donde las
+                            tuberías rígidas fallarían debido al movimiento, la vibración o las dificultades geométricas
+                            de instalación. Combinan la resistencia a la presión y durabilidad de los tubos rígidos de
+                            acero con la maniobrabilidad de las mangueras de caucho debido a su robusta estructura
+                            multicapa.</p>
+                    </div>
+                </div>
+
+                <!-- Sección Interactiva de Tipos de Líneas (Organizadas en Grid con diseño de tarjetas modernas) -->
+                <div style="margin-bottom: 20px;">
+                    <h4 style="font-size: 1rem; color: #2d3748; margin-bottom: 12px; font-weight: 600;">Líneas según la
+                        temperatura operativa y aplicación:</h4>
+                    <div class="sheet-features-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
+
+                        <!-- Tarjeta 1 -->
+                        <div class="spec-block-card"
+                            style="transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 4px solid #3182ce;"
+                            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h5 style="color: #2b6cb0; display: flex; align-items: center; gap: 6px;">
+                                <span>❑</span> Líneas Rilsan® Estándar
+                            </h5>
+                            <p style="font-size: 0.9rem; color: #4a5568; margin-top: 6px;">Utilizan una capa interna de
+                                poliamida (Rilsan). Son ideales para fluidos estándar en rangos normales de temperatura.
+                            </p>
+                        </div>
+
+                        <!-- Tarjeta 2 -->
+                        <div class="spec-block-card"
+                            style="transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 4px solid #dd6b20;"
+                            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h5 style="color: #c05621; display: flex; align-items: center; gap: 6px;">
+                                <span>❑</span> Líneas High Temperature Co-flon®
+                            </h5>
+                            <p style="font-size: 0.9rem; color: #4a5568; margin-top: 6px;">Diseñadas con una capa
+                                interna de fluoropolímero patentado para soportar temperaturas más elevadas.</p>
+                        </div>
+
+                        <!-- Tarjeta 3 -->
+                        <div class="spec-block-card"
+                            style="transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 4px solid #e53e3e;"
+                            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h5 style="color: #c53030; display: flex; align-items: center; gap: 6px;">
+                                <span>❑</span> Líneas Choke & Kill Lines (API 16C)
+                            </h5>
+                            <p style="font-size: 0.9rem; color: #4a5568; margin-top: 6px;">Mangueras blindadas y
+                                específicamente diseñadas para el control de brotes en el pozo petrolero (well control)
+                                conectadas al manifold.</p>
+                        </div>
+
+                        <!-- Tarjeta 4 -->
+                        <div class="spec-block-card"
+                            style="transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 4px solid #38a169;"
+                            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h5 style="color: #2f855a; display: flex; align-items: center; gap: 6px;">
+                                <span>❑</span> Líneas de Prueba de Pozos (Well Testing)
+                            </h5>
+                            <p style="font-size: 0.9rem; color: #4a5568; margin-top: 6px;">Utilizadas para conectar el
+                                árbol de prueba superficial hacia las líneas de flujo fijas a presiones de hasta 10,000
+                                y 15,000 psi.</p>
+                        </div>
+
+                        <!-- Tarjeta 5 -->
+                        <div class="spec-block-card"
+                            style="transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 4px solid #805ad5; grid-column: 1 / -1;"
+                            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h5 style="color: #6b46c1; display: flex; align-items: center; gap: 6px;">
+                                <span>❑</span> Líneas de Refinería e Industriales
+                            </h5>
+                            <p style="font-size: 0.9rem; color: #4a5568; margin-top: 6px;">Modelos especiales de baja
+                                presión para drenajes internos de tanques de techo flotante (Drain Pipes), skimmers y
+                                sistemas de espuma contra incendios.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-coflexip-manguera')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Especificaciones Detalladas Coflexip
+                    </button>
                 </div>
             </div>
 
@@ -965,7 +1366,7 @@
                 <header class="sheet-header">
                     <div class="sheet-title-area">
                         <h3>MANGUERAS <span>Coflexip®</span></h3>
-                        <p>Líneas flexibles de alta ingeniería para operaciones críticas de estrangulación y ahogo</p>
+                        <p>Características Generales</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 18</span>
                 </header>
@@ -1011,19 +1412,20 @@
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Diámetros Internos (ID)</h5>
-                        <p>• 2”, 3”, 4” (Comúnmente utilizados)</p>
+                        <p>2”, 3”, 4” (Comúnmente utilizados)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Longitudes (Pies)</h5>
-                        <p>• 19’, 40’, 55’, 67’ y Mayores (Prefabricadas)</p>
+                        <p>19’, 40’, 55’, 67’ y Mayores (Prefabricadas)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Tipos de Servicio</h5>
-                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• 5000, 10000, 15000, 20000 CWP</p>
+                        <p>5000, 10000, 15000, 20000 CWP</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Extremos de Conexión</h5>
@@ -1049,12 +1451,68 @@
                 </div>
             </div>
 
+            <!--PRINCIPAL VALVULA DE TAPON-->
+            <div id="mat-valvulaTapon-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Válvula de Tapón <span>(Plug Valve Weco®)</span></h3>
+                        <p>Dispositivo utilizado en Líneas de Tratamiento de Flujo de Alta Presión en la Industria de
+                            Petróleo y Gas</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaTapon.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La Válvula de Tapón (Plug Valve Weco®) es un Dispositivo utilizado en Líneas de Tratamiento
+                            de Flujo de Alta Presión en la Industria de Petróleo y Gas. La Válvula de Tapón está
+                            diseñada para proveer Operación ON/FF (Apertura y Sello) en Líneas Principales y en
+                            Dispositivos Manifolds a través de su funcionamiento de Un Cuarto de Vuelta del Tapón.</p>
+                        <p style="margin-top: 10px;">Es ampliamente utilizada en procesos muy exigentes como
+                            Cementación, Fractura Hidráulica, Acidificación y Control de Arena.</p>
+                        <p style="margin-top: 10px;"><strong>Se encuentra disponible en Dos Modelos:</strong></p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 8px;">❑ <strong>Modelo ULT (Ultimate Weco®)</strong>: Diseño de
+                                Última Generación y de Alta Gama con respecto a las Válvulas Tradicionales y de Larga
+                                Vida Útil.</li>
+                            <li>❑ <strong>Modelo DR (Dual Repair Weco®)</strong>: Diseño Tradicional, Muy Confiable en
+                                Procesos Estándar de Alta Presión.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-tapon')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Modelos ULT
+                    </button>
+                </div>
+            </div>
+
             <!-- FICHA 07: VÁLVULA DE TAPÓN MODELO ULT WECO® -->
             <div id="mat-valvula-tapon" class="spec-sheet-container">
                 <header class="sheet-header">
                     <div class="sheet-title-area">
                         <h3>VÁLVULA DE TAPÓN ULT <span>Modelo ULT Weco®</span></h3>
-                        <p>Tecnología de última generación para procesos de alta presión y abrasión</p>
+                        <p>Características Generales</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 19</span>
                 </header>
@@ -1084,35 +1542,60 @@
                         Ver en 3D e Interactuar
                     </button>
                 </div>
+                <div class="gallery-thumbnails-grid">
+                    <div class="thumb-item active"
+                        style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=200&q=80');"
+                        onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                    <div class="thumb-item"
+                        style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=200&q=80');"
+                        onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                    <div class="thumb-item"
+                        style="background-image: url('https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=200&q=80');"
+                        onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                </div>
 
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
-                        <p>• 2”x1”, 2”x2”, 3”, 4”</p>
+                        <p>2“x1”, 2”x2”, 3”, 4”</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Tipos de Servicio</h5>
-                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 10000, 15000 CWP
+                        </p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Extremos de Conexión</h5>
-                        <p>• Tuerca Aleteada Weco Retirable</p>
+                        <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
                         <p>• Última Generación en Válvulas de Tapón<br>• Reduce el Torque de Operación a cualquier
                             Presión<br>• Posee Configuración Patentada de Tapón Flotante y Sello Dual con Carga
-                            Distribuida de manera Uniforme<br>• Muy Durable, Larga Vida Útil y de Funcionamiento
+                            Distribuida de manera Unifome<br>• Muy Durable, Larga Vida Útil y de Funcionamiento
                             Confiable y Seguro</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Procesos de Fractura, de Cementación y Altamente Abrasivos</p>
+                        <p>Procesos de Fractura, de Cementación y Altamente Abrasivos</p>
                     </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-tapon-dr')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Modelos DR
+                    </button>
                 </div>
             </div>
 
@@ -1121,7 +1604,7 @@
                 <header class="sheet-header">
                     <div class="sheet-title-area">
                         <h3>VÁLVULA DE TAPÓN <span>Modelo DR Weco®</span></h3>
-                        <p>Tecnología de Doble Reparación para alta presión</p>
+                        <p>Características Generales</p>
                     </div>
                     <span class="sheet-tag-pill">PÁGINA 19</span>
                 </header>
@@ -1150,33 +1633,322 @@
                             Ver en 3D e Interactuar
                         </button>
                     </div>
+                    <div class="gallery-thumbnails-grid">
+                        <div class="thumb-item active"
+                            style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="thumb-item"
+                            style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="thumb-item"
+                            style="background-image: url('https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=200&q=80');"
+                            onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
-                        <p>• 2”, 3”</p>
+                        <p>2”, 3”</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Tipos de Servicio</h5>
-                        <p>• Estándar<br>• Gas Agrio (NACE – API MR-01-75)</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Rangos de Presión</h5>
-                        <p>• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP</p>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 10000, 15000 CWP
+                        </p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Extremos de Conexión</h5>
-                        <p>• Tuerca Aleteada Weco Retirable</p>
+                        <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
-                        <p>• Provee Sello Dual Convencional a través de Configuración Simétrica de sus Componentes<br>•
-                            Funcionamiento Confiable y Seguro</p>
+                        <p>• Provee Sello Dual Convencional a través de la Configuración Simétrica de sus Componentes
+                            Internos<br>• Funcionamiento Confiable y Seguro</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Diversos Procesos Estándar de Alta Presión</p>
+                        <p>Diversos Procesos Estándar de Alta Presión</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--PRINCIPAL VALVULA DE RETENCION-->
+            <div id="mat-valvulaRetencion-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Válvula de Retención <span>(Check Valve Weco®)</span></h3>
+                        <p>Diseñada para aplicaciones de alta presión, garantiza el flujo unidireccional del fluido,
+                            previniendo automáticamente el reﬂujo.</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaRetencion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La Válvula de Retención (Check Valve Weco®) diseñada para aplicaciones de alta presión,
+                            garantiza el flujo unidireccional del fluido, previniendo automáticamente el reflujo. Actúa
+                            como una barrera mecánica autoaccionada, por lo que responde instantáneamente a los cambios
+                            de presión.</p>
+                        <p style="margin-top: 10px;">Según su mecanismo de sello, aplicabilidad y facilidad de
+                            mantenimiento, se clasifican en los siguientes diseños:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 6px;">❑ Veleta Convencional</li>
+                            <li style="margin-bottom: 6px;">❑ Veleta con Entrada Superior</li>
+                            <li>❑ Dardo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-retencion-veleta')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Válvula de Veleta Convecional
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 09: VÁLVULA DE RETENCIÓN DISEÑO VELETA CONVENCIONAL -->
+            <div id="mat-valvula-retencion-veleta" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>VÁLVULA DE RETENCIÓN <span>Diseño Veleta Convencional</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 20</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaRetencion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/ValvulaRetencion.glb', 'mat-valvula-retencion-veleta')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 10000, 15000 CWP
+                        </p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Empleada en el Manejo de Fluidos Viscosos<br>• Disco Articulado Tradicional (Veleta) que se
+                            abre con el flujo y se cierra por gravedad o contrapresión.<br>• La Superficie de la Veleta
+                            de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión.</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Servicios Abrasivos de Alto Volumen, como Fractura Hidráulica, Bombeo de Arena y Lechada de
+                            Cemento</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-retencion-entrada-superior')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Válvula de Veleta Superior
+                    </button>
+                </div>
+            </div>
+            <!-- FICHA 010: VÁLVULA DE RETENCIÓN DISEÑO VELETA CON ENTRADA SUPERIOR -->
+            <div id="mat-valvula-retencion-entrada-superior" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>VÁLVULA DE RETENCIÓN <span>Veleta con Entrada Superior Weco®</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 10</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/veletaSuperior.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/veletaSuperior.glb', 'mat-valvula-retencion-entrada-superior')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 10000, 15000 CWP
+                        </p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Empleada en el Manejo de Fluidos Viscosos<br>• Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión.<br>• La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión.<br>• Fácil Mantenimiento sin Necesidad de Desmonte de la Línea<br>• Larga Vida Útil Operativa</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Operaciones de Fractura, Estimulación de Alta Presión y Altamente Abrasivos y Severos</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-retencion-dardo')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Válvula De Dardo Weco
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 011: VÁLVULA DE RETENCIÓN DISEÑO DARDO WECO -->
+            <div id="mat-valvula-retencion-dardo" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>VÁLVULA DE RETENCIÓN <span>Dardo Weco®</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 11</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaRetencionDardo.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaRetencionDardo.glb', 'mat-valvula-retencion-dardo')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 10000, 15000 CWP
+                        </p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Utilizado para el Manejo de Fluidos Gaseosos<br>• Emplea un Émbolo de Movimiento Lineal ("Dardo") en lugar de una Aleta Oscilante como Elemento Obstructivo<br>• Resiste la Descompresión Explosiva y los Flujos de Gas de Alta Velocidad<br>• Funcionamiento Confiable y Seguro</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Control de Gases Extremos como Nitrógeno (N2), Dióxido de Carbono (CO2)<br>• Flujos Gaseosos Secos o Húmedos No Erosivos de Alta Velocidad</p>
                     </div>
                 </div>
             </div>
@@ -1212,6 +1984,33 @@
         </div>
     </section>
 
+    <!-- BANDEJA FLOTANTE DE COMPARACIÓN -->
+    <div id="comparisonTray" class="comparison-tray hidden">
+        <div class="tray-content">
+            <div class="tray-info">
+                <span id="selectedCount">0</span> de 2 productos seleccionados para comparar
+            </div>
+            <div class="tray-actions">
+                <button id="btnCompareNow" class="btn-compare-action" onclick="openComparisonModal()" disabled>Comparar
+                    Ahora</button>
+                <button class="btn-tray-close" onclick="clearComparison()">Limpiar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DEL COMPARADOR TÉCNICO -->
+    <div id="comparisonModal" class="comparison-modal-overlay hidden">
+        <div class="comparison-modal-container">
+            <header class="comparison-modal-header">
+                <h3>Comparativa Técnica de Materiales</h3>
+                <button class="btn-close-modal" onclick="closeComparisonModal()">&times;</button>
+            </header>
+            <div class="comparison-body" id="comparisonTableContent">
+                <!-- La tabla se inyectará dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
     <div class="whatsapp-floating-container">
         <div class="whatsapp-tooltip-box">
             <span class="tooltip-status-dot"></span>
@@ -1228,6 +2027,118 @@
         </a>
     </div>
 
+
+    <!-- FOOTER INDUSTRIAL PROFESIONAL -->
+    <footer class="industrial-footer">
+        <div class="footer-top-cta">
+            <div class="footer-cta-container">
+                <div class="footer-cta-text">
+                    <h3>¿Requiere una solución o cotización a la medida?</h3>
+                    <p>Nuestro equipo técnico y de ingeniería está listo para asesorarle en proyectos de alta presión y
+                        servicio crítico.</p>
+                </div>
+                <a href="#contacto" class="btn-footer-cta">
+                    Contactar a Ingeniería
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-main-content">
+            <div class="footer-grid">
+                <!-- Columna 1: Marca y Descripción -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <h2>ESIP <span>Industrial</span></h2>
+                    </div>
+                    <p class="footer-brand-desc">
+                        Especialistas en componentes de alta presión, uniones y sistemas flexibles para la industria
+                        petrolera y de perforación bajo los más altos estándares internacionales.
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg></a>
+                        <a href="#" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg></a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos del Catálogo -->
+                <div class="footer-col">
+                    <h4>Catálogo Técnico</h4>
+                    <ul class="footer-links">
+                        <li><a href="#catalogo" onclick="filterCat('tuberia', event)">Tubería Weco</a></li>
+                        <li><a href="#catalogo" onclick="filterCat('giratorias', event)">Juntas Giratorias</a></li>
+                        <li><a href="#catalogo" onclick="filterCat('manguera_metalicas', event)">Mangueras Metálicas</a>
+                        </li>
+                        <li><a href="#catalogo" onclick="filterCat('manguera_coflexip', event)">Mangueras Coflexip</a>
+                        </li>
+                        <li><a href="#catalogo" onclick="filterCat('valvulas_tapon', event)">Válvulas de Tapón</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Normativas y Estándares -->
+                <div class="footer-col">
+                    <h4>Calidad y Normas</h4>
+                    <ul class="footer-links">
+                        <li><span>API MR-01-75 (Gas Agrio)</span></li>
+                        <li><span>Certificación NACE</span></li>
+                        <li><span>Presiones CWP Verificadas</span></li>
+                        <li><span>Manufactura Forjada Integral</span></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto Rápido -->
+                <div class="footer-col">
+                    <h4>Contacto de Campo</h4>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Colombia</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>ventas@esip-industrial.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra Inferior de Copyright -->
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 ESIP Industrial. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
