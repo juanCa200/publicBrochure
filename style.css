@@ -1,22 +1,12 @@
 :root {
     --esip-green-dark: #00331e;
-    --esip-green: #005433;
+    --esip-green: #01A84B;
     --esip-green-light: #008f4c;
     --esip-orange: #f26522;
     --esip-orange-dark: #d44d0e;
     --gray-dark: #1a202c;
     --gray-muted: #718096;
     --font-premium: 'Montserrat', sans-serif;
-
-    --esip-green-dark: #00331e;
-    --esip-green: #005433;
-    --esip-green-light: #008f4c;
-    --esip-orange: #f26522;
-    --esip-orange-dark: #d44d0e;
-    --gray-bg: #f8fafc;
-    --gray-dark: #1a202c;
-    --gray-muted: #718096;
-    --border-color: #e2e8f0;
 }
 
 * {
@@ -2647,4 +2637,122 @@ button,
     .footer-bottom-links {
         justify-content: center;
     }
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 99999;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+/* Contenedor para escalar el iframe de YouTube a pantalla completa */
+.video-container-iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* Relación de aspecto 16:9 (100 * 9 / 16) */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Relación 16:9 inversa */
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Evita que el usuario haga clic en el video y lo abra en YouTube */
+}
+
+.video-container-iframe iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.skip-video-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 100000;
+    pointer-events: auto; /* Permite hacer clic en el botón de omitir */
+}
+
+.skip-video-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.corporate-identity .corporate-logo-img {
+    width: 100% !important;
+    max-width: 200px !important; /* Prueba subiendo este valor poco a poco (ej. 450px o 600px) */
+    height: auto !important;
+    object-path: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Forzamos también al contenedor contenedor para que no restrinja el ancho */
+.corporate-identity .logo-wrapper-svg {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Estilo del botón de coordenada / estrella en el 3D */
+.hotspot-punto {
+    background: #01A84B; /* Color verde corporativo */
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
+}
+
+.hotspot-punto:hover {
+    transform: scale(1.2);
+    background: #ea580c; /* Cambia a naranja ESIP al pasar el cursor */
+}
+
+.punto-star {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* Tooltip flotante que muestra el tamaño */
+.hotspot-tooltip {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.hotspot-punto:hover .hotspot-tooltip {
+    opacity: 1;
 }

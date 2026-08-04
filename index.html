@@ -17,42 +17,51 @@
 
 <body>
 
-    <div id="welcome-announcement-overlay" class="announcement-overlay">
-        <div class="announcement-card">
-
-            <button class="close-announcement-btn" onclick="closeAnnouncement()">&times;</button>
-
-            <div class="announcement-body-content">
-                <header class="announcement-header">
-                    <span class="announcement-badge">NUEVO LANZAMIENTO</span>
-                    <h1>ESIP S.A.S. </h1>
-                    <h2>Evolución Digital en Equipos de Alta Presión</h2>
-                </header>
-
-                <div class="announcement-divider"></div>
-
-                <p class="announcement-description">
-                    Bienvenido a nuestra plataforma interactiva. Hemos digitalizado todo nuestro portafolio técnico para
-                    que cotices, explores dimensiones, capacidades de PSI y especificaciones API / NACE en tiempo real y
-                    a un solo clic.
-                </p>
-
-                <div class="announcement-actions-flex">
-                    <button class="btn-announcement-primary" onclick="closeAnnouncement()">
-                        <span>EXPLORAR BROCHURE</span>
-                        <svg viewBox="0 0 24 24" class="btn-arrow-icon">
-                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" />
-                        </svg>
-                    </button>
-                    <a href="URL_DE_TU_PDF_SI_TIENES_UNO" target="_blank" class="btn-announcement-secondary">
-                        Descargar PDF Estático
-                    </a>
-                </div>
-            </div>
-
+    <!-- Video de YouTube en pantalla completa -->
+    <div id="intro-video-overlay" class="video-overlay">
+        <div class="video-container-iframe">
+            <iframe
+                src="https://www.youtube.com/embed/tF5EzkG6TDI?autoplay=1&mute=1&controls=0&loop=1&playlist=tF5EzkG6TDI&disablekb=1&modestbranding=1&iv_load_policy=3"
+                title="Intro 3D" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
         </div>
+        <button class="skip-video-btn" onclick="cerrarVideoIntro()">Omitir intro &times;</button>
     </div>
 
+    <!--
+    <div id="welcome-announcement-overlay" class="announcement-overlay">
+    <div class="announcement-card">
+
+        <button class="close-announcement-btn" onclick="closeAnnouncement()">&times;</button>
+
+        <div class="announcement-body-content">
+            <header class="announcement-header">
+                <h1>ESIP S.A.S.</h1>
+                <h2>Catálogo Digital e Industrial</h2>
+            </header>
+
+            <div class="announcement-divider"></div>
+
+            <p class="announcement-description">
+                Bienvenido a nuestro portal. Explora nuestro portafolio de equipos, especificaciones técnicas y cotiza de forma rápida y sencilla.
+            </p>
+
+            <div class="announcement-actions-flex">
+                <button class="btn-announcement-primary" onclick="closeAnnouncement()">
+                    <span>ENTRAR AL CATÁLOGO</span>
+                    <svg viewBox="0 0 24 24" class="btn-arrow-icon">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                </button>
+                <a href="URL_DE_TU_PDF_SI_TIENES_UNO" target="_blank" class="btn-announcement-secondary">
+                    Descargar PDF
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+-->
     <main class="split-creative-viewport">
 
         <section class="visual-canvas">
@@ -64,32 +73,28 @@
 
                 <div class="editorial-panel panel-alpha tech-layer" data-speed="-3">
                     <div class="panel-window">
-                        <div class="panel-img"
-                            style="background-image: url('https://images.unsplash.com/photo-1518745994840-d5ea9bdcc6a5?auto=format&fit=crop&w=600&q=80');">
+                        <div class="panel-img" style="background-image: url('img/portadabrochure.jpg');">
                         </div>
                     </div>
                 </div>
 
                 <div class="editorial-panel panel-beta tech-layer" data-speed="2">
                     <div class="panel-window">
-                        <div class="panel-img"
-                            style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80');">
+                        <div class="panel-img" style="background-image: url('img/portadaBrochure2.jpg');">
                         </div>
                     </div>
                 </div>
 
                 <div class="editorial-panel panel-prime tech-layer" data-speed="-5">
                     <div class="panel-window highlighted-orange-frame">
-                        <div class="panel-img"
-                            style="background-image: url('https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?auto=format&fit=crop&w=600&q=80');">
+                        <div class="panel-img" style="background-image: url('img/portadaBrochure3.jpg');">
                         </div>
                     </div>
                 </div>
 
                 <div class="editorial-panel panel-gamma tech-layer" data-speed="4">
                     <div class="panel-window">
-                        <div class="panel-img"
-                            style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80');">
+                        <div class="panel-img" style="background-image: url('img/portadaBrochure4.png');">
                         </div>
                     </div>
                 </div>
@@ -101,20 +106,12 @@
 
             <header class="corporate-identity">
                 <div class="brand-flex-align">
-                    <div class="logo-wrapper-svg">
-                        <svg viewBox="0 0 100 100" class="derrick-logo-vector">
-                            <polygon points="50,6 16,95 84,95" fill="none" stroke="#005433" stroke-width="7" />
-                            <line x1="50" y1="6" x2="50" y2="95" stroke="#005433" stroke-width="5" />
-                            <line x1="33" y1="51" x2="67" y2="51" stroke="#005433" stroke-width="4" />
-                            <line x1="24" y1="75" x2="76" y2="75" stroke="#005433" stroke-width="4" />
-                            <path d="M50,6 Q58,0 54,-10 Q50,6 46,-10 Q50,6 50,6" fill="#005433" />
-                        </svg>
-                        <span class="logo-text-a">A</span>
+                    <!-- Quitamos la clase restrictiva y usamos un contenedor limpio con estilo directo -->
+                    <div style="width: 100%; max-width: 450px; margin: 0 auto; display: flex; justify-content: center;">
+                        <img src="img/logo.png" alt="ESIP S.A.S. - Equipos y Servicios Integrados Petroleros"
+                            style="width: 100%; height: auto; object-fit: contain; display: block;">
                     </div>
-                    <span class="brand-name-main">ESIP</span>
                 </div>
-                <p class="brand-subtext">EQUIPOS Y SERVICIOS INTEGRADOS PETROLEROS S.A.S.</p>
-                <p class="brand-nit">NIT: 901.268.080-7</p>
             </header>
 
             <div class="marketing-titles">
@@ -460,6 +457,15 @@
                 <div class="filter-pill" onclick="filterCat('manguera_coflexip', event)">Mangueras Coflexip</div>
                 <div class="filter-pill" onclick="filterCat('valvulas_tapon', event)">Válvulas de Tapon</div>
                 <div class="filter-pill" onclick="filterCat('valvulas_retencion', event)">Válvulas de Retención</div>
+                <div class="filter-pill" onclick="filterCat('valvulas_presion', event)">Válvulas de Alivio de Presión
+                </div>
+                <div class="filter-pill" onclick="filterCat('valvulas_estrangulacion', event)"> Válvulas de
+                    Estrangulación</div>
+                <div class="filter-pill" onclick="filterCat('valvulas_mariposa', event)">Válvulas Mariposa</div>
+                <div class="filter-pill" onclick="filterCat('accesorios_conexion', event)">Accesorios de Conexión</div>
+                <div class="filter-pill" onclick="filterCat('adaptadores_conexion', event)">Adaptadores de Conexión
+                </div>
+
 
 
             </div>
@@ -478,8 +484,7 @@
                         <h4>Tubería WECO Diseño Integral</h4>
                     </div>
                 </div>
-                <div class="material-nav-card" data-target="mat-npst" data-cat="tuberia"
-                    onclick="switchMaterial(this)">
+                <div class="material-nav-card" data-target="mat-npst" data-cat="tuberia" onclick="switchMaterial(this)">
                     <div class="card-num-badge">03</div>
                     <div class="card-meta-info">
                         <h4>Tuberia Weco Diseño NPST</h4>
@@ -581,8 +586,8 @@
                         <p>Lorem Ipsun</p>
                     </div>
                 </div>
-                <div class="material-nav-card" data-target="mat-valvula-retencion-entrada-superior" data-cat="valvulas_retencion"
-                    onclick="switchMaterial(this)">
+                <div class="material-nav-card" data-target="mat-valvula-retencion-entrada-superior"
+                    data-cat="valvulas_retencion" onclick="switchMaterial(this)">
                     <div class="card-num-badge">16</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Retención Veleta con Entrada Superior</h4>
@@ -597,6 +602,236 @@
                         <p>Lorem Ipsun</p>
                     </div>
                 </div>
+                <div class="material-nav-card" data-target="mat-valvulaAlivio-main" data-cat="valvulas_presion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">18</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula de Alivio de Presión(Pressure Releif Valve Weco®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-alivio-mecanica" data-cat="valvulas_presion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">19</div>
+                    <div class="card-meta-info">
+                        <h4>Diseño Mecánico Estándar de Acción Directa</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-alivio-electronica" data-cat="valvulas_presion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">20</div>
+                    <div class="card-meta-info">
+                        <h4>Diseño Electrónico (ePRV Weco®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvulaEstrangulacion-main"
+                    data-cat="valvulas_estrangulacion" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">21</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula de Estrangulación de Flujo(Throttle Choke Valve Weco®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-estrangulador-fijo" data-cat="valvulas_estrangulacion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">22</div>
+                    <div class="card-meta-info">
+                        <h4>Estrangulador Fijo(Positive Choke Weco® de Producción y Control)Serie 200P</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-estrangulador-ajustable"
+                    data-cat="valvulas_estrangulacion" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">23</div>
+                    <div class="card-meta-info">
+                        <h4>Estrangulador Ajustable(Adjustable Choke Weco®)Serie 200N</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvulaEstrangulacionRegulacion-main"
+                    data-cat="valvulas_estrangulacion" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">24</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula de Estrangulación y Regulación(Throttle Choke Valve®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-estrangulacion-regulacion"
+                    data-cat="valvulas_estrangulacion" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">25</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula de Estrangulación y Regulación(Throttle Choke Valve®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-adaptadorEstrangulacion-main"
+                    data-cat="valvulas_estrangulacion" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">26</div>
+                    <div class="card-meta-info">
+                        <h4>Principal Adaptador de Estrangulación(Choke Saver®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-adaptador-estrangulacion"
+                    data-cat="valvulas_estrangulacion" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">27</div>
+                    <div class="card-meta-info">
+                        <h4>Adaptador de Estrangulación(Choke Saver®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvulaMariposa-main" data-cat="valvulas_mariposa"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">28</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula Mariposa(Butterfly Valve Weco®)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-12" data-cat="valvulas_mariposa"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">29</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula Mariposa (Modelo 12)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-12n"
+                    data-cat="valvulas_mariposa" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">30</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula Mariposa(Modelo 12N)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-22" data-cat="valvulas_mariposa"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">31</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula Mariposa (Modelo 22)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+                <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-22l"
+                    data-cat="valvulas_mariposa" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">32</div>
+                    <div class="card-meta-info">
+                        <h4>Válvula Mariposa(Modelo 22L)</h4>
+                        <p>Lorem Ipsun</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-opciones-accionamiento-mariposa"
+                    data-cat="valvulas_mariposa" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">33</div>
+                    <div class="card-meta-info">
+                        <h4>Opciones de Accionamiento y Operación</h4>
+                        <p>Configuración y Sistemas de Accionamiento</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-diseno-engranaje-helicoidal"
+                    data-cat="valvulas_mariposa" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">34</div>
+                    <div class="card-meta-info">
+                        <h4>Diseño de Engranaje Helicoidal</h4>
+                        <p>Resistente a la intemperie Modelo 22L</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-actuador-veleta-modelo-200" data-cat="valvulas_mariposa"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">35</div>
+                    <div class="card-meta-info">
+                        <h4>Actuador de Veleta Modelo 200</h4>
+                        <p>Modelo 22L</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-actuador-neumatico-doble-accion"
+                    data-cat="valvulas_mariposa" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">36</div>
+                    <div class="card-meta-info">
+                        <h4>Actuador Neumático Doble Acción</h4>
+                        <p>Con retorno por resorte Modelo 22L</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-manija-estandar-weco" data-cat="valvulas_mariposa"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">37</div>
+                    <div class="card-meta-info">
+                        <h4>Manija Estándar</h4>
+                        <p>Modelo 22L</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-palanca-regulacion-weco" data-cat="valvulas_mariposa"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">38</div>
+                    <div class="card-meta-info">
+                        <h4>Palanca de Regulación</h4>
+                        <p>Modelo 22L</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-fittings-weco-main" data-cat="accesorios_conexion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">39</div>
+                    <div class="card-meta-info">
+                        <h4>Accesorios de Conexión(Fittings Weco®)</h4>
+                        <p>Loremm ipsum</p>
+                    </div>
+                </div>
+
+
+                <div class="material-nav-card" data-target="mat-accesorios-conexion-weco" data-cat="accesorios_conexion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">40</div>
+                    <div class="card-meta-info">
+                        <h4> Caracteristicas Accesorios de Conexión</h4>
+                        <p>Loremm ipsum</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-adaptadores-main" data-cat="adaptadores_conexion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">41</div>
+                    <div class="card-meta-info">
+                        <h4>Adaptadores(Crossovers & Changeovers)</h4>
+                        <p>Lorem Ipsum </p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-crossover" data-cat="adaptadores_conexion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">42</div>
+                    <div class="card-meta-info">
+                        <h4>Crossovers (X-Overs)</h4>
+                        <p>Loremp Ipsum</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-changeover" data-cat="adaptadores_conexion"
+                    onclick="switchMaterial(this)">
+                    <div class="card-num-badge">43</div>
+                    <div class="card-meta-info">
+                        <h4>Changeovers (X-Overs)</h4>
+                        <p>Loremp Ipsum</p>
+                    </div>
+                </div>
+
+                <div class="material-nav-card" data-target="mat-disenos-comunes-adaptadores"
+                    data-cat="adaptadores_conexion" onclick="switchMaterial(this)">
+                    <div class="card-num-badge">44</div>
+                    <div class="card-meta-info">
+                        <h4>Diseños Comúnes</h4>
+                        <p>Loremp Ipsum</p>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="dashboard-viewer-canvas">
@@ -738,7 +973,7 @@
                         <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Tuerca Aleteada Weco Retirable<br>• Manufactura Integral Forjada de Una Sola Pieza<br>• Muy
                             Durable y de Funcionamiento Confiable y Seguro</p>
                     </div>
@@ -835,7 +1070,7 @@
                         <p>Tuerca Aleteada Weco No Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Tuerca Aleteada Weco No Retirable<br>• Manufactura Compuesta No Integral<br>• Peso Ligero y
                             Precio Económico</p>
                     </div>
@@ -977,7 +1212,7 @@
                         <p>Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Configuración Convencional de Tres Pistas de Balines<br>• Codos de Barrido Largo para
                             Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Durable y de
                             Funcionamiento Confiable</p>
@@ -1073,7 +1308,7 @@
                         <p>Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Diseño Cónico Patentado de Gran Grosor de Pistas de Balines<br>• Pistas de Balines
                             Altamente Resistentes a la Corrosión<br>• Codos de Barrido Largo para Minimizar
                             Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Mayor Capacidad de Carga en
@@ -1229,7 +1464,7 @@
                         <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>Muy Durable y de Funcionamiento Confiable y Seguro</p>
                     </div>
                     <div class="spec-block-card">
@@ -1432,7 +1667,7 @@
                         <p>• Conexión Bridada API<br>• Conexión Roscada API<br>• Unión de Golpe (Weco)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Presenta estructura multicapa robusta<br>• Resistente a presiones y temperaturas
                             extremas<br>• Su cubierta exterior termoplástica le ofrece alta protección química, térmica
                             y contra el gas agrio<br>• No se expande, no se contrae, ni sufre latigazos ("patadas") al
@@ -1473,8 +1708,22 @@
             background-color: #ffffff; 
             border-radius: 12px; 
             position: relative;">
+
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaTaponULT.glb', 'mat-valvula-tapon')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
                     </div>
                 </div>
+
 
                 <!-- Sección de Descripción General -->
                 <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
@@ -1517,7 +1766,7 @@
                     <span class="sheet-tag-pill">PÁGINA 19</span>
                 </header>
 
-                <div class="main-gallery-display" style="background-image: url('img/ValvulaTapon.png'); 
+                <div class="main-gallery-display" style="background-image: url('img/ULTWecoTipo.png'); 
             width: 100%; 
             height: 320px; 
             background-size: contain; 
@@ -1530,7 +1779,7 @@
 
                     <!-- BOTÓN FLOTANTE PREMIUM -->
                     <button class="btn-trigger-modal-premium"
-                        onclick="abrirModal3DSpecs('img/valvulaTaponULT.glb', 'mat-valvula-tapon')">
+                        onclick="abrirModal3DSpecs('img/wecoULTipos.glb', 'mat-valvula-tapon')">
                         <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
@@ -1578,7 +1827,7 @@
                         <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Última Generación en Válvulas de Tapón<br>• Reduce el Torque de Operación a cualquier
                             Presión<br>• Posee Configuración Patentada de Tapón Flotante y Sello Dual con Carga
                             Distribuida de manera Unifome<br>• Muy Durable, Larga Vida Útil y de Funcionamiento
@@ -1610,7 +1859,7 @@
                 </header>
 
                 <div class="sheet-visual-showcase gallery-mode">
-                    <div class="main-gallery-display" style="background-image: url('img/valvulaTaponDR.png'); 
+                    <div class="main-gallery-display" style="background-image: url('img/DRWeco.png'); 
             width: 100%; 
             height: 320px; 
             background-size: contain; 
@@ -1621,7 +1870,7 @@
             transition: background-image 0.3s ease; 
             position: relative;">
                         <button class="btn-trigger-modal-premium"
-                            onclick="abrirModal3DSpecs('img/valvulaTaponDRT.glb', 'mat-valvula-tapon-dr')">
+                            onclick="abrirModal3DSpecs('img/DRWeco.glb', 'mat-valvula-tapon-dr')">
                             <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -1670,7 +1919,7 @@
                         <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Provee Sello Dual Convencional a través de la Configuración Simétrica de sus Componentes
                             Internos<br>• Funcionamiento Confiable y Seguro</p>
                     </div>
@@ -1727,7 +1976,8 @@
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-retencion-veleta')"
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-retencion-veleta')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                         Ver Válvula de Veleta Convecional
                     </button>
@@ -1791,7 +2041,7 @@
                         <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras especificaciones</h5>
                         <p>• Empleada en el Manejo de Fluidos Viscosos<br>• Disco Articulado Tradicional (Veleta) que se
                             abre con el flujo y se cierra por gravedad o contrapresión.<br>• La Superficie de la Veleta
                             de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión.</p>
@@ -1805,7 +2055,8 @@
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-retencion-entrada-superior')"
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-retencion-entrada-superior')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                         Ver Válvula de Veleta Superior
                     </button>
@@ -1868,8 +2119,11 @@
                         <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
-                        <p>• Empleada en el Manejo de Fluidos Viscosos<br>• Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión.<br>• La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión.<br>• Fácil Mantenimiento sin Necesidad de Desmonte de la Línea<br>• Larga Vida Útil Operativa</p>
+                        <h5>Otras especificaciones</h5>
+                        <p>• Empleada en el Manejo de Fluidos Viscosos<br>• Disco Articulado Tradicional (Veleta) que se
+                            abre con el flujo y se cierra por gravedad o contrapresión.<br>• La Superficie de la Veleta
+                            de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión.<br>• Fácil
+                            Mantenimiento sin Necesidad de Desmonte de la Línea<br>• Larga Vida Útil Operativa</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
@@ -1879,13 +2133,13 @@
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-retencion-dardo')"
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-retencion-dardo')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                         Ver Válvula De Dardo Weco
                     </button>
                 </div>
             </div>
-
             <!-- FICHA 011: VÁLVULA DE RETENCIÓN DISEÑO DARDO WECO -->
             <div id="mat-valvula-retencion-dardo" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -1943,15 +2197,1988 @@
                         <p>Tuerca Aleteada Weco Retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
-                        <p>• Utilizado para el Manejo de Fluidos Gaseosos<br>• Emplea un Émbolo de Movimiento Lineal ("Dardo") en lugar de una Aleta Oscilante como Elemento Obstructivo<br>• Resiste la Descompresión Explosiva y los Flujos de Gas de Alta Velocidad<br>• Funcionamiento Confiable y Seguro</p>
+                        <h5>Otras especificaciones</h5>
+                        <p>• Utilizado para el Manejo de Fluidos Gaseosos<br>• Emplea un Émbolo de Movimiento Lineal
+                            ("Dardo") en lugar de una Aleta Oscilante como Elemento Obstructivo<br>• Resiste la
+                            Descompresión Explosiva y los Flujos de Gas de Alta Velocidad<br>• Funcionamiento Confiable
+                            y Seguro</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
-                        <p>• Control de Gases Extremos como Nitrógeno (N2), Dióxido de Carbono (CO2)<br>• Flujos Gaseosos Secos o Húmedos No Erosivos de Alta Velocidad</p>
+                        <p>• Control de Gases Extremos como Nitrógeno (N2), Dióxido de Carbono (CO2)<br>• Flujos
+                            Gaseosos Secos o Húmedos No Erosivos de Alta Velocidad</p>
                     </div>
                 </div>
             </div>
+
+            <!--PRINCIPAL VALVULA DE ALIVIO DE PRESION-->
+            <div id="mat-valvulaAlivio-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Válvula de Alivio de Presión <span>(Pressure Relief Valve Weco®)</span></h3>
+                        <p>Diseñada para proteger tuberías, bombas y recipientes de la sobrepresión en entornos
+                            industriales extremos.</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaPresionPortada.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La Válvula de Alivio de Presión (PRV Weco®) es un dispositivo mecánico y electrónico
+                            automático de seguridad diseñado para proteger tuberías, bombas y recipientes de la
+                            sobrepresión en entornos industriales extremos. Constituye un estándar crítico en la
+                            industria de gas y petróleo (Oil & Gas) para Operaciones de Alta Presión como Perforación,
+                            Cementación y Fractura Hidráulica entre otras.</p>
+                        <p style="margin-top: 10px;">Se encuentra disponible en Dos Diseños:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 6px;">❑ Diseño Mecánico Estándar de Acción Directa (PRV Weco®)
+                            </li>
+                            <li>❑ Diseño Electrónico (ePRV Weco®)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-alivio-mecanica')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Diseño Mecánico (PRV)
+                    </button>
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-alivio-electronica')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Diseño Electrónico (ePRV)
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 012: VÁLVULA DE ALIVIO MECANICO -->
+            <div id="mat-valvula-alivio-mecanica" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>VÁLVULA DE ALIVIO DE PRESIÓN <span>Diseño Mecánico Estándar de Acción Directa</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 12</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/ValvulaPresionMecanicaEstandar.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/ValvulaPresionMecanicaEstandar.glb', 'mat-valvula-alivio-mecanica')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>• De 100 a 1000 Psi para Tamaño 2” Fig. 1502<br>• De 1000 a 15000 Psi para Tamaños 2” y 3”
+                            Fig. 1502<br>• De 10000 a 20000 Psi para Tamaño 2” Fig. 1502</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Funcionamiento Estándar de Acción Directa<br>• Utiliza Un Conjunto de Resortes Belleville
+                            de Alta Resistencia junto a un Arreglo de Esfera y Asiento para Soportar la Presión del
+                            Fluido y Garantizar un Cierre Fiable.<br>• Un tornillo de Ajuste en la Parte Superior del
+                            Cuerpo de la Válvula permite Ajustar la Presión de Alivio.<br>• Durable y de Funcionamiento
+                            Confiable y Seguro</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Procesos Diversos</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-alivio-electronica')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Diseño Electrónico (ePRV)
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 013: VÁLVULA DE ALIVIO ELECTRONICA -->
+            <div id="mat-valvula-alivio-electronica" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>VÁLVULA DE ALIVIO DE PRESIÓN <span>Diseño Electrónico (ePRV Weco®)</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 13</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaElectronica.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaElectronica.glb', 'mat-valvula-alivio-electronica')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>Hasta 15000 Psi</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Funcionamiento Electrónico<br>• Requiere señal de 24 voltios para su activación<br>• La
+                            Válvula Piloto controla la Apertura y el Cierre de la Válvula Principal<br>• La Válvula
+                            Principal se Abre Instantáneamente al Perderse la Señal Eléctrica<br>• Se Cierra
+                            Automáticamente una vez que se ha Liberado Completamente la Presión de la Línea o cuando la
+                            Presión es Inferior a 80-100 psi<br>• Un Indicador Visual permite ver si la Válvula está
+                            Abierta o Cerrada<br>• No requiere de Intervención Manual, Botellas de Gas ni Mangueras, por
+                            lo que Reduce Significantly la Exposición del Personal en Zonas de Alto Riesgo<br>• Más
+                            Fiable que otras Válvulas de Alivio</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Operaciones de Fractura Hidráulica, Estimulación de Pozos, Líneas de Tratamiento de Alta
+                            Presión</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-alivio-mecanica')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Diseño Mecánico (PRV)
+                    </button>
+                </div>
+            </div>
+
+            <!--PRINCIPAL VALVULA DE ESTRANGULACION-->
+            <div id="mat-valvulaEstrangulacion-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Válvula de Estrangulación de Flujo <span>(Throttle Choke Valve Weco®)</span></h3>
+                        <p>Diseñada para regular el flujo y la presión de fluidos en la industria del petróleo y el gas
+                            en aplicaciones de alta presión.</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaEstrangulacionPortada.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La Válvula de Control de Flujo (Chokes Weco®) es un dispositivo robusto de alta presión el
+                            cual se utiliza para regular el flujo y la presión de fluidos en la industria del petróleo y
+                            el gas. Se emplea ampliamente en cabezales de pozo, colectores de producción y colectores de
+                            estrangulación y control de flujo durante las operaciones de perforación, fractura y
+                            limpieza.</p>
+                        <p style="margin-top: 10px;">Se encuentra disponible en Dos Diseños:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 6px;">❑ Fijo: Utiliza un restrictor metálico cilíndrico de
+                                diámetro fijo denominado “inserto de flujo” para lograr un caudal específico.</li>
+                            <li>❑ Ajustable: Incorpora un mecanismo de volante que permite variar manualmente la
+                                apertura (mediante una aguja y un asiento) para controlar dinámicamente los caudales y
+                                las presiones.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-estrangulacion-fija')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Diseño Fijo
+                    </button>
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-estrangulacion-ajustable')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Diseño Ajustable
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 014: ESTRANGULADOR FIJO -->
+            <div id="mat-estrangulador-fijo" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>ESTRANGULADOR FIJO <span>(Positive Choke Weco® de Producción y Control) Serie 200P</span>
+                        </h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 14</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaEstranguladorFijo.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaEstranguladorFijo.glb', 'mat-estrangulador-fijo')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Diámetro Orificios</h5>
+                        <p>• Tamaño 2”: Insertos de 1/2” (32/64”) a 1” (64/64”)<br>• Tamaño 3”: Insertos de 1” (64/64”)
+                            a 2” (128/64”)<br>(Los Diámetros de los Orificios de los Insertos están calibrados en
+                            incrementos de 1/64” según Estándar API 6A)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 5000, 10000, 15000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 15000 CWP</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable (MxF, FxM)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Diseñado específicamente para alojar Insertos de estrangulación fijos<br>• Proporciona una
+                            restricción constante del flujo en operaciones estables<br>• Genera menor turbulencia
+                            interna de flujo, muy resistente a la erosión<br>• Utiliza insertos calibrados con diámetros
+                            de orificio fijos intercambiables<br>• Los insertos son reemplazables mediante el uso de
+                            herramientas convencionales, permitiendo variar el diámetro del flujo sin desmontar el
+                            cuerpo de la línea de tubería.<br>• Fabricado y certificado bajo Estándar API 6A<br>•
+                            Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de
+                            materiales aptas para ambientes corrosivos</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Operaciones de Cementación, Fractura, Control de Flujo, Retorno de Fluidos, Inyección de
+                            Fluidos, Producción Estable a Largo Plazo.</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-valvula-estrangulacion-ajustable')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Ajustable
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 015: ESTRANGULADOR AJUSTABLE -->
+            <div id="mat-estrangulador-ajustable" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>ESTRANGULADOR AJUSTABLE <span>(Adjustable Choke Weco®) Serie 200N</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 15</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaEstranguladorAjustable.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaEstranguladorAjustable.glb', 'mat-estrangulador-ajustable')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Diámetro Orificios</h5>
+                        <p>• Tamaño 2”: Diámetro del Orificio regulable de 1/2” (32/64”) a 1” (64/64”)<br>• Tamaño 3”:
+                            Diámetro del Orificio regulable de 1” (64/64”) a 2” (128/64”)<br>(Los Diámetros de los
+                            Orificios se regulan en incrementos de 1/64” según Estándar API 6A)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 15000 CWP</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable (MxF)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Diseñado para ajustar de manera variable el orificio de estrangulación<br>• Opción con
+                            mecanismo de Volante Graduado con Indicador de Posición<br>• Opción con Actuador Neumático e
+                            Hidráulico para control remoto<br>• Las agujas, puntas y asientos críticos se suministran en
+                            carburo de tungsteno o cerámicas endurecidas<br>• Fabricado y certificado bajo Estándar API
+                            6A<br>• Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de
+                            materiales aptas para ambientes corrosivos</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Ideal para Servicios Generales de Estrangulación y de Control preciso de Fluidos, Caudales
+                            y Caídas de Presión Extrema<br>• Cementación, Fractura, Pruebas de Pozos, Retorno de Flujo,
+                            Inyección de Fluidos</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Fijo
+                    </button>
+                </div>
+            </div>
+
+            <!--PRINCIPAL VALVULA DE ESTRANGULACION Y REGULACION-->
+            <div id="mat-valvulaEstrangulacionRegulacion-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Válvula de Estrangulación y Regulación <span>(Throttle Choke Valve®)</span></h3>
+                        <p>Diseñada para combinar la capacidad de control de flujo con alta fiabilidad en yacimientos
+                            petrolíferos exigentes.</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaEstrangulacionRegulacion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La <strong>Válvula de Estrangulación y Regulación de Flujo</strong> TechnipFMC combina la
+                            capacidad de control de flujo de una Válvula de Jaula con Puertos con la fiabilidad de
+                            cierre hermético de una Válvula de Tapón. Este híbrido de doble configuración está diseñado
+                            específicamente para soportar aplicaciones exigentes en yacimientos petrolíferos, como el
+                            manejo de fluidos de fractura altamente erosivos y de alta velocidad, sin que se degrade el
+                            mecanismo de sellado hermético.</p>
+                        <p style="margin-top: 10px;">Su principio de operación se basa en la restricción controlada del
+                            flujo mediante la variación del área transversal de un orificio interno, lo que convierte la
+                            energía de presión del fluido en energía cinética (velocidad) y calor. Este mecanismo está
+                            diseñado específicamente para la industria del petróleo y el gas, con el fin de reducir las
+                            altas presiones de la cabeza del pozo a niveles seguros y manejables antes de que el crudo o
+                            gas llegue a los equipos de producción de superficie.</p>
+                        <p style="margin-top: 10px;">Dependiendo de si se encuentran en manifold de estrangulación
+                            manual o automatizado, se operan de dos formas:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 6px;">❑ <strong>Manual:</strong> Utiliza un volante/palanca que
+                                gira directamente el vástago para abrir o cerrar el orificio.</li>
+                            <li>❑ <strong>Actuador Hidráulico o Neumático:</strong> Utiliza actuadores de pistón
+                                operados de forma remota.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Fijo
+                    </button>
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Ajustable
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 016: VÁLVULA DE ESTRANGULACIÓN Y REGULACIÓN -->
+            <div id="mat-valvula-estrangulacion-regulacion" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>VÁLVULA DE ESTRANGULACIÓN Y REGULACIÓN <span>(Throttle Choke Valve®)</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 16</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaEstrangulacionRegulacion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaEstrangulacionRegulacion.glb', 'mat-valvula-estrangulacion-regulacion')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Diámetro Nominal Interno</h5>
+                        <p>• Tamaño 2”: 1-1/2” a 2”<br>• Tamaño 3”: 2” a 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 5000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 15000 CWP</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable (MxF)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Funciona simultáneamente como válvula de estrangulación y de tapón<br>• Operado manualmente
+                            (1/4” de vuelta) o a través de actuador automático<br>• Utiliza diseños internos de presión
+                            equilibrados y segmentos flotantes para reducir la fricción<br>• Su geometría interna aísla
+                            el desgaste severo por erosión<br>• Sus componentes internos cuentan con un revestimiento
+                            duro especializado de carburo de tungsteno sólido<br>• Cuenta con un indicador visual
+                            graduado que muestra el porcentaje de apertura en fracciones de pulgada (64avos) o
+                            milímetros<br>• Fabricado y certificado bajo Norma API 6A, API API 16C<br>• Compatible con
+                            niveles de especificación de producto (PSL) exigentes y con tipos de materiales aptos para
+                            ambientes corrosivos</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Operaciones de Fractura Hidráulica, Retorno de Flujo, Limpieza a Alta Presión, Control del
+                            Flujo</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Ajustable
+                    </button>
+                </div>
+            </div>
+
+            <!--PRINCIPAL ADAPTADOR DE ESTRANGULACION-->
+            <div id="mat-adaptadorEstrangulacion-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Adaptador de Estrangulación <span>(Choke Saver®)</span></h3>
+                        <p>Dispositivo o accesorio de sacrificio de alta durabilidad diseñado para proteger y prolongar
+                            la vida útil del estrangulador y la línea de flujo.</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/adaptadorEstrangulacion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>El <strong>Adaptador de Estrangulación de Flujo (Choke Saver®)</strong> es un Dispositivo o
+                            Accesorio de Sacrificio de alta durabilidad, el cual se instala aguas arriba del
+                            Estrangulador en una línea de flujo.</p>
+                        <p style="margin-top: 10px;">Constituye una Pieza Crítica de Alta Presión utilizada en los
+                            Cabezales de Pozos y Manifolds de Fractura para conectar y alojar los mecanismos internos
+                            del <strong>Estrangulador de Flujo (Choke®)</strong>, optimizando la resistencia de éste
+                            ante fluidos altamente abrasivos.</p>
+                        <p style="margin-top: 10px;">Asimismo, está diseñado para absorber y disipar la energía generada
+                            por el impacto dañino de los fluidos a alta velocidad, y el de retener de manera controlada
+                            las partículas sólidas erosivas que circulan con los fluidos, protegiendo así el cuerpo del
+                            Estrangulador y de otros dispositivos instalados en la línea de flujo.</p>
+                        <p style="margin-top: 10px;">Este hecho prolonga la vida útil del Estrangulador y de otros
+                            elementos que conforman la línea de flujo. Para ello, utiliza componentes internos (como
+                            insertos, camisas o boquillas) fabricados con materiales extremadamente duros, generalmente
+                            de <strong>carburo de tungsteno</strong> o de cerámicas avanzadas.</p>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Fijo
+                    </button>
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Ajustable
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 017: ADAPTADOR DE ESTRANGULACIÓN -->
+            <div id="mat-adaptador-estrangulacion" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>ADAPTADOR DE ESTRANGULACIÓN <span>(Choke Saver®)</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 17</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/adaptadorEstrangulacion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/adaptadorEstrangulacion.glb', 'mat-adaptador-estrangulacion')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2”, 3”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 15000 CWP</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Tuerca Aleteada Weco Retirable (MxF)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Diseñado para soportar la fuerza de flujos turbulentos y erosivos que impactan a la línea
+                            de flujo<br>• Absorbe la acción de desgaste y de deterioro intenso para proteger los
+                            Componentes Principales de la línea de flujo<br>• Como dispositivo protector del
+                            Estrangulador Principal, prolonga su vida útil de funcionamiento<br>• Fabricado con
+                            materiales extremadamente duros, tales como carburo de tungsteno o de cerámicas
+                            avanzadas<br>• Constituye una opción rápida y económica de reemplazo con relación al
+                            Estrangulador Principal al cual protege<br>• Se puede utilizar en una amplia gama de
+                            aplicaciones de alta presión</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Operaciones de Retorno de Flujo, Pruebas de Pozos, Limpieza con Tubería Flexible (Coiled
+                            Tubing), Manifolds de Estrangulación y Control, Líneas de Acidificación y Fractura
+                            Hidráulica</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Estrangulador Ajustable
+                    </button>
+                </div>
+            </div>
+
+            <!--PRINCIPAL VÁLVULA MARIPOSA-->
+            <div id="mat-valvulaMariposa-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Válvula Mariposa <span>(Butterfly Valve Weco®)</span></h3>
+                        <p>Dispositivo de control de fluidos a baja presión con accionamiento de un cuarto de vuelta
+                            para un manejo de flujo fiable y económico.</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaMariposaPortada.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>La <strong>Válvula Mariposa (Weco®)</strong> es un dispositivo de control de fluidos a baja
+                            presión con accionamiento de un cuarto de vuelta, diseñado específicamente para un manejo de
+                            flujo fiable y económico en aplicaciones de servicio a pozos de crudo y gas y en la
+                            industria pesada. Constituye un equipo de eficacia probada, ofrece un sellado hermético,
+                            alta eficiencia de flujo, una rápida reparación en línea y la capacidad de desempeñarse en
+                            una amplia variedad de entornos de fluidos, tanto estándar como corrosivos.</p>
+                        <p style="margin-top: 10px;">Está diseñada para servicio de estrangulamiento estático y de
+                            apertura/cierre hasta 175 Psi. Se monta en bridas de entre 125 y 150 Psi. Su material y
+                            componentes se adaptan a las condiciones de funcionamiento específico. Sus partes son
+                            intercambiables para facilitar las reparaciones en campo.</p>
+                        <p style="margin-top: 10px;">Disponible en tamaños de 2” a 24” con cuerpos tipo:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                            <li style="margin-bottom: 6px;">❑ Panqueca</li>
+                            <li style="margin-bottom: 6px;">❑ Ranurada</li>
+                            <li>❑ Apernada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-mariposa')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Ficha de Válvula Mariposa
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 018: VÁLVULA MARIPOSA MODELO 12 -->
+            <div id="mat-valvula-mariposa-modelo-12" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Modelo 12</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 18</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaMariposaPortada.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaMariposaPortada.glb', 'mat-valvula-mariposa-modelo-12')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Cuerpo Tipo Panqueca Weco® de Cuello Corto</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2” a 16”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>• 175 Psi para Tamaños 2” a 12”<br>• 150 Psi para Tamaños 14” y 16”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Se Monta en Bridas de entre 125 Psi y 150 Psi</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• El Cuerpo de la Válvula se Centra fácilmente entre Bridas ANSI Estándar de 125 o 150
+                            Psi<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la
+                            Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores
+                            Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el
+                            Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de
+                            Engranaje y Actuadores de Accionamiento Automático</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal
+                            desde 1 mm Hg hasta su Rango Máximo de Presión</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 019: VÁLVULA MARIPOSA MODELO 12N -->
+            <div id="mat-valvula-mariposa-modelo-12n" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Modelo 12N</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 19</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaMariposa.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaMariposa.glb', 'mat-valvula-mariposa-modelo-12n')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Cuerpo Tipo Panqueca Ranurado Weco® de Cuello Corto</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2” a 6”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>• 175 Psi para Tamaños 2” a 6”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Se Monta entre Bridas de Tubería Ligeras</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Cuerpo Ranurado para utilizarse con Bridas de Servicio Ligero<br>• Sistema de Triple Sello.
+                            Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante.
+                            Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>•
+                            Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite
+                            Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento
+                            Automático</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal
+                            desde 1 mm Hg hasta su Rango Máximo de Presión</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 020: VÁLVULA MARIPOSA MODELO 22 -->
+            <div id="mat-valvula-mariposa-modelo-22" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Modelo 22</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 20</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaMariposaModelo22.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaMariposaModelo22.glb', 'mat-valvula-mariposa-modelo-22')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Cuerpo Tipo Panqueca Weco® de Cuello Largo</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2” a 12”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>• 175 Psi para Tamaños 2” a 12”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Se Monta en Bridas de entre 125 Psi ó 150 Psi</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• El Cuerpo de la Válvula se Centra fácilmente entre Bridas Estándar de 125 o 150 Psi<br>•
+                            Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula
+                            no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior
+                            e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble
+                            Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico
+                            Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de
+                            Operadores de Engranaje y Actuadores de Accionamiento Automático</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal
+                            desde 1 mm Hg hasta su Rango Máximo de Presión</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 021: VÁLVULA MARIPOSA MODELO 22L -->
+            <div id="mat-valvula-mariposa-modelo-22l" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Modelo 22L</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 21</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaMaripoaModelo22L.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/valvulaMaripoaModelo22L.glb', 'mat-valvula-mariposa-modelo-22l')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Cuerpo con Orejetas Roscadas Weco® de Cuello Largo</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>2” a 24”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p>• 175 Psi para Tamaños 2” a 12”<br>• 150 Psi para Tamaños 14” a 24”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>Se Atornilla en Bridas de entre 125 Psi ó 150 Psi</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Cuerpo con Orejetas Roscadas para Conexión Independiente de la Tubería Aguas Arriba o Aguas
+                            Abajo<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de
+                            la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los
+                            Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un
+                            sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con
+                            Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de
+                            Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal
+                            desde 1 mm Hg hasta su Rango Máximo de Presión</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!--PORTADA: OPCIONES DE ACCIONAMIENTO Y OPERACIÓN DE LAS VÁLVULAS MARIPOSA WECO®-->
+            <div id="mat-opciones-accionamiento-mariposa" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Opciones de Accionamiento y Operación de las Válvulas Mariposa Weco®</h3>
+                        <p>Configuración y Sistemas de Accionamiento</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>Cada Modelo de Válvula Mariposa Weco admite una Configuración Sencilla con Operadores de
+                            Accionamiento Manuales y Automáticos diversos. Entre ellos están los siguientes:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
+                            <li style="margin-bottom: 10px;">❑ <strong>Manijas Manuales:</strong> Las Opciones incluyen
+                                Manijas de Bloqueo Manual Estándar de 10 posiciones para un Simple Aislamiento de
+                                Apertura/Cierre, o Palancas de Regulación para una Modulación de Flujo Preciso.</li>
+                            <li style="margin-bottom: 10px;">❑ <strong>Operadores de Engranajes:</strong> Volantes
+                                Manuales de Engranajes de Alto Desempeño para Diámetros de Tubería mayores que requieren
+                                un Par de Operación más Alto.</li>
+                            <li>❑ <strong>Actuadores Automatizados:</strong> Actuadores Neumáticos de Veleta de Doble
+                                Acción Compactos de Un Cuarto de Vuelta o Actuadores Hidráulicos de Tipo Pistón
+                                diseñados para Operaciones Remotas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 022: DISEÑO DE ENGRANAJE HELICOIDAL RESISTENTE A LA INTEMPERIE WECO® -->
+            <div id="mat-diseno-engranaje-helicoidal" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Diseño de Engranaje Helicoidal Resiste a la Intemperie Weco®</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 22</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/engranajeHelicoidal.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/engranajeHelicoidal.glb', 'mat-diseno-engranaje-helicoidal')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Engranaje Helicoidal Weco®</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Compatibilidad</h5>
+                        <p>Compatible con Válvulas de todos los Tamaños</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación Recomendada</h5>
+                        <p>Accionamiento Manual (Apertura/Cierre) o Regulación de Caudal</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Especificaciones de Giro</h5>
+                        <p>Arco de 90 grados con Tornillos de Tope Internos para Ajuste de +/- 20 grados</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Montaje</h5>
+                        <p>Se Monta en la Válvula en Cualquier Cuadrante</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Accesorios Disponibles</h5>
+                        <p>• Extensiones de Eje para Volante disponibles<br>• Accesorio para Rueda Dentada disponible
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 023: ACTUADOR DE VELETA MODELO 200 WECO® -->
+            <div id="mat-actuador-veleta-modelo-200" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Actuador de Veleta Modelo 200</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 23</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/ActuadorDeVeletaModelo200.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/ActuadorDeVeletaModelo200.glb', 'mat-actuador-veleta-modelo-200')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Actuador Neumático de Veleta de Doble Acción, Robusto y Compacto, de 1/4 de Vuelta Weco®</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>Disponible para Válvulas de 2” a 6”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Recomendado para el Funcionamiento de Válvulas de Apertura/Cierre</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Mantenimiento</h5>
+                        <p>Diseño Sencillo que No Requiere Lubricación en Campo</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Montaje</h5>
+                        <p>Se Monta Directamente en la Válvula en Cualquier Cuadrante</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 024: ACTUADOR NEUMÁTICO DE DOBLE ACCIÓN CON RETORNO POR RESORTE WECO® -->
+            <div id="mat-actuador-neumatico-doble-accion" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Actuador Neumático Doble Acción / Retorno por Resorte</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 24</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/ActuadorNeumaticoDeDoubleAccion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/ActuadorNeumatico.glb', 'mat-actuador-neumatico-doble-accion')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Actuador Neumático de Doble Acción o con Retorno por Resorte Weco®</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>Compatible con Válvulas Mariposa de 2” a 12” y algunas Válvulas de Tapón</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>Recomendado para Operación de Apertura/Cierre</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Presión Requerida</h5>
+                        <p>Algunos Modelos requieren una Presión de Aire Mínima de 30 Psi para su Funcionamiento</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Montaje</h5>
+                        <p>Se Monta Directamente en la Válvula en Cualquier Cuadrante sin Adaptadores ni Accesorios
+                            Especiales</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 025: MANIJA ESTÁNDAR WECO® -->
+            <div id="mat-manija-estandar-weco" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Manija Estándar Weco®</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 24</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/manijaEstandarWeco.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/manijaEstandarWeco.glb', 'mat-manija-estandar-weco')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Manija Manual Estándar de Bloqueo</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>Disponible para Tamaños de 2” a 12” (Recomendadas para Tamaños de 8” o menores)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Compatibilidad de Modelos</h5>
+                        <p>• Compatible con Válvulas Modelos 12 y 12N con Placas de Retención<br>• Compatible con
+                            Válvulas Modelos 22 y 22L</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Instalación y Montaje</h5>
+                        <p>• Se Monta en Cualquier Cuadrante<br>• Se Monta Directamente en la Brida Superior
+                            Pre-ranurada del Cuerpo de la Válvula con Posiciones de Retención de Apertura/Cierre</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 026: PALANCA DE REGULACIÓN WECO® -->
+            <div id="mat-palanca-regulacion-weco" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Palanca de Regulación Weco®</h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 26</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/palancaRegulacionWeco.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/palancaRegulacionWeco.glb', 'mat-palanca-regulacion-weco')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tipo</h5>
+                        <p>Palanca de Regulación con Placa de Retención con Muescas</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>Disponible para Tamaños de 2” a 12” (Recomendada para Tamaños de 8” o menores)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Sistema de Bloqueo</h5>
+                        <p>La Placa de Retención con Muescas y el Sistema de Sujeción Garantizan un Bloqueo Seguro en
+                            cualquiera de las 10 Posiciones, desde completamente abierto hasta completamente cerrado</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Compatibilidad de Modelos</h5>
+                        <p>• Compatible con las Válvulas Modelos 12 y 12N con Placas de Retención<br>• Compatible con
+                            las Válvulas Modelos 22 y 22L</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Instalación y Montaje</h5>
+                        <p>• Se Monta en Cualquier Cuadrante<br>• Se Monta Directamente en la Brida Superior con Muescas
+                            del Cuerpo de la Válvula con Posiciones de Retención de Apertura/Cierre</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Válvula Mariposa Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- PORTADA: ACCESORIOS DE CONEXIÓN (FITTINGS WECO®) -->
+            <div id="mat-fittings-weco-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Accesorios de Conexión (Fittings Weco®)</h3>
+                        <p>Líneas de Flujo de Alta Presión</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/AccesoriosConexionPortada.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>Los Accesorios de Conexión Weco® son componentes de alta calidad para líneas de flujo de alta
+                            presión, diseñados para manejar fluidos de servicio de pozos de gas estándar y ácido a
+                            presiones de trabajo en frío de hasta 20000 Psi. Su función principal es la desviar,
+                            dividir, converger, divergir o adaptar la trayectoria de flujo de los fluidos de trabajo.
+                        </p>
+                        <p style="margin-top: 10px;">Disponibles en tamaños de 1” a 4” y en diversos diseños de
+                            construcción, estos robustos componentes constituyen un estándar en operaciones de Fractura,
+                            Cementación, Acidificación y Pruebas de Pozos.</p>
+                        <p style="margin-top: 10px;">Entre sus configuraciones de diseño según su función específica
+                            están:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
+                            <li style="margin-bottom: 8px;">❑ <strong>Codo</strong></li>
+                            <li style="margin-bottom: 8px;">❑ <strong>Tee</strong></li>
+                            <li style="margin-bottom: 8px;">❑ <strong>Cruz</strong></li>
+                            <li style="margin-bottom: 8px;">❑ <strong>Lateral</strong></li>
+                            <li>❑ <strong>Yee</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-codo-weco')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Codo Weco®
+                    </button>
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-tee-weco')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Tee Weco®
+                    </button>
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-cruz-weco')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Cruz Weco®
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 027: ACCESORIOS DE CONEXIÓN (FITTINGS WECO®) -->
+            <div id="mat-accesorios-conexion-weco" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Accesorios de Conexión <span>(Fittings Weco®)</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 27</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/AccesoriosConexion.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/AccesoriosConexion.glb', 'mat-accesorios-conexion-weco')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid">
+                    <div class="spec-block-card">
+                        <h5>Tamaños</h5>
+                        <p>1”, 1-1/2”, 2”, 3”, 4”</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Accesorio</h5>
+                        <p>• Codo<br>• Tee<br>• Cruz<br>• Lateral<br>• Yee</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Tipos de Servicio</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span><br><span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (NACE – API MR-01-75)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Rangos de Presión</h5>
+                        <p><span style="color: #e53e3e; font-weight: bold;">Estándar</span>: 6000, 10000, 15000, 20000
+                            CWP<br><span style="color: #38a169; font-weight: bold;">Gas Agrio</span>: 10000, 15000 CWP
+                        </p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Extremos de Conexión</h5>
+                        <p>• Tuerca aleteada retirable Weco<br>• Roscado<br>• Soldadura a Tope (Butt Weld)</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Otras Cualidades</h5>
+                        <p>• Desvían, dividen, convergen, divergen o adaptan el flujo de los fluidos de trabajo<br>•
+                            Construcción forjada<br>• Disponibles en diseños compactos y no compactos<br>• Disponibles
+                            en múltiples arreglos de conexión<br>• Altamente durables y de funcionamiento confiable y
+                            seguro</p>
+                    </div>
+                    <div class="spec-block-card">
+                        <h5>Aplicación</h5>
+                        <p>• Líneas de Fractura<br>• Líneas de Prueba<br>• Líneas de Circulación, Cementación y
+                            Estimulación<br>• Operaciones de Alta Presión y Altamente Abrasivas</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-fittings-weco-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Accesorios de Conexión Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- PORTADA: ADAPTADORES (CROSSOVERS & CHANGEOVERS) -->
+            <div id="mat-adaptadores-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Adaptadores <span>(Crossovers & Changeovers)</span></h3>
+                        <p>Dispositivos de Transición y Conexión</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/AdaptadoresCrossOver-ChangeOver.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            position: relative;">
+                    </div>
+                </div>
+
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción General</h5>
+                        <p>Son dispositivos que se utilizan principalmente para cambiar el tipo y/o tamaño de conexión
+                            física entre dos componentes de una línea. Conectan tecnologías de unión diferentes, tal es
+                            el caso de una brida de cabezal de pozo a una unión de golpe Weco.</p>
+                        <p style="margin-top: 10px;">Se presentan en dos configuraciones de diseño según su función
+                            específica:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
+                            <li style="margin-bottom: 8px;">❑ <strong>Crossovers</strong></li>
+                            <li>❑ <strong>Changeovers</strong></li>
+                        </ul>
+                        <p style="margin-top: 10px;">En caso de que el dispositivo presente en su diseño configuración
+                            simultánea de <strong>Changeover</strong> y de <strong>Crossover</strong>, entonces se le
+                            denomina <strong>Adaptador</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-crossover')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Crossovers
+                    </button>
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-changeover')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Changeovers
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 028: CROSSOVERS (X-OVERS) -->
+            <div id="mat-crossover" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Crossovers <span>(X-Overs)</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 28</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/AccesorioConexionCrossOver.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/AccesorioConexionCrossOver.glb', 'mat-crossover')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr;">
+                    <div class="spec-block-card">
+                        <h5>Características Generales</h5>
+                        <p>• Están diseñados para hacer la transición entre diferentes diámetros nominales o
+                            clasificaciones de presión en la misma línea de flujo.</p>
+                        <p style="margin-top: 8px;">• Su función es el de permitir que el fluido pase de una línea de
+                            alta presión con un diámetro grande a una de menor diámetro y de menor presión, asegurando
+                            la integridad estructural.</p>
+                        <p style="margin-top: 8px;">• La presión máxima de trabajo de todo el sistema queda limitada a
+                            la clasificación del componente de más baja tolerancia de presión o integrado en el
+                            Crossover.</p>
+                        <p style="margin-top: 8px;">• Se emplean tanto para Servicio <span
+                                style="color: #e53e3e; font-weight: bold;">Estándar</span> como de <span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (H2S)</p>
+                        <p style="margin-top: 8px;">• Los tamaños, tipos de conexión y material de fabricación varían de
+                            acuerdo al requerimiento operativo.</p>
+                        <p style="margin-top: 8px;">• Se fabrican bajo previo pedido.</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-adaptadores-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Adaptadores Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 029: CHANGEOVERS (X-OVERS) -->
+            <div id="mat-changeover" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Changeovers <span>(X-Overs)</span></h3>
+                        <p>Características Generales</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 29</span>
+                </header>
+
+                <div class="sheet-visual-showcase gallery-mode">
+                    <div class="main-gallery-display" style="background-image: url('img/AccesorioConexionChangeOver.png'); 
+            width: 100%; 
+            height: 320px; 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            transition: background-image 0.3s ease; 
+            position: relative;">
+                        <button class="btn-trigger-modal-premium"
+                            onclick="abrirModal3DSpecs('img/AccesorioConexionChangeOver.glb', 'mat-changeover')">
+                            <svg class="icon-3d" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Ver en 3D e Interactuar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr;">
+                    <div class="spec-block-card">
+                        <h5>Características Generales</h5>
+                        <p>• Son piezas de acoplamiento utilizadas comúnmente para modificar el género de conexión o
+                            tipo de rosca dentro de la misma familia de conexiones (LP, EUE, NPT, WECO, etc.).</p>
+                        <p style="margin-top: 8px;">• Su función es la de facilitar la continuidad cuando se encuentran
+                            dos extremos incompatibles del mismo tipo.</p>
+                        <p style="margin-top: 8px;">• La presión máxima de trabajo de todo el sistema queda limitada a
+                            la clasificación del componente de más baja tolerancia de presión o integrado en el
+                            Changeover.</p>
+                        <p style="margin-top: 8px;">• Se emplean tanto para Servicio <span
+                                style="color: #e53e3e; font-weight: bold;">Estándar</span> como de <span
+                                style="color: #38a169; font-weight: bold;">Gas Agrio</span> (H2S)</p>
+                        <p style="margin-top: 8px;">• Los tamaños, tipos de conexión y material de fabricación varían de
+                            acuerdo al requerimiento operativo.</p>
+                        <p style="margin-top: 8px;">• Se fabrican bajo previo pedido.</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-adaptadores-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Adaptadores Principal
+                    </button>
+                </div>
+            </div>
+
+            <!-- FICHA 030: DISEÑOS COMUNES (ADAPTADORES / CROSSOVERS & CHANGEOVERS) -->
+            <div id="mat-disenos-comunes-adaptadores" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Diseños Comunes</h3>
+                        <p>Adaptadores (Crossovers & Changeovers)</p>
+                    </div>
+                    <span class="sheet-tag-pill">PÁGINA 30</span>
+                </header>
+
+                <div class="sheet-features-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <!-- Ítem 1 -->
+                    <div class="spec-block-card"
+                        style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 100%; height: 140px; background-image: url('img/DisenoCrossOver1.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #ffffff; border-radius: 8px; margin-bottom: 12px;">
+                        </div>
+                        <h5 style="color: #e53e3e; margin-bottom: 5px;">Changeover</h5>
+                        <p style="margin: 0; font-weight: bold;">(Hembra Weco x EUE)</p>
+                    </div>
+
+                    <!-- Ítem 2 -->
+                    <div class="spec-block-card"
+                        style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 100%; height: 140px; background-image: url('img/DisenoCrossOver2.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #ffffff; border-radius: 8px; margin-bottom: 12px;">
+                        </div>
+                        <h5 style="color: #e53e3e; margin-bottom: 5px;">Changeover</h5>
+                        <p style="margin: 0; font-weight: bold;">(EUE x Macho Weco)</p>
+                    </div>
+
+                    <!-- Ítem 3 -->
+                    <div class="spec-block-card"
+                        style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 100%; height: 140px; background-image: url('img/diseno1ChangeOverr.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #ffffff; border-radius: 8px; margin-bottom: 12px;">
+                        </div>
+                        <h5 style="color: #e53e3e; margin-bottom: 5px;">Crossover</h5>
+                        <p style="margin: 0; font-weight: bold;">(Macho Weco x Macho Weco)</p>
+                    </div>
+
+                    <!-- Ítem 4 -->
+                    <div class="spec-block-card"
+                        style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 100%; height: 140px; background-image: url('img/diseno2ChangeOver.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #ffffff; border-radius: 8px; margin-bottom: 12px;">
+                        </div>
+                        <h5 style="color: #e53e3e; margin-bottom: 5px;">Crossover</h5>
+                        <p style="margin: 0; font-weight: bold;">(Hembra Weco x Hembra Weco)</p>
+                    </div>
+
+                    <!-- Ítem 5 -->
+                    <div class="spec-block-card"
+                        style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 100%; height: 140px; background-image: url('img/ChangeOver1.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #ffffff; border-radius: 8px; margin-bottom: 12px;">
+                        </div>
+                        <h5 style="color: #e53e3e; margin-bottom: 5px;">Changeover</h5>
+                        <p style="margin: 0; font-weight: bold;">(Hembra Weco x Macho Weco)</p>
+                    </div>
+
+                    <!-- Ítem 6 -->
+                    <div class="spec-block-card"
+                        style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 100%; height: 140px; background-image: url('img/ChangeOver2.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #ffffff; border-radius: 8px; margin-bottom: 12px;">
+                        </div>
+                        <h5 style="color: #e53e3e; margin-bottom: 5px;">Changeover</h5>
+                        <p style="margin: 0; font-weight: bold;">(Hembra Weco x Brida API)</p>
+                    </div>
+                </div>
+
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-adaptadores-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a Adaptadores Principal
+                    </button>
+                </div>
+            </div>
+
         </div>
 
         <!-- VENTANA EMERGENTE (MODAL) AL FINAL DE LA SECCIÓN -->
