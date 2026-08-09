@@ -692,51 +692,318 @@ button,
 }
 
 /* ==========================================================================
-   RESPONSIVE (Limpio de duplicados)
+   ESTILOS PARA LAS PESTAÑAS (TABS) DE CONTENIDO
+   ========================================================================== */
+.index-tabs-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    background: #f1f5f9;
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-dark, #333);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: var(--esip-green, #005433);
+    color: #ffffff;
+}
+
+.index-tab-content {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 52vh; /* Mantiene un scroll cómodo sin volverse infinito */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.index-tab-content.active {
+    display: flex;
+}
+
+/* Scrollbar interno para la pestaña de productos */
+.index-tab-content::-webkit-scrollbar {
+    width: 5px;
+}
+.index-tab-content::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE OPTIMIZADO: SECCIÓN ÍNDICE DE CONTENIDOS
    ========================================================================== */
 
 @media (max-width: 1024px) {
+    /* Convertimos la estructura de dos columnas en una columna vertical apilada */
     .content-section-viewport {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         height: auto;
         min-height: 100vh;
+        overflow-y: auto;
     }
 
     .index-text-canvas {
-        padding: 60px 20px;
+        padding: 50px 24px;
+        width: 100%;
     }
 
+    /* Permitimos que la lista crezca con naturalidad en pantallas táctiles */
     .technical-index-list {
         max-width: 100%;
-        max-height: 50vh;
-        /* Ajuste para tablets */
+        max-height: none;
+        overflow-y: visible;
+        margin-right: 0;
+        padding-right: 0;
     }
 
+    /* La sección visual pasa a la parte inferior con altura fija cómoda */
     .index-visual-canvas {
-        height: 45vh;
-        min-height: 350px;
+        width: 100%;
+        height: 40vh;
+        min-height: 320px;
     }
 
+    /* Se oculta el divisor de onda diagonal al romper el layout horizontal */
     .asymmetric-wave-divider {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
+    .index-text-canvas {
+        padding: 40px 18px;
+    }
+
+    .index-main-title {
+        font-size: 26px;
+    }
+
+    /* Reducimos ligeramente los márgenes de los puntos guía en tablets */
     .item-dots {
         margin: 0 8px;
+    }
+
+    .item-name, 
+    .item-page {
+        font-size: 13px;
+    }
+
+    .item-icon, 
+    .item-badge {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .item-badge {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .index-text-canvas {
-        padding: 40px 15px;
+        padding: 30px 12px;
     }
 
-    .index-item,
+    .index-main-title {
+        font-size: 22px;
+    }
+
+    .category-divider {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    /* En celulares muy estrechos, los puntos guía se ocultan 
+       para evitar que el texto colapse o genere saltos de línea extraños */
+    .item-dots {
+        display: none;
+    }
+
+    .index-item-trigger {
+        padding: 8px 0;
+        justify-content: space-between;
+    }
+
     .item-name {
-        font-size: 13px;
+        font-size: 12px;
+        flex-grow: 1; /* Ocupa el espacio intermedio de forma limpia */
+        padding: 0 6px;
+    }
+
+    .item-page {
+        font-size: 12px;
+        margin-left: auto;
+    }
+
+    /* Ajuste del submenú desplegable en móviles pequeños */
+    .index-item-submenu {
+        padding-left: 28px;
+    }
+
+    .index-item-submenu a {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .index-visual-canvas {
+        height: 35vh;
+        min-height: 260px;
+    }
+}
+
+
+    /* ==========================================================================
+   OPTIMIZACIÓN RESPONSIVE PREMIUM (ESIP S.A.S.)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    /* Ajuste para pantallas medianas o portátiles compactas */
+    .brand-name-main { font-size: 70px; }
+    .title-green { font-size: 30px; }
+    .title-light { font-size: 24px; }
+    .title-orange { font-size: 42px; }
+    .tech-panel-cluster { max-width: 450px; transform: translateX(20px); }
+}
+
+@media (max-width: 992px) {
+    /* Transición a diseño apilado (1 sola columna) en Tablets y Celulares */
+    .split-creative-viewport {
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    /* Sección visual superior en móvil */
+    .visual-canvas {
+        width: 100%;
+        height: 50vh;
+        min-height: 400px;
+        clip-path: none; /* Se elimina el corte diagonal para evitar espacios extraños */
+        padding: 30px 0;
+    }
+
+    .tech-panel-cluster {
+        height: 90%;
+        max-width: 380px;
+        transform: translateX(0); /* Se centra el clúster de imágenes */
+    }
+
+    /* Sección derecha (Contenido corporativo) pasa debajo */
+    .content-canvas {
+        width: 100%;
+        padding: 5vh 6vw 12vh 6vw; /* Espacio extra abajo para las curvas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .corporate-identity,
+    .brand-flex-align,
+    .interactive-action-zone {
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Alineación de texto y elementos a la centro para móvil */
+    .features-minimal-grid {
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .feature-card-item {
+        justify-content: center;
+    }
+
+    /* Reducción proporcional de títulos grandes */
+    .marketing-titles {
+        margin: 20px 0;
+    }
+    
+    .title-green { font-size: 26px; }
+    .title-light { font-size: 20px; letter-spacing: 1px; }
+    .title-orange { font-size: 38px; }
+
+    /* Ajuste de curvas del pie de página para que no tapuen información */
+    .asymmetric-footer-curves {
+        width: 100%;
+        height: 45px;
+    }
+    
+    .curve-orange { width: 100%; }
+}
+
+@media (max-width: 576px) {
+    /* Celulares pequeños */
+    .visual-canvas {
+        height: 45vh;
+        min-height: 320px;
+    }
+
+    .tech-panel-cluster {
+        max-width: 290px;
+    }
+
+    .content-canvas {
+        padding: 4vh 5vw 10vh 5vw;
+        align-items: center; /* Asegura que todo el contenido del contenedor flex esté centrado */
+        text-align: center;
+    }
+
+    /* CENTRADO ABSOLUTO DE LA GRILLA DE ATRIBUTOS */
+    .features-minimal-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 15px;
+        width: 100%;
+        max-width: 280px; /* Ancho controlado para que no se expanda de más */
+        margin: 0 auto; /* Centrado horizontal automático */
+        justify-items: center; /* Centra los elementos internos de la grilla */
+    }
+
+    /* Centrar cada tarjeta de forma individual y alinear sus textos e iconos */
+    .feature-card-item {
+        justify-content: center; /* Centra el contenido de la tarjeta */
+        text-align: left; /* Mantiene el texto alineado internamente de forma limpia frente al icono */
+        width: 100%;
+        background: #f8fafc;
+        padding: 10px 15px;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .badge-meta {
+        text-align: left;
+    }
+
+    .title-green { font-size: 22px; }
+    .title-light { font-size: 16px; }
+    .title-orange { font-size: 30px; }
+
+    .btn-creative-esip {
+        padding: 14px 28px;
+        font-size: 12px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .interactive-action-zone {
+        justify-content: center;
     }
 }
 
@@ -896,6 +1163,7 @@ button,
     background: var(--gray-bg);
     overflow-x: auto;
     border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
 }
 
 .category-filter-pills::-webkit-scrollbar {
@@ -1825,7 +2093,7 @@ button,
 .modal-right-specs-pane h4 {
     font-size: 24px;
     font-weight: 900;
-    color: #0f172a;
+    color: var(--esip-green);
     margin-bottom: 25px;
     border-bottom: 3px solid var(--esip-orange, #f26522);
     padding-bottom: 10px;
@@ -2755,4 +3023,755 @@ button,
 
 .hotspot-punto:hover .hotspot-tooltip {
     opacity: 1;
+}
+
+.industrial-kits-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 4rem 1.5rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #1f2937;
+}
+
+@media (min-width: 768px) {
+    .industrial-kits-section {
+        padding: 5rem 3rem;
+    }
+}
+
+.kits-wrapper {
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+.kits-main-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header-tag {
+    font-family: monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #f97316;
+    background-color: rgba(249, 115, 22, 0.08);
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    font-weight: bold;
+}
+
+.kits-main-header h2 {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #111827;
+    margin: 1rem 0 0.5rem 0;
+    letter-spacing: -0.025em;
+}
+
+.kits-main-header p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+/* Pestañas Horizontales Superiores */
+.kits-tabs-container {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #01A84B #f3f4f6;
+}
+
+.kits-tabs-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.kits-tabs-container::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 4px;
+}
+
+.kits-tabs-container::-webkit-scrollbar-thumb {
+    background: #01A84B;
+    border-radius: 4px;
+}
+
+.kit-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 0.85rem 1.25rem;
+    border-radius: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+.kit-tab-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.kit-tab-btn.active {
+    background-color: #01A84B;
+    border-color: #01A84B;
+    box-shadow: 0 4px 20px rgba(1, 168, 75, 0.3);
+}
+
+.tab-num {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.kit-tab-btn.active .tab-num {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.tab-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.kit-tab-btn.active .tab-label {
+    color: #ffffff;
+}
+
+/* Tarjeta Principal de Exhibición */
+.kit-showcase-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 768px) {
+    .kit-showcase-card {
+        padding: 3rem;
+    }
+}
+
+.showcase-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.meta-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge-cat {
+    background-color: rgba(1, 168, 75, 0.1);
+    color: #01A84B;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(1, 168, 75, 0.25);
+}
+
+.ref-code {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.stock-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #01A84B;
+    font-weight: 600;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #01A84B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(1, 168, 75, 0.7);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(1, 168, 75, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(1, 168, 75, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(1, 168, 75, 0);
+    }
+}
+
+.showcase-header-content h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+}
+
+.showcase-header-content p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+    max-width: 50rem;
+}
+
+/* Galería Bento Grid (Diseño de 5 Imágenes) */
+.bento-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 180px);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Configuración Bento para las 5 imágenes */
+.bento-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+@media (min-width: 768px) {
+    .bento-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 160px);
+    }
+    
+    .bento-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .bento-item:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .bento-item:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .bento-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .bento-item:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+.bento-item {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-4px);
+    border-color: #01A84B;
+    box-shadow: 0 10px 20px rgba(1, 168, 75, 0.12);
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bento-item:hover img {
+    transform: scale(1.05);
+}
+
+.bento-badge-num {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    color: #1f2937;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    border: 1px solid #e5e7eb;
+}
+
+/* Pie de Tarjeta y Botón de Cotización */
+.showcase-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 1.5rem;
+}
+
+.footer-note {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #4b5563;
+    font-size: 0.85rem;
+}
+
+.footer-note svg {
+    color: #f97316;
+    flex-shrink: 0;
+}
+
+.action-quote-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #f97316;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
+}
+
+.action-quote-btn:hover {
+    background-color: #ea580c;
+    transform: translateY(-2px);
+}
+
+.action-quote-btn svg {
+    transition: transform 0.2s ease;
+}
+
+.action-quote-btn:hover svg {
+    transform: translateX(4px);
+}
+
+.industrial-kits-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 4rem 1.5rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #1f2937;
+}
+
+@media (min-width: 768px) {
+    .industrial-kits-section {
+        padding: 5rem 3rem;
+    }
+}
+
+.kits-wrapper {
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+.kits-main-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.header-tag {
+    font-family: monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #f97316;
+    background-color: rgba(249, 115, 22, 0.08);
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    font-weight: bold;
+}
+
+.kits-main-header h2 {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #111827;
+    margin: 1rem 0 0.5rem 0;
+    letter-spacing: -0.025em;
+}
+
+.kits-main-header p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+/* Pestañas Horizontales Superiores */
+.kits-tabs-container {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #01A84B #f3f4f6;
+}
+
+.kits-tabs-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.kits-tabs-container::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 4px;
+}
+
+.kits-tabs-container::-webkit-scrollbar-thumb {
+    background: #01A84B;
+    border-radius: 4px;
+}
+
+.kit-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 0.85rem 1.25rem;
+    border-radius: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+.kit-tab-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.kit-tab-btn.active {
+    background-color: #01A84B;
+    border-color: #01A84B;
+    box-shadow: 0 4px 20px rgba(1, 168, 75, 0.3);
+}
+
+.tab-num {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.kit-tab-btn.active .tab-num {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.tab-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.kit-tab-btn.active .tab-label {
+    color: #ffffff;
+}
+
+/* Tarjeta Principal de Exhibición */
+.kit-showcase-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 768px) {
+    .kit-showcase-card {
+        padding: 2.5rem;
+    }
+}
+
+.showcase-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.meta-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge-cat {
+    background-color: rgba(1, 168, 75, 0.1);
+    color: #01A84B;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(1, 168, 75, 0.25);
+}
+
+.ref-code {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.stock-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #01A84B;
+    font-weight: 600;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #01A84B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(1, 168, 75, 0.7);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(1, 168, 75, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(1, 168, 75, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(1, 168, 75, 0);
+    }
+}
+
+/* Galería Bento Grid Estrictamente Visual (5 Imágenes) */
+.bento-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 160px);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Distribución Bento impactante para las 5 imágenes de cada kit */
+.bento-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+@media (min-width: 768px) {
+    .bento-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 180px);
+    }
+    
+    .bento-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .bento-item:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .bento-item:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .bento-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .bento-item:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+.bento-item {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-4px);
+    border-color: #01A84B;
+    box-shadow: 0 10px 20px rgba(1, 168, 75, 0.12);
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bento-item:hover img {
+    transform: scale(1.05);
+}
+
+.bento-badge-num {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    color: #1f2937;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    border: 1px solid #e5e7eb;
+}
+
+/* Pie de Tarjeta y Botón de Cotización */
+.showcase-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 1.5rem;
+}
+
+.footer-note {
+    display: flex;
+    align-items: center;
+}
+
+.mini-title-reference {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #374151;
+}
+
+.action-quote-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #f97316;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
+}
+
+.action-quote-btn:hover {
+    background-color: #ea580c;
+    transform: translateY(-2px);
+}
+
+.action-quote-btn svg {
+    transition: transform 0.2s ease;
+}
+
+.action-quote-btn:hover svg {
+    transform: translateX(4px);
 }

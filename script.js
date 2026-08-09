@@ -791,5 +791,123 @@ function cerrarVideoIntro() {
         overlay.innerHTML = '';
     }, 500);
 }
+const kitsData = {
+    1: {
+        category: "LÍNEAS DE ALTA PRESIÓN",
+        ref: "REF: ESIP-WECO-01",
+        title: "Repuestos para Extremos de Conexión Weco",
+        images: [
+            "img/TuberiaWecoIntegral.png",
+            "img/kitsTuberiaWecoIntegral1.png",
+            "img/kitsTuberiaWecoIntegral2.png",
+            "img/kitsTuberiaWecoIntegral3.png",
+            "img/kitsTuberiaWecoIntegral4.png"
+        ]
+    },
+    2: {
+        category: "MANTENIMIENTO INDUSTRIAL",
+        ref: "REF: ESIP-LS-02",
+        title: "Kits de Repuestos para Juntas Giratorias LS / TSi",
+        images: [
+            "img/juntasGiratorias.png",
+            "img/kitsJuntasGiratorias1.png",
+            "img/kitsJuntasGiratorias2.png",
+            "img/kitsJuntasGiratorias3.png",
+            "img/kitsJuntasGiratorias4.png"
+        ]
+    },
+    3: {
+        category: "CONTROL DE FLUJOS",
+        ref: "REF: ESIP-ULT-03",
+        title: "Kits de Repuestos para Válvulas de Tapón ULT",
+        images: [
+            "img/ValvulaTapon.png",
+            "img/kitsValvulaTaponULT1.png",
+            "img/kitsValvulaTaponULT2.png",
+            "img/kitsValvulaTaponULT3.png",
+            "img/kitsValvulaTaponULT4.png"
+        ]
+    },
+    4: {
+        category: "VALVULERÍA ESPECIALIZADA",
+        ref: "REF: ESIP-DR-04",
+        title: "Kits de Repuestos para Válvulas de Tapón DR",
+        images: [
+            "img/DRWeco.png",
+            "img/kitsValvulaDR1.png",
+            "img/kitsValvulaDR2.png",
+            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&auto=format&fit=crop&q=80"
+        ]
+    },
+    5: {
+        category: "SISTEMAS DE RETENCIÓN",
+        ref: "REF: ESIP-CV-05",
+        title: "Kits de Repuestos para Válvulas de Retención",
+        images: [
+            "img/valvulaRetencion.png",
+            "img/kitsValvulaRetencion1.png",
+            "img/kitsValvulaRetencion2.png",
+            "img/kitsValvulaRetencion3.png",
+            "img/kitsValvulaRetencion1.png"
+        ]
+    },
+    6: {
+        category: "SEGURIDAD INDUSTRIAL",
+        ref: "REF: ESIP-PRV-06",
+        title: "Kits de Repuestos para Válvulas de Alivio",
+        images: [
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400&auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=400&auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&auto=format&fit=crop&q=80"
+        ]
+    }
+};
 
+function switchKit(id) {
+    document.querySelectorAll('.kit-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
 
+    const activeBtn = document.querySelector(`[data-kit="${id}"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
+
+    const data = kitsData[id];
+    if (data) {
+        document.getElementById('showcase-badge').innerText = data.category;
+        document.getElementById('showcase-ref').innerText = data.ref;
+        document.getElementById('showcase-title-mini').innerText = data.title;
+        
+        const bentoContainer = document.getElementById('showcase-bento');
+        bentoContainer.innerHTML = '';
+        
+        data.images.forEach((imgUrl, index) => {
+            bentoContainer.innerHTML += `
+                <div class="bento-item">
+                    <img src="${imgUrl}" alt="Componente ${index + 1} - ${data.title}" loading="lazy">
+                    <span class="bento-badge-num">0${index + 1}</span>
+                </div>
+            `;
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    switchKit(1);
+});
+
+document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remover clase activa de botones y contenidos
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.index-tab-content').forEach(content => content.classList.remove('active'));
+        
+        // Agregar clase activa al botón presionado y su contenido correspondiente
+        button.classList.add('active');
+        document.getElementById(button.getAttribute('data-target')).classList.add('active');
+    });
+});
