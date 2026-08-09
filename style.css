@@ -1114,6 +1114,79 @@ button,
 }
 
 
+/* ==========================================================================
+   RESPONSIVO PARA MODAL CORPORATIVO (¿QUIÉNES SOMOS?)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .esip-premium-modal {
+        padding: 20px;
+    }
+
+    /* Cambiamos el grid de dos columnas a una sola columna vertical */
+    .premium-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* La imagen pasa a la parte superior con una altura fija atractiva */
+    .visual-pane {
+        height: 240px;
+    }
+
+    .content-pane {
+        padding: 40px 30px;
+    }
+
+    .content-pane h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .esip-premium-modal {
+        padding: 10px;
+    }
+
+    .content-pane {
+        padding: 30px 20px;
+    }
+
+    .content-pane h1 {
+        font-size: 32px;
+    }
+
+    /* Misión y Visión se apilan en una sola columna en pantallas pequeñas */
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .close-modal-btn {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 11px;
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media (max-width: 480px) {
+    .content-pane h1 {
+        font-size: 28px;
+    }
+
+    .intro-text, 
+    .story-item p, 
+    .quality-list li {
+        font-size: 13px;
+    }
+
+    .visual-pane {
+        height: 180px;
+    }
+}
+
 
 
 .catalog-dashboard-section {
