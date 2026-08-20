@@ -417,6 +417,225 @@ const databaseEspecificaciones = {
         tabla: [
             { propiedad: "Características Generales", valor: "• Son piezas de acoplamiento utilizadas comúnmente para modificar el género de conexión o tipo de rosca dentro de la misma familia de conexiones (LP, EUE, NPT, WECO, etc.).<br>• Su función es la de facilitar la continuidad cuando se encuentran dos extremos incompatibles del mismo tipo.<br>• La presión máxima de trabajo de todo el sistema queda limitada a la clasificación del componente de más baja tolerancia de presión o integrado en el Changeover.<br>• Se emplean tanto para Servicio Estándar como de Gas Agrio (H2S)<br>• Los tamaños, tipos de conexión y material de fabricación varían de acuerdo al requerimiento operativo.<br>• Se fabrican bajo previo pedido." }
         ]
+    },
+    'mat-figura-100': {
+        titulo: "FIGURA 100 (Niple en Amarillo y Tuerca en Negro)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "2”, 2-1/2”, 3”, 4”, 6”, 8”" },
+            { propiedad: "Servicio", valor: "Estándar" },
+            { propiedad: "Presión", valor: "1000 Psi" },
+            { propiedad: "Conexión", valor: "Rosca de Tubería (LPT)" },
+            { propiedad: "Aplicación", valor: "Diseñada para Baja Presión, Flujo por Gravedad o Líneas de Lodo / Manifolds de Baja Presión" }
+        ]
+    },
+    'mat-figura-200': {
+        titulo: "FIGURA 200 (Niple en Gris y Tuerca en Azul)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”" },
+            { propiedad: "Servicio", valor: "Estándar" },
+            { propiedad: "Presión", valor: "2000 Psi" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)" },
+            { propiedad: "Aplicación", valor: "Servicio General para Aire, Agua, Aceite o Gas / Manifolds de Servicio General" }
+        ]
+    },
+    'mat-figura-206': {
+        titulo: "FIGURA 206 (Niple en Gris y Tuerca en Azul)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”, 6”, 8”, 10”" },
+            { propiedad: "Servicio", valor: "Estándar" },
+            { propiedad: "Presión", valor: "2,000 Psi (con Junta Tórica)" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)" },
+            { propiedad: "Aplicación", valor: "Servicio General para Aire, Agua, Aceite o Gas / Manifolds de Servicio General" }
+        ]
+    },
+    'mat-figura-207': {
+        titulo: "FIGURA 207 (Niple en Gris y Tapa en Azul)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "3”, 4”, 6”, 8”, 10”" },
+            { propiedad: "Servicio", valor: "Estándar" },
+            { propiedad: "Presión", valor: "2000 Psi" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)" },
+            { propiedad: "Aplicación", valor: "Sellar el Manifold de las Conexiones de Línea / Proteger las Roscas de las Uniones" }
+        ]
+    },
+    'mat-figura-400': {
+        titulo: "FIGURA 400 (Niple en Rojo y Tuerca en Negro)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "2”, 2-1/2”, 3”, 4”, 5”, 6”, 8”, 10”, 12”" },
+            { propiedad: "Servicio", valor: "Estándar y Gas Agrio" },
+            { propiedad: "Presión", valor: "4000 Psi para Tamaño 2” / 4000 Psi para Tamaños 2-1/2” a 4” (con Junta Tórica) / 2500 Psi para Tamaños 5” a 12” (con Junta Tórica)" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)" },
+            { propiedad: "Aplicación", valor: "Manifolds y Líneas de Succión de Bombas / Servicio de Lodo para Perforación" }
+        ]
+    },
+    'mat-figura-602': {
+        titulo: "FIGURA 602 (Niple en Rojo y Tuerca en Negro)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”" },
+            { propiedad: "Servicio", valor: "Estándar y Gas Agrio" },
+            { propiedad: "Presión", valor: "6,000 Psi (con Junta de Sello Labial)" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables" },
+            { propiedad: "Aplicación", valor: "Manifolds y Líneas de Succión de Bombas / Servicio de Lodo para Perforación" }
+        ]
+    },
+    'mat-figura-1002': {
+        titulo: "FIGURA 1002",
+        tabla: [
+            { propiedad: "Descripción", valor: "Niple en Azul y Tuerca en Rojo para Servicio Estándar / Niple y Tuerca en Verde Cromado para Servicio de Gas Agrio" },
+            { propiedad: "Tamaños", valor: "1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”, 5”, 6”" },
+            { propiedad: "Servicio", valor: "Estándar y Gas Agrio" },
+            { propiedad: "Presión", valor: "10000 Psi para Tamaños 1” a 4” (con Sello Labial) Estándar; 7500 Psi para Tamaños 5” y 6” (con Junta Tórica) Estándar; 7500 Psi para Tamaños 1” a 4” (con Sello Labial) Gas Agrio; 5000 Psi para Tamaños 5” y 6” (con Junta Tórica) Gas Agrio" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables" },
+            { propiedad: "Aplicación", valor: "Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos" }
+        ]
+    },
+    'mat-figura-1003': {
+        titulo: "FIGURA 1003",
+        tabla: [
+            { propiedad: "Descripción", valor: "Niple en Verde y Tuerca en Negro para Servicio Estándar / Niple y Tuerca en Verde Cromado para Servicio de Gas Agrio" },
+            { propiedad: "Tamaños", valor: "2”, 2-1/2”, 3”, 4”, 5”" },
+            { propiedad: "Servicio", valor: "Estándar y Gas Agrio" },
+            { propiedad: "Presión", valor: "10000 Psi para Tamaños 2” a 3” (Estándar) / 7500 Psi para Tamaños 4” y 5” (Estándar) / 7500 Psi para Tamaños 2” a 3” (Gas Agrio) / 5000 Psi para Tamaños 4” y 5” (Gas Agrio)" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables" },
+            { propiedad: "Aplicación", valor: "Líneas de Alta Presión donde la Alineación del Conexionado es un Problema" }
+        ]
+    },
+    'mat-figura-1502': {
+        titulo: "FIGURA 1502",
+        tabla: [
+            { propiedad: "Descripción", valor: "Niple en Rojo Tenue y Tuerca en Azul para Servicio Estándar / Niple y Tuerca en Verde Cromado para Servicio de Gas Agrio" },
+            { propiedad: "Tamaños", valor: "1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”" },
+            { propiedad: "Servicio", valor: "Estándar y Gas Agrio" },
+            { propiedad: "Presión", valor: "15000 Psi (con Junta de Sello Labial) (Estándar) / 10000 Psi (con Junta de Sello Labial) (Gas Agrio)" },
+            { propiedad: "Conexión", valor: "Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables" },
+            { propiedad: "Aplicación", valor: "Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos" }
+        ]
+    },
+    'mat-figura-2002': {
+        titulo: "FIGURA 2002 (Niple en Plateado y Tuerca en Verde)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "2”, 3”" },
+            { propiedad: "Servicio", valor: "Estándar" },
+            { propiedad: "Presión", valor: "20000 Psi (con Junta de Sello Labial)" },
+            { propiedad: "Conexión", valor: "Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables" },
+            { propiedad: "Aplicación", valor: "Solo para Operaciones de Servicio Estándar: Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos" }
+        ]
+    },
+    'mat-figura-2202': {
+        titulo: "FIGURA 2202 (Niple y Tuerca en Verde Cromado)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "2”, 2-1/2”, 3”" },
+            { propiedad: "Servicio", valor: "Gas Agrio" },
+            { propiedad: "Presión", valor: "15000 Psi (con Junta de Sello Labial)" },
+            { propiedad: "Conexión", valor: "Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables" },
+            { propiedad: "Aplicación", valor: "Solo para Operaciones de Servicio de Gas Agrio: Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos" }
+        ]
+    },
+    'mat-figura-tank': {
+        titulo: "TANK (Niple y Tapa en Rojo)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "6” a 12”" },
+            { propiedad: "Servicio", valor: "Servicio Estándar" },
+            { propiedad: "Presión", valor: "150 Psi" },
+            { propiedad: "Conexión", valor: "Soldadura a Tope / Soldadura de Encaje" },
+            { propiedad: "Aplicación", valor: "Tanques de Lodo / Tuberías de Lodo / Líneas de Succión de Bombas" }
+        ]
+    },
+    'mat-figura-air-o-union': {
+        titulo: "AIR-O-UNION (Niple en Rojo)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "6” a 16”" },
+            { propiedad: "Servicio", valor: "Estándar" },
+            { propiedad: "Presión", valor: "150 Psi" },
+            { propiedad: "Conexión", valor: "Soldadura a Tope (Únicamente)" },
+            { propiedad: "Aplicación", valor: "Tanques de Lodo / Tuberías de Lodo / Líneas de Succión de Bombas / Conexiones de Niples/Líneas de Flujo" }
+        ]
+    },
+    'mat-sistema-sujencion-tpr': {
+        titulo: "SISTEMA DE SUJECIÓN TPR (PM100, PM200, PM300, SM100, SM200)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "Ver Tabla Adjunta" },
+            { propiedad: "Presión", valor: "Ver Tabla Adjunta" },
+            { propiedad: "Modelos", valor: "PM100, PM200, PM300, SM100, SM200" },
+            { propiedad: "Componentes", valor: "Eslabón-R de Sujeción / Eslabón-C de Conexión" },
+            { propiedad: "Otras Características", valor: "Ver Tabla Adjunta" },
+            { propiedad: "Aplicación", valor: "Fractura Hidráulica, Cementación, Acidificación, Fluidos Energizados, Completación de Pozos" }
+        ]
+    },
+    'mat-manifold-empaque': {
+        titulo: "MANIFOLD DE EMPAQUE CON GRAVA",
+        tabla: [
+            { propiedad: "Tamaños", valor: "2”, 3”" },
+            { propiedad: "Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
+            { propiedad: "Presión", valor: "Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP" },
+            { propiedad: "Conexión", valor: "Tuerca Aleteada Weco Retirable" },
+            { propiedad: "Componentes", valor: "Válvulas de Tapón / Accesorios de Conexión: Tee's / Adaptadores de Conexión" },
+            { propiedad: "Aplicación", valor: "Actúa como el centro de control crítico en superficie. / Desvía, regula y aísla los flujos limpios y lechadas abrasivas hacia el cabezal del pozo o el crossover de fondo, soportando presiones extremas de operación de hasta 15,000 psi / Controla, dirige y monitorea el caudal y la presión de fluidos y lodos con arena durante las operaciones de completación de pozos." }
+        ]
+    },
+    'mat-manifold-retorno': {
+        titulo: "RETORNO DE FLUJO / PRUEBA DE POZO / PRODUCCIÓN",
+        tabla: [
+            { propiedad: "Tamaños", valor: "2”, 3”" },
+            { propiedad: "Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
+            { propiedad: "Presión", valor: "Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP" },
+            { propiedad: "Conexión", valor: "Tuerca Aleteada Weco Retirable" },
+            { propiedad: "Componentes", valor: "Válvulas de Tapón / Válvulas de Retención / Estranguladores Fijos o Ajustables / Válvula de Estrangulación y Regulación (Opcional) / Accesorios de Conexión: Cruces, Tee's (Convencionales o Amortiguadas)" },
+            { propiedad: "Aplicación", valor: "Aísla un pozo específico de la red general y dirige su flujo hacia un separador de pruebas / Realiza limpieza inicial o terminación del pozo, maneja altas tasas de flujo, fluidos abrasivos y fuertes presiones / Recolecta la mezcla de hidrocarburos de todos los pozos en producción activa y la dirige hacia la planta de procesamiento central" }
+        ]
+    },
+    'mat-manifold-choke-saver': {
+        titulo: "RETORNO DE FLUJO / PRUEBA DE POZO / CON ADAPTADOR DE ESTRANGULACIÓN (CHOKE SAVER®)",
+        tabla: [
+            { propiedad: "Tamaños", valor: "2”, 3”" },
+            { propiedad: "Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
+            { propiedad: "Presión", valor: "Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP" },
+            { propiedad: "Conexión", valor: "Tuerca Aleteada Weco Retirable" },
+            { propiedad: "Componentes", valor: "Válvulas de Tapón / Estranguladores Fijos y Ajustables / Adaptador de Estrangulación (Choke Saber) / Accesorios de Conexión: Cruces, Tee's (Convencionales o Amortiguadas)" },
+            { propiedad: "Aplicación", valor: "Se sitúa entre el cabezal del pozo (alta presión) y los equipos de separación de superficie (baja presión) / Genera la caída de presión necesaria y controla el flujo durante la limpieza inicial del pozo (retorno de fluidos de fractura con arena) y durante las pruebas de producción dinámicas. / Regula los caudales y reduce las altas presiones del pozo de forma segura" }
+        ]
+    },
+    'mat-bomba-wt2400': {
+        titulo: "WT2400 Triplex Émbolo",
+        tabla: [
+            { propiedad: "Carrera", valor: "10”" },
+            { propiedad: "Presión Máxima", valor: "20000 Psi" },
+            { propiedad: "Caudal Máximo", valor: "Hasta 30.8 BPM" },
+            { propiedad: "Potencia Máxima", valor: "2400 HP" },
+            { propiedad: "Otras Cualidades", valor: "• Provista con Fluid End GeoPro Estándar<br>• Power End de alta resistencia diseñado para condiciones de campo exigentes<br>• Sistema de fijación integrado y acceso frontal para mantenimiento rápido" },
+            { propiedad: "Aplicación", valor: "• Fractura Hidráulica<br>• Estimulación y Acidificación de Pozos a Alta Presión<br>• Operaciones de Cementación" }
+        ]
+    },
+    'mat-bomba-wq3000': {
+        titulo: "WQ3000 Quintuplex Émbolo de Alto Desempeño",
+        tabla: [
+            { propiedad: "Carrera", valor: "10”" },
+            { propiedad: "Presión Máxima", valor: "20000 Psi" },
+            { propiedad: "Caudal Máximo", valor: "36.7 BPM" },
+            { propiedad: "Potencia Máxima", valor: "3000 HP" },
+            { propiedad: "Otras Cualidades", valor: "• Provista con Fluid End GeoPro 200L<br>• Capaz de entregar altas tasas de flujo, optimizando un incremento de hasta el 25% respecto a diseños tradicionales<br>• Sistema de engranajes modular de alta durabilidad" },
+            { propiedad: "Aplicación", valor: "• Fractura Hidráulica Continua<br>• Acidificación de Pozos<br>• Estimulación de Pozos Petroleros y Gasíferos" }
+        ]
+    },
+    'mat-fluid-end-geopr': {
+        titulo: "FLUID END GEOPRO ESTÁNDAR",
+        tabla: [
+            { propiedad: "Tamaños", valor: "4”, 4-1/2”, 5” (Triplex)" },
+            { propiedad: "Carrera", valor: "10”" },
+            { propiedad: "Rangos de Presión", valor: "Hasta 20000 Psi" },
+            { propiedad: "Otras Cualidades", valor: "• Disponible en acero inoxidable de primera calidad y acero aleado para resistir fluidos corrosivos y erosivos agresivos<br>• Diseñado con contornos internos optimizados para reducir las concentraciones de tensión<br>• Compatible con versiones anteriores de los extremos de potencia de TechnipFMC" },
+            { propiedad: "Aplicación", valor: "• Fractura Hidráulica<br>• Acidificación<br>• Cementación<br>• Mantenimiento de Pozos." }
+        ]
+    },
+    'mat-fluid-end-geopro-200l': {
+        titulo: "FLUID END MODELO GEOPRO 200L",
+        tabla: [
+            { propiedad: "Tamaños", valor: "4”, 5” (Triplex y Quintuplex)" },
+            { propiedad: "Carrera", valor: "10”" },
+            { propiedad: "Rangos de Presión", valor: "Hasta 20000 Psi" },
+            { propiedad: "Otras Cualidades", valor: "• Variante reforzada del Modelo GeoPro Estándar para ciclos de trabajo continuo prolongados<br>• Pasajes internos suavizados mediante maquinado de precisión para reducir la erosión<br>• Compatible con los Power Ends actuales de la marca" },
+            { propiedad: "Aplicación", valor: "• Fractura Hidráulica<br>• Estimulación de Pozos<br>• Tubería Flexible (Coiled Tubing)<br>• Bombeo Industrial de Servicio Pesado" }
+        ]
     }
 };
 
@@ -562,43 +781,45 @@ window.addEventListener("click", function (event) {
 
 
 let comparisonList = [];
-
-// Base de datos rápida extraída de tus elementos HTML para la comparación
 const technicalDataDb = {
     'mat-weco': {
         title: 'Tubería WECO Integral',
+        categoria: 'tuberia', // Necesario para la validación
         tamanios: '1", 1-1/2", 2", 3", 4"',
         longitudes: 'De 1 a 20 pies',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
-        presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
+        presion: '6k, 10k, 15k, 20k CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
         aplicacion: 'Procesos de Alta Presión y Muy Abrasivos'
     },
     'mat-npst': {
         title: 'Tubería Weco Diseño NPST®',
+        categoria: 'tuberia',
         tamanios: '1", 1-1/2", 2", 3", 4"',
         longitudes: 'De 1 a 20 pies',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
-        presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
+        presion: '6k, 10k, 15k, 20k CWP',
         conexion: 'Tuerca Aleteada Weco No Retirable',
         aplicacion: 'Procesos de Alta Presión No Tan Críticos'
     },
     'mat-valves200': {
-        title: 'Junta Giratoria (Swivel Joint)',
+        title: 'Junta Giratoria LS',
+        categoria: 'junta',
         tamanios: '2"',
         estilos: '10, 20, 30, 40, 50, 60, 70, 80, 100',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
-        presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
-        conexion: 'Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)',
+        presion: '6k, 10k, 15k, 20k CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable...',
         aplicacion: 'Diversos Procesos No Críticos'
     },
     'mat-choke300': {
-        title: 'Junta Giratoria (Swivel Joint - Chiksan Weco®)',
+        title: 'Junta Giratoria TSI',
+        categoria: 'junta',
         tamanios: '3", 4"',
         estilos: '10, 20, 30, 40, 50, 60, 70, 80, 100',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
-        presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
-        conexion: 'Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)',
+        presion: '6k, 10k, 15k, 20k CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable...',
         aplicacion: 'Procesos de Alta Presión y Abrasivos'
     },
     'mat-manguerametalica': {
@@ -620,6 +841,7 @@ const technicalDataDb = {
         aplicacion: 'Líneas de control de pozos (estrangulación y ahogo), Pruebas de pozos superficiales, Absorción de movimientos y vibraciones, Operaciones de servicio extrapesado, Conducción de fluidos abrasivos o corrosivos, tales como líneas para lodos de perforación, cementación, inyección de nitrógeno y operaciones de acidificación.'
     },
     'mat-valvula-tapon': {
+        categoria: 'valvulas-de-tapon',
         title: 'VÁLVULA DE TAPÓN ULT (Modelo ULT Weco®)',
         tamanios: '2“x1”, 2”x2”, 3”, 4”',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
@@ -628,6 +850,7 @@ const technicalDataDb = {
         aplicacion: 'Procesos de Fractura, de Cementación y Altamente Abrasivos'
     },
     'mat-valvula-tapon-dr': {
+        categoria: 'valvulas-de-tapon',
         title: 'VÁLVULA DE TAPÓN (Modelo DR Weco®)',
         tamanios: '2”, 3”',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
@@ -645,7 +868,10 @@ const technicalDataDb = {
     },
     'mat-valvula-retencion-veleta': {
         title: 'VÁLVULA DE RETENCIÓN (Diseño Veleta Convencional)',
+        categoria: 'valvula-retencion',
         tamanios: '2”, 3”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
@@ -653,7 +879,10 @@ const technicalDataDb = {
     },
     'mat-valvula-retencion-entrada-superior': {
         title: 'VÁLVULA DE RETENCIÓN (Veleta con Entrada Superior Weco®)',
+        categoria: 'valvula-retencion',
         tamanios: '2”, 3”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
@@ -661,29 +890,412 @@ const technicalDataDb = {
     },
     'mat-valvula-retencion-dardo': {
         title: 'VÁLVULA DE RETENCIÓN (Dardo Weco®)',
+        categoria: 'valvula-retencion',
         tamanios: '2”, 3”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
         aplicacion: 'Control de Gases Extremos como Nitrógeno (N2), Dióxido de Carbono (CO2) / Flujos Gaseosos Secos o Húmedos No Erosivos de Alta Velocidad'
+    },
+    'mat-valvula-alivio-mecanica': {
+        title: 'VÁLVULA DE ALIVIO MECÁNICA (Acción Directa)',
+        categoria: 'valvula-alivio',
+        tamanios: '2”, 3”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: '100-1000, 1000-15000, 10000-20000 Psi (Variantes)',
+        conexion: 'Tuerca Aleteada Weco Retirable',
+        aplicacion: 'Procesos Diversos'
+    },
+    'mat-valvula-alivio-electronica': {
+        title: 'VÁLVULA DE ALIVIO ELECTRÓNICA (ePRV Weco®)',
+        categoria: 'valvula-alivio',
+        tamanios: '3”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Hasta 15000 Psi',
+        conexion: 'Tuerca Aleteada Weco Retirable',
+        aplicacion: 'Fractura Hidráulica, Estimulación de Pozos, Líneas de Alta Presión'
+    },
+    'mat-estrangulador-fijo': {
+        title: 'ESTRANGULADOR FIJO (Positive Choke)',
+        categoria: 'estranguladores',
+        tamanios: '2”, 3”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 5000, 10000, 15000 CWP / Gas Agrio: 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable (MxF, FxM)',
+        aplicacion: 'Operaciones de Cementación, Fractura, Control de Flujo, Retorno de Fluidos, Inyección de Fluidos, Producción Estable a Largo Plazo'
+    },
+    'mat-estrangulador-ajustable': {
+        title: 'ESTRANGULADOR AJUSTABLE (Adjustable Choke)',
+        categoria: 'estranguladores',
+        tamanios: '2”, 3”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 6000, 10000, 15000 CWP / Gas Agrio: 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable (MxF)',
+        aplicacion: 'Control preciso de Fluidos, Caudales y Caídas de Presión Extrema. Cementación, Fractura, Pruebas de Pozos, Retorno de Flujo, Inyección de Fluidos'
+    },
+    'mat-valvula-estrangulacion-regulacion': {
+        title: 'VÁLVULA DE ESTRANGULACIÓN Y REGULACIÓN (Throttle Choke Valve®)',
+        tamanios: '2”, 3”',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable (MxF)',
+        aplicacion: 'Operaciones de Fractura Hidráulica, Retorno de Flujo, Limpieza a Alta Presión, Control del Flujo'
+    },
+    'mat-adaptador-estrangulacion': {
+        title: 'ADAPTADOR DE ESTRANGULACIÓN (Choke Saver®)',
+        tamanios: '2”, 3”',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 6000, 10000, 15000 CWP / Gas Agrio: 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable (MxF)',
+        aplicacion: 'Operaciones de Retorno de Flujo, Pruebas de Pozos, Limpieza con Tubería Flexible (Coiled Tubing), Manifolds de Estrangulación y Control, Líneas de Acidificación y Fractura Hidráulica'
+    },
+    'mat-valvula-mariposa-12': {
+        title: 'VÁLVULA DE MARIPOSA MODELO 12',
+        categoria: 'valvulas-mariposa',
+        tamanios: '2” a 16”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: '175 (2”-12”), 150 (14”-16”) CWP',
+        conexion: 'Bridas 125/150 Psi',
+        aplicacion: 'Servicios de apertura/cierre o regulación de caudal (1 mm Hg hasta presión máxima)'
+    },
+    'mat-valvula-mariposa-12n': {
+        title: 'VÁLVULA DE MARIPOSA MODELO 12N',
+        categoria: 'valvulas-mariposa',
+        tamanios: '2” a 6”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: '175 (2”-6”) CWP',
+        conexion: 'Bridas Tubería Ligera',
+        aplicacion: 'Servicios de apertura/cierre o regulación de caudal'
+    },
+    'mat-valvula-mariposa-22': {
+        title: 'VÁLVULA DE MARIPOSA MODELO 22',
+        categoria: 'valvulas-mariposa',
+        tamanios: '2” a 12”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: '175 (2”-12”) CWP',
+        conexion: 'Bridas 125/150 Psi',
+        aplicacion: 'Servicios de apertura/cierre o regulación de caudal'
+    },
+    'mat-valvula-mariposa-22l': {
+        title: 'VÁLVULA DE MARIPOSA MODELO 22L',
+        categoria: 'valvulas-mariposa',
+        tamanios: '2” a 24”',
+        longitudes: 'N/A',
+        estilos: 'N/A',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: '175 (2”-12”), 150 (14”-24”) CWP',
+        conexion: 'Atornillable (Bridas 125/150)',
+        aplicacion: 'Servicios de apertura/cierre o regulación de caudal'
+    },
+    'mat-diseno-engranaje-helicoidal': {
+        title: 'DISEÑO DE ENGRANAJE HELICOIDAL RESISTENTE A LA INTEMPERIE Weco®',
+        categoria: 'accesorios-valvulas',
+        tamanios: 'Compatible con Válvulas de todos los Tamaños',
+        servicio: 'No especificado',
+        presion: 'No especificado',
+        conexion: 'Se Monta en la Válvula en Cualquier Cuadrante',
+        aplicacion: 'Recomendado para Accionamiento Manual (Apertura/Cierre) o Regulación de Caudal'
+    },
+    'mat-actuador-veleta-modelo-200': {
+        title: 'ACTUADOR DE VELETA MODELO 200 Weco®',
+        categoria: 'accesorios-valvulas',
+        tamanios: '2” a 6”',
+        servicio: 'No especificado',
+        presion: 'No especificado',
+        conexion: 'Se Monta Directamente en la Válvula en Cualquier Cuadrante',
+        aplicacion: 'Recomendado para el Funcionamiento de Válvulas de Apertura/Cierre'
+    },
+    'mat-actuador-neumatico-doble-accion': {
+        title: 'ACTUADOR NEUMÁTICO DE DOBLE ACCIÓN O CON RETORNO POR RESORTE Weco®',
+        categoria: 'accesorios-valvulas',
+        tamanios: 'Compatible con Válvulas Mariposa de 2” a 12” y algunas Válvulas de Tapón',
+        servicio: 'No especificado',
+        presion: 'Algunos Modelos requieren una Presión de Aire Mínima de 30 Psi',
+        conexion: 'Se Monta Directamente en la Válvula en Cualquier Cuadrante sin Adaptadores ni Accesorios Especiales',
+        aplicacion: 'Recomendado para Operación de Apertura/Cierre'
+    },
+    'mat-manija-estandar-weco': {
+        title: 'MANIJA ESTÁNDAR Weco®',
+        categoria: 'accesorios-valvulas',
+        tamanios: '2” a 12” (Recomendada para Tamaños de 8” o menores)',
+        servicio: 'No especificado',
+        presion: 'No especificado',
+        conexion: 'Se Monta Directamente en la Brida Superior Pre-ranurada del Cuerpo de la Válvula',
+        aplicacion: 'Accionamiento Manual con Posiciones de Retención de Apertura/Cierre'
+    },
+    'mat-palanca-regulacion-weco': {
+        title: 'PALANCA DE REGULACIÓN Weco®',
+        categoria: 'accesorios-valvulas',
+        tamanios: '2” a 12” (Recomendada para Tamaños de 8” o menores)',
+        servicio: 'No especificado',
+        presion: 'No especificado',
+        conexion: 'Se Monta Directamente en la Brida Superior con Muescas del Cuerpo de la Válvula',
+        aplicacion: 'Bloqueo Seguro en cualquiera de las 10 Posiciones, desde completamente abierto hasta completamente cerrado'
+    },
+    'mat-accesorios-conexion-weco': {
+        title: 'ACCESORIOS DE CONEXIÓN',
+        tamanios: '1”, 1-1/2”, 2”, 3”, 4”',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable / Roscado / Soldadura a Tope (Butt Weld)',
+        aplicacion: 'Líneas de Fractura, Líneas de Prueba, Líneas de Circulación, Cementación y Estimulación, Operaciones de Alta Presión y Altamente Abrasivas'
+    },
+    'mat-crossover': {
+        title: 'CROSSOVERS (X-Overs)',
+        categoria: 'adaptadores',
+        tamanios: 'Varían de acuerdo al requerimiento operativo',
+        servicio: 'Estándar / Gas Agrio (H2S)',
+        presion: 'Limitada a la clasificación del componente de más baja tolerancia de presión o integrado en el Crossover',
+        conexion: 'Varían de acuerdo al requerimiento operativo',
+        aplicacion: 'Transición entre diferentes diámetros nominales o clasificaciones de presión en la misma línea de flujo (Se fabrican bajo previo pedido)'
+    },
+    'mat-changeover': {
+        title: 'CHANGEOVERS (X-Overs)',
+        categoria: 'adaptadores',
+        tamanios: 'Varían de acuerdo al requerimiento operativo',
+        servicio: 'Estándar / Gas Agrio (H2S)',
+        presion: 'Limitada a la clasificación del componente de más baja tolerancia de presión o integrado en el Changeover',
+        conexion: 'Varían de acuerdo al requerimiento operativo',
+        aplicacion: 'Modificar el género de conexión o tipo de rosca dentro de la misma familia de conexiones / Facilitar la continuidad cuando se encuentran dos extremos incompatibles del mismo tipo (Se fabrican bajo previo pedido)'
+    },
+    'mat-figura-100': {
+        title: 'FIGURA 100 (Niple en Amarillo y Tuerca en Negro)',
+        categoria: 'uniones-golpe',
+        tamanios: '2”, 2-1/2”, 3”, 4”, 6”, 8”',
+        servicio: 'Estándar',
+        presion: '1000 Psi',
+        conexion: 'Rosca de Tubería (LPT)',
+        aplicacion: 'Diseñada para Baja Presión, Flujo por Gravedad o Líneas de Lodo / Manifolds de Baja Presión'
+    },
+    'mat-figura-200': {
+        title: 'FIGURA 200 (Niple en Gris y Tuerca en Azul)',
+        categoria: 'uniones-golpe',
+        tamanios: '1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”',
+        servicio: 'Estándar',
+        presion: '2000 Psi',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)',
+        aplicacion: 'Servicio General para Aire, Agua, Aceite o Gas / Manifolds de Servicio General'
+    },
+    'mat-figura-206': {
+        title: 'FIGURA 206 (Niple en Gris y Tuerca en Azul)',
+        categoria: 'uniones-golpe',
+        tamanios: '1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”, 6”, 8”, 10”',
+        servicio: 'Estándar',
+        presion: '2,000 Psi (con Junta Tórica)',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)',
+        aplicacion: 'Servicio General para Aire, Agua, Aceite o Gas / Manifolds de Servicio General'
+    },
+    'mat-figura-207': {
+        title: 'FIGURA 207 (Niple en Gris y Tapa en Azul)',
+        categoria: 'uniones-golpe',
+        tamanios: '3”, 4”, 6”, 8”, 10”',
+        servicio: 'Estándar',
+        presion: '2000 Psi',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)',
+        aplicacion: 'Sellar el Manifold de las Conexiones de Línea / Proteger las Roscas de las Uniones'
+    },
+    'mat-figura-400': {
+        title: 'FIGURA 400 (Niple en Rojo y Tuerca en Negro)',
+        categoria: 'uniones-golpe',
+        tamanios: '2”, 2-1/2”, 3”, 4”, 5”, 6”, 8”, 10”, 12”',
+        servicio: 'Estándar y Gas Agrio',
+        presion: '4000 Psi para Tamaño 2” / 4000 Psi para Tamaños 2-1/2” a 4” (con Junta Tórica) / 2500 Psi para Tamaños 5” a 12” (con Junta Tórica)',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld)',
+        aplicacion: 'Manifolds y Líneas de Succión de Bombas / Servicio de Lodo para Perforación'
+    },
+    'mat-figura-602': {
+        title: 'FIGURA 602 (Niple en Rojo y Tuerca en Negro)',
+        categoria: 'uniones-golpe',
+        tamanios: '1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”',
+        servicio: 'Estándar y Gas Agrio',
+        presion: '6,000 Psi (con Junta de Sello Labial)',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables',
+        aplicacion: 'Manifolds y Líneas de Succión de Bombas / Servicio de Lodo para Perforación'
+    },
+    'mat-figura-1002': {
+        title: 'FIGURA 1002 (Niple en Azul y Tuerca en Rojo para Servicio Estándar / Niple y Tuerca en Verde Cromado para Servicio de Gas Agrio)',
+        categoria: 'uniones-golpe',
+        tamanios: '1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”, 5”, 6”',
+        servicio: 'Estándar y Gas Agrio',
+        presion: '10000 Psi para Tamaños 1” a 4” (con Sello Labial) Estándar; 7500 Psi para Tamaños 5” y 6” (con Junta Tórica) Estándar; 7500 Psi para Tamaños 1” a 4” (con Sello Labial) Gas Agrio; 5000 Psi para Tamaños 5” y 6” (con Junta Tórica) Gas Agrio',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables',
+        aplicacion: 'Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos'
+    },
+    'mat-figura-1003': {
+        title: 'FIGURA 1003 (Niple en Verde y Tuerca en Negro para Servicio Estándar / Niple y Tuerca en Verde Cromado para Servicio de Gas Agrio)',
+        categoria: 'uniones-golpe',
+        tamanios: '2”, 2-1/2”, 3”, 4”, 5”',
+        servicio: 'Estándar y Gas Agrio',
+        presion: '10000 Psi para Tamaños 2” a 3” (Estándar) / 7500 Psi para Tamaños 4” y 5” (Estándar) / 7500 Psi para Tamaños 2” a 3” (Gas Agrio) / 5000 Psi para Tamaños 4” y 5” (Gas Agrio)',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables',
+        aplicacion: 'Líneas de Alta Presión donde la Alineación del Conexionado es un Problema'
+    },
+    'mat-figura-1502': {
+        title: 'FIGURA 1502 (Niple en Rojo Tenue y Tuerca en Azul para Servicio Estándar / Niple y Tuerca en Verde Cromado para Servicio de Gas Agrio)',
+        categoria: 'uniones-golpe',
+        tamanios: '1”, 1-1/4”, 1-1/2”, 2”, 2-1/2”, 3”, 4”',
+        servicio: 'Estándar y Gas Agrio',
+        presion: '15000 Psi (con Junta de Sello Labial) (Estándar) / 10000 Psi (con Junta de Sello Labial) (Gas Agrio)',
+        conexion: 'Rosca de Tuberías (LPT) / Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables',
+        aplicacion: 'Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos'
+    },
+    'mat-figura-2002': {
+        title: 'FIGURA 2002 (Niple en Plateado y Tuerca en Verde)',
+        categoria: 'uniones-golpe',
+        tamanios: '2”, 3”',
+        servicio: 'Estándar',
+        presion: '20000 Psi (con Junta de Sello Labial)',
+        conexion: 'Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables',
+        aplicacion: 'Solo para Operaciones de Servicio Estándar: Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos'
+    },
+    'mat-figura-2202': {
+        title: 'FIGURA 2202 (Niple y Tuerca en Verde Cromado)',
+        categoria: 'uniones-golpe',
+        tamanios: '2”, 2-1/2”, 3”',
+        servicio: 'Gas Agrio',
+        presion: '15000 Psi (con Junta de Sello Labial)',
+        conexion: 'Soldadura a Tope (Butt Weld) / Integrales en Productos con Tuercas Retirables',
+        aplicacion: 'Solo para Operaciones de Servicio de Gas Agrio: Cementación / Fractura / Acidificación / Pruebas / Líneas de Estrangulación y Control de Pozos'
+    },
+    'mat-figura-tank': {
+        title: 'TANK (Niple y Tapa en Rojo)',
+        categoria: 'uniones-golpe',
+        tamanios: '6” a 12”',
+        servicio: 'Servicio Estándar',
+        presion: '150 Psi',
+        conexion: 'Soldadura a Tope / Soldadura de Encaje',
+        aplicacion: 'Tanques de Lodo / Tuberías de Lodo / Líneas de Succión de Bombas'
+    },
+    'mat-figura-air-o-union': {
+        title: 'AIR-O-UNION (Niple en Rojo)',
+        categoria: 'uniones-golpe',
+        tamanios: '6” a 16”',
+        servicio: 'Estándar',
+        presion: '150 Psi',
+        conexion: 'Soldadura a Tope (Únicamente)',
+        aplicacion: 'Tanques de Lodo / Tuberías de Lodo / Líneas de Succión de Bombas / Conexiones de Niples/Líneas de Flujo'
+    },
+    'mat-sistema-sujencion-tpr': {
+        title: 'SISTEMA DE SUJECIÓN TPR (PM100, PM200, PM300, SM100, SM200)',
+        tamanios: 'Ver Tabla Adjunta',
+        presion: 'Ver Tabla Adjunta',
+        modelos: 'PM100, PM200, PM300, SM100, SM200',
+        componentes: 'Eslabón-R de Sujeción / Eslabón-C de Conexión',
+        otrasCaracteristicas: 'Ver Tabla Adjunta',
+        aplicacion: 'Fractura Hidráulica, Cementación, Acidificación, Fluidos Energizados, Completación de Pozos'
+    },
+    'mat-manifold-empaque': {
+        title: 'MANIFOLD DE EMPAQUE CON GRAVA',
+        categoria: 'manifolds',
+        tamanios: '2”, 3”',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable',
+        componentes: 'Válvulas de Tapón / Accesorios de Conexión: Tee\'s / Adaptadores de Conexión',
+        aplicacion: 'Actúa como el centro de control crítico en superficie. / Desvía, regula y aísla los flujos limpios y lechadas abrasivas hacia el cabezal del pozo o el crossover de fondo, soportando presiones extremas de operación de hasta 15,000 psi / Controla, dirige y monitorea el caudal y la presión de fluidos y lodos con arena durante las operaciones de completación de pozos.'
+    },
+    'mat-manifold-retorno': {
+        title: 'RETORNO DE FLUJO / PRUEBA DE POZO / PRODUCCIÓN',
+        categoria: 'manifolds',
+        tamanios: '2”, 3”',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable',
+        componentes: 'Válvulas de Tapón / Válvulas de Retención / Estranguladores Fijos o Ajustables / Válvula de Estrangulación y Regulación (Opcional) / Accesorios de Conexión: Cruces, Tee\'s (Convencionales o Amortiguadas)',
+        aplicacion: 'Aísla un pozo específico de la red general y dirige su flujo hacia un separador de pruebas / Realiza limpieza inicial o terminación del pozo, maneja altas tasas de flujo, fluidos abrasivos y fuertes presiones / Recolecta la mezcla de hidrocarburos de todos los pozos en producción activa y la dirige hacia la planta de procesamiento central'
+    },
+    'mat-manifold-choke-saver': {
+        title: 'RETORNO DE FLUJO / PRUEBA DE POZO / CON ADAPTADOR DE ESTRANGULACIÓN (CHOKE SAVER®)',
+        categoria: 'manifolds',
+        tamanios: '2”, 3”',
+        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
+        presion: 'Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
+        conexion: 'Tuerca Aleteada Weco Retirable',
+        componentes: 'Válvulas de Tapón / Estranguladores Fijos y Ajustables / Adaptador de Estrangulación (Choke Saber) / Accesorios de Conexión: Cruces, Tee\'s (Convencionales o Amortiguadas)',
+        aplicacion: 'Se sitúa entre el cabezal del pozo (alta presión) y los equipos de separación de superficie (baja presión) / Genera la caída de presión necesaria y controla el flujo durante la limpieza inicial del pozo (retorno de fluidos de fractura con arena) y durante las pruebas de producción dinámicas. / Regula los caudales y reduce las altas presiones del pozo de forma segura'
+    },
+   'mat-bomba-wt2400': {
+        title: 'WT2400 Triplex Émbolo',
+        categoria: 'bombas-reciprocantes',
+        tamanios: 'Carrera: 10”',
+        presion: '20000 Psi',
+        caudalMaximo: 'Hasta 30.8 BPM',
+        potenciaMaxima: '2400 HP',
+        otrasCualidades: 'Provista con Fluid End GeoPro Estándar / Power End de alta resistencia diseñado para condiciones de campo exigentes / Diseño de fijación integrado y acceso frontal para mantenimiento rápido',
+        aplicacion: 'Fractura Hidráulica / Estimulación y Acidificación de Pozos a Alta Presión / Operaciones de Cementación'
+    },
+    'mat-bomba-wq3000': {
+        title: 'WQ3000 Quintuplex Émbolo de Alto Desempeño',
+        categoria: 'bombas-reciprocantes',
+        tamanios: 'Carrera: 10”',
+        presion: '20000 Psi',
+        caudalMaximo: '36.7 BPM',
+        potenciaMaxima: '3000 HP',
+        otrasCualidades: 'Provista con Fluid End GeoPro 200L / Capaz de entregar altas tasas de flujo, optimizando un incremento de hasta el 25% respecto a diseños tradicionales / Sistema de engranajes modular de alta durabilidad',
+        aplicacion: 'Fractura Hidráulica Continua / Acidificación de Pozos / Estimulación de Pozos Petroleros y Gasíferos'
+    },
+    'mat-fluid-end-geopr': {
+        title: 'FLUID END GEOPRO ESTÁNDAR',
+        categoria: 'bombas-reciprocantes',
+        tamanios: '4”, 4-1/2”, 5” (Triplex)',
+        carrera: '10”',
+        presion: 'Hasta 20000 Psi',
+        otrasCualidades: 'Disponible en acero inoxidable de primera calidad y acero aleado / Diseñado con contornos internos optimizados para reducir concentraciones de tensión / Compatible con versiones anteriores de TechnipFMC',
+        aplicacion: 'Fractura Hidráulica / Acidificación / Cementación / Mantenimiento de Pozos.'
+    },
+    'mat-fluid-end-geopro-200l': {
+        title: 'FLUID END MODELO GEOPRO 200L',
+        categoria: 'bombas-reciprocantes',
+        tamanios: '4”, 5” (Triplex y Quintuplex)',
+        carrera: '10”',
+        presion: 'Hasta 20000 Psi',
+        otrasCualidades: 'Variante reforzada del Modelo GeoPro Estándar para ciclos de trabajo continuo prolongados / Pasajes internos suavizados mediante maquinado de precisión para reducir la erosión / Compatible con los Power Ends actuales de la marca',
+        aplicacion: 'Fractura Hidráulica / Estimulación de Pozos / Tubería Flexible (Coiled Tubing) / Bombeo Industrial de Servicio Pesado'
     }
 };
 
 function toggleCompare(id, name, event) {
-    const index = comparisonList.indexOf(id);
     const btn = event.currentTarget;
+    const producto = technicalDataDb[id];
 
-    if (index > -1) {
-        // Si ya estaba, lo quitamos
-        comparisonList.splice(index, 1);
+    // 1. Si ya está en la lista, lo quitamos
+    if (comparisonList.includes(id)) {
+        comparisonList = comparisonList.filter(item => item !== id);
         btn.classList.remove('active');
         btn.innerText = '+ Añadir a comparar';
     } else {
-        // Si no está, validamos el límite de 2 elementos
+        // 2. Validación de categoría: Si hay algo, debe ser igual
+        if (comparisonList.length > 0) {
+            const catActual = technicalDataDb[comparisonList[0]].categoria;
+            if (producto.categoria !== catActual) {
+                alert('⚠️ Solo puedes comparar productos de la misma categoría.');
+                return;
+            }
+        }
+
+        // 3. Límite de 2
         if (comparisonList.length >= 2) {
-            alert('Solo puedes comparar 2 productos simultáneamente.');
+            alert('❌ Solo puedes comparar 2 productos a la vez.');
             return;
         }
+
+        // 4. Agregamos
         comparisonList.push(id);
         btn.classList.add('active');
         btn.innerText = '✓ En comparación';
@@ -726,9 +1338,39 @@ function openComparisonModal() {
 
     const modal = document.getElementById('comparisonModal');
     const container = document.getElementById('comparisonTableContent');
-
     const prod1 = technicalDataDb[comparisonList[0]];
     const prod2 = technicalDataDb[comparisonList[1]];
+
+    const specs = [
+        { label: 'Tamaños', key: 'tamanios' },
+        { label: 'Longitudes', key: 'longitudes' },
+        { label: 'Estilos', key: 'estilos' },
+        { label: 'Servicio', key: 'servicio' },
+        { label: 'Presión', key: 'presion' },
+        { label: 'Conexión', key: 'conexion' },
+        { label: 'Aplicación', key: 'aplicacion' }
+    ];
+
+    // Filtramos las filas: solo incluimos si al menos uno tiene datos válidos
+    let rows = specs.map(item => {
+        const val1 = prod1[item.key];
+        const val2 = prod2[item.key];
+
+        // Verificamos si ambos son 'N/A', null, undefined o vacíos
+        const isEmpty1 = !val1 || val1 === 'N/A';
+        const isEmpty2 = !val2 || val2 === 'N/A';
+
+        // Si ambos están vacíos, no creamos la fila (retornamos un string vacío)
+        if (isEmpty1 && isEmpty2) return '';
+
+        return `
+            <tr>
+                <td><strong>${item.label}</strong></td>
+                <td>${val1 || '-'}</td>
+                <td>${val2 || '-'}</td>
+            </tr>
+        `;
+    }).join('');
 
     container.innerHTML = `
         <table class="compare-table">
@@ -739,14 +1381,7 @@ function openComparisonModal() {
                     <th>${prod2.title}</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr><td><strong>Tamaños</strong></td><td>${prod1.tamanios}</td><td>${prod2.tamanios}</td></tr>
-                <tr><td><strong>Longitudes</strong></td><td>${prod1.longitudes}</td><td>${prod2.longitudes}</td></tr>
-                <tr><td><strong>Tipo de Servicio</strong></td><td>${prod1.servicio}</td><td>${prod2.servicio}</td></tr>
-                <tr><td><strong>Rangos de Presión</strong></td><td>${prod1.presion}</td><td>${prod2.presion}</td></tr>
-                <tr><td><strong>Conexión / Extremos</strong></td><td>${prod1.conexion}</td><td>${prod2.conexion}</td></tr>
-                <tr><td><strong>Aplicación Principal</strong></td><td>${prod1.aplicacion}</td><td>${prod2.aplicacion}</td></tr>
-            </tbody>
+            <tbody>${rows}</tbody>
         </table>
     `;
 
@@ -756,7 +1391,6 @@ function openComparisonModal() {
 function closeComparisonModal() {
     document.getElementById('comparisonModal').classList.add('hidden');
 }
-
 
 
 
@@ -866,6 +1500,7 @@ const kitsData = {
     }
 };
 
+
 function switchKit(id) {
     document.querySelectorAll('.kit-tab-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -881,13 +1516,13 @@ function switchKit(id) {
         document.getElementById('showcase-badge').innerText = data.category;
         document.getElementById('showcase-ref').innerText = data.ref;
         document.getElementById('showcase-title-mini').innerText = data.title;
-        
+
         const bentoContainer = document.getElementById('showcase-bento');
         bentoContainer.innerHTML = '';
-        
+
         data.images.forEach((imgUrl, index) => {
             bentoContainer.innerHTML += `
-                <div class="bento-item">
+                <div class="bento-item" style="cursor: pointer;" onclick="abrirModalImagen('${imgUrl}')">
                     <img src="${imgUrl}" alt="Componente ${index + 1} - ${data.title}" loading="lazy">
                     <span class="bento-badge-num">0${index + 1}</span>
                 </div>
@@ -905,9 +1540,151 @@ document.querySelectorAll('.tab-btn').forEach(button => {
         // Remover clase activa de botones y contenidos
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelectorAll('.index-tab-content').forEach(content => content.classList.remove('active'));
-        
+
         // Agregar clase activa al botón presionado y su contenido correspondiente
         button.classList.add('active');
         document.getElementById(button.getAttribute('data-target')).classList.add('active');
     });
+});
+
+
+// Función para abrir el modal con la imagen seleccionada
+function abrirModalImagen(urlImagen) {
+    const modal = document.getElementById('imageModal');
+    const imgAmpliada = document.getElementById('imgModalAmpliada');
+    
+    imgAmpliada.src = urlImagen;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+}
+
+// Función para cerrar el modal
+function cerrarModalImagen() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restaura el scroll
+}
+
+// Cerrar con la tecla ESC
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        cerrarModalImagen();
+    }
+});
+
+// Ejemplo de cómo debes actualizar la plantilla dentro de tu función switchKit o renderizado de bento:
+function renderBentoImages(imagenesArray) {
+    const bentoContainer = document.getElementById('showcase-bento');
+    bentoContainer.innerHTML = ''; // Limpiar contenido previo
+
+    imagenesArray.forEach((imgUrl, index) => {
+        const itemDiv = document.createElement('div');
+        // Mantén tus clases bento originales (ej. bento-item, bento-img, etc.)
+        itemDiv.className = `bento-item bento-item-${index + 1}`;
+        itemDiv.style.backgroundImage = `url('${imgUrl}')`;
+        itemDiv.style.cursor = 'pointer'; // Cambiar cursor a mano para indicar que es clickeable
+        
+        // Añadir el evento de clic para abrir el visor modal a pantalla completa
+        itemDiv.setAttribute('onclick', `abrirModalImagen('${imgUrl}')`);
+
+        bentoContainer.appendChild(itemDiv);
+    });
+}
+
+function navigateToSection(category, targetId) {
+    // 1. Activar el filtro correspondiente en las "pills" superiores si existe la función filterCat
+    const filterPills = document.querySelectorAll('.category-filter-pills .filter-pill');
+    filterPills.forEach(pill => {
+        pill.classList.remove('active');
+        if (pill.getAttribute('onclick') && pill.getAttribute('onclick').includes(`'${category}'`)) {
+            pill.classList.add('active');
+        }
+    });
+
+    if (typeof filterCat === 'function') {
+        filterCat(category, { target: document.querySelector(`.category-filter-pills [onclick*="'${category}'"]`) });
+    }
+
+    // 2. Buscar la tarjeta de material correspondiente en la cuadrícula inferior
+    const targetCard = document.querySelector(`.material-nav-card[data-target="${targetId}"]`);
+    
+    if (targetCard) {
+        // Remover la clase active de todas las tarjetas y activar la seleccionada
+        document.querySelectorAll('.material-nav-card').forEach(card => card.classList.remove('active'));
+        targetCard.classList.add('active');
+
+        // Si usas switchMaterial(this), puedes llamarlo directamente:
+        if (typeof switchMaterial === 'function') {
+            switchMaterial(targetCard);
+        }
+
+        // 3. Desplazamiento suave hacia la tarjeta seleccionada
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 90,
+      "density": {
+        "enable": true,
+        "value_area": 1000
+      }
+    },
+    "color": {
+      "value": ["#00e676", "#ffffff"] // Verde brillante y blanco para contraste en ambos lados
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.8,
+      "random": true
+    },
+    "size": {
+      "value": 3.5,
+      "random": true
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#00a859",
+      "opacity": 0.5,
+      "width": 1.2
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false
+    }
+  },
+  "interactivity": {
+    "detect_on": "window", // Detecta el movimiento en toda la ventana
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse" // <--- AQUÍ ESTÁ EL CAMBIO: Las partículas se alejan del mouse
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "repulse": {
+        "distance": 120, // Qué tan cerca debe estar el mouse para que empiecen a huir
+        "duration": 0.4  // Qué tan suave es el retroceso
+      },
+      "push": {
+        "particles_nb": 4
+      }
+    }
+  },
+  "retina_detect": true
 });

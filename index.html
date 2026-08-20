@@ -13,20 +13,11 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <link rel="icon" type="image/png" href="img/logo3.png">
 </head>
 
 <body>
 
-    <!-- Video de YouTube en pantalla completa -->
-    <div id="intro-video-overlay" class="video-overlay">
-        <div class="video-container-iframe">
-            <iframe
-                src="https://www.youtube.com/embed/tF5EzkG6TDI?autoplay=1&mute=1&controls=0&loop=1&playlist=tF5EzkG6TDI&disablekb=1&modestbranding=1&iv_load_policy=3"
-                title="Intro 3D" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-            </iframe>
-        </div>
-        <button class="skip-video-btn" onclick="cerrarVideoIntro()">Omitir intro &times;</button>
-    </div>
 
     <!--
     <div id="welcome-announcement-overlay" class="announcement-overlay">
@@ -62,110 +53,105 @@
     </div>
 </div>
 -->
-    <main class="split-creative-viewport">
 
-        <section class="visual-canvas">
-            <div class="industrial-bg-src" style="background-image: url('img/enviroment.jpg');"></div>
-            <div class="industrial-gradient-image" style="background-image: url('img/enviroment.jpg');"></div>
-            <div class="gradient-overlay-fluid"></div>
+<section class="hero-section">
+    <!-- 1. El contenedor exclusivo para las partículas de red -->
+    <div id="particles-js"></div>
+    
+    <!-- 2. Tu contenido normal intacto -->
+    <div class="hero-content">
+        <main class="split-creative-viewport">
+            <section class="visual-canvas">
+                <div class="industrial-bg-src" style="background-image: url('img/enviroment.jpg');"></div>
+                <div class="industrial-gradient-image" style="background-image: url('img/enviroment.jpg');"></div>
+                <div class="gradient-overlay-fluid"></div>
 
-            <div class="tech-panel-cluster">
-
-                <div class="editorial-panel panel-alpha tech-layer" data-speed="-3">
-                    <div class="panel-window">
-                        <div class="panel-img" style="background-image: url('img/portadabrochure.jpg');">
+                <div class="tech-panel-cluster">
+                    <div class="editorial-panel panel-alpha tech-layer" data-speed="-3">
+                        <div class="panel-window">
+                            <div class="panel-img" style="background-image: url('img/portadabrochure.jpg');"></div>
+                        </div>
+                    </div>
+                    <div class="editorial-panel panel-beta tech-layer" data-speed="2">
+                        <div class="panel-window">
+                            <div class="panel-img" style="background-image: url('img/portadaBrochure2.jpg');"></div>
+                        </div>
+                    </div>
+                    <div class="editorial-panel panel-prime tech-layer" data-speed="-5">
+                        <div class="panel-window highlighted-orange-frame">
+                            <div class="panel-img" style="background-image: url('img/portadaBrochure3.jpg');"></div>
+                        </div>
+                    </div>
+                    <div class="editorial-panel panel-gamma tech-layer" data-speed="4">
+                        <div class="panel-window">
+                            <div class="panel-img" style="background-image: url('img/portadaBrochure4.png');"></div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="editorial-panel panel-beta tech-layer" data-speed="2">
-                    <div class="panel-window">
-                        <div class="panel-img" style="background-image: url('img/portadaBrochure2.jpg');">
+            <section class="content-canvas">
+                <header class="corporate-identity">
+                    <div class="brand-flex-align">
+                        <div style="width: 100%; max-width: 450px; margin: 0 auto; display: flex; justify-content: center;">
+                            <img src="img/logo.png" alt="ESIP S.A.S." style="width: 100%; height: auto; object-fit: contain; display: block;">
+                        </div>
+                    </div>
+                </header>
+
+                <div class="marketing-titles">
+                    <h2 class="title-green">SOLUCIONES INTEGRADAS</h2>
+                    <h3 class="title-light">PARA LA INDUSTRIA</h3>
+                    <h2 class="title-orange">PETROLERA</h2>
+                </div>
+
+                <div class="interactive-action-zone">
+                    <a href="#contenido" class="btn-creative-esip">
+                        <span class="btn-txt">VER CONTENIDO</span>
+                        <span class="btn-arrow">→</span>
+                        <div class="btn-shimmer"></div>
+                    </a>
+                </div>
+
+                <div class="features-minimal-grid">
+                    <div class="feature-card-item">
+                        <div class="badge-icon icon-green">⚙️</div>
+                        <div class="badge-meta">
+                            <h4>EQUIPOS</h4>
+                            <p>DE ALTA CALIDAD</p>
+                        </div>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="badge-icon icon-orange">⛑️</div>
+                        <div class="badge-meta">
+                            <h4>SERVICIOS</h4>
+                            <p>ESPECIALIZADOS</p>
+                        </div>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="badge-icon icon-blue">🛡️</div>
+                        <div class="badge-meta">
+                            <h4>SEGURIDAD</h4>
+                            <p>Y CONFIANZA</p>
+                        </div>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="badge-icon icon-gold">📈</div>
+                        <div class="badge-meta">
+                            <h4>COMPROMISO</h4>
+                            <p>QUE GENERA VALOR</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="editorial-panel panel-prime tech-layer" data-speed="-5">
-                    <div class="panel-window highlighted-orange-frame">
-                        <div class="panel-img" style="background-image: url('img/portadaBrochure3.jpg');">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="editorial-panel panel-gamma tech-layer" data-speed="4">
-                    <div class="panel-window">
-                        <div class="panel-img" style="background-image: url('img/portadaBrochure4.png');">
-                        </div>
-                    </div>
-                </div>
-
+            </section>
+            <div class="asymmetric-footer-curves">
+                <div class="layer-curve curve-orange"></div>
+                <div class="layer-curve curve-green"></div>
             </div>
-        </section>
-
-        <section class="content-canvas">
-
-            <header class="corporate-identity">
-                <div class="brand-flex-align">
-                    <!-- Quitamos la clase restrictiva y usamos un contenedor limpio con estilo directo -->
-                    <div style="width: 100%; max-width: 450px; margin: 0 auto; display: flex; justify-content: center;">
-                        <img src="img/logo.png" alt="ESIP S.A.S. - Equipos y Servicios Integrados Petroleros"
-                            style="width: 100%; height: auto; object-fit: contain; display: block;">
-                    </div>
-                </div>
-            </header>
-
-            <div class="marketing-titles">
-                <h2 class="title-green">SOLUCIONES INTEGRADAS</h2>
-                <h3 class="title-light">PARA LA INDUSTRIA</h3>
-                <h2 class="title-orange">PETROLERA</h2>
-            </div>
-
-            <div class="interactive-action-zone">
-                <a href="#contenido" class="btn-creative-esip">
-                    <span class="btn-txt">VER CONTENIDO</span>
-                    <span class="btn-arrow">→</span>
-                    <div class="btn-shimmer"></div>
-                </a>
-            </div>
-
-            <div class="features-minimal-grid">
-                <div class="feature-card-item">
-                    <div class="badge-icon icon-green">⚙️</div>
-                    <div class="badge-meta">
-                        <h4>EQUIPOS</h4>
-                        <p>DE ALTA CALIDAD</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <div class="badge-icon icon-orange">⛑️</div>
-                    <div class="badge-meta">
-                        <h4>SERVICIOS</h4>
-                        <p>ESPECIALIZADOS</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <div class="badge-icon icon-blue">🛡️</div>
-                    <div class="badge-meta">
-                        <h4>SEGURIDAD</h4>
-                        <p>Y CONFIANZA</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <div class="badge-icon icon-gold">📈</div>
-                    <div class="badge-meta">
-                        <h4>COMPROMISO</h4>
-                        <p>QUE GENERA VALOR</p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <div class="asymmetric-footer-curves">
-            <div class="layer-curve curve-orange"></div>
-            <div class="layer-curve curve-green"></div>
-        </div>
-    </main>
+        </main>
+    </div>
+</section>
+   
 
     <section id="contenido" class="content-section-viewport">
         <div class="index-text-canvas">
@@ -175,193 +161,376 @@
             </header>
 
             <nav class="technical-index-list">
-    <!-- PESTAÑAS DE NAVEGACIÓN MÓVIL / ESCRITORIO -->
-    <div class="index-tabs-nav">
-        <button type="button" class="tab-btn active" data-target="tab-empresa">Empresa</button>
-        <button type="button" class="tab-btn" data-target="tab-productos">Productos y Soluciones</button>
-    </div>
+                <!-- PESTAÑAS DE NAVEGACIÓN MÓVIL / ESCRITORIO -->
+                <div class="index-tabs-nav">
+                    <button type="button" class="tab-btn active" data-target="tab-empresa">Empresa</button>
+                    <button type="button" class="tab-btn" data-target="tab-productos">Productos y Soluciones</button>
+                </div>
 
-    <!-- CONTENEDOR: EMPRESA -->
-    <div id="tab-empresa" class="index-tab-content active">
-        <div class="category-divider">Empresa</div>
-        <div class="index-item" data-preview="img-support">
-            <div class="trigger-quienes">
-                <span class="item-icon">🏢</span>
-                <span class="item-name fontweight-bold">¿Quiénes somos?</span>
-                <span class="item-dots"></span>
-                <span class="item-page">4</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#mision">Nuestra Misión</a>
-                <a href="#vision">Visión 2030</a>
-                <a href="#certificaciones">Políticas de Calidad HSEQ</a>
-            </div>
-        </div>
-    </div>
+                <!-- CONTENEDOR: EMPRESA -->
+                <div id="tab-empresa" class="index-tab-content active">
+                    <div class="category-divider">Empresa</div>
+                    <div class="index-item" data-preview="img-support">
+                        <div class="trigger-quienes">
+                            <span class="item-icon">🏢</span>
+                            <span class="item-name fontweight-bold">¿Quiénes somos?</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">4</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="#mision">Nuestra Misión</a>
+                            <a href="#vision">Visión 2030</a>
+                            <a href="#certificaciones">Políticas de Calidad HSEQ</a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- CONTENEDOR: PRODUCTOS Y SOLUCIONES -->
-    <div id="tab-productos" class="index-tab-content">
-        <div class="category-divider">Productos y Soluciones</div>
+                <!-- CONTENEDOR: PRODUCTOS Y SOLUCIONES -->
+                <div id="tab-productos" class="index-tab-content">
+                    <div class="category-divider">Productos y Soluciones</div>
 
-        <!-- Item 1 -->
-        <div class="index-item" data-preview="img-valves">
-            <div class="index-item-trigger">
-                <span class="item-icon">⚙️</span>
-                <span class="item-name">Tuberia Weco</span>
-                <span class="item-dots"></span>
-                <span class="item-page">5</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#eventTuberiaWeco">Diseño Integral</a>
-                <a href="#garantias">Diseño NPST</a>
-            </div>
-        </div>
+                    <!-- Item 1: Tubería Weco -->
+                    <div class="index-item" data-preview="img-valves">
+                        <div class="index-item-trigger" onclick="navigateToSection('tuberia', 'mat-tuberias-main')">
+                            <span class="item-icon">⚙️</span>
+                            <span class="item-name">Tuberia Weco</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">1</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)" onclick="navigateToSection('tuberia', 'mat-weco')">Diseño
+                                Integral</a>
+                            <a href="javascript:void(0)" onclick="navigateToSection('tuberia', 'mat-npst')">Diseño
+                                NPST</a>
+                        </div>
+                    </div>
 
-        <!-- Item 2 -->
-        <div class="index-item" data-preview="img-pipes">
-            <div class="index-item-trigger">
-                <span class="item-icon">📦</span>
-                <span class="item-name">Juntas Giratorias</span>
-                <span class="item-dots"></span>
-                <span class="item-page">6</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#especificaciones-coflexip">Diseño LS</a>
-                <a href="#certificados-coflexip">Diseño Tsi</a>
-            </div>
-        </div>
+                    <!-- Item 2 -->
+                    <div class="index-item" data-preview="img-pipes">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('giratorias', 'mat-juntasGiratorias-main')">
+                            <span class="item-icon">📦</span>
+                            <span class="item-name">Juntas Giratorias</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">2</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('giratorias', 'mat-valves200')">Diseño LS</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('giratorias', 'mat-choke300')">Diseño Tsi</a>
+                        </div>
+                    </div>
 
-        <!-- Item 3 -->
-        <div class="index-item" data-preview="img-valves">
-            <div class="index-item-trigger">
-                <span class="item-icon">🚰</span>
-                <span class="item-name">Mangueras Metalicas</span>
-                <span class="item-dots"></span>
-                <span class="item-page">7</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#bloques-man">Carácteristicas de las Mangueras Flexibles</a>
-            </div>
-        </div>
+                    <!-- Item 3: Mangueras Metalicas -->
+                    <div class="index-item" data-preview="img-valves">
+                        <div class="index-item-trigger">
+                            <span class="item-icon">🚰</span>
+                            <span class="item-name">Mangueras Metalicas</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">3</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('manguera_metalicas', 'mat-manguerametalica')">Carácteristicas
+                                de las Mangueras Flexibles</a>
+                        </div>
+                    </div>
 
-        <!-- Item 4 -->
-        <div class="index-item" data-preview="img-valves">
-            <div class="index-item-trigger">
-                <span class="item-badge badge-orange">200</span>
-                <span class="item-name">Mangueras Coflexip®</span>
-                <span class="item-dots"></span>
-                <span class="item-page">7</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#repuestos-val">Carácteristicas de las Mangueras Coflexip</a>
-            </div>
-        </div>
+                    <!-- Item 4: Mangueras Coflexip® -->
+                    <div class="index-item" data-preview="img-valves">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('manguera_metalicas', 'mat-coflexip-manguera')">
+                            <span class="item-badge badge-orange">200</span>
+                            <span class="item-name">Mangueras Coflexip®</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">4</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('manguera_metalicas', 'mat-coflexip-manguera')">Carácteristicas
+                                de las Mangueras Coflexip</a>
+                        </div>
+                    </div>
 
-        <!-- Item 5 -->
-        <div class="index-item" data-preview="img-valves">
-            <div class="index-item-trigger">
-                <span class="item-badge badge-green">300</span>
-                <span class="item-name">Válvulas de Tapón</span>
-                <span class="item-dots"></span>
-                <span class="item-page">7</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#compuerta-200">Modelo ULT</a>
-                <a href="#mantenimiento-200">Modelo DR</a>
-            </div>
-        </div>
+                    <!-- Item 5 -->
+                    <div class="index-item" data-preview="img-valves">
+                        <div class="index-item-trigger" onclick="navigateToSection('valvulas', 'mat-valvula-tapon')">
+                            <span class="item-badge badge-green">300</span>
+                            <span class="item-name">Válvulas de Tapón</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">5</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-tapon')">Modelo ULT</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-tapon-dr')">Modelo DR</a>
+                        </div>
+                    </div>
 
-        <!-- Item 6 -->
-        <div class="index-item" data-preview="img-pipes">
-            <div class="index-item-trigger">
-                <span class="item-icon">🏗️</span>
-                <span class="item-name">Válvulas de Retención</span>
-                <span class="item-dots"></span>
-                <span class="item-page">7</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#configuraciones-m">Esquemas de Configuración</a>
-                <a href="#pruebas-hidro">Registros de Pruebas Hidrostáticas</a>
-            </div>
-        </div>
+                    <!-- Item 6: Válvulas de Retención -->
+                    <div class="index-item" data-preview="img-pipes">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('valvulas', 'mat-valvula-retencion-veleta')">
+                            <span class="item-icon">🏗️</span>
+                            <span class="item-name">Válvulas de Retención</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">6</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-retencion-veleta')">Veleta
+                                Convencional</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-retencion-entrada-superior')">Veleta
+                                Entrada Superior</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-retencion-dardo')">Diseño Dardo</a>
+                        </div>
+                    </div>
 
-        <!-- Item 7 -->
-        <div class="index-item" data-preview="img-drilling">
-            <div class="index-item-trigger">
-                <span class="item-icon">🛤️</span>
-                <span class="item-name fontweight-bold">Válvulas de Alivio de Presión</span>
-                <span class="item-dots"></span>
-                <span class="item-page">8</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#lineas-weco">Tuberías Express Weco®</a>
-                <a href="#acoples-mecanicos">Sistemas de Acople Rápido</a>
-            </div>
-        </div>
+                    <!-- Item 7: Válvulas de Alivio de Presión -->
+                    <div class="index-item" data-preview="img-drilling">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('valvulas', 'mat-valvula-alivio-mecanica')">
+                            <span class="item-icon">🛤️</span>
+                            <span class="item-name">Válvulas de Alivio de Presión</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">7</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-alivio-mecanica')">Diseño Mecánico
+                                Estándar</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-alivio-electronica')">Diseño
+                                Electrónico (ePRV)</a>
+                        </div>
+                    </div>
 
-        <!-- Item 8 -->
-        <div class="index-item" data-preview="img-pipes">
-            <div class="index-item-trigger">
-                <span class="item-icon">🚛</span>
-                <span class="item-name">Válvulas de Estrangulación</span>
-                <span class="item-dots"></span>
-                <span class="item-page">9</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#unidades-moviles">Unidades de Transporte Móvil</a>
-                <a href="#planos-dimensiones">Planos y Dimensiones del Tráiler</a>
-            </div>
-        </div>
+                    <!-- Item 8: Válvulas de Estrangulación -->
+                    <div class="index-item" data-preview="img-pipes">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('valvulas', 'mat-estrangulador-fijo')">
+                            <span class="item-icon">🎛️</span>
+                            <span class="item-name">Válvulas de Estrangulación</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">8</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-estrangulador-fijo')">Estrangulador Fijo
+                                (Serie 200P)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-estrangulador-ajustable')">Estrangulador
+                                Ajustable (Serie 200N)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-estrangulacion-regulacion')">Válvula
+                                de Estrangulación y Regulación</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-adaptador-estrangulacion')">Adaptador de
+                                Estrangulación (Choke Saver®)</a>
+                        </div>
+                    </div>
 
-        <!-- Item 9 -->
-        <div class="index-item" data-preview="img-drilling">
-            <div class="index-item-trigger">
-                <span class="item-icon">⚓</span>
-                <span class="item-name fontweight-bold">Válvulas Mariposa</span>
-                <span class="item-dots"></span>
-                <span class="item-page">10</span>
-            </div>
-            <div class="index-item-submenu">
-                <a href="#bombas-triplex">Bombas Triplex y Quintuplex</a>
-                <a href="#potencia-hidraulica">Curvas de Rendimiento Hidráulico</a>
-            </div>
-        </div>
+                    <!-- Item 9: Válvulas Mariposa y Accionamientos -->
+                    <div class="index-item" data-preview="img-drilling">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('valvulas', 'mat-valvula-mariposa-modelo-12')">
+                            <span class="item-icon">🎛️</span>
+                            <span class="item-name">Válvulas Mariposa y Accionamientos</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">9</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-mariposa-modelo-12')">Modelo 12
+                                (Cuello Corto / Panqueca)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-mariposa-modelo-12n')">Modelo 12N
+                                (Cuello Corto Ranurado)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-mariposa-modelo-22')">Modelo 22
+                                (Cuello Largo / Panqueca)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-valvula-mariposa-modelo-22l')">Modelo 22L
+                                (Cuello Largo con Orejetas)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-diseno-engranaje-helicoidal')">Engranaje
+                                Helicoidal Resiste a la Intemperie</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-actuador-veleta-modelo-200')">Actuador de
+                                Veleta Modelo 200</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-actuador-neumatico-doble-accion')">Actuador
+                                Neumático Doble Acción / Resorte</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-manija-estandar-weco')">Manija Estándar
+                                Weco®</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('valvulas', 'mat-palanca-regulacion-weco')">Palanca de
+                                Regulación Weco®</a>
+                        </div>
+                    </div>
 
-        <!-- Items 10 a 17 -->
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Accesorios de Conexión</span><span class="item-dots"></span><span class="item-page">11</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Adaptadores de Conexión</span><span class="item-dots"></span><span class="item-page">12</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Uniones de Golpe</span><span class="item-dots"></span><span class="item-page">13</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Restrictores de Seguridad</span><span class="item-dots"></span><span class="item-page">14</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Juntas de Brida API 6A</span><span class="item-dots"></span><span class="item-page">14</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Manifolds de Superficie</span><span class="item-dots"></span><span class="item-page">14</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Bombas Reciprocantes</span><span class="item-dots"></span><span class="item-page">14</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-        <div class="index-item" data-preview="img-support">
-            <div class="index-item-trigger"><span class="item-icon">🌐</span><span class="item-name">Kits De Repuestos</span><span class="item-dots"></span><span class="item-page">14</span></div>
-            <div class="index-item-submenu"><a href="#cobertura">Centros de Servicio en Campo</a><a href="#contacto-soporte">Línea de Emergencia Técnica</a></div>
-        </div>
-    </div>
-</nav>
+                    <!-- Items 10 a 17 -->
+                    <!-- Índice: Accesorios de Conexión -->
+                    <div class="index-item" data-preview="img-support">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('accesorios', 'mat-accesorios-conexion-weco')">
+                            <span class="item-icon">🌐</span>
+                            <span class="item-name">Accesorios de Conexión</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">10</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('accesorios', 'mat-accesorios-conexion-weco')">Fittings
+                                Weco®</a>
+                        </div>
+                    </div>
+                    <!-- Índice: Adaptadores de Conexión -->
+                    <div class="index-item" data-preview="img-support">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('adaptadores_conexion', 'mat-crossover')">
+                            <span class="item-icon">🌐</span>
+                            <span class="item-name">Adaptadores de Conexión</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">11</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('adaptadores_conexion', 'mat-crossover')">Crossovers
+                                (X-Overs)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('adaptadores_conexion', 'mat-changeover')">Changeovers
+                                (X-Overs)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('adaptadores_conexion', 'mat-disenos-comunes-adaptadores')">Diseños
+                                Comunes</a>
+                        </div>
+                    </div>
+                    <!-- Índice: Uniones de Golpe -->
+                    <div class="index-item" data-preview="img-support">
+                        <div class="index-item-trigger" onclick="navigateToSection('uniones_golpes', 'mat-figura-100')">
+                            <span class="item-icon">🌐</span>
+                            <span class="item-name">Uniones de Golpe</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">12</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-100')">Figura 100</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-200')">Figura 200</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-206')">Figura 206</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-207')">Figura 207</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-400')">Figura 400</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-602')">Figura 602</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-1002')">Figura 1002</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-1003')">Figura 1003</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-1502')">Figura 1502</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-2002')">Figura 2002</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-2202')">Figura 2202</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-tank')">Tank</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('uniones_golpes', 'mat-figura-air-o-union')">Air-O-Union</a>
+                        </div>
+                    </div>
+                    <!-- Restrictores de Seguridad -->
+                    <div class="index-item" data-preview="img-support">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('restrictores_seguridad', 'mat-sistema-sujencion-tpr')">
+                            <span class="item-icon">🌐</span>
+                            <span class="item-name">Restrictores de Seguridad</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">13</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('restrictores_seguridad', 'mat-sistema-sujencion-tpr')">Sistema
+                                de Sujeción TPR®</a>
+                        </div>
+                    </div>
+                    <!-- Juntas de Brida API 6A -->
+                    <div class="index-item" data-preview="img-support">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('juntas_brida', 'mat-juntas-bridadas-main')">
+                            <span class="item-icon">🌐</span>
+                            <span class="item-name">Juntas de Brida API 6A</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">14</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('juntas_brida', 'mat-juntas-bridadas-main')">Juntas Bridadas
+                                API 6A</a>
+                        </div>
+                    </div>
+                    <!-- Manifolds de Superficie -->
+                    <div class="index-item" data-preview="img-support">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('manifolds_superficie', 'mat-manifold-empaque')">
+                            <span class="item-icon">🌐</span>
+                            <span class="item-name">Manifolds de Superficie</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">15</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('manifolds_superficie', 'mat-manifold-empaque')">Manifold de
+                                Empaque con Grava / Inyección</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('manifolds_superficie', 'mat-manifold-retorno')">Retorno de
+                                Flujo / Prueba de Pozo / Producción</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('manifolds_superficie', 'mat-manifold-choke-saver')">Retorno
+                                de Flujo / con Adaptador de Estrangulación</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('manifolds_superficie', 'mat-manifold-retorno-fractura')">Retorno
+                                de Flujo de Fractura</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('manifolds_superficie', 'mat-manifold-descarga')">Descarga</a>
+                        </div>
+                    </div>
+                    <!-- Bombas Reciprocantes -->
+                    <div class="index-item" data-preview="img-support">
+                        <div class="index-item-trigger"
+                            onclick="navigateToSection('bombas_reciprocantes', 'mat-mat-bomba-wt2400')">
+                            <span class="item-icon">🌐</span>
+                            <span class="item-name">Bombas Reciprocantes</span>
+                            <span class="item-dots"></span>
+                            <span class="item-page">16</span>
+                        </div>
+                        <div class="index-item-submenu">
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('bombas_reciprocantes', 'mat-bomba-wt2400')">Bomba
+                                Reciprocante de Émbolo Triplex (WT2400)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('bombas_reciprocantes', 'mat-bomba-wq3000')">Bomba
+                                Reciprocante de Émbolo Quintuplex (WQ3000)</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('bombas_reciprocantes', 'mat-fluid-end-geopro')">Fluid End
+                                GeoPro Estándar</a>
+                            <a href="javascript:void(0)"
+                                onclick="navigateToSection('bombas_reciprocantes', 'mat-fluid-end-geopro-200l')">Fluid
+                                End Modelo GeoPro 200L</a>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
         </div>
 
         <!-- Panel derecho (Se conserva intacto) -->
@@ -492,7 +661,6 @@
                     <div class="card-num-badge">04</div>
                     <div class="card-meta-info">
                         <h4>Juntas Giratorias (Swivel Joint - Chiksan Weco®)</h4>
-                        <p>Lorem Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valves200" data-cat="giratorias"
@@ -500,7 +668,6 @@
                     <div class="card-num-badge">05</div>
                     <div class="card-meta-info">
                         <h4>Juntas Giratorias Modelo LS</h4>
-                        <p>Lorem Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-choke300" data-cat="giratorias"
@@ -508,7 +675,6 @@
                     <div class="card-num-badge">06</div>
                     <div class="card-meta-info">
                         <h4>Juntas Giratorias Modelo Tsi</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-manguerasMetalicas-main" data-cat="manguera_metalicas"
@@ -516,7 +682,6 @@
                     <div class="card-num-badge">07</div>
                     <div class="card-meta-info">
                         <h4>Manguera Metálica de Cementación y Circulación(C&C Hose Weco®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-manguerametalica" data-cat="manguera_metalicas"
@@ -524,7 +689,6 @@
                     <div class="card-num-badge">08</div>
                     <div class="card-meta-info">
                         <h4>Manguera Metalica Modelos LS Weco® y Tsi Weco®</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-coflexip-main" data-cat="manguera_coflexip"
@@ -532,7 +696,6 @@
                     <div class="card-num-badge">09</div>
                     <div class="card-meta-info">
                         <h4>Mangueras Coflexip® DIFERENTES MODELOS </h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-coflexip-manguera" data-cat="manguera_coflexip"
@@ -540,7 +703,6 @@
                     <div class="card-num-badge">10</div>
                     <div class="card-meta-info">
                         <h4>Manguera Coflexip</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvulaTapon-main" data-cat="valvulas_tapon"
@@ -548,7 +710,6 @@
                     <div class="card-num-badge">11</div>
                     <div class="card-meta-info">
                         <h4>Válvula de Tapón(Plug Valve Weco®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-tapon" data-cat="valvulas_tapon"
@@ -556,7 +717,6 @@
                     <div class="card-num-badge">12</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Tapon Modelo ULT</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-tapon-dr" data-cat="valvulas_tapon"
@@ -564,7 +724,6 @@
                     <div class="card-num-badge">13</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Tapon Modelo DR</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvulaRetencion-main" data-cat="valvulas_retencion"
@@ -572,7 +731,6 @@
                     <div class="card-num-badge">14</div>
                     <div class="card-meta-info">
                         <h4>Válvula de Retención(Check Valve Weco®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-retencion-veleta" data-cat="valvulas_retencion"
@@ -580,7 +738,6 @@
                     <div class="card-num-badge">15</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Retención Diseño Veleta</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-retencion-entrada-superior"
@@ -588,7 +745,6 @@
                     <div class="card-num-badge">16</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Retención Veleta con Entrada Superior</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-retencion-dardo" data-cat="valvulas_retencion"
@@ -596,7 +752,6 @@
                     <div class="card-num-badge">17</div>
                     <div class="card-meta-info">
                         <h4>Valvula de Retención Dardo Weco</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvulaAlivio-main" data-cat="valvulas_presion"
@@ -604,7 +759,6 @@
                     <div class="card-num-badge">18</div>
                     <div class="card-meta-info">
                         <h4>Válvula de Alivio de Presión(Pressure Releif Valve Weco®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-alivio-mecanica" data-cat="valvulas_presion"
@@ -612,7 +766,6 @@
                     <div class="card-num-badge">19</div>
                     <div class="card-meta-info">
                         <h4>Diseño Mecánico Estándar de Acción Directa</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-alivio-electronica" data-cat="valvulas_presion"
@@ -620,7 +773,6 @@
                     <div class="card-num-badge">20</div>
                     <div class="card-meta-info">
                         <h4>Diseño Electrónico (ePRV Weco®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvulaEstrangulacion-main"
@@ -628,7 +780,6 @@
                     <div class="card-num-badge">21</div>
                     <div class="card-meta-info">
                         <h4>Válvula de Estrangulación de Flujo(Throttle Choke Valve Weco®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-estrangulador-fijo" data-cat="valvulas_estrangulacion"
@@ -636,7 +787,6 @@
                     <div class="card-num-badge">22</div>
                     <div class="card-meta-info">
                         <h4>Estrangulador Fijo(Positive Choke Weco® de Producción y Control)Serie 200P</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-estrangulador-ajustable"
@@ -644,7 +794,6 @@
                     <div class="card-num-badge">23</div>
                     <div class="card-meta-info">
                         <h4>Estrangulador Ajustable(Adjustable Choke Weco®)Serie 200N</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvulaEstrangulacionRegulacion-main"
@@ -652,7 +801,6 @@
                     <div class="card-num-badge">24</div>
                     <div class="card-meta-info">
                         <h4>Válvula de Estrangulación y Regulación(Throttle Choke Valve®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-estrangulacion-regulacion"
@@ -660,7 +808,6 @@
                     <div class="card-num-badge">25</div>
                     <div class="card-meta-info">
                         <h4>Válvula de Estrangulación y Regulación(Throttle Choke Valve®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-adaptadorEstrangulacion-main"
@@ -668,7 +815,6 @@
                     <div class="card-num-badge">26</div>
                     <div class="card-meta-info">
                         <h4>Principal Adaptador de Estrangulación(Choke Saver®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-adaptador-estrangulacion"
@@ -676,7 +822,6 @@
                     <div class="card-num-badge">27</div>
                     <div class="card-meta-info">
                         <h4>Adaptador de Estrangulación(Choke Saver®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvulaMariposa-main" data-cat="valvulas_mariposa"
@@ -684,7 +829,6 @@
                     <div class="card-num-badge">28</div>
                     <div class="card-meta-info">
                         <h4>Válvula Mariposa(Butterfly Valve Weco®)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-12" data-cat="valvulas_mariposa"
@@ -692,7 +836,6 @@
                     <div class="card-num-badge">29</div>
                     <div class="card-meta-info">
                         <h4>Válvula Mariposa (Modelo 12)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-12n"
@@ -700,7 +843,6 @@
                     <div class="card-num-badge">30</div>
                     <div class="card-meta-info">
                         <h4>Válvula Mariposa(Modelo 12N)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-22" data-cat="valvulas_mariposa"
@@ -708,7 +850,6 @@
                     <div class="card-num-badge">31</div>
                     <div class="card-meta-info">
                         <h4>Válvula Mariposa (Modelo 22)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-valvula-mariposa-modelo-22l"
@@ -716,7 +857,6 @@
                     <div class="card-num-badge">32</div>
                     <div class="card-meta-info">
                         <h4>Válvula Mariposa(Modelo 22L)</h4>
-                        <p>Lorem Ipsun</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-opciones-accionamiento-mariposa"
@@ -743,7 +883,6 @@
                         <p>Modelo 22L</p>
                     </div>
                 </div>
-
                 <div class="material-nav-card" data-target="mat-actuador-neumatico-doble-accion"
                     data-cat="valvulas_mariposa" onclick="switchMaterial(this)">
                     <div class="card-num-badge">36</div>
@@ -773,7 +912,6 @@
                     <div class="card-num-badge">39</div>
                     <div class="card-meta-info">
                         <h4>Accesorios de Conexión(Fittings Weco®)</h4>
-                        <p>Loremm ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-accesorios-conexion-weco" data-cat="accesorios_conexion"
@@ -781,7 +919,6 @@
                     <div class="card-num-badge">40</div>
                     <div class="card-meta-info">
                         <h4> Caracteristicas Accesorios de Conexión</h4>
-                        <p>Loremm ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-adaptadores-main" data-cat="adaptadores_conexion"
@@ -789,7 +926,6 @@
                     <div class="card-num-badge">41</div>
                     <div class="card-meta-info">
                         <h4>Adaptadores(Crossovers & Changeovers)</h4>
-                        <p>Lorem Ipsum </p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-crossover" data-cat="adaptadores_conexion"
@@ -797,7 +933,6 @@
                     <div class="card-num-badge">42</div>
                     <div class="card-meta-info">
                         <h4>Crossovers (X-Overs)</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-changeover" data-cat="adaptadores_conexion"
@@ -805,7 +940,6 @@
                     <div class="card-num-badge">43</div>
                     <div class="card-meta-info">
                         <h4>Changeovers (X-Overs)</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-disenos-comunes-adaptadores"
@@ -813,7 +947,6 @@
                     <div class="card-num-badge">44</div>
                     <div class="card-meta-info">
                         <h4>Diseños Comúnes</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-uniones-golpe-main" data-cat="uniones_golpes"
@@ -821,7 +954,6 @@
                     <div class="card-num-badge">45</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe(Hammer / Wing Unions Weco®)</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-100" data-cat="uniones_golpes"
@@ -829,7 +961,6 @@
                     <div class="card-num-badge">46</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 100</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-200" data-cat="uniones_golpes"
@@ -837,7 +968,6 @@
                     <div class="card-num-badge">47</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 200</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-206" data-cat="uniones_golpes"
@@ -845,7 +975,6 @@
                     <div class="card-num-badge">48</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 206</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-207" data-cat="uniones_golpes"
@@ -853,7 +982,6 @@
                     <div class="card-num-badge">49</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 207</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-400" data-cat="uniones_golpes"
@@ -861,7 +989,6 @@
                     <div class="card-num-badge">50</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 400</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-602" data-cat="uniones_golpes"
@@ -869,7 +996,6 @@
                     <div class="card-num-badge">51</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 602</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-1002" data-cat="uniones_golpes"
@@ -877,7 +1003,6 @@
                     <div class="card-num-badge">52</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 1002</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-1003" data-cat="uniones_golpes"
@@ -885,7 +1010,6 @@
                     <div class="card-num-badge">53</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 1003</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-1502" data-cat="uniones_golpes"
@@ -893,7 +1017,6 @@
                     <div class="card-num-badge">54</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 1502</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-2002" data-cat="uniones_golpes"
@@ -901,7 +1024,6 @@
                     <div class="card-num-badge">55</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 2002</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-2202" data-cat="uniones_golpes"
@@ -909,7 +1031,6 @@
                     <div class="card-num-badge">56</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura 2202</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-tank" data-cat="uniones_golpes"
@@ -917,7 +1038,6 @@
                     <div class="card-num-badge">57</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura Tank</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-figura-air-o-union" data-cat="uniones_golpes"
@@ -925,7 +1045,6 @@
                     <div class="card-num-badge">58</div>
                     <div class="card-meta-info">
                         <h4>Uniones de Golpe Figura Air-O-Union</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-tpr-system-main" data-cat="restrictores_seguridad"
@@ -934,7 +1053,6 @@
                     <div class="card-meta-info">
                         <h4>Restrictores Temporales de Seguridad para Líneas de Tratamiento de Alta Presión(TPR® System)
                         </h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-sistema-sujencion-tpr" data-cat="restrictores_seguridad"
@@ -942,7 +1060,6 @@
                     <div class="card-num-badge">60</div>
                     <div class="card-meta-info">
                         <h4>Sistema de Sujeción TPR®</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-juntas-bridadas-main" data-cat="juntas_brida"
@@ -950,7 +1067,6 @@
                     <div class="card-num-badge">61</div>
                     <div class="card-meta-info">
                         <h4>Juntas Bridadas API 6A</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-ground-manifolds-main" data-cat="manifolds_superficie"
@@ -958,7 +1074,6 @@
                     <div class="card-num-badge">62</div>
                     <div class="card-meta-info">
                         <h4>Manifolds (Múltiples) de Superficie(Ground Manifolds®)</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-manifold-empaque" data-cat="manifolds_superficie"
@@ -966,16 +1081,13 @@
                     <div class="card-num-badge">63</div>
                     <div class="card-meta-info">
                         <h4>Empaque con Grava / Inyección</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
-
                 <div class="material-nav-card" data-target="mat-manifold-retorno" data-cat="manifolds_superficie"
                     onclick="switchMaterial(this)">
                     <div class="card-num-badge">64</div>
                     <div class="card-meta-info">
                         <h4>Retorno de Flujo / Prueba de Pozo / Producción</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-manifold-choke-saver" data-cat="manifolds_superficie"
@@ -983,7 +1095,6 @@
                     <div class="card-num-badge">65</div>
                     <div class="card-meta-info">
                         <h4>Retorno de Flujo / Prueba de Pozo / con Adaptador de Estrangulación (Choke Saver®)</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-manifold-retorno-fractura"
@@ -991,7 +1102,6 @@
                     <div class="card-num-badge">66</div>
                     <div class="card-meta-info">
                         <h4>Retorno de Flujo de Fractura</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-manifold-descarga" data-cat="manifolds_superficie"
@@ -999,7 +1109,6 @@
                     <div class="card-num-badge">67</div>
                     <div class="card-meta-info">
                         <h4>Descarga</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-bombas-reciprocantes-main"
@@ -1007,7 +1116,6 @@
                     <div class="card-num-badge">68</div>
                     <div class="card-meta-info">
                         <h4>Bombas de Pistón y Émbolo Reciprocantes(Desplazamiento Positivo)</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-bomba-wt2400" data-cat="bombas_reciprocantes"
@@ -1015,7 +1123,6 @@
                     <div class="card-num-badge">69</div>
                     <div class="card-meta-info">
                         <h4>Bomba Reciprocante de Émbolo Triplex</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-bomba-wq3000" data-cat="bombas_reciprocantes"
@@ -1023,7 +1130,6 @@
                     <div class="card-num-badge">70</div>
                     <div class="card-meta-info">
                         <h4>Bomba Reciprocante de Émbolo Quintuplex</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-fluid-end-geopro" data-cat="bombas_reciprocantes"
@@ -1031,7 +1137,6 @@
                     <div class="card-num-badge">71</div>
                     <div class="card-meta-info">
                         <h4>Fluid End GeoPro Estándar</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
                 <div class="material-nav-card" data-target="mat-fluid-end-geopro-200l" data-cat="bombas_reciprocantes"
@@ -1039,7 +1144,6 @@
                     <div class="card-num-badge">72</div>
                     <div class="card-meta-info">
                         <h4>Fluid End Modelo GeoPro 200L</h4>
-                        <p>Loremp Ipsum</p>
                     </div>
                 </div>
             </div>
@@ -1197,7 +1301,7 @@
 
                 <div class="sheet-visual-showcase gallery-mode">
                     <!-- Contenedor de la imagen principal con botón flotante premium -->
-                   <div class="main-gallery-display" style="background-image: url('img/TuberiaWecoNPST.png'); 
+                    <div class="main-gallery-display" style="background-image: url('img/TuberiaWecoNPST.png'); 
             width: 100%; 
             height: 320px; 
             background-size: contain; 
@@ -1352,15 +1456,18 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valves200', 'Junta Giratoria LS', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
-
                     <!-- Miniaturas -->
                     <div class="gallery-thumbnails-grid">
-                        <div class="thumb-item active"
-                            style="background-image: url('img/juntasGiratorias.png');">
+                        <div class="thumb-item active" style="background-image: url('img/juntasGiratorias.png');"
+                            onclick="abrirModalImagen('img/juntasGiratorias.png')">
                         </div>
-                        <div class="thumb-item"
-                            style="background-image: url('img/juntaGiratoriaMiniatura.png');">
+                        <div class="thumb-item" style="background-image: url('img/juntaGiratoriaMiniatura.png');"
+                            onclick="abrirModalImagen('img/juntaGiratoriaMiniatura.png')">
                         </div>
                     </div>
                 </div>
@@ -1444,15 +1551,19 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-choke300', 'Junta Giratoria TSI', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
 
                     <!-- Miniaturas -->
                     <div class="gallery-thumbnails-grid">
-                        <div class="thumb-item active"
-                            style="background-image: url('img/juntaGiratoria2.png');">
+                        <div class="thumb-item active" style="background-image: url('img/juntaGiratoria2.png');"
+                            onclick="abrirModalImagen('img/juntaGiratoria2.png')">
                         </div>
-                        <div class="thumb-item"
-                            style="background-image: url('img/juntaGiratoriaTSI2.png');">
+                        <div class="thumb-item" style="background-image: url('img/juntaGiratoriaTSI2.png');"
+                            onclick="abrirModalImagen('img/juntaGiratoriaTSI2.png')">
                         </div>
                     </div>
                 </div>
@@ -1779,13 +1890,13 @@
                             Ver en 3D e Interactuar
                         </button>
                     </div>
-
                     <div class="gallery-thumbnails-grid">
                         <div class="thumb-item active"
-                            style="background-image: url('img/manguerasCoflexipPrincipal.png');">
+                            style="background-image: url('img/manguerasCoflexipPrincipal.png');"
+                            onclick="abrirModalImagen('img/manguerasCoflexipPrincipal.png')">
                         </div>
-                        <div class="thumb-item"
-                            style="background-image: url('img/MangueraMetalica2.png');">
+                        <div class="thumb-item" style="background-image: url('img/MangueraMetalica2.png');"
+                            onclick="abrirModalImagen('img/MangueraMetalica2.png')">
                         </div>
                     </div>
                 </div>
@@ -1935,27 +2046,25 @@
                         </svg>
                         Ver en 3D e Interactuar
                     </button>
+                    <button class="btn-toggle-compare"
+                        onclick="toggleCompare('mat-valvula-tapon', 'VÁLVULA DE TAPÓN ULT Modelo ULT Weco®', event)">
+                        + Añadir a comparar
+                    </button>
                 </div>
                 <div class="gallery-thumbnails-grid">
-                    <div class="thumb-item active"
-                        style="background-image: url('img/ULTWecoTipo.png');"
-                        onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80')">
+                    <div class="thumb-item active" style="background-image: url('img/ULTWecoTipo.png');"
+                        onclick="abrirModalImagen('img/ULTWecoTipo.png')">
                     </div>
-                    <div class="thumb-item"
-                        style="background-image: url('img/ValvulaTapon2x1.png');"
-                        onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80')">
+                    <div class="thumb-item" style="background-image: url('img/ValvulaTapon2x1.png');"
+                        onclick="abrirModalImagen('img/ValvulaTapon2x1.png')">
                     </div>
-                    <div class="thumb-item"
-                        style="background-image: url('img/ValvulaTapon2x2.png');"
-                        onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=800&q=80')">
+                    <div class="thumb-item" style="background-image: url('img/ValvulaTapon2x2.png');"
+                        onclick="abrirModalImagen('img/ValvulaTapon2x2.png')">
                     </div>
-                    <div class="thumb-item"
-                        style="background-image: url('img/ValvulaTapon3x4.png');"
-                        onclick="changeGalleryImage(this, 'https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&w=800&q=80')">
+                    <div class="thumb-item" style="background-image: url('img/ValvulaTapon3x4.png');"
+                        onclick="abrirModalImagen('img/ValvulaTapon3x4.png')">
                     </div>
-                    
                 </div>
-
                 <div class="sheet-features-grid">
                     <div class="spec-block-card">
                         <h5>Tamaños</h5>
@@ -2029,6 +2138,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-tapon-dr', 'VÁLVULA DE TAPÓN (Modelo DR Weco®)', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -2150,6 +2263,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-retencion-veleta', 'Válvula Retención Veleta', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -2228,6 +2345,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-retencion-entrada-superior', 'Válvula Retención Entrada Sup.', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -2305,6 +2426,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-retencion-dardo', 'Válvula Retención Dardo', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -2434,6 +2559,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-alivio-mecanica', 'Válvula Alivio Mecánica', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -2511,6 +2640,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-alivio-electronica', 'Válvula Alivio Electrónica', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -2654,6 +2787,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-estrangulador-fijo', 'Estrangulador Fijo', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -2741,6 +2878,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-estrangulador-ajustable', 'Estrangulador Ajustable', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -3182,6 +3323,9 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-mariposa-12', 'Válvula de Mariposa Modelo 12', event)">
+                            + Añadir a comparar</button>
                     </div>
                 </div>
 
@@ -3264,6 +3408,9 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-mariposa-12n', 'Válvula de Mariposa Modelo 12N', event)">
+                            + Añadir a comparar</button>
                     </div>
                 </div>
 
@@ -3346,6 +3493,9 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-mariposa-22', 'Válvula de Mariposa Modelo 22', event)">
+                            + Añadir a comparar</button>
                     </div>
                 </div>
 
@@ -3429,6 +3579,9 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-valvula-mariposa-22l', 'Válvula de Mariposa Modelo 22L', event)">
+                            + Añadir a comparar</button>
                     </div>
                 </div>
 
@@ -3565,6 +3718,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-diseno-engranaje-helicoidal', 'Diseño de Engranaje Helicoidal Resiste a la Intemperie Weco®', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -3637,6 +3794,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-actuador-veleta-modelo-200', 'Actuador de Veleta Modelo 200 Weco®', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -3703,6 +3864,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-actuador-neumatico-doble-accion', 'Actuador Neumático Doble Acción / Retorno por Resorte Weco®', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -3772,6 +3937,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-manija-estandar-weco', 'Manija Estándar Weco®', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -3836,6 +4005,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-palanca-regulacion-weco', 'Palanca de Regulación Weco®', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -4110,6 +4283,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-crossover', 'Crossovers (X-Overs)', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -4173,6 +4350,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-changeover', 'Changeovers (X-Overs)', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -4366,6 +4547,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-100', 'Figura 100', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -4445,6 +4630,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-200', 'Figura 200', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -4530,6 +4719,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-206', 'Figura 206', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -4614,6 +4807,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-207', 'Figura 207', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -4697,6 +4894,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-400', 'Figura 400', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -4794,6 +4995,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-602', 'Figura 602', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -4881,6 +5086,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-1002', 'Figura 1002', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -4987,6 +5196,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-1003', 'Figura 1003', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -5087,6 +5300,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-1502', 'Figura 1502', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -5189,6 +5406,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-2002', 'Figura 2002', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -5277,6 +5498,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-2202', 'Figura 2202', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -5367,6 +5592,9 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare" onclick="toggleCompare('mat-figura-tank', 'Tank', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -5451,6 +5679,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-air-o-union', 'AIR-O-UNION', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -5600,18 +5832,23 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-figura-air-o-union', 'Air-O-Union', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
 
                     <!-- Miniaturas -->
+                    <!-- Miniaturas actualizadas -->
                     <div class="gallery-thumbnails-grid">
-                        <div class="thumb-item active"
-                            style="background-image: url('img/SujecionTPR.png');">
+                        <div class="thumb-item active" style="background-image: url('img/SujecionTPR.png');"
+                            onclick="abrirModalImagen('img/SujecionTPR.png')">
                         </div>
-                        <div class="thumb-item"
-                            style="background-image: url('img/SujecionTPR1.png');">
+                        <div class="thumb-item" style="background-image: url('img/SujecionTPR1.png');"
+                            onclick="abrirModalImagen('img/SujecionTPR1.png')">
                         </div>
-                        <div class="thumb-item"
-                            style="background-image: url('img/SujecionTPR2.png');">
+                        <div class="thumb-item" style="background-image: url('img/SujecionTPR2.png');"
+                            onclick="abrirModalImagen('img/SujecionTPR2.png')">
                         </div>
                     </div>
                 </div>
@@ -5825,6 +6062,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-manifold-empaque', 'MANIFOLD DE EMPAQUE CON GRAVA', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -5897,6 +6138,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-manifold-retorno', 'RETORNO DE FLUJO / PRUEBA DE POZO / PRODUCCIÓN', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -5971,6 +6216,10 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             Ver en 3D e Interactuar
+                        </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-manifold-choke-saver', 'RETORNO DE FLUJO / PRUEBA DE POZO / CON ADAPTADOR DE ESTRANGULACIÓN ', event)">
+                            + Añadir a comparar
                         </button>
                     </div>
                 </div>
@@ -6245,6 +6494,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-bomba-wt2400', 'WT2400 Triplex Émbolo', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -6271,21 +6524,10 @@
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
-                        <p>• Provista con Fluid End GeoPro Estándar<br>• Permite que la bomba desplace un mayor volumen
-                            de fluido por minuto a una presión determinada en comparación con los modelos de la
-                            competencia.<br>• Power End de alta resistencia diseñado for condiciones de campo exigentes,
-                            con rodamientos sobredimensionados y componentes de precisión.<br>• Incorpora retenedores de
-                            válvula de succión avanzados (patente en trámite) diseñados para reducir la erosión y la
-                            fatiga del extremo de fluido, lo que reduce significativamente los costos operativos.<br>•
-                            El Fluid End está diseñado con un cigüeñal forjado, cojinetes de rodillos principales
-                            reforzados y cojinetes de vástago sobredimensionados para soportar cargas mecánicas cíclicas
-                            elevadas de forma segura.<br>• Los cilindros hidráulicos están fabricados con materiales de
-                            primera calidad, como acero al carbono o acero inoxidable dúplex.<br>• Cuentan con válvulas
-                            de alto rendimiento y empaquetaduras personalizadas que minimizan drásticamente las grietas
-                            internas por tensión bajo presiones ultra altas.<br>• Diseñado para el trabajo de campo,
-                            este modelo cuenta con un sistema de fijación integrado y acceso frontal. Permite a los
-                            operarios cambiar rápidamente émbolos, empaquetaduras y válvulas directamente en el lugar de
-                            trabajo, minimizando el tiempo de inactividad.</p>
+                        <p>• Provista con Fluid End GeoPro Estándar de alta eficiencia volumétrica.<br>• Power End
+                            resistente con rodamientos y cigüeñal forjado para cargas cíclicas elevadas.<br>•
+                            Retenedores de válvula avanzados que reducen la erosión y la fatiga.<br>• Cilindros en acero
+                            al carbono o inoxidable dúplex con válvulas de alto rendimiento.</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
@@ -6332,6 +6574,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-bomba-wq3000', 'WQ3000 Quintuplex Émbolo de Alto', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -6358,20 +6604,13 @@
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
-                        <p>• Provista con Fluid End GeoPro 200L<br>• Capaz de entregar altas tasas de flujo, optimizando
-                            un incremento de hasta el 25% respecto a diseños tradicionales en operaciones de
-                            estimulación de pozos.<br>• Incorpora tecnología de extremo de fluido en acero inoxidable de
-                            alta resistencia, diseñado para mitigar la fatiga del metal y prolongar drásticamente la
-                            vida útil de los componentes consumibles en ambientes abrasivos.<br>• Su tren de potencia
-                            incluye un diseño de caja de engranajes modular de alta durabilidad que facilita las labores
-                            de mantenimiento en campo sin desarmar por completo la unidad.<br>• Cuenta con mejoras
-                            mecánicas que extienden los ciclos de mantenimiento de las válvulas, permitiendo un flujo de
-                            fluido más limpio y con menor riesgo de cavitación.<br>• Diseñada con rodamientos de
-                            rodillos sobredimensionados en el cigüeñal y en los muñones de las bielas para soportar las
-                            cargas cíclicas extremas del bombeo continuo.<br>• Equipado con Fluid End de acero
-                            inoxidable duradero y resistente a la erosión.<br>• Pernos pasantes reemplazan las varillas
-                            de sujeción convencionales para eliminar fallas estructurales en el extremo de
-                            potencia.<br>• Disponible en orientaciones de transmisión a la izquierda y a la derecha.</p>
+                        <p>• Equipada con Fluid End GeoPro 200L en acero inoxidable de alta resistencia.<br>• Incremento
+                            de hasta un 25% en tasas de flujo frente a diseños tradicionales.<br>• Tren de potencia con
+                            caja de engranajes modular para un mantenimiento en campo más ágil.<br>• Válvulas
+                            optimizadas que extienden ciclos de mantenimiento y reducen la cavitación.<br>• Rodamientos
+                            sobredimensionados en cigüeñal y bielas para cargas cíclicas extremas.<br>• Pernos pasantes
+                            que eliminan fallas estructurales y diseño disponible en transmisión izquierda y derecha.
+                        </p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
@@ -6416,6 +6655,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-fluid-end-geopro', 'FLUID END GEOPRO ESTÁNDAR', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -6434,19 +6677,14 @@
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
-                        <p>• Disponible en acero inoxidable de primera calidad y acero aleado para resistir fluidos
-                            corrosivos y erosivos agresivos<br>• Diseñado con contornos internos optimizados para
-                            reducir las concentraciones de tensión y aumentar significativamente la vida útil.<br>•
-                            Compatible con versiones anteriores de los extremos de potencia de TechnipFMC. Conserva el
-                            uso de válvulas, émbolos, empaquetaduras y manifolds de succión estándar para evitar
-                            interrupciones en la cadena de suministro.<br>• Retenedor de la Cubierta de Succión -
-                            Presenta un perfil de rosca mejorado que reduce la tensión en la rosca y se evita que se
-                            afloje mediante una llave de bloqueo magnética única y pasadores de alineación.<br>• Sello
-                            de la Caja de Empaquetadura - Emplea un diseño de sello mejorado, diseñado para limitar
-                            drásticamente el tiempo de inactividad al reducir la frecuencia de fugas y los requisitos de
-                            mantenimiento.<br>• Durabilidad - Ha demostrado en rigurosas pruebas en condiciones reales
-                            que soporta más de 50 millones de pulsaciones, lo que proporciona una vida útil más
-                            constante y predecible que los modelos anteriores.</p>
+                        <p>•Fabricado en acero inoxidable y aleado de alta resistencia contra corrosión y erosión.<br>•
+                            Contornos internos optimizados para reducir la concentración de tensiones y alargar su
+                            vida útil.<br>• Compatible con extremos de potencia TechnipFMC previos y componentes
+                            estándar (válvulas, émbolos y empaquetaduras).<br>• Tapa de succión con rosca mejorada y
+                            sistema de bloqueo magnético contra aflojamientos.<br>• Empaquetaduras optimizadas para
+                            minimizar fugas y reducir el tiempo de inactividad.<br>• Alta durabilidad comprobada en
+                            campo con más de 50 millones de pulsaciones.
+                        </p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
@@ -6490,6 +6728,10 @@
                             </svg>
                             Ver en 3D e Interactuar
                         </button>
+                        <button class="btn-toggle-compare"
+                            onclick="toggleCompare('mat-fluid-end-geopro-200l', 'FLUID END MODELO GEOPRO 200L', event)">
+                            + Añadir a comparar
+                        </button>
                     </div>
                 </div>
 
@@ -6508,21 +6750,12 @@
                     </div>
                     <div class="spec-block-card">
                         <h5>Otras Cualidades</h5>
-                        <p>• Es la variante reforzada del Modelo GeoPro Estándar. Diseñada específicamente para ciclos
-                            de trabajo continúo prolongados y alta carga de varilla<br>• El diseño se acopla
-                            directamente con los Power Ends actuales de la marca. Esto evita modificaciones costosas en
-                            el patín o la estructura de la bomba<br>• Los pasajes internos del bloque 200L están
-                            suavizados mediante maquinado de precisión para reducir la erosión por flujo turbulento de
-                            fluidos abrasivos (lodos de perforación y arenas apuntalantes).<br>• Utiliza los mismos
-                            componentes de desgaste estándar que las versiones anteriores. Elementos como válvulas,
-                            émbolos, empaquetaduras, manifolds de succión y retenedores de descarga no cambian,
-                            protegiendo la cadena de suministro del operador<br>• La forma externa modificada y los
-                            contornos internos optimizados del Fluid End redistribuyen las presiones cíclicas,
-                            reduciendo estrés mecánico. Esto mitiga de forma drástica los puntos de concentración de
-                            tensiones<br>• Incorpora un nuevo diseño de prensaestopas, cubiertas de succión y sistemas
-                            de retención que agilizan el servicio técnico de su mantenimiento en campo<br>• Cuenta con
-                            capacidad para operar de manera sostenida en rangos de alta presión (hasta 15,000 - 20,000
-                            Psi según la configuración del pistón instalado)</p>
+                        <p>• Versión reforzada para ciclos de trabajo continuo y alta carga.<br>
+                            • Compatible con Power Ends actuales (sin modificaciones en el patín).<br>
+                            • Pasajes internos con maquinado de precisión para reducir erosión.<br>
+                            • Utiliza componentes de desgaste estándar de la industria.<br>
+                            • Geometría optimizada para menor concentración de tensiones.<br>
+                            • Nuevo diseño de prensaestopas y cubiertas para mantenimiento ágil.</p>
                     </div>
                     <div class="spec-block-card">
                         <h5>Aplicación</h5>
@@ -6532,7 +6765,6 @@
                 </div>
             </div>
         </div>
-
         <!-- VENTANA EMERGENTE (MODAL) AL FINAL DE LA SECCIÓN -->
         <div id="modalSpecs3D" class="custom-specs-modal">
             <div class="modal-overlay" onclick="cerrarModal3DSpecs()"></div>
@@ -6561,82 +6793,91 @@
             </div>
         </div>
         </div>
+
+        <!-- Modal de Imagen Ampliada (Lightbox) -->
+        <div id="imageModal" class="modal-lightbox" onclick="cerrarModalImagen(event)">
+            <div class="modal-lightbox-content" onclick="event.stopPropagation()">
+                <span class="modal-close-btn" onclick="cerrarModalImagen()">&times;</span>
+                <img id="imgModalAmpliada" src="" alt="Vista ampliada">
+            </div>
+        </div>
     </section>
 
     <!-- SECCIÓN: KITS DE REPUESTOS INDUSTRIALES (Diseño Visual Puramente Fotográfico) -->
-<section id="kits-repuestos" class="industrial-kits-section">
-    <div class="kits-wrapper">
-        
-        <!-- Cabecera de la sección -->
-        <div class="kits-main-header">
-            <span class="header-tag">GALERÍA DE COMPONENTES</span>
-            <h2>Kits de Repuestos Industriales</h2>
-            <p>Selecciona un sistema para visualizar exclusivamente los componentes certificados de cada kit.</p>
-        </div>
+    <section id="kits-repuestos" class="industrial-kits-section">
+        <div class="kits-wrapper">
+            <!-- Cabecera de la sección -->
+            <div class="kits-main-header">
+                <span class="header-tag">GALERÍA DE COMPONENTES</span>
+                <h2>Kits de Repuestos Industriales</h2>
+                <p>Selecciona un sistema para visualizar exclusivamente los componentes certificados de cada kit.</p>
+            </div>
+            <!-- Pestañas de Navegación Horizontales (Selector Superior) -->
+            <div class="kits-tabs-container custom-horizontal-scroll">
+                <button onclick="switchKit(1)" class="kit-tab-btn active" data-kit="1">
+                    <span class="tab-num">01</span>
+                    <span class="tab-label">Extremos Weco</span>
+                </button>
+                <button onclick="switchKit(2)" class="kit-tab-btn" data-kit="2">
+                    <span class="tab-num">02</span>
+                    <span class="tab-label">Juntas Giratorias LS / TSi</span>
+                </button>
+                <button onclick="switchKit(3)" class="kit-tab-btn" data-kit="3">
+                    <span class="tab-num">03</span>
+                    <span class="tab-label">Válvulas de Tapón ULT</span>
+                </button>
+                <button onclick="switchKit(4)" class="kit-tab-btn" data-kit="4">
+                    <span class="tab-num">04</span>
+                    <span class="tab-label">Válvulas de Tapón DR</span>
+                </button>
+                <button onclick="switchKit(5)" class="kit-tab-btn" data-kit="5">
+                    <span class="tab-num">05</span>
+                    <span class="tab-label">Válvulas de Retención</span>
+                </button>
+                <button onclick="switchKit(6)" class="kit-tab-btn" data-kit="6">
+                    <span class="tab-num">06</span>
+                    <span class="tab-label">Alivio de Presión</span>
+                </button>
+            </div>
+            <!-- Tarjeta de Exhibición Principal (Exclusivamente Imágenes y Referencia) -->
+            <div class="kit-showcase-card">
 
-        <!-- Pestañas de Navegación Horizontales (Selector Superior) -->
-        <div class="kits-tabs-container custom-horizontal-scroll">
-            <button onclick="switchKit(1)" class="kit-tab-btn active" data-kit="1">
-                <span class="tab-num">01</span>
-                <span class="tab-label">Extremos Weco</span>
-            </button>
-            <button onclick="switchKit(2)" class="kit-tab-btn" data-kit="2">
-                <span class="tab-num">02</span>
-                <span class="tab-label">Juntas Giratorias LS / TSi</span>
-            </button>
-            <button onclick="switchKit(3)" class="kit-tab-btn" data-kit="3">
-                <span class="tab-num">03</span>
-                <span class="tab-label">Válvulas de Tapón ULT</span>
-            </button>
-            <button onclick="switchKit(4)" class="kit-tab-btn" data-kit="4">
-                <span class="tab-num">04</span>
-                <span class="tab-label">Válvulas de Tapón DR</span>
-            </button>
-            <button onclick="switchKit(5)" class="kit-tab-btn" data-kit="5">
-                <span class="tab-num">05</span>
-                <span class="tab-label">Válvulas de Retención</span>
-            </button>
-            <button onclick="switchKit(6)" class="kit-tab-btn" data-kit="6">
-                <span class="tab-num">06</span>
-                <span class="tab-label">Alivio de Presión</span>
-            </button>
-        </div>
+                <!-- Barra superior con Referencia y Estado -->
+                <div class="showcase-top-bar">
+                    <div class="meta-info">
+                        <span id="showcase-badge" class="badge-cat">LÍNEAS DE ALTA PRESIÓN</span>
+                        <span id="showcase-ref" class="ref-code">REF: ESIP-WECO-01</span>
+                    </div>
+                    <div class="stock-status">
+                        <span class="pulse-dot"></span>
+                        <span>Disponible</span>
+                    </div>
+                </div>
 
-        <!-- Tarjeta de Exhibición Principal (Exclusivamente Imágenes y Referencia) -->
-        <div class="kit-showcase-card">
-            
-            <!-- Barra superior con Referencia y Estado -->
-            <div class="showcase-top-bar">
-                <div class="meta-info">
-                    <span id="showcase-badge" class="badge-cat">LÍNEAS DE ALTA PRESIÓN</span>
-                    <span id="showcase-ref" class="ref-code">REF: ESIP-WECO-01</span>
+                <!-- Galería Visual Estilo Bento (Exactamente 5 imágenes grandes y limpias por kit, sin texto de descripción) -->
+                <div class="bento-gallery" id="showcase-bento">
+                    <!-- Inyectado dinámicamente mediante JavaScript -->
                 </div>
-                <div class="stock-status">
-                    <span class="pulse-dot"></span>
-                    <span>Disponible</span>
+
+                <!-- Pie de tarjeta / Botón de Acción Rápida -->
+                <div class="showcase-footer">
+                    <div class="footer-note">
+                        <span id="showcase-title-mini" class="mini-title-reference">Repuestos para Extremos de Conexión
+                            Weco</span>
+                    </div>
+                    <a href="#contacto" class="action-quote-btn">
+                        COTIZAR KIT
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
+
             </div>
 
-            <!-- Galería Visual Estilo Bento (Exactamente 5 imágenes grandes y limpias por kit, sin texto de descripción) -->
-            <div class="bento-gallery" id="showcase-bento">
-                <!-- Inyectado dinámicamente mediante JavaScript -->
-            </div>
-
-            <!-- Pie de tarjeta / Botón de Acción Rápida -->
-            <div class="showcase-footer">
-                <div class="footer-note">
-                    <span id="showcase-title-mini" class="mini-title-reference">Repuestos para Extremos de Conexión Weco</span>
-                </div>
-                <a href="#contacto" class="action-quote-btn">
-                    COTIZAR KIT 
-                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-            </div>
-
         </div>
-
-    </div>
-</section>
+    </section>
 
     <!-- BANDEJA FLOTANTE DE COMPARACIÓN -->
     <div id="comparisonTray" class="comparison-tray hidden">
@@ -6651,7 +6892,6 @@
             </div>
         </div>
     </div>
-
     <!-- MODAL DEL COMPARADOR TÉCNICO -->
     <div id="comparisonModal" class="comparison-modal-overlay hidden">
         <div class="comparison-modal-container">
@@ -6792,6 +7032,7 @@
             </div>
         </div>
     </footer>
+    <script src="particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 
