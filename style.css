@@ -3928,18 +3928,18 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 
 
 .hero-section {
-    position: relative;
-    width: 100vw; /* Asegura el ancho total de la pantalla */
+    position: relative; /* <--- Esto es clave para que sirva de "caja" contenedora */
+    width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: hidden; /* Evita que las partículas se salgan de la sección */
 }
 
 #particles-js {
-    position: fixed; /* O absolute pero asegurando el 100vw */
-    width: 100vw;
-    height: 100vh;
+    position: absolute; /* <--- Cambiado de fixed a absolute para que se quede en el main */
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    z-index: 10; /* Ponlo por encima de los fondos pero debajo de los textos */
-    pointer-events: none; /* Vital para que puedas hacer clic en los botones */
+    z-index: 10;     
+    pointer-events: none; /* Permite que los clics sigan funcionando en los botones */
 }
