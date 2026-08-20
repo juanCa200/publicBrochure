@@ -1639,7 +1639,7 @@ particlesJS("particles-js", {
       "type": "circle"
     },
     "opacity": {
-      "value": 0.95,
+      "value": 0.8,
       "random": true
     },
     "size": {
@@ -1650,7 +1650,7 @@ particlesJS("particles-js", {
       "enable": true,
       "distance": 150,
       "color": "#00a859",
-      "opacity": 0.75,
+      "opacity": 0.5,
       "width": 1.2
     },
     "move": {
