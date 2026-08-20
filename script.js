@@ -1626,10 +1626,10 @@ function navigateToSection(category, targetId) {
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 90,
+      "value": 110,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 900
       }
     },
     "color": {
