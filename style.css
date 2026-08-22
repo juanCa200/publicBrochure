@@ -1009,110 +1009,231 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     }
 }
 
-
+/* Contenedor Modal Premium */
 .esip-premium-modal {
     position: fixed;
     inset: 0;
-    background: rgba(5, 11, 20, .98);
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
     display: none;
-    z-index: 9999;
-
-    overflow-y: auto;
-    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1.5rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Estructura interna */
 .modal-inner {
+    background: #ffffff;
     width: 100%;
-    max-width: 1400px;
-
-    min-height: 100%;
-    margin: auto;
-
-    background: #fff;
+    max-width: 1050px;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     position: relative;
-
-    overflow: visible;
-}
-
-.premium-grid {
-    display: grid;
-    grid-template-columns: .4fr .6fr;
-}
-
-.visual-pane {
-    position: relative;
-    background: #000;
-}
-
-.visual-pane img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6;
-}
-
-.content-pane {
-    padding: 80px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
-.eyebrow {
-    color: var(--esip-orange);
-    font-weight: 800;
-    letter-spacing: 3px;
-    font-size: 12px;
-}
-
-.content-pane h1 {
-    font-size: 64px;
-    line-height: 0.9;
-    color: var(--esip-green);
-    margin: 20px 0;
-}
-
-.content-pane h1 span {
-    font-weight: 300;
-    color: #333;
-}
-
-.story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.story-item h4 {
-    border-top: 2px solid var(--esip-orange);
-    padding-top: 15px;
-    margin-bottom: 10px;
-}
-
-.story-item p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-}
-
+/* Botón Cerrar */
 .close-modal-btn {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    z-index: 10;
-    background: transparent;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    cursor: pointer;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    padding: 0.5rem 1rem;
     font-weight: 700;
-    transition: 0.3s;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
 }
 
 .close-modal-btn:hover {
-    background: var(--esip-green);
-    color: white;
-    border-color: var(--esip-green);
+    background: #f26522;
+    color: #ffffff;
+    border-color: #f26522;
+}
+
+/* Rejilla Principal de 2 Columnas */
+.premium-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    min-height: 600px;
+}
+
+@media (max-width: 768px) {
+    .premium-grid {
+        grid-template-columns: 1fr;
+    }
+    .visual-pane {
+        min-height: 220px;
+    }
+}
+
+/* Panel Visual (Izquierda) - Imagen limpia sin tonos */
+.visual-pane {
+    position: relative;
+    background: #0f172a;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.visual-pane img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: transform 0.5s ease;
+}
+
+.visual-pane:hover img {
+    transform: scale(1.03);
+}
+
+.visual-pane::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.1) 60%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.visual-caption {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem;
+    color: #ffffff;
+}
+
+.caption-tag {
+    display: inline-block;
+    background-color: #f26522;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+}
+
+.visual-caption h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Panel de Contenido (Derecha) */
+.content-pane {
+    padding: 2.5rem;
+    overflow-y: auto;
+    max-height: 80vh;
+    background-color: #ffffff;
+}
+
+.modal-header .eyebrow {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.intro-text {
+    font-size: 0.925rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    border-left: 3px solid #f26522;
+    padding-left: 1rem;
+}
+
+/* Tarjetas Internas */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.story-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.story-card:hover {
+    border-color: #01A84B;
+    box-shadow: 0 4px 12px rgba(1, 168, 75, 0.05);
+}
+
+.card-icon {
+    background: rgba(1, 168, 75, 0.08);
+    color: #01A84B;
+    padding: 0.6rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.story-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem 0;
+}
+
+.story-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Objetivos de Calidad */
+.story-card.full-width {
+    flex-direction: column;
+}
+
+.card-header-flex {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-header-flex h4 {
+    margin: 0;
+}
+
+.quality-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.quality-list li {
+    margin-bottom: 0.35rem;
 }
 
 
