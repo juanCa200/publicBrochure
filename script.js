@@ -1427,7 +1427,7 @@ function cerrarVideoIntro() {
 }
 const kitsData = {
     1: {
-        category: "LÍNEAS DE ALTA PRESIÓN",
+        category: "EXTREMOS DE CONEXION WECO",
         ref: "REF: ESIP-WECO-01",
         title: "Repuestos para Extremos de Conexión Weco",
         images: [
@@ -1439,7 +1439,7 @@ const kitsData = {
         ]
     },
     2: {
-        category: "MANTENIMIENTO INDUSTRIAL",
+        category: "JUNTAS GIRATORIAS",
         ref: "REF: ESIP-LS-02",
         title: "Kits de Repuestos para Juntas Giratorias LS / TSi",
         images: [
@@ -1451,7 +1451,7 @@ const kitsData = {
         ]
     },
     3: {
-        category: "CONTROL DE FLUJOS",
+        category: "VÁLVULAS DE TAPÓN ULT",
         ref: "REF: ESIP-ULT-03",
         title: "Kits de Repuestos para Válvulas de Tapón ULT",
         images: [
@@ -1463,19 +1463,17 @@ const kitsData = {
         ]
     },
     4: {
-        category: "VALVULERÍA ESPECIALIZADA",
+        category: "VÁLVULA TAPON DR",
         ref: "REF: ESIP-DR-04",
         title: "Kits de Repuestos para Válvulas de Tapón DR",
         images: [
             "img/DRWeco.png",
             "img/kitsValvulaDR1.png",
-            "img/kitsValvulaDR2.png",
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop&q=80",
-            "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&auto=format&fit=crop&q=80"
+            "img/kitsValvulaDR2.png"
         ]
     },
     5: {
-        category: "SISTEMAS DE RETENCIÓN",
+        category: "VÁLVULAS DE RETENCIÓN",
         ref: "REF: ESIP-CV-05",
         title: "Kits de Repuestos para Válvulas de Retención",
         images: [
@@ -1484,18 +1482,6 @@ const kitsData = {
             "img/kitsValvulaRetencion2.png",
             "img/kitsValvulaRetencion3.png",
             "img/kitsValvulaRetencion1.png"
-        ]
-    },
-    6: {
-        category: "SEGURIDAD INDUSTRIAL",
-        ref: "REF: ESIP-PRV-06",
-        title: "Kits de Repuestos para Válvulas de Alivio",
-        images: [
-            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80",
-            "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400&auto=format&fit=crop&q=80",
-            "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=400&auto=format&fit=crop&q=80",
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop&q=80",
-            "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&auto=format&fit=crop&q=80"
         ]
     }
 };
@@ -1633,7 +1619,7 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": ["#00e676", "#ffffff"] // Verde brillante y blanco para contraste en ambos lados
+      "value": ["#00e676", "#ffffff"]
     },
     "shape": {
       "type": "circle"
@@ -1664,25 +1650,21 @@ particlesJS("particles-js", {
     }
   },
   "interactivity": {
-    "detect_on": "window", // Detecta el movimiento en toda la ventana
+    "detect_on": "window",
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "repulse" // <--- AQUÍ ESTÁ EL CAMBIO: Las partículas se alejan del mouse
+        "mode": "repulse" // Las partículas se alejan suavemente del cursor
       },
       "onclick": {
-        "enable": true,
-        "mode": "push"
+        "enable": false  // <--- CAMBIO: Desactivado para evitar que se saturen de por vida
       },
       "resize": true
     },
     "modes": {
       "repulse": {
-        "distance": 120, // Qué tan cerca debe estar el mouse para que empiecen a huir
-        "duration": 0.4  // Qué tan suave es el retroceso
-      },
-      "push": {
-        "particles_nb": 4
+        "distance": 120,
+        "duration": 0.4
       }
     }
   },

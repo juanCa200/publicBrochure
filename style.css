@@ -3277,8 +3277,9 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 /* Pestañas Horizontales Superiores */
 .kits-tabs-container {
     display: flex;
+    justify-content: center; /* <--- CENTRA LAS PESTAÑAS HORIZONTALMENTE */
+    flex-wrap: wrap;         /* <--- Permite que bajen si la pantalla es muy pequeña */
     gap: 0.75rem;
-    overflow-x: auto;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     scrollbar-width: thin;
