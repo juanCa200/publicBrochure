@@ -1609,6 +1609,10 @@ function navigateToSection(category, targetId) {
     }
 }
 
+
+/* ==========================================
+   1. CONFIGURACIÓN DE PARTICLES.JS
+   ========================================== */
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -1654,10 +1658,10 @@ particlesJS("particles-js", {
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "repulse" // Las partículas se alejan suavemente del cursor
+        "mode": "repulse"
       },
       "onclick": {
-        "enable": false  // <--- CAMBIO: Desactivado para evitar que se saturen de por vida
+        "enable": false
       },
       "resize": true
     },
@@ -1670,3 +1674,218 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+
+// Variables globales para el visor 3D
+let modalScene, modalCamera, modalRenderer, modalControls;
+let modelosCargados = []; // Arreglo para guardar los 3 modelos cargados
+let indiceModeloActual = 0;
+let isModalExploded = false;
+let modalAnimId = null;
+
+// Lista de tus 3 modelos .glb
+const listaRutasModelos = [
+    'img/BombaEmboloTriplexPartes.glb', // Modelo 0
+    'img/ValvulaRetencionDardoPartes.glb', // Modelo 1
+    'img/ValvulaULTPartes.glb'          // Modelo 2
+];
+
+// Distancias de explosión personalizadas para cada modelo (Índice 0, 1 y 2)
+// Modifica estos valores si algún modelo se dispersa demasiado o muy poco
+const distanciasExplosion = [
+    1.0,  // Distancia para el Modelo 0 (Bomba)
+    0.4,  // Distancia para el Modelo 1 (Válvula Dardo)
+    0.5   // Distancia para el Modelo 2 (Válvula ULT)
+];
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const container = document.getElementById('modal-canvas-container');
+        if (!container) return;
+
+        iniciarVisorMultipleConExplosion(container);
+    }, 250);
+});
+
+function iniciarVisorMultipleConExplosion(container) {
+    container.innerHTML = ''; 
+
+    const width = container.clientWidth > 0 ? container.clientWidth : 600;
+    const height = container.clientHeight > 0 ? container.clientHeight : 520;
+
+    modalScene = new THREE.Scene();
+    modalCamera = new THREE.PerspectiveCamera(30, width / height, 0.1, 1000);
+    modalCamera.position.set(1.4, 0.9, 1.4); // Cámara cercana para que se vea grande
+
+    // Renderer con fondo transparente
+    modalRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    modalRenderer.setSize(width, height);
+    container.appendChild(modalRenderer.domElement);
+
+    modalControls = new THREE.OrbitControls(modalCamera, modalRenderer.domElement);
+    modalControls.enableDamping = true;
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2.0);
+    modalScene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 2.5);
+    dirLight.position.set(10, 20, 15);
+    modalScene.add(dirLight);
+
+    modelosCargados = new Array(listaRutasModelos.length).fill(null);
+    indiceModeloActual = 0;
+    isModalExploded = false;
+
+    const loader = new THREE.GLTFLoader();
+
+    try {
+        if (typeof DRACOLoader !== 'undefined') {
+            const dracoLoader = new DRACOLoader();
+            dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+            loader.setDRACOLoader(dracoLoader);
+        } else if (typeof THREE !== 'undefined' && THREE.DRACOLoader) {
+            const dracoLoader = new THREE.DRACOLoader();
+            dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+            loader.setDRACOLoader(dracoLoader);
+        }
+    } catch (e) {
+        console.warn("Aviso sobre Draco Loader:", e);
+    }
+
+    // Cargar los 3 modelos simultáneamente en memoria
+    listaRutasModelos.forEach((glbPath, index) => {
+        loader.load(glbPath, (gltf) => {
+            const model = gltf.scene;
+
+            // Centrar modelo
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            model.position.sub(center);
+
+            // Preparar datos de despiece para cada pieza de este modelo
+            const modelBox = new THREE.Box3().setFromObject(model);
+            const modelCenter = modelBox.getCenter(new THREE.Vector3());
+
+            let partesModelo = [];
+            model.traverse((child) => {
+                if (child.isMesh) {
+                    const basePos = child.position.clone();
+                    child.userData.basePosition = basePos;
+
+                    const childBox = new THREE.Box3().setFromObject(child);
+                    const childCenter = childBox.getCenter(new THREE.Vector3());
+
+                    let dir = childCenter.clone().sub(modelCenter);
+                    if (dir.lengthSq() === 0) {
+                        dir.set(Math.random() - 0.5, 0.5, Math.random() - 0.5);
+                    }
+                    dir.normalize();
+
+                    child.userData.explodeDir = dir;
+                    partesModelo.push(child);
+                }
+            });
+
+            // Guardamos el objeto contenedor junto con sus piezas mapeadas
+            model.userData.partes = partesModelo;
+
+            // Solo mostrar el primer modelo por defecto, los demás ocultos
+            model.visible = (index === 0);
+
+            modalScene.add(model);
+            modelosCargados[index] = model;
+
+            renderScenes();
+        }, undefined, (error) => {
+            console.error(`Error al cargar el modelo ${glbPath}:`, error);
+        });
+    });
+
+    loopModalAnimation();
+}
+
+function renderScenes() {
+    if (modalRenderer && modalScene && modalCamera) {
+        modalRenderer.render(modalScene, modalCamera);
+    }
+}
+
+function loopModalAnimation() {
+    cancelAnimationFrame(modalAnimId);
+    function animate() {
+        modalAnimId = requestAnimationFrame(animate);
+        if (modalControls) modalControls.update();
+        renderScenes();
+    }
+    animate();
+}
+
+// Función para cambiar de modelo con los botones laterales del carrusel
+function cambiarModelo(direccion) {
+    if (modelosCargados.length === 0) return;
+
+    // Ocultar modelo actual
+    if (modelosCargados[indiceModeloActual]) {
+        modelosCargados[indiceModeloActual].visible = false;
+    }
+
+    // Calcular nuevo índice en bucle circular (0 -> 1 -> 2 -> 0)
+    indiceModeloActual += direccion;
+    if (indiceModeloActual >= modelosCargados.length) {
+        indiceModeloActual = 0;
+    } else if (indiceModeloActual < 0) {
+        indiceModeloActual = modelosCargados.length - 1;
+    }
+
+    // Resetear el estado de despiece al cambiar de producto para evitar confusiones
+    isModalExploded = false;
+    const btn = document.querySelector('.btn-despiece-modal');
+    if (btn) btn.textContent = 'Ver Despiece / Ensamblaje';
+
+    // Mostrar el nuevo modelo si ya terminó de cargar
+    if (modelosCargados[indiceModeloActual]) {
+        modelosCargados[indiceModeloActual].visible = true;
+    }
+
+    renderScenes();
+}
+
+// Función de despiece aplicada únicamente al modelo activo con su distancia específica
+function toggleExplodeModal() {
+    const modeloActual = modelosCargados[indiceModeloActual];
+    if (!modeloActual || !modeloActual.userData.partes) return;
+
+    isModalExploded = !isModalExploded;
+    
+    // Asigna la distancia configurada para el modelo actual en el arreglo
+    const expansionDistance = distanciasExplosion[indiceModeloActual] || 1.0; 
+
+    modeloActual.userData.partes.forEach((part) => {
+        const base = part.userData.basePosition;
+        const dir = part.userData.explodeDir;
+
+        const targetX = isModalExploded ? base.x + (dir.x * expansionDistance) : base.x;
+        const targetY = isModalExploded ? base.y + (dir.y * expansionDistance) : base.y;
+        const targetZ = isModalExploded ? base.z + (dir.z * expansionDistance) : base.z;
+
+        gsap.to(part.position, {
+            x: targetX,
+            y: targetY,
+            z: targetZ,
+            duration: 1.0,
+            ease: "power2.inOut"
+        });
+    });
+
+    const btn = document.querySelector('.btn-despiece-modal');
+    if (btn) {
+        btn.textContent = isModalExploded ? 'Ensamblar Modelo' : 'Ver Despiece / Ensamblaje';
+    }
+}
+
+function cerrarModal3D() {
+    const overlay = document.getElementById('modal-visor-3d-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        cancelAnimationFrame(modalAnimId);
+    }
+}

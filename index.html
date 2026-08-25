@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
-        rel="stylesheet">
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/logo3.png">
+    
+    <!-- Scripts base de Three.js (Versión unificada r128) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- GSAP (Una sola versión limpia) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
@@ -53,6 +58,50 @@
     </div>
 </div>
 -->
+
+<!-- Overlay del Visor 3D -->
+<div id="modal-visor-3d-overlay" class="modal-3d-overlay" style="display: flex;">
+    <div class="modal-3d-card minimal-transparent-card">
+        
+        <!-- Botón de cerrar superior -->
+        <button class="close-modal-3d-btn" onclick="cerrarModal3D()">&times;</button>
+
+        <!-- Contenedor principal de dos columnas -->
+        <div class="visor-content-wrapper">
+            
+            <!-- Panel de información a la izquierda (Vertical y elegante) -->
+            <div class="visor-info-panel">
+                <span class="visor-badge">Ingeniería Avanzada</span>
+                <h3>Soluciones para la Industria Petrolera</h3>
+                <p>Especialistas en la venta de equipos y componentes de alta calidad, garantizando durabilidad y rendimiento extremo.</p>
+                <div class="visor-highlight-box">
+                    <span>✨ <strong>Exploración 3D:</strong> Visualiza modelos interactivos detallados y explora su estructura técnica en tiempo real.</span>
+                </div>
+            </div>
+
+            <!-- Contenedor del Canvas 3D con los botones de flecha (carrusel) integrados -->
+            <div class="visor-canvas-wrapper" style="position: relative; flex: 1; display: flex; align-items: center; justify-content: center;">
+                
+                <!-- Botón Izquierda para cambiar de modelo -->
+                <button onclick="cambiarModelo(-1)" class="btn-carrusel-visor btn-prev">&#10094;</button>
+                <!-- Canvas 3D -->
+                <div class="modal-canvas-container" id="modal-canvas-container" style="width: 100%;"></div>
+
+                <!-- Botón Derecha para cambiar de modelo -->
+                <button onclick="cambiarModelo(1)" class="btn-carrusel-visor btn-next">&#10095;</button>
+
+            </div>
+
+        </div>
+
+        <!-- Botón inferior de despiece -->
+        <div class="modal-3d-actions">
+            <button class="btn-despiece-modal" onclick="toggleExplodeModal()">Ver Despiece / Ensamblaje</button>
+        </div>
+
+    </div>
+</div>
+
 
     <section class="hero-section">
         <!-- 1. El contenedor exclusivo para las partículas de red -->
@@ -7195,6 +7244,8 @@ position: relative;">
             </div>
         </div>
     </footer>
+
+    
     <script src="particles.min.js"></script>
     <script src="script.js"></script>
 </body>
