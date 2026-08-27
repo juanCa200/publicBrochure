@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <link rel="icon" type="image/png" href="img/logo3.png">
-    
+
+      
     <!-- Scripts base de Three.js (Versión unificada r128) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -19,45 +24,10 @@
     
     <!-- GSAP (Una sola versión limpia) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 
 <body>
-
-
-    <!--
-    <div id="welcome-announcement-overlay" class="announcement-overlay">
-    <div class="announcement-card">
-
-        <button class="close-announcement-btn" onclick="closeAnnouncement()">&times;</button>
-
-        <div class="announcement-body-content">
-            <header class="announcement-header">
-                <h1>ESIP S.A.S.</h1>
-                <h2>Catálogo Digital e Industrial</h2>
-            </header>
-
-            <div class="announcement-divider"></div>
-
-            <p class="announcement-description">
-                Bienvenido a nuestro portal. Explora nuestro portafolio de equipos, especificaciones técnicas y cotiza de forma rápida y sencilla.
-            </p>
-
-            <div class="announcement-actions-flex">
-                <button class="btn-announcement-primary" onclick="closeAnnouncement()">
-                    <span>ENTRAR AL CATÁLOGO</span>
-                    <svg viewBox="0 0 24 24" class="btn-arrow-icon">
-                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" />
-                    </svg>
-                </button>
-                <a href="URL_DE_TU_PDF_SI_TIENES_UNO" target="_blank" class="btn-announcement-secondary">
-                    Descargar PDF
-                </a>
-            </div>
-        </div>
-
-    </div>
-</div>
--->
 
 <!-- Overlay del Visor 3D -->
 <div id="modal-visor-3d-overlay" class="modal-3d-overlay" style="display: flex;">
@@ -101,7 +71,6 @@
 
     </div>
 </div>
-
 
     <section class="hero-section">
         <!-- 1. El contenedor exclusivo para las partículas de red -->
@@ -202,7 +171,6 @@
             </main>
         </div>
     </section>
-
 
     <section id="contenido" class="content-section-viewport">
         <div class="index-text-canvas">
@@ -7077,17 +7045,8 @@ position: relative;">
                         <span id="showcase-title-mini" class="mini-title-reference">Repuestos para Extremos de Conexión
                             Weco</span>
                     </div>
-                    <a href="#contacto" class="action-quote-btn">
-                        COTIZAR KIT
-                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
                 </div>
-
             </div>
-
         </div>
     </section>
 
@@ -7104,6 +7063,7 @@ position: relative;">
             </div>
         </div>
     </div>
+
     <!-- MODAL DEL COMPARADOR TÉCNICO -->
     <div id="comparisonModal" class="comparison-modal-overlay hidden">
         <div class="comparison-modal-container">
@@ -7132,7 +7092,6 @@ position: relative;">
             </svg>
         </a>
     </div>
-
     <!-- FOOTER INDUSTRIAL PROFESIONAL -->
     <footer class="industrial-footer">
         <div class="footer-top-cta">
@@ -7244,7 +7203,6 @@ position: relative;">
             </div>
         </div>
     </footer>
-
     
     <script src="particles.min.js"></script>
     <script src="script.js"></script>
