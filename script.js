@@ -107,7 +107,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
-            { propiedad: "Otras Cualidades", valor: "• Tuerca Aleteada Weco Retirable<br>• Manufactura Integral Forjada de Una Sola Pieza<br>• Muy Durable y de Funcionamiento Confiable y Seguro" },
+            { propiedad: "Otras Especificaciones", valor: "• Tuerca Aleteada Weco Retirable<br>• Manufactura Integral Forjada de Una Sola Pieza<br>• Muy Durable y de Funcionamiento Confiable y Seguro" },
             { propiedad: "Aplicación", valor: "Procesos de Alta Presión y Muy Abrasivos" }
         ]
     },
@@ -119,7 +119,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco No Retirable" },
-            { propiedad: "Otras Cualidades", valor: "• Tuerca Aleteada Weco No Retirable<br>• Manufactura Compuesta No Integral<br>• Peso Ligero y Precio Económico" },
+            { propiedad: "Otras Especificaciones", valor: "• Tuerca Aleteada Weco No Retirable<br>• Manufactura Compuesta No Integral<br>• Peso Ligero y Precio Económico" },
             { propiedad: "Aplicación", valor: "Procesos de Alta Presión No Tan Críticos" }
         ]
     },
@@ -131,7 +131,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)" },
-            { propiedad: "Otras Cualidades", valor: "• Configuración Convencional de Tres Pistas de Balines<br>• Codos de Barrido Largo para Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Durable y de Funcionamiento Confiable" },
+            { propiedad: "Otras Especificaciones", valor: "• Configuración Convencional de Tres Pistas de Balines<br>• Codos de Barrido Largo para Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Durable y de Funcionamiento Confiable" },
             { propiedad: "Aplicación", valor: "Diversos Procesos No Críticos" }
         ]
     },
@@ -143,7 +143,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)" },
-            { propiedad: "Otras Cualidades", valor: "• Diseño Cónico Patentado de Gran Grosor de Pistas de Balines<br>• Pistas de Balines Altamente Resistentes a la Corrosión<br>• Codos de Barrido Largo para Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Mayor Capacidad de Carga en las Juntas de Giro<br>• Mayor Durabilidad y Funcionamiento Confiable y Seguro" },
+            { propiedad: "Otras Especificaciones", valor: "• Diseño Cónico Patentado de Gran Grosor de Pistas de Balines<br>• Pistas de Balines Altamente Resistentes a la Corrosión<br>• Codos de Barrido Largo para Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Mayor Capacidad de Carga en las Juntas de Giro<br>• Mayor Durabilidad y Funcionamiento Confiable y Seguro" },
             { propiedad: "Aplicación", valor: "Procesos de Alta Presión y Abrasivos" }
         ]
     },
@@ -155,7 +155,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "• Tuerca Aleteada Weco Retirable" },
-            { propiedad: "Otras especificaciones", valor: "• Muy Durable y de Funcionamiento Confiable y Seguro" },
+            { propiedad: "Otras Especificaciones", valor: "• Muy Durable y de Funcionamiento Confiable y Seguro" },
             { propiedad: "Aplicación", valor: "• Procesos de Alta Presión y Abrasivos" }
         ]
     },
@@ -167,7 +167,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "5000, 10000, 15000, 20000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "• Conexión Bridada API<br>• Conexión Roscada API<br>• Unión de Golpe (Weco)" },
-            { propiedad: "Otras especificaciones", valor: "• Presenta estructura multicapa robusta<br>• Resistente a presiones y temperaturas extremas<br>• Su cubierta exterior termoplástica le ofrece alta protección química, térmica y contra el gas agrio<br>• No se expande, no se contrae, ni sufre latigazos (\"patadas\") al recibir golpes de ariete o flujos pulsantes<br>• Conformadas con revestimientos de Rilsan® (-20°C a 100°C) o Coflon® (130°C a 160°C continuos)<br>• Fabricadas según Estándar API 16C (para operaciones de Estrangulación y Ahogo)" },
+            { propiedad: "Otras Especificaciones", valor: "• Presenta estructura multicapa robusta<br>• Resistente a presiones y temperaturas extremas<br>• Su cubierta exterior termoplástica le ofrece alta protección química, térmica y contra el gas agrio<br>• No se expande, no se contrae, ni sufre latigazos (\"patadas\") al recibir golpes de ariete o flujos pulsantes<br>• Conformadas con revestimientos de Rilsan® (-20°C a 100°C) o Coflon® (130°C a 160°C continuos)<br>• Fabricadas según Estándar API 16C (para operaciones de Estrangulación y Ahogo)" },
             { propiedad: "Aplicación", valor: "• Líneas de control de pozos (estrangulación y ahogo)<br>• Pruebas de pozos superficiales<br>• Absorción de movimientos y vibraciones<br>• Operaciones de servicio extrapesado<br>• Conducción de fluidos abrasivos o corrosivos (lodos de perforación, cementación, inyección de nitrógeno y acidificación)" }
         ]
     },
@@ -178,7 +178,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
-            { propiedad: "Otras especificaciones", valor: "• Última Generación en Válvulas de Tapón<br>• Reduce el Torque de Operación a cualquier Presión<br>• Posee Configuración Patentada de Tapón Flotante y Sello Dual con Carga Distribuida de manera Uniforme<br>• Muy Durable, Larga Vida Útil y de Funcionamiento Confiable y Seguro" },
+            { propiedad: "Otras Especificaciones", valor: "• Última Generación en Válvulas de Tapón<br>• Reduce el Torque de Operación a cualquier Presión<br>• Posee Configuración Patentada de Tapón Flotante y Sello Dual con Carga Distribuida de manera Uniforme<br>• Muy Durable, Larga Vida Útil y de Funcionamiento Confiable y Seguro" },
             { propiedad: "Aplicación", valor: "Procesos de Fractura, de Cementación y Altamente Abrasivos" }
         ]
     },
@@ -189,7 +189,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "• Estándar<br>• Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
-            { propiedad: "Otras especificaciones", valor: "• Provee Sello Dual Convencional a través de Configuración Simétrica de sus Componentes<br>• Funcionamiento Confiable y Seguro" },
+            { propiedad: "Otras Especificaciones", valor: "• Provee Sello Dual Convencional a través de Configuración Simétrica de sus Componentes<br>• Funcionamiento Confiable y Seguro" },
             { propiedad: "Aplicación", valor: "Diversos Procesos Estándar de Alta Presión" }
         ]
     },
@@ -200,7 +200,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tamaños", valor: "2”, 3”" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
-            { propiedad: "Otras especificaciones", valor: "Empleada en el Manejo de Fluidos Viscosos. Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión. La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión." },
+            { propiedad: "Otras Especificaciones", valor: "Empleada en el Manejo de Fluidos Viscosos. Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión. La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión." },
             { propiedad: "Aplicación", valor: "Servicios Abrasivos de Alto Volumen, como Fractura Hidráulica, Bombeo de Arena y Lechada de Cemento" }
         ]
     },
@@ -211,7 +211,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tamaños", valor: "2”, 3”" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
-            { propiedad: "Otras especificaciones", valor: "Empleada en el Manejo de Fluidos Viscosos. Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión. La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión. Fácil Mantenimiento sin Necesidad de Desmonte de la Línea. Larga Vida Útil Operativa" },
+            { propiedad: "Otras Especificaciones", valor: "Empleada en el Manejo de Fluidos Viscosos. Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión. La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión. Fácil Mantenimiento sin Necesidad de Desmonte de la Línea. Larga Vida Útil Operativa" },
             { propiedad: "Aplicación", valor: "Operaciones de Fractura, Estimulación de Alta Presión y Altamente Abrasivos y Severos" }
         ]
     },
@@ -222,7 +222,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tamaños", valor: "2”, 3”" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
-            { propiedad: "Otras especificaciones", valor: "Utilizado para el Manejo de Fluidos Gaseosos. Emplea un Émbolo de Movimiento Lineal (\"Dardo\") en lugar de una Aleta Oscilante como Elemento Obstructivo. Resiste la Descompresión Explosiva y los Flujos de Gas de Alta Velocidad. Funcionamiento Confiable y Seguro" },
+            { propiedad: "Otras Especificaciones", valor: "Utilizado para el Manejo de Fluidos Gaseosos. Emplea un Émbolo de Movimiento Lineal (\"Dardo\") en lugar de una Aleta Oscilante como Elemento Obstructivo. Resiste la Descompresión Explosiva y los Flujos de Gas de Alta Velocidad. Funcionamiento Confiable y Seguro" },
             { propiedad: "Aplicación", valor: "Control de Gases Extremos como Nitrógeno (N2), Dióxido de Carbono (CO2) / Flujos Gaseosos Secos o Húmedos No Erosivos de Alta Velocidad" }
         ]
     },
@@ -233,7 +233,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tamaños", valor: "2”, 3”" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
-            { propiedad: "Otras Cualidades", valor: "• Funcionamiento Estándar de Acción Directa<br>• Utiliza Un Conjunto de Resortes Belleville de Alta Resistencia junto a un Arreglo de Esfera y Asiento para Soportar la Presión del Fluido y Garantizar un Cierre Fiable.<br>• Un tornillo de Ajuste en la Parte Superior del Cuerpo de la Válvula permite Ajustar la Presión de Alivio.<br>• Durable y de Funcionamiento Confiable y Seguro" },
+            { propiedad: "Otras Especificaciones", valor: "• Funcionamiento Estándar de Acción Directa<br>• Utiliza Un Conjunto de Resortes Belleville de Alta Resistencia junto a un Arreglo de Esfera y Asiento para Soportar la Presión del Fluido y Garantizar un Cierre Fiable.<br>• Un tornillo de Ajuste en la Parte Superior del Cuerpo de la Válvula permite Ajustar la Presión de Alivio.<br>• Durable y de Funcionamiento Confiable y Seguro" },
             { propiedad: "Aplicación", valor: "Procesos Diversos" }
         ]
     },
@@ -244,7 +244,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "Hasta 15000 Psi" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable" },
-            { propiedad: "Otras Cualidades", valor: "• Funcionamiento Electrónico<br>• Requiere señal de 24 voltios para su activación<br>• La Válvula Piloto controla la Apertura y el Cierre de la Válvula Principal<br>• La Válvula Principal se Abre Instantáneamente al Perderse la Señal Eléctrica<br>• Se Cierra Automáticamente una vez que se ha Liberado Completamente la Presión de la Línea o cuando la Presión es Inferior a 80-100 psi<br>• Un Indicador Visual permite ver si la Válvula está Abierta o Cerrada<br>• No requiere de Intervención Manual, Botellas de Gas ni Mangueras, por lo que Reduce Significantly la Exposición del Personal en Zonas de Alto Riesgo<br>• Más Fiable que otras Válvulas de Alivio" },
+            { propiedad: "Otras Especificaciones", valor: "• Funcionamiento Electrónico<br>• Requiere señal de 24 voltios para su activación<br>• La Válvula Piloto controla la Apertura y el Cierre de la Válvula Principal<br>• La Válvula Principal se Abre Instantáneamente al Perderse la Señal Eléctrica<br>• Se Cierra Automáticamente una vez que se ha Liberado Completamente la Presión de la Línea o cuando la Presión es Inferior a 80-100 psi<br>• Un Indicador Visual permite ver si la Válvula está Abierta o Cerrada<br>• No requiere de Intervención Manual, Botellas de Gas ni Mangueras, por lo que Reduce Significantly la Exposición del Personal en Zonas de Alto Riesgo<br>• Más Fiable que otras Válvulas de Alivio" },
             { propiedad: "Aplicación", valor: "Operaciones de Fractura Hidráulica, Estimulación de Pozos, Líneas de Tratamiento de Alta Presión" }
         ]
     },
@@ -256,7 +256,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "Estándar: 5000, 10000, 15000 CWP<br>Gas Agrio: 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable (MxF, FxM)" },
-            { propiedad: "Otras Cualidades", valor: "• Diseñado específicamente para alojar Insertos de estrangulación fijos<br>• Proporciona una restricción constante del flujo en operaciones estables<br>• Genera menor turbulencia interna de flujo, muy resistente a la erosión<br>• Utiliza insertos calibrados con diámetros de orificio fijos intercambiables<br>• Los insertos son reemplazables mediante el uso de herramientas convencionales, permitiendo variar el diámetro del flujo sin desmontar el cuerpo de la línea de tubería.<br>• Fabricado y certificado bajo Estándar API 6A<br>• Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de materiales aptas para ambientes corrosivos" },
+            { propiedad: "Otras Especificaciones", valor: "• Diseñado específicamente para alojar Insertos de estrangulación fijos<br>• Proporciona una restricción constante del flujo en operaciones estables<br>• Genera menor turbulencia interna de flujo, muy resistente a la erosión<br>• Utiliza insertos calibrados con diámetros de orificio fijos intercambiables<br>• Los insertos son reemplazables mediante el uso de herramientas convencionales, permitiendo variar el diámetro del flujo sin desmontar el cuerpo de la línea de tubería.<br>• Fabricado y certificado bajo Estándar API 6A<br>• Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de materiales aptas para ambientes corrosivos" },
             { propiedad: "Aplicación", valor: "• Operaciones de Cementación, Fractura, Control de Flujo, Retorno de Fluidos, Inyección de Fluidos, Producción Estable a Largo Plazo." }
         ]
     },
@@ -268,7 +268,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "Estándar: 6000, 10000, 15000 CWP<br>Gas Agrio: 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable (MxF)" },
-            { propiedad: "Otras Cualidades", valor: "• Diseñado para ajustar de manera variable el orificio de estrangulación<br>• Opción con mecanismo de Volante Graduado con Indicador de Posición<br>• Opción con Actuador Neumático e Hidráulico para control remoto<br>• Las agujas, puntas y asientos críticos se suministran en carburo de tungsteno o cerámicas endurecidas<br>• Fabricado y certificado bajo Estándar API 6A<br>• Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de materiales aptas para ambientes corrosivos" },
+            { propiedad: "Otras Especificaciones", valor: "• Diseñado para ajustar de manera variable el orificio de estrangulación<br>• Opción con mecanismo de Volante Graduado con Indicador de Posición<br>• Opción con Actuador Neumático e Hidráulico para control remoto<br>• Las agujas, puntas y asientos críticos se suministran en carburo de tungsteno o cerámicas endurecidas<br>• Fabricado y certificado bajo Estándar API 6A<br>• Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de materiales aptas para ambientes corrosivos" },
             { propiedad: "Aplicación", valor: "• Ideal para Servicios Generales de Estrangulación y de Control preciso de Fluidos, Caudales y Caídas de Presión Extrema<br>• Cementación, Fractura, Pruebas de Pozos, Retorno de Flujo, Inyección de Fluidos" }
         ]
     },
@@ -280,7 +280,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipo de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "Estándar: 5000, 10000, 15000, 20000 CWP<br>Gas Agrio: 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable (MxF)" },
-            { propiedad: "Otras Cualidades", valor: "• Funciona simultáneamente como válvula de estrangulación y de tapón<br>• Operado manualmente (1/4” de vuelta) o a través de actuador automático<br>• Utiliza diseños internos de presión equilibrados y segmentos flotantes para reducir la fricción<br>• Su geometría interna aísla el desgaste severo por erosión<br>• Sus componentes internos cuentan con un revestimiento duro especializado de carburo de tungsteno sólido<br>• Cuenta con un indicador visual graduado que muestra el porcentaje de apertura en fracciones de pulgada (64avos) o milímetros<br>• Fabricado y certificado bajo Norma API 6A, API API 16C<br>• Compatible con niveles de especificación de producto (PSL) exigentes y con tipos de materiales aptos para ambientes corrosivos" },
+            { propiedad: "Otras Especificaciones", valor: "• Funciona simultáneamente como válvula de estrangulación y de tapón<br>• Operado manualmente (1/4” de vuelta) o a través de actuador automático<br>• Utiliza diseños internos de presión equilibrados y segmentos flotantes para reducir la fricción<br>• Su geometría interna aísla el desgaste severo por erosión<br>• Sus componentes internos cuentan con un revestimiento duro especializado de carburo de tungsteno sólido<br>• Cuenta con un indicador visual graduado que muestra el porcentaje de apertura en fracciones de pulgada (64avos) o milímetros<br>• Fabricado y certificado bajo Norma API 6A, API API 16C<br>• Compatible con niveles de especificación de producto (PSL) exigentes y con tipos de materiales aptos para ambientes corrosivos" },
             { propiedad: "Aplicación", valor: "• Operaciones de Fractura Hidráulica, Retorno de Flujo, Limpieza a Alta Presión, Control del Flujo" }
         ]
     },
@@ -291,7 +291,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "Estándar: 6000, 10000, 15000 CWP<br>Gas Agrio: 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "Tuerca Aleteada Weco Retirable (MxF)" },
-            { propiedad: "Otras Cualidades", valor: "• Diseñado para soportar la fuerza de flujos turbulentos y erosivos que impactan a la línea de flujo<br>• Absorbe la acción de desgaste y de deterioro intenso para proteger los Componentes Principales de la línea de flujo<br>• Como dispositivo protector del Estrangulador Principal, prolonga su vida útil de funcionamiento<br>• Fabricado con materiales extremadamente duros, tales como carburo de tungsteno o de cerámicas avanzadas<br>• Constituye una opción rápida y económica de reemplazo con relación al Estrangulador Principal al cual protege<br>• Se puede utilizar en una amplia gama de aplicaciones de alta presión" },
+            { propiedad: "Otras Especificaciones", valor: "• Diseñado para soportar la fuerza de flujos turbulentos y erosivos que impactan a la línea de flujo<br>• Absorbe la acción de desgaste y de deterioro intenso para proteger los Componentes Principales de la línea de flujo<br>• Como dispositivo protector del Estrangulador Principal, prolonga su vida útil de funcionamiento<br>• Fabricado con materiales extremadamente duros, tales como carburo de tungsteno o de cerámicas avanzadas<br>• Constituye una opción rápida y económica de reemplazo con relación al Estrangulador Principal al cual protege<br>• Se puede utilizar en una amplia gama de aplicaciones de alta presión" },
             { propiedad: "Aplicación", valor: "• Operaciones de Retorno de Flujo, Pruebas de Pozos, Limpieza con Tubería Flexible (Coiled Tubing), Manifolds de Estrangulación y Control, Líneas de Acidificación y Fractura Hidráulica" }
         ]
     },
@@ -303,7 +303,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• 175 Psi para Tamaños 2” a 12”<br>• 150 Psi para Tamaños 14” y 16”" },
             { propiedad: "Extremos de Conexión", valor: "Se Monta en Bridas de entre 125 Psi y 150 Psi" },
-            { propiedad: "Otras Cualidades", valor: "• El Cuerpo de la Válvula se Centra fácilmente entre Bridas ANSI Estándar de 125 o 150 Psi<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
+            { propiedad: "Otras Especificaciones", valor: "• El Cuerpo de la Válvula se Centra fácilmente entre Bridas ANSI Estándar de 125 o 150 Psi<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
             { propiedad: "Aplicación", valor: "Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal desde 1 mm Hg hasta su Rango Máximo de Presión" }
         ]
     },
@@ -315,7 +315,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• 175 Psi para Tamaños 2” a 6”" },
             { propiedad: "Extremos de Conexión", valor: "Se Monta entre Bridas de Tubería Ligeras" },
-            { propiedad: "Otras Cualidades", valor: "• Cuerpo Ranurado para utilizarse con Bridas de Servicio Ligero<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
+            { propiedad: "Otras Especificaciones", valor: "• Cuerpo Ranurado para utilizarse con Bridas de Servicio Ligero<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
             { propiedad: "Aplicación", valor: "Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal desde 1 mm Hg hasta su Rango Máximo de Presión" }
         ]
     },
@@ -327,7 +327,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• 175 Psi para Tamaños 2” a 12”" },
             { propiedad: "Extremos de Conexión", valor: "Se Monta en Bridas de entre 125 Psi ó 150 Psi" },
-            { propiedad: "Otras Cualidades", valor: "• El Cuerpo de la Válvula se Centra fácilmente entre Bridas Estándar de 125 o 150 Psi<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
+            { propiedad: "Otras Especificaciones", valor: "• El Cuerpo de la Válvula se Centra fácilmente entre Bridas Estándar de 125 o 150 Psi<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
             { propiedad: "Aplicación", valor: "Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal desde 1 mm Hg hasta su Rango Máximo de Presión" }
         ]
     },
@@ -339,7 +339,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• 175 Psi para Tamaños 2” a 12”<br>• 150 Psi para Tamaños 14” a 24”" },
             { propiedad: "Extremos de Conexión", valor: "Se Atornilla en Bridas de entre 125 Psi ó 150 Psi" },
-            { propiedad: "Otras Cualidades", valor: "• Cuerpo con Orejetas Roscadas para Conexión Independiente de la Tubería Aguas Arriba o Aguas Abajo<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
+            { propiedad: "Otras Especificaciones", valor: "• Cuerpo con Orejetas Roscadas para Conexión Independiente de la Tubería Aguas Arriba o Aguas Abajo<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático" },
             { propiedad: "Aplicación", valor: "Ideal para Servicios Industriales Cotidianos de Apertura/Cierre o de Regulación de Caudal desde 1 mm Hg hasta su Rango Máximo de Presión" }
         ]
     },
@@ -744,7 +744,6 @@ document.querySelectorAll('.index-item-trigger').forEach(trigger => {
     });
 });
 
-
 // Selecciona el ítem de "Quiénes somos" en tu HTML (debes ponerle una clase única 'trigger-quienes')
 document.querySelector('.trigger-quienes').addEventListener('click', function (e) {
     e.preventDefault();
@@ -763,8 +762,6 @@ window.onclick = (event) => {
     }
 }
 
-
-
 window.addEventListener("click", function (event) {
 
     const modal1 = document.getElementById("modalQuienes");
@@ -782,14 +779,15 @@ window.addEventListener("click", function (event) {
 
 let comparisonList = [];
 const technicalDataDb = {
-    'mat-weco': {
+   'mat-weco': {
         title: 'Tubería WECO Integral',
-        categoria: 'tuberia', // Necesario para la validación
+        categoria: 'tuberia',
         tamanios: '1", 1-1/2", 2", 3", 4"',
         longitudes: 'De 1 a 20 pies',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '6k, 10k, 15k, 20k CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: '• Tuerca Aleteada Weco Retirable<br>• Manufactura Integral Forjada de Una Sola Pieza<br>• Muy Durable y de Funcionamiento Confiable y Seguro',
         aplicacion: 'Procesos de Alta Presión y Muy Abrasivos'
     },
     'mat-npst': {
@@ -800,6 +798,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '6k, 10k, 15k, 20k CWP',
         conexion: 'Tuerca Aleteada Weco No Retirable',
+        especificaciones: '• Tuerca Aleteada Weco No Retirable<br>• Manufactura Compuesta No Integral<br>• Peso Ligero y Precio Económico',
         aplicacion: 'Procesos de Alta Presión No Tan Críticos'
     },
     'mat-valves200': {
@@ -809,7 +808,8 @@ const technicalDataDb = {
         estilos: '10, 20, 30, 40, 50, 60, 70, 80, 100',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '6k, 10k, 15k, 20k CWP',
-        conexion: 'Tuerca Aleteada Weco Retirable...',
+        conexion: 'Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)',
+        especificaciones: '• Configuración Convencional de Tres Pistas de Balines<br>• Codos de Barrido Largo para Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Durable y de Funcionamiento Confiable',
         aplicacion: 'Diversos Procesos No Críticos'
     },
     'mat-choke300': {
@@ -819,7 +819,8 @@ const technicalDataDb = {
         estilos: '10, 20, 30, 40, 50, 60, 70, 80, 100',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '6k, 10k, 15k, 20k CWP',
-        conexion: 'Tuerca Aleteada Weco Retirable...',
+        conexion: 'Tuerca Aleteada Weco Retirable, Roscado y Soldadura a Tope (Butt Weld)',
+        especificaciones: '• Diseño Cónico Patentado de Gran Grosor de Pistas de Balines<br>• Pistas de Balines Altamente Resistentes a la Corrosión<br>• Codos de Barrido Largo para Minimizar Turbulencias, Restricciones de Flujo y Caídas de Presión<br>• Mayor Capacidad de Carga en las Juntas de Giro<br>• Mayor Durabilidad y Funcionamiento Confiable y Seguro',
         aplicacion: 'Procesos de Alta Presión y Abrasivos'
     },
     'mat-manguerametalica': {
@@ -829,6 +830,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: '• Muy Durable y de Funcionamiento Confiable y Seguro',
         aplicacion: 'Procesos de Alta Presión y Abrasivos'
     },
     'mat-coflexip-manguera': {
@@ -838,6 +840,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '5000, 10000, 15000, 20000 CWP',
         conexion: 'Conexión Bridada API, Conexión Roscada API, Unión de Golpe (Weco)',
+        especificaciones: '• Presenta estructura multicapa robusta<br>• Resistente a presiones y temperaturas extremas<br>• Su cubierta exterior termoplástica le ofrece alta protección química, térmica y contra el gas agrio<br>• No se expande, no se contrae, ni sufre latigazos ("patadas") al recibir golpes de ariete o flujos pulsantes<br>• Conformadas con revestimientos de Rilsan® (-20°C a 100°C) o Coflon® (130°C a 160°C continuos)<br>• Fabricadas según Estándar API 16C (para operaciones de Estrangulación y Ahogo)',
         aplicacion: 'Líneas de control de pozos (estrangulación y ahogo), Pruebas de pozos superficiales, Absorción de movimientos y vibraciones, Operaciones de servicio extrapesado, Conducción de fluidos abrasivos o corrosivos, tales como líneas para lodos de perforación, cementación, inyección de nitrógeno y operaciones de acidificación.'
     },
     'mat-valvula-tapon': {
@@ -847,6 +850,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: '• Última Generación en Válvulas de Tapón<br>• Reduce el Torque de Operación a cualquier Presión<br>• Posee Configuración Patentada de Tapón Flotante y Sello Dual con Carga Distribuida de manera Uniforme<br>• Muy Durable, Larga Vida Útil y de Funcionamiento Confiable y Seguro',
         aplicacion: 'Procesos de Fractura, de Cementación y Altamente Abrasivos'
     },
     'mat-valvula-tapon-dr': {
@@ -856,15 +860,8 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: '• Provee Sello Dual Convencional a través de Configuración Simétrica de sus Componentes<br>• Funcionamiento Confiable y Seguro',
         aplicacion: 'Diversos Procesos Estándar de Alta Presión'
-    },
-    'mat-valvula-retencion-veleta': {
-        title: 'VÁLVULA DE RETENCIÓN (Diseño Veleta Convencional)',
-        tamanios: '2”, 3”',
-        servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
-        presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
-        conexion: 'Tuerca Aleteada Weco Retirable',
-        aplicacion: 'Servicios Abrasivos de Alto Volumen, como Fractura Hidráulica, Bombeo de Arena y Lechada de Cemento'
     },
     'mat-valvula-retencion-veleta': {
         title: 'VÁLVULA DE RETENCIÓN (Diseño Veleta Convencional)',
@@ -875,6 +872,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: 'Empleada en el Manejo de Fluidos Viscosos. Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión. La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión.',
         aplicacion: 'Servicios Abrasivos de Alto Volumen, como Fractura Hidráulica, Bombeo de Arena y Lechada de Cemento'
     },
     'mat-valvula-retencion-entrada-superior': {
@@ -886,6 +884,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: 'Empleada en el Manejo de Fluidos Viscosos. Disco Articulado Tradicional (Veleta) que se abre con el flujo y se cierra por gravedad o contrapresión. La Superficie de la Veleta de Nitrilo Carboxilado, diseñada para Máxima Resistencia a la Abrasión. Fácil Mantenimiento sin Necesidad de Desmonte de la Línea. Larga Vida Útil Operativa',
         aplicacion: 'Operaciones de Fractura, Estimulación de Alta Presión y Altamente Abrasivos y Severos'
     },
     'mat-valvula-retencion-dardo': {
@@ -897,6 +896,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000, 20000 CWP / Gas Agrio: 10000, 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: 'Utilizado para el Manejo de Fluidos Gaseosos. Emplea un Émbolo de Movimiento Lineal ("Dardo") en lugar de una Aleta Oscilante como Elemento Obstructivo. Resiste la Descompresión Explosiva y los Flujos de Gas de Alta Velocidad. Funcionamiento Confiable y Seguro',
         aplicacion: 'Control de Gases Extremos como Nitrógeno (N2), Dióxido de Carbono (CO2) / Flujos Gaseosos Secos o Húmedos No Erosivos de Alta Velocidad'
     },
     'mat-valvula-alivio-mecanica': {
@@ -908,9 +908,10 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '100-1000, 1000-15000, 10000-20000 Psi (Variantes)',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: '• Funcionamiento Estándar de Acción Directa<br>• Utiliza Un Conjunto de Resortes Belleville de Alta Resistencia junto a un Arreglo de Esfera y Asiento para Soportar la Presión del Fluido y Garantizar un Cierre Fiable.<br>• Un tornillo de Ajuste en la Parte Superior del Cuerpo de la Válvula permite Ajustar la Presión de Alivio.<br>• Durable y de Funcionamiento Confiable y Seguro',
         aplicacion: 'Procesos Diversos'
     },
-    'mat-valvula-alivio-electronica': {
+   'mat-valvula-alivio-electronica': {
         title: 'VÁLVULA DE ALIVIO ELECTRÓNICA (ePRV Weco®)',
         categoria: 'valvula-alivio',
         tamanios: '3”',
@@ -919,6 +920,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Hasta 15000 Psi',
         conexion: 'Tuerca Aleteada Weco Retirable',
+        especificaciones: '• Funcionamiento Electrónico<br>• Requiere señal de 24 voltios para su activación<br>• La Válvula Piloto controla la Apertura y el Cierre de la Válvula Principal<br>• La Válvula Principal se Abre Instantáneamente al Perderse la Señal Eléctrica<br>• Se Cierra Automáticamente una vez que se ha Liberado Completamente la Presión de la Línea o cuando la Presión es Inferior a 80-100 psi<br>• Un Indicador Visual permite ver si la Válvula está Abierta o Cerrada<br>• No requiere de Intervención Manual, Botellas de Gas ni Mangueras, por lo que Reduce Significantly la Exposición del Personal en Zonas de Alto Riesgo<br>• Más Fiable que otras Válvulas de Alivio',
         aplicacion: 'Fractura Hidráulica, Estimulación de Pozos, Líneas de Alta Presión'
     },
     'mat-estrangulador-fijo': {
@@ -930,6 +932,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 5000, 10000, 15000 CWP / Gas Agrio: 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable (MxF, FxM)',
+        especificaciones: '• Diseñado específicamente para alojar Insertos de estrangulación fijos<br>• Proporciona una restricción constante del flujo en operaciones estables<br>• Genera menor turbulencia interna de flujo, muy resistente a la erosión<br>• Utiliza insertos calibrados con diámetros de orificio fijos intercambiables<br>• Los insertos son reemplazables mediante el uso de herramientas convencionales, permitiendo variar el diámetro del flujo sin desmontar el cuerpo de la línea de tubería.<br>• Fabricado y certificado bajo Estándar API 6A<br>• Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de materiales aptas para ambientes corrosivos',
         aplicacion: 'Operaciones de Cementación, Fractura, Control de Flujo, Retorno de Fluidos, Inyección de Fluidos, Producción Estable a Largo Plazo'
     },
     'mat-estrangulador-ajustable': {
@@ -941,6 +944,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000 CWP / Gas Agrio: 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable (MxF)',
+        especificaciones: '• Diseñado para ajustar de manera variable el orificio de estrangulación<br>• Opción con mecanismo de Volante Graduado con Indicador de Posición<br>• Opción con Actuador Neumático e Hidráulico para control remoto<br>• Las agujas, puntas y asientos críticos se suministran en carburo de tungsteno o cerámicas endurecidas<br>• Fabricado y certificado bajo Estándar API 6A<br>• Compatible con Niveles de Especificación de Producto (PSL) exigentes y con clases de materiales aptas para ambientes corrosivos',
         aplicacion: 'Control preciso de Fluidos, Caudales y Caídas de Presión Extrema. Cementación, Fractura, Pruebas de Pozos, Retorno de Flujo, Inyección de Fluidos'
     },
     'mat-valvula-estrangulacion-regulacion': {
@@ -949,14 +953,16 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 5000, 10000, 15000, 20000 CWP / Gas Agrio: 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable (MxF)',
+        especificaciones: '• Funciona simultáneamente como válvula de estrangulación y de tapón<br>• Operado manualmente (1/4” de vuelta) o a través de actuador automático<br>• Utiliza diseños internos de presión equilibrados y segmentos flotantes para reducir la fricción<br>• Su geometría interna aísla el desgaste severo por erosión<br>• Sus componentes internos cuentan con un revestimiento duro especializado de carburo de tungsteno sólido<br>• Cuenta con un indicador visual graduado que muestra el porcentaje de apertura en fracciones de pulgada (64avos) o milímetros<br>• Fabricado y certificado bajo Norma API 6A, API API 16C<br>• Compatible con niveles de especificación de producto (PSL) exigentes y con tipos de materiales aptos para ambientes corrosivos',
         aplicacion: 'Operaciones de Fractura Hidráulica, Retorno de Flujo, Limpieza a Alta Presión, Control del Flujo'
     },
-    'mat-adaptador-estrangulacion': {
+   'mat-adaptador-estrangulacion': {
         title: 'ADAPTADOR DE ESTRANGULACIÓN (Choke Saver®)',
         tamanios: '2”, 3”',
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: 'Estándar: 6000, 10000, 15000 CWP / Gas Agrio: 15000 CWP',
         conexion: 'Tuerca Aleteada Weco Retirable (MxF)',
+        especificaciones: '• Diseñado para soportar la fuerza de flujos turbulentos y erosivos que impactan a la línea de flujo<br>• Absorbe la acción de desgaste y de deterioro intenso para proteger los Componentes Principales de la línea de flujo<br>• Como dispositivo protector del Estrangulador Principal, prolonga su vida útil de funcionamiento<br>• Fabricado con materiales extremadamente duros, tales como carburo de tungsteno o de cerámicas avanzadas<br>• Constituye una opción rápida y económica de reemplazo con relación al Estrangulador Principal al cual protege<br>• Se puede utilizar en una amplia gama de aplicaciones de alta presión',
         aplicacion: 'Operaciones de Retorno de Flujo, Pruebas de Pozos, Limpieza con Tubería Flexible (Coiled Tubing), Manifolds de Estrangulación y Control, Líneas de Acidificación y Fractura Hidráulica'
     },
     'mat-valvula-mariposa-12': {
@@ -968,6 +974,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '175 (2”-12”), 150 (14”-16”) CWP',
         conexion: 'Bridas 125/150 Psi',
+        especificaciones: '• El Cuerpo de la Válvula se Centra fácilmente entre Bridas ANSI Estándar de 125 o 150 Psi<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático',
         aplicacion: 'Servicios de apertura/cierre o regulación de caudal (1 mm Hg hasta presión máxima)'
     },
     'mat-valvula-mariposa-12n': {
@@ -979,6 +986,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '175 (2”-6”) CWP',
         conexion: 'Bridas Tubería Ligera',
+        especificaciones: '• Cuerpo Ranurado para utilizarse con Bridas de Servicio Ligero<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático',
         aplicacion: 'Servicios de apertura/cierre o regulación de caudal'
     },
     'mat-valvula-mariposa-22': {
@@ -990,6 +998,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '175 (2”-12”) CWP',
         conexion: 'Bridas 125/150 Psi',
+        especificaciones: '• El Cuerpo de la Válvula se Centra fácilmente entre Bridas Estándar de 125 o 150 Psi<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático',
         aplicacion: 'Servicios de apertura/cierre o regulación de caudal'
     },
     'mat-valvula-mariposa-22l': {
@@ -1348,6 +1357,7 @@ function openComparisonModal() {
         { label: 'Servicio', key: 'servicio' },
         { label: 'Presión', key: 'presion' },
         { label: 'Conexión', key: 'conexion' },
+        { label: 'Otras Especificaciones', key: 'especificaciones' },
         { label: 'Aplicación', key: 'aplicacion' }
     ];
 
