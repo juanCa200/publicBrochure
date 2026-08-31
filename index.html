@@ -15,13 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <link rel="icon" type="image/png" href="img/logo3.png">
 
-      
+
     <!-- Scripts base de Three.js (Versión unificada r128) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-    
+
     <!-- GSAP (Una sola versión limpia) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
@@ -29,48 +29,56 @@
 
 <body>
 
-<!-- Overlay del Visor 3D -->
-<div id="modal-visor-3d-overlay" class="modal-3d-overlay" style="display: flex;">
+    <!-- Botón Flotante Animado (Izquierda) -->
+<button class="btn-flotante-3d" onclick="abrirModal3D()">
+    🧊
+</button>
+
+<!-- Overlay del Visor 3D (Oculto por defecto) -->
+<div id="modal-visor-3d-overlay" class="modal-3d-overlay" style="display: none;">
     <div class="modal-3d-card minimal-transparent-card">
-        
-        <!-- Botón de cerrar superior -->
-        <button class="close-modal-3d-btn" onclick="cerrarModal3D()">&times;</button>
 
-        <!-- Contenedor principal de dos columnas -->
-        <div class="visor-content-wrapper">
-            
-            <!-- Panel de información a la izquierda (Vertical y elegante) -->
-            <div class="visor-info-panel">
-                <span class="visor-badge">Ingeniería Avanzada</span>
-                <h3>Soluciones para la Industria Petrolera</h3>
-                <p>Especialistas en la venta de equipos y componentes de alta calidad, garantizando durabilidad y rendimiento extremo.</p>
-                <div class="visor-highlight-box">
-                    <span>✨ <strong>Exploración 3D:</strong> Visualiza modelos interactivos detallados y explora su estructura técnica en tiempo real.</span>
+            <!-- Botón de cerrar superior -->
+            <button class="close-modal-3d-btn" onclick="cerrarModal3D()">&times;</button>
+
+            <!-- Contenedor principal de dos columnas -->
+            <div class="visor-content-wrapper">
+
+                <!-- Panel de información a la izquierda (Vertical y elegante) -->
+                <div class="visor-info-panel">
+                    <span class="visor-badge">Ingeniería Avanzada</span>
+                    <h3>Soluciones para la Industria Petrolera</h3>
+                    <p>Especialistas en la venta de equipos y componentes de alta calidad, garantizando durabilidad y
+                        rendimiento extremo.</p>
+                    <div class="visor-highlight-box">
+                        <span>✨ <strong>Exploración 3D:</strong> Visualiza modelos interactivos detallados y explora su
+                            estructura técnica en tiempo real.</span>
+                    </div>
                 </div>
+
+                <!-- Contenedor del Canvas 3D con los botones de flecha (carrusel) integrados -->
+                <div class="visor-canvas-wrapper"
+                    style="position: relative; flex: 1; display: flex; align-items: center; justify-content: center;">
+
+                    <!-- Botón Izquierda para cambiar de modelo -->
+                    <button onclick="cambiarModelo(-1)" class="btn-carrusel-visor btn-prev">&#10094;</button>
+                    <!-- Canvas 3D -->
+                    <div class="modal-canvas-container" id="modal-canvas-container" style="width: 100%;"></div>
+
+                    <!-- Botón Derecha para cambiar de modelo -->
+                    <button onclick="cambiarModelo(1)" class="btn-carrusel-visor btn-next">&#10095;</button>
+
+                </div>
+
             </div>
 
-            <!-- Contenedor del Canvas 3D con los botones de flecha (carrusel) integrados -->
-            <div class="visor-canvas-wrapper" style="position: relative; flex: 1; display: flex; align-items: center; justify-content: center;">
-                
-                <!-- Botón Izquierda para cambiar de modelo -->
-                <button onclick="cambiarModelo(-1)" class="btn-carrusel-visor btn-prev">&#10094;</button>
-                <!-- Canvas 3D -->
-                <div class="modal-canvas-container" id="modal-canvas-container" style="width: 100%;"></div>
-
-                <!-- Botón Derecha para cambiar de modelo -->
-                <button onclick="cambiarModelo(1)" class="btn-carrusel-visor btn-next">&#10095;</button>
-
+            <!-- Botón inferior de despiece -->
+            <div class="modal-3d-actions">
+                <button class="btn-despiece-modal" onclick="toggleExplodeModal()">Ver Despiece / Ensamblaje</button>
             </div>
 
         </div>
-
-        <!-- Botón inferior de despiece -->
-        <div class="modal-3d-actions">
-            <button class="btn-despiece-modal" onclick="toggleExplodeModal()">Ver Despiece / Ensamblaje</button>
-        </div>
-
     </div>
-</div>
 
     <section class="hero-section">
         <!-- 1. El contenedor exclusivo para las partículas de red -->
@@ -1950,7 +1958,6 @@ position: relative;">
                     </div>
                 </div>
             </div>
-
             <!--PRINCIPAL MANGUERAS COFLEXIP-->
             <div id="mat-coflexip-main" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -2072,7 +2079,6 @@ position: relative;">
                     </button>
                 </div>
             </div>
-
             <!-- FICHA 06: MANGUERAS COFLEXIP® -->
             <div id="mat-coflexip-manguera" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -2155,7 +2161,6 @@ position: relative;">
                     </div>
                 </div>
             </div>
-
             <!--PRINCIPAL VALVULA DE TAPON-->
             <div id="mat-valvulaTapon-main" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -2524,7 +2529,6 @@ position: relative;">
                     </button>
                 </div>
             </div>
-
             <!-- FICHA 010: VÁLVULA DE RETENCIÓN DISEÑO VELETA CON ENTRADA SUPERIOR -->
             <div id="mat-valvula-retencion-entrada-superior" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -2618,7 +2622,7 @@ position: relative;">
                 </header>
 
                 <div class="sheet-visual-showcase gallery-mode">
-                    <div class="main-gallery-display" style="background-image: url('img/valvulaRetencionDardo.png'); 
+                    <div class="main-gallery-display" style="background-image: url('img/valvulaRetenciondardo.png'); 
             width: 100%; 
             height: 320px; 
             background-size: contain; 
@@ -2799,7 +2803,7 @@ position: relative;">
                         <p>Tuerca aleteada Weco retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Funcionamiento estándar de acción directa<br>• Utiliza un conjunto de resortes Belleville
                             de alta resistencia junto a un arreglo de esfera y asiento para soportar la presión del
                             fluido y garantizar un cierre fiable.<br>• Un tornillo de ajuste en la parte superior del
@@ -2821,7 +2825,6 @@ position: relative;">
                     </button>
                 </div>
             </div>
-
             <!-- FICHA 013: VÁLVULA DE ALIVIO ELECTRONICA -->
             <div id="mat-valvula-alivio-electronica" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -2881,7 +2884,7 @@ position: relative;">
                         <p>Tuerca aleteada Weco retirable</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Funcionamiento electrónico<br>• Requiere señal de 24 voltios para su activación<br>• La
                             válvula piloto controla la apertura y el cierre de la válvula principal<br>• La válvula
                             principal se abre instantáneamente al perderse la señal eléctrica<br>• Se cierra
@@ -3033,7 +3036,7 @@ position: relative;">
                         <p>Tuerca aleteada Weco retirable (MxF, FxM)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Diseñado específicamente para alojar insertos de estrangulación fijos<br>• Proporciona una
                             restricción constante del flujo en operaciones estables<br>• Genera menor turbulencia
                             interna de flujo, muy resistente a la erosión<br>• Utiliza insertos calibrados con diámetros
@@ -3125,7 +3128,7 @@ position: relative;">
                         <p>Tuerca aleteada Weco retirable (MxF)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Diseñado para ajustar de manera variable el orificio de estrangulación<br>• Opción con
                             mecanismo de volante graduado con indicador de posición<br>• Opción con actuador neumático e
                             hidráulico para control remoto<br>• Las agujas, puntas y asientos críticos se suministran en
@@ -3275,7 +3278,7 @@ position: relative;">
                         <p>Tuerca Aleteada Weco Retirable (MxF)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Funciona simultáneamente como válvula de estrangulación y de tapón<br>• Operado manualmente
                             (1/4” de vuelta) o a través de actuador automático<br>• Utiliza diseños internos de presión
                             equilibrados y segmentos flotantes para reducir la fricción<br>• Su geometría interna aísla
@@ -3303,18 +3306,19 @@ position: relative;">
                 </div>
             </div>
             <!--PRINCIPAL ADAPTADOR DE ESTRANGULACION-->
-           <div id="mat-adaptadorEstrangulacion-main" class="spec-sheet-container">
-    <header class="sheet-header">
-        <div class="sheet-title-area">
-            <h3>Adaptador de estrangulación <span>(Choke Saver®)</span></h3>
-            <p>Dispositivo o accesorio de sacrificio de alta durabilidad diseñado para proteger y prolongar la vida útil del estrangulador y la línea de flujo.</p>
-        </div>
-        <span class="sheet-tag-pill">GENERAL</span>
-    </header>
+            <div id="mat-adaptadorEstrangulacion-main" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Adaptador de estrangulación <span>(Choke Saver®)</span></h3>
+                        <p>Dispositivo o accesorio de sacrificio de alta durabilidad diseñado para proteger y prolongar
+                            la vida útil del estrangulador y la línea de flujo.</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
 
-    <div class="sheet-visual-showcase gallery-mode">
-        <!-- Contenedor de la imagen principal -->
-        <div class="main-gallery-display" style="background-image: url('img/adaptadorEstrangulacion.png'); 
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/adaptadorEstrangulacion.png'); 
             width: 100%; 
             height: 320px; 
             background-size: contain; 
@@ -3323,34 +3327,45 @@ position: relative;">
             background-color: #ffffff; 
             border-radius: 12px; 
             position: relative;">
-        </div>
-    </div>
+                    </div>
+                </div>
 
-    <!-- Sección de Descripción General -->
-    <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
-        <div class="spec-block-card">
-            <h5>Descripción general</h5>
-            <p>El <strong>adaptador de estrangulación de flujo (Choke Saver®)</strong> es un dispositivo o accesorio de sacrificio de alta durabilidad, el cual se instala aguas arriba del estrangulador en una línea de flujo.</p>
-            <p style="margin-top: 10px;">Constituye una pieza crítica de alta presión utilizada en los cabezales de pozos y manifolds de fractura para conectar y alojar los mecanismos internos del <strong>estrangulador de flujo (Choke®)</strong>, optimizando la resistencia de este ante fluidos altamente abrasivos.</p>
-            <p style="margin-top: 10px;">Asimismo, está diseñado para absorber y disipar la energía generada por el impacto dañino de los fluidos a alta velocidad, y el de retener de manera controlada las partículas sólidas erosivas que circulan con los fluidos, protegiendo así el cuerpo del estrangulador y de otros dispositivos instalados en la línea de flujo.</p>
-            <p style="margin-top: 10px;">Este hecho prolonga la vida útil del estrangulador y de otros elementos que conforman la línea de flujo. Para ello, utiliza componentes internos (como insertos, camisas o boquillas) fabricados con materiales extremadamente duros, generalmente de <strong>carburo de tungsteno</strong> o de cerámicas avanzadas.</p>
-        </div>
-    </div>
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción general</h5>
+                        <p>El <strong>adaptador de estrangulación de flujo (Choke Saver®)</strong> es un dispositivo o
+                            accesorio de sacrificio de alta durabilidad, el cual se instala aguas arriba del
+                            estrangulador en una línea de flujo.</p>
+                        <p style="margin-top: 10px;">Constituye una pieza crítica de alta presión utilizada en los
+                            cabezales de pozos y manifolds de fractura para conectar y alojar los mecanismos internos
+                            del <strong>estrangulador de flujo (Choke®)</strong>, optimizando la resistencia de este
+                            ante fluidos altamente abrasivos.</p>
+                        <p style="margin-top: 10px;">Asimismo, está diseñado para absorber y disipar la energía generada
+                            por el impacto dañino de los fluidos a alta velocidad, y el de retener de manera controlada
+                            las partículas sólidas erosivas que circulan con los fluidos, protegiendo así el cuerpo del
+                            estrangulador y de otros dispositivos instalados en la línea de flujo.</p>
+                        <p style="margin-top: 10px;">Este hecho prolonga la vida útil del estrangulador y de otros
+                            elementos que conforman la línea de flujo. Para ello, utiliza componentes internos (como
+                            insertos, camisas o boquillas) fabricados con materiales extremadamente duros, generalmente
+                            de <strong>carburo de tungsteno</strong> o de cerámicas avanzadas.</p>
+                    </div>
+                </div>
 
-    <!-- Botones de navegación hacia las fichas específicas -->
-    <div class="sheet-navigation-buttons"
-        style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-        <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
-            style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-            Ver estrangulador fijo
-        </button>
-        <button class="btn-trigger-modal-premium"
-            onclick="switchMaterialById('mat-estrangulador-ajustable')"
-            style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-            Ver estrangulador ajustable
-        </button>
-    </div>
-</div>
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver estrangulador fijo
+                    </button>
+                    <button class="btn-trigger-modal-premium"
+                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver estrangulador ajustable
+                    </button>
+                </div>
+            </div>
             <!-- FICHA 017: ADAPTADOR DE ESTRANGULACIÓN -->
             <div id="mat-adaptador-estrangulacion" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -3407,7 +3422,7 @@ position: relative;">
                         <p>Tuerca Aleteada Weco Retirable (MxF)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Diseñado para soportar la fuerza de flujos turbulentos y erosivos que impactan a la línea
                             de flujo<br>• Absorbe la acción de desgaste y de deterioro intenso para proteger los
                             Componentes Principales de la línea de flujo<br>• Como dispositivo protector del
@@ -3553,7 +3568,7 @@ position: relative;">
                         <p>Se Monta en Bridas de entre 125 Psi y 150 Psi</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• El Cuerpo de la Válvula se Centra fácilmente entre Bridas ANSI Estándar de 125 o 150
                             Psi<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la
                             Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores
@@ -3638,7 +3653,7 @@ position: relative;">
                         <p>Se Monta entre Bridas de Tubería Ligeras</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Cuerpo Ranurado para utilizarse con Bridas de Servicio Ligero<br>• Sistema de Triple Sello.
                             Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante.
                             Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>•
@@ -3723,7 +3738,7 @@ position: relative;">
                         <p>Se Monta en Bridas de entre 125 Psi ó 150 Psi</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• El Cuerpo de la Válvula se Centra fácilmente entre Bridas Estándar de 125 o 150 Psi<br>•
                             Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula
                             no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior
@@ -3809,7 +3824,7 @@ position: relative;">
                         <p>Se Atornilla en Bridas de entre 125 Psi ó 150 Psi</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Cuerpo con Orejetas Roscadas para Conexión Independiente de la Tubería Aguas Arriba o Aguas
                             Abajo<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de
                             la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los
@@ -3834,18 +3849,18 @@ position: relative;">
                 </div>
             </div>
             <!--PORTADA: OPCIONES DE ACCIONAMIENTO Y OPERACIÓN DE LAS VÁLVULAS MARIPOSA WECO®-->
-           <div id="mat-opciones-accionamiento-mariposa" class="spec-sheet-container">
-    <header class="sheet-header">
-        <div class="sheet-title-area">
-            <h3>Opciones de accionamiento y operación de las válvulas mariposa Weco®</h3>
-            <p>Configuración y sistemas de accionamiento</p>
-        </div>
-        <span class="sheet-tag-pill">GENERAL</span>
-    </header>
+            <div id="mat-opciones-accionamiento-mariposa" class="spec-sheet-container">
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Opciones de accionamiento y operación de las válvulas mariposa Weco®</h3>
+                        <p>Configuración y sistemas de accionamiento</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
 
-    <div class="sheet-visual-showcase gallery-mode">
-        <!-- Contenedor de la imagen principal -->
-        <div class="main-gallery-display" style="background-image: url('img/.png'); 
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/.png'); 
             width: 100%; 
             height: 320px; 
             background-size: contain; 
@@ -3854,31 +3869,38 @@ position: relative;">
             background-color: #ffffff; 
             border-radius: 12px; 
             position: relative;">
-        </div>
-    </div>
+                    </div>
+                </div>
 
-    <!-- Sección de Descripción General -->
-    <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
-        <div class="spec-block-card">
-            <h5>Descripción general</h5>
-            <p>Cada modelo de válvula mariposa Weco admite una configuración sencilla con operadores de accionamiento manuales y automáticos diversos. Entre ellos están los siguientes:</p>
-            <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
-                <li style="margin-bottom: 10px;">❑ <strong>Manijas manuales:</strong> Las opciones incluyen manijas de bloqueo manual estándar de 10 posiciones para un simple aislamiento de apertura/cierre, o palancas de regulación para una modulación de flujo preciso.</li>
-                <li style="margin-bottom: 10px;">❑ <strong>Operadores de engranajes:</strong> Volantes manuales de engranajes de alto desempeño para diámetros de tubería mayores que requieren un par de operación más alto.</li>
-                <li>❑ <strong>Actuadores automatizados:</strong> Actuadores neumáticos de veleta de doble acción compactos de un cuarto de vuelta o actuadores hidráulicos de tipo pistón diseñados para operaciones remotas.</li>
-            </ul>
-        </div>
-    </div>
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción general</h5>
+                        <p>Cada modelo de válvula mariposa Weco admite una configuración sencilla con operadores de
+                            accionamiento manuales y automáticos diversos. Entre ellos están los siguientes:</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
+                            <li style="margin-bottom: 10px;">❑ <strong>Manijas manuales:</strong> Las opciones incluyen
+                                manijas de bloqueo manual estándar de 10 posiciones para un simple aislamiento de
+                                apertura/cierre, o palancas de regulación para una modulación de flujo preciso.</li>
+                            <li style="margin-bottom: 10px;">❑ <strong>Operadores de engranajes:</strong> Volantes
+                                manuales de engranajes de alto desempeño para diámetros de tubería mayores que requieren
+                                un par de operación más alto.</li>
+                            <li>❑ <strong>Actuadores automatizados:</strong> Actuadores neumáticos de veleta de doble
+                                acción compactos de un cuarto de vuelta o actuadores hidráulicos de tipo pistón
+                                diseñados para operaciones remotas.</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <!-- Botones de navegación hacia las fichas específicas -->
-    <div class="sheet-navigation-buttons"
-        style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-        <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
-            style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-            Volver a válvula mariposa principal
-        </button>
-    </div>
-</div>
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a válvula mariposa principal
+                    </button>
+                </div>
+            </div>
             <!-- FICHA 022: DISEÑO DE ENGRANAJE HELICOIDAL RESISTENTE A LA INTEMPERIE WECO® -->
             <div id="mat-diseno-engranaje-helicoidal" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -4367,7 +4389,7 @@ position: relative;">
                         <p>• Tuerca aleteada retirable Weco<br>• Roscado<br>• Soldadura a Tope (Butt Weld)</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Desvían, dividen, convergen, divergen o adaptan el flujo de los fluidos de trabajo<br>•
                             Construcción forjada<br>• Disponibles en diseños compactos y no compactos<br>• Disponibles
                             en múltiples arreglos de conexión<br>• Altamente durables y de funcionamiento confiable y
@@ -5930,17 +5952,17 @@ position: relative;">
             </div>
             <!-- PORTADA: RESTRICTORES TEMPORALES DE SEGURIDAD (TPR® System) -->
             <div id="mat-tpr-system-main" class="spec-sheet-container">
-    <header class="sheet-header">
-        <div class="sheet-title-area">
-            <h3>Restrictores temporales de seguridad para líneas de tratamiento de alta presión</h3>
-            <p>(TPR® System)</p>
-        </div>
-        <span class="sheet-tag-pill">GENERAL</span>
-    </header>
+                <header class="sheet-header">
+                    <div class="sheet-title-area">
+                        <h3>Restrictores temporales de seguridad para líneas de tratamiento de alta presión</h3>
+                        <p>(TPR® System)</p>
+                    </div>
+                    <span class="sheet-tag-pill">GENERAL</span>
+                </header>
 
-    <div class="sheet-visual-showcase gallery-mode">
-        <!-- Contenedor de la imagen principal -->
-        <div class="main-gallery-display" style="background-image: url('img/RestrictoresSeguridadPortada.png'); 
+                <div class="sheet-visual-showcase gallery-mode">
+                    <!-- Contenedor de la imagen principal -->
+                    <div class="main-gallery-display" style="background-image: url('img/RestrictoresSeguridadPortada.png'); 
             width: 100%; 
             height: 320px; 
             background-size: contain; 
@@ -5949,37 +5971,47 @@ position: relative;">
             background-color: #ffffff; 
             border-radius: 12px; 
             position: relative;">
-        </div>
-    </div>
+                    </div>
+                </div>
 
-    <!-- Sección de Descripción General -->
-    <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
-        <div class="spec-block-card">
-            <h5>Descripción general</h5>
-            <p style="margin-top: 10px; line-height: 1.6; color: #2d3748;">
-                Los restrictores de seguridad para líneas de tratamiento de alta presión <strong>TPR® System</strong> (comúnmente integrados en sistemas de sujeción de líneas de flujo) son dispositivos diseñados para mitigar el latigazo destructivo de las tuberías temporales en caso de una ruptura estructural o desacople accidental.
-            </p>
-            <p style="margin-top: 10px; line-height: 1.6; color: #2d3748;">
-                Constituyen un sistema de sujeción temporal de tuberías diseñado para uso en líneas de bombeo de servicio de pozos y otras tuberías temporales presurizadas, como las utilizadas en operaciones de fractura hidráulica, cementación, acidificación, fluidos energizados, terminación de pozos, etc.
-            </p>
+                <!-- Sección de Descripción General -->
+                <div class="sheet-features-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                    <div class="spec-block-card">
+                        <h5>Descripción general</h5>
+                        <p style="margin-top: 10px; line-height: 1.6; color: #2d3748;">
+                            Los restrictores de seguridad para líneas de tratamiento de alta presión <strong>TPR®
+                                System</strong> (comúnmente integrados en sistemas de sujeción de líneas de flujo) son
+                            dispositivos diseñados para mitigar el latigazo destructivo de las tuberías temporales en
+                            caso de una ruptura estructural o desacople accidental.
+                        </p>
+                        <p style="margin-top: 10px; line-height: 1.6; color: #2d3748;">
+                            Constituyen un sistema de sujeción temporal de tuberías diseñado para uso en líneas de
+                            bombeo de servicio de pozos y otras tuberías temporales presurizadas, como las utilizadas en
+                            operaciones de fractura hidráulica, cementación, acidificación, fluidos energizados,
+                            terminación de pozos, etc.
+                        </p>
 
-            <h5 style="margin-top: 20px;">El sistema TPR® consta de solo dos componentes:</h5>
-            <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
-                <li style="margin-bottom: 10px;">❑ <strong>Eslabón-R: Eslabón de sujeción.</strong> Se utiliza para asegurar las líneas de flujo. (Eslinga redonda sintética) Longitudes disponibles: 5', 10', 15' y 20'</li>
-                <li>❑ <strong>Eslabón-C: Eslabón de conexión.</strong> Se utiliza para conectar los extremos de dos eslabones R. (Eslabón-C de eslinga redonda sintética con pasador de enganche de aluminio integrado)</li>
-            </ul>
-        </div>
-    </div>
+                        <h5 style="margin-top: 20px;">El sistema TPR® consta de solo dos componentes:</h5>
+                        <ul style="list-style-type: none; padding-left: 0; margin-top: 10px;">
+                            <li style="margin-bottom: 10px;">❑ <strong>Eslabón-R: Eslabón de sujeción.</strong> Se
+                                utiliza para asegurar las líneas de flujo. (Eslinga redonda sintética) Longitudes
+                                disponibles: 5', 10', 15' y 20'</li>
+                            <li>❑ <strong>Eslabón-C: Eslabón de conexión.</strong> Se utiliza para conectar los extremos
+                                de dos eslabones R. (Eslabón-C de eslinga redonda sintética con pasador de enganche de
+                                aluminio integrado)</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <!-- Botones de navegación hacia las fichas específicas -->
-    <div class="sheet-navigation-buttons"
-        style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-        <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
-            style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-            Volver a uniones de golpe principal
-        </button>
-    </div>
-</div>
+                <!-- Botones de navegación hacia las fichas específicas -->
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Volver a uniones de golpe principal
+                    </button>
+                </div>
+            </div>
             <!-- FICHA 44: SISTEMA DE SUJECIÓN TPR® -->
             <div id="mat-sistema-sujencion-tpr" class="spec-sheet-container">
                 <header class="sheet-header">
@@ -6033,6 +6065,9 @@ position: relative;">
                         </div>
                         <div class="thumb-item" style="background-image: url('img/SujecionTPR2.png');"
                             onclick="abrirModalImagen('img/SujecionTPR2.png')">
+                        </div>
+                        <div class="thumb-item" style="background-image: url('img/tablaTpr.jpg');"
+                            onclick="abrirModalImagen('img/tablaTpr.jpg')">
                         </div>
                     </div>
                 </div>
@@ -6707,7 +6742,7 @@ position: relative;">
                         <p>10"</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Provista con Fluid End GeoPro Estándar de alta eficiencia volumétrica.<br>• Power End
                             resistente con rodamientos y cigüeñal forjado para cargas cíclicas elevadas.<br>•
                             Retenedores de válvula avanzados que reducen la erosión y la fatiga.<br>• Cilindros en acero
@@ -6787,7 +6822,7 @@ position: relative;">
                         <p>10"</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Equipada con Fluid End GeoPro 200L en acero inoxidable de alta resistencia.<br>• Incremento
                             de hasta un 25% en tasas de flujo frente a diseños tradicionales.<br>• Tren de potencia con
                             caja de engranajes modular para un mantenimiento en campo más ágil.<br>• Válvulas
@@ -6840,7 +6875,7 @@ position: relative;">
                             Ver en 3D e Interactuar
                         </button>
                         <button class="btn-toggle-compare"
-                            onclick="toggleCompare('mat-fluid-end-geopro', 'FLUID END GEOPRO ESTÁNDAR', event)">
+                            onclick="toggleCompare('mat-fluid-end-geopr', 'FLUID END GEOPRO ESTÁNDAR', event)">
                             + Añadir a comparar
                         </button>
                     </div>
@@ -6860,7 +6895,7 @@ position: relative;">
                         <p>Hasta 20000 Psi</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>•Fabricado en acero inoxidable y aleado de alta resistencia contra corrosión y erosión.<br>•
                             Contornos internos optimizados para reducir la concentración de tensiones y alargar su
                             vida útil.<br>• Compatible con extremos de potencia TechnipFMC previos y componentes
@@ -6933,7 +6968,7 @@ position: relative;">
                         <p>Hasta 20000 Psi</p>
                     </div>
                     <div class="spec-block-card">
-                        <h5>Otras Cualidades</h5>
+                        <h5>Otras Especificaciones</h5>
                         <p>• Versión reforzada para ciclos de trabajo continuo y alta carga.<br>
                             • Compatible con Power Ends actuales (sin modificaciones en el patín).<br>
                             • Pasajes internos con maquinado de precisión para reducir erosión.<br>
@@ -7203,7 +7238,7 @@ position: relative;">
             </div>
         </div>
     </footer>
-    
+
     <script src="particles.min.js"></script>
     <script src="script.js"></script>
 </body>

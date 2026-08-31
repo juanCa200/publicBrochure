@@ -2618,8 +2618,6 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 
 .hidden { display: none; }
 
-
-
 .technical-data-table tbody tr {
     transition: background-color 0.2s ease;
 }
@@ -2628,9 +2626,6 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     background-color: rgba(255, 204, 0, 0.2); /* Color de resaltado */
     color: var(--esip-orange);
 }
-
-
-
 
 /* Bandeja Flotante Inferior */
 .comparison-tray {
@@ -2713,6 +2708,46 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     font-size: 28px;
     cursor: pointer;
     color: #4b5563;
+}
+
+/* ==========================================================================
+   AJUSTE EXCLUSIVO PARA MÓVILES (BOTONES FUERA Y DEBAJO DE LA IMAGEN)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* 1. La imagen principal mantendrá su alto y no cortará los botones */
+    .main-gallery-display {
+        position: relative !important;
+        height: 200px !important; /* Alto de la imagen en celular */
+        margin-bottom: 120px !important; /* Crear espacio físico debajo de la imagen para los botones */
+        overflow: visible !important;
+    }
+
+    /* 2. Botón 3D: Se ubica justo al terminar la imagen */
+    .main-gallery-display .btn-trigger-modal-premium {
+        position: absolute !important;
+        top: calc(100% + 12px) !important; /* Empuja el botón 12px abajo del borde inferior de la imagen */
+        left: 0 !important;
+        right: 0 !important;
+        bottom: auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        z-index: 10 !important;
+    }
+
+    /* 3. Botón Comparar: Se ubica debajo del botón 3D */
+    .main-gallery-display .btn-toggle-compare {
+        position: absolute !important;
+        top: calc(100% + 64px) !important; /* Se ubica debajo del primer botón */
+        left: 0 !important;
+        right: 0 !important;
+        bottom: auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        z-index: 10 !important;
+    }
 }
 /* Estilo de la tabla comparativa */
 .compare-table {
@@ -4144,11 +4179,12 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
-    display: flex;
+    display: none; /* <--- Asegurar que esté en none */
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
+
 
 /* Tarjeta principal transparente y mucho más ancha */
 .minimal-transparent-card {
@@ -4321,4 +4357,74 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     background: #f26522;
     border-color: #f26522;
     transform: scale(1.1);
+}
+
+/* Botón Flotante 3D (Inferior Izquierdo) */
+.btn-flotante-3d {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, #f26522, #d9531e);
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    z-index: 9900;
+    box-shadow: 0 4px 15px rgba(242, 101, 34, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Efecto de pulso (Ondas expansivas) */
+.btn-flotante-3d::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(242, 101, 34, 0.5);
+    z-index: -1;
+    animation: onda-pulso 2s infinite cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Animación de la onda */
+@keyframes onda-pulso {
+    75%, 100% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+/* Hover: Aumenta tamaño y muestra tooltip */
+.btn-flotante-3d:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff7533, #f26522);
+}
+
+.btn-flotante-3d:hover::after {
+    content: 'Explorar en 3D';
+    position: absolute;
+    left: 80px; /* Aparece a la derecha del botón */
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: 1px solid rgba(242, 101, 34, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+/* Ocultar el botón flotante en celulares y tablets */
+@media (max-width: 1024px) {
+    .btn-flotante-3d {
+        display: none !important;
+    }
 }

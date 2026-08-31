@@ -401,7 +401,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tipos de Servicio", valor: "Estándar / Gas Agrio (NACE – API MR-01-75)" },
             { propiedad: "Rangos de Presión", valor: "• Estándar: 6000, 10000, 15000, 20000 CWP<br>• Gas Agrio: 10000, 15000 CWP" },
             { propiedad: "Extremos de Conexión", valor: "• Tuerca aleteada retirable Weco<br>• Roscado<br>• Soldadura a Tope (Butt Weld)" },
-            { propiedad: "Otras Cualidades", valor: "• Desvían, dividen, convergen, divergen o adaptan el flujo de los fluidos de trabajo<br>• Construcción forjada<br>• Disponibles en diseños compactos y no compactos<br>• Disponibles en múltiples arreglos de conexión<br>• Altamente durables y de funcionamiento confiable y seguro" },
+            { propiedad: "Otras Especificaciones", valor: "• Desvían, dividen, convergen, divergen o adaptan el flujo de los fluidos de trabajo<br>• Construcción forjada<br>• Disponibles en diseños compactos y no compactos<br>• Disponibles en múltiples arreglos de conexión<br>• Altamente durables y de funcionamiento confiable y seguro" },
             { propiedad: "Aplicación", valor: "• Líneas de Fractura<br>• Líneas de Prueba<br>• Líneas de Circulación, Cementación y Estimulación<br>• Operaciones de Alta Presión y Altamente Abrasivas" }
         ]
     },
@@ -558,7 +558,7 @@ const databaseEspecificaciones = {
             { propiedad: "Presión", valor: "Ver Tabla Adjunta" },
             { propiedad: "Modelos", valor: "PM100, PM200, PM300, SM100, SM200" },
             { propiedad: "Componentes", valor: "Eslabón-R de Sujeción / Eslabón-C de Conexión" },
-            { propiedad: "Otras Características", valor: "Ver Tabla Adjunta" },
+            { propiedad: "Otras Especificaciones", valor: "Ver Tabla Adjunta" },
             { propiedad: "Aplicación", valor: "Fractura Hidráulica, Cementación, Acidificación, Fluidos Energizados, Completación de Pozos" }
         ]
     },
@@ -602,7 +602,7 @@ const databaseEspecificaciones = {
             { propiedad: "Presión Máxima", valor: "20000 Psi" },
             { propiedad: "Caudal Máximo", valor: "Hasta 30.8 BPM" },
             { propiedad: "Potencia Máxima", valor: "2400 HP" },
-            { propiedad: "Otras Cualidades", valor: "• Provista con Fluid End GeoPro Estándar<br>• Power End de alta resistencia diseñado para condiciones de campo exigentes<br>• Sistema de fijación integrado y acceso frontal para mantenimiento rápido" },
+            { propiedad: "Otras Especificaciones", valor: "• Provista con Fluid End GeoPro Estándar<br>• Power End de alta resistencia diseñado para condiciones de campo exigentes<br>• Sistema de fijación integrado y acceso frontal para mantenimiento rápido" },
             { propiedad: "Aplicación", valor: "• Fractura Hidráulica<br>• Estimulación y Acidificación de Pozos a Alta Presión<br>• Operaciones de Cementación" }
         ]
     },
@@ -613,7 +613,7 @@ const databaseEspecificaciones = {
             { propiedad: "Presión Máxima", valor: "20000 Psi" },
             { propiedad: "Caudal Máximo", valor: "36.7 BPM" },
             { propiedad: "Potencia Máxima", valor: "3000 HP" },
-            { propiedad: "Otras Cualidades", valor: "• Provista con Fluid End GeoPro 200L<br>• Capaz de entregar altas tasas de flujo, optimizando un incremento de hasta el 25% respecto a diseños tradicionales<br>• Sistema de engranajes modular de alta durabilidad" },
+            { propiedad: "Otras Especificaciones", valor: "• Provista con Fluid End GeoPro 200L<br>• Capaz de entregar altas tasas de flujo, optimizando un incremento de hasta el 25% respecto a diseños tradicionales<br>• Sistema de engranajes modular de alta durabilidad" },
             { propiedad: "Aplicación", valor: "• Fractura Hidráulica Continua<br>• Acidificación de Pozos<br>• Estimulación de Pozos Petroleros y Gasíferos" }
         ]
     },
@@ -623,7 +623,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tamaños", valor: "4”, 4-1/2”, 5” (Triplex)" },
             { propiedad: "Carrera", valor: "10”" },
             { propiedad: "Rangos de Presión", valor: "Hasta 20000 Psi" },
-            { propiedad: "Otras Cualidades", valor: "• Disponible en acero inoxidable de primera calidad y acero aleado para resistir fluidos corrosivos y erosivos agresivos<br>• Diseñado con contornos internos optimizados para reducir las concentraciones de tensión<br>• Compatible con versiones anteriores de los extremos de potencia de TechnipFMC" },
+            { propiedad: "Otras Especificaciones", valor: "• Disponible en acero inoxidable de primera calidad y acero aleado para resistir fluidos corrosivos y erosivos agresivos<br>• Diseñado con contornos internos optimizados para reducir las concentraciones de tensión<br>• Compatible con versiones anteriores de los extremos de potencia de TechnipFMC" },
             { propiedad: "Aplicación", valor: "• Fractura Hidráulica<br>• Acidificación<br>• Cementación<br>• Mantenimiento de Pozos." }
         ]
     },
@@ -633,7 +633,7 @@ const databaseEspecificaciones = {
             { propiedad: "Tamaños", valor: "4”, 5” (Triplex y Quintuplex)" },
             { propiedad: "Carrera", valor: "10”" },
             { propiedad: "Rangos de Presión", valor: "Hasta 20000 Psi" },
-            { propiedad: "Otras Cualidades", valor: "• Variante reforzada del Modelo GeoPro Estándar para ciclos de trabajo continuo prolongados<br>• Pasajes internos suavizados mediante maquinado de precisión para reducir la erosión<br>• Compatible con los Power Ends actuales de la marca" },
+            { propiedad: "Otras Especificaciones", valor: "• Variante reforzada del Modelo GeoPro Estándar para ciclos de trabajo continuo prolongados<br>• Pasajes internos suavizados mediante maquinado de precisión para reducir la erosión<br>• Compatible con los Power Ends actuales de la marca" },
             { propiedad: "Aplicación", valor: "• Fractura Hidráulica<br>• Estimulación de Pozos<br>• Tubería Flexible (Coiled Tubing)<br>• Bombeo Industrial de Servicio Pesado" }
         ]
     }
@@ -1010,6 +1010,7 @@ const technicalDataDb = {
         servicio: 'Estándar / Gas Agrio (NACE – API MR-01-75)',
         presion: '175 (2”-12”), 150 (14”-24”) CWP',
         conexion: 'Atornillable (Bridas 125/150)',
+        especificaciones: '• Cuerpo con Orejetas Roscadas para Conexión Independiente de la Tubería Aguas Arriba o Aguas Abajo<br>• Diseño de Cuello Largo para Montaje en Tuberías Aisladas. El Operador o Manija de la Válvula no se obstruye por el Aislamiento<br>• Sistema de Triple Sello. Aísla los Vástagos Superior e Inferior del Fluido de la Línea<br>• Disco Autocentrante. Emplea un sistema de Doble Vástago con Pasadores Tangenciales Superior e Inferior<br>• Asiento con Respaldo Fenólico Rígido. Evita el Desplazamiento del Asiento<br>• Admite Manijas de Apertura/Cierre, de Operadores de Engranaje y Actuadores de Accionamiento Automático',
         aplicacion: 'Servicios de apertura/cierre o regulación de caudal'
     },
     'mat-diseno-engranaje-helicoidal': {
@@ -1246,7 +1247,7 @@ const technicalDataDb = {
         presion: '20000 Psi',
         caudalMaximo: 'Hasta 30.8 BPM',
         potenciaMaxima: '2400 HP',
-        otrasCualidades: 'Provista con Fluid End GeoPro Estándar / Power End de alta resistencia diseñado para condiciones de campo exigentes / Diseño de fijación integrado y acceso frontal para mantenimiento rápido',
+        especificaciones: 'Provista con Fluid End GeoPro Estándar / Power End de alta resistencia diseñado para condiciones de campo exigentes / Diseño de fijación integrado y acceso frontal para mantenimiento rápido',
         aplicacion: 'Fractura Hidráulica / Estimulación y Acidificación de Pozos a Alta Presión / Operaciones de Cementación'
     },
     'mat-bomba-wq3000': {
@@ -1256,7 +1257,7 @@ const technicalDataDb = {
         presion: '20000 Psi',
         caudalMaximo: '36.7 BPM',
         potenciaMaxima: '3000 HP',
-        otrasCualidades: 'Provista con Fluid End GeoPro 200L / Capaz de entregar altas tasas de flujo, optimizando un incremento de hasta el 25% respecto a diseños tradicionales / Sistema de engranajes modular de alta durabilidad',
+        especificaciones: 'Provista con Fluid End GeoPro 200L / Capaz de entregar altas tasas de flujo, optimizando un incremento de hasta el 25% respecto a diseños tradicionales / Sistema de engranajes modular de alta durabilidad',
         aplicacion: 'Fractura Hidráulica Continua / Acidificación de Pozos / Estimulación de Pozos Petroleros y Gasíferos'
     },
     'mat-fluid-end-geopr': {
@@ -1898,4 +1899,14 @@ function cerrarModal3D() {
         overlay.style.display = 'none';
         cancelAnimationFrame(modalAnimId);
     }
+}
+
+// Función para abrir el modal
+function abrirModal3D() {
+    document.getElementById('modal-visor-3d-overlay').style.display = 'flex';
+}
+
+// Función para cerrar el modal
+function cerrarModal3D() {
+    document.getElementById('modal-visor-3d-overlay').style.display = 'none';
 }
