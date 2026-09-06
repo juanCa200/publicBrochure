@@ -1598,7 +1598,7 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 
 .spec-block-card p {
     font-size: 13px;
-    color: black;
+    color: #000000;
     font-weight: 500;
     line-height: 1.5;
 }
@@ -2318,12 +2318,13 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     padding: 14px 16px;
     border-bottom: 1px solid #f1f5f9;
     font-size: 13.5px;
-    color: #475569;
+    color: #000000;
 }
 
 .technical-data-table tr:hover td {
     background: #f8fafc;
-    color: #0f172a;
+    color: #000000;
+    font-weight: 600;
 }
 
 .technical-data-table td:first-child {

@@ -1490,10 +1490,9 @@ const kitsData = {
         images: [
             "img/valvulaRetencion.png",
             "img/kitsValvulaRetencion1.png",
-            "img/kitsValvulaRetencion2.png",
-            "img/kitsValvulaRetencion3.png",
-            "img/kitsValvulaRetencion1.png"
-        ]
+            "img/kitValculaRetencion.png",
+            "img/kitrepuestooo.png"      
+          ]
     }
 };
 
@@ -1695,17 +1694,17 @@ let modalAnimId = null;
 
 // Lista de tus 3 modelos .glb
 const listaRutasModelos = [
-    'img/BombaEmboloTriplexPartes.glb', // Modelo 0
+    'img/manifoldsPartes.glb', // Modelo 0
     'img/ValvulaRetencionDardoPartes.glb', // Modelo 1
-    'img/ValvulaULTPartes.glb'          // Modelo 2
+    'img/BombaEmboloTriplexPartes.glb'          // Modelo 2
 ];
 
 // Distancias de explosión personalizadas para cada modelo (Índice 0, 1 y 2)
 // Modifica estos valores si algún modelo se dispersa demasiado o muy poco
 const distanciasExplosion = [
-    1.0,  // Distancia para el Modelo 0 (Bomba)
-    0.4,  // Distancia para el Modelo 1 (Válvula Dardo)
-    0.5   // Distancia para el Modelo 2 (Válvula ULT)
+    0.3,  // Distancia para el Modelo 0 (Bomba)
+    0.5,  // Distancia para el Modelo 1 (Válvula Dardo)
+    0.4   // Distancia para el Modelo 2 (Válvula ULT)
 ];
 
 window.addEventListener('DOMContentLoaded', () => {
