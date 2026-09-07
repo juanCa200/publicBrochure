@@ -1154,7 +1154,7 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 
 .intro-text {
     font-size: 0.925rem;
-    color: #64748b;
+    color: #000000;
     line-height: 1.6;
     margin-bottom: 2rem;
     border-left: 3px solid #f26522;
@@ -1203,7 +1203,7 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 
 .story-card p {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #000000;
     line-height: 1.5;
     margin: 0;
 }
@@ -1228,7 +1228,7 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     margin: 0;
     padding-left: 1.25rem;
     font-size: 0.85rem;
-    color: #64748b;
+    color: #000000;
     line-height: 1.6;
 }
 

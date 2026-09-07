@@ -518,7 +518,7 @@
                         </div>
                         <div class="index-item-submenu">
                             <a href="javascript:void(0)"
-                                onclick="navigateToSection('accesorios', 'mat-accesorios-conexion-weco')">Fittings
+                                onclick="navigateToSection('accesorios_conexion', 'mat-accesorios-conexion-weco')">Fittings
                                 Weco®</a>
                         </div>
                     </div>
@@ -2737,11 +2737,6 @@ position: relative;">
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                         Ver diseño mecánico (PRV)
                     </button>
-                    <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-valvula-alivio-electronica')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver diseño electrónico (ePRV)
-                    </button>
                 </div>
             </div>
             <!-- FICHA 012: VÁLVULA DE ALIVIO MECANICO -->
@@ -2899,15 +2894,6 @@ position: relative;">
                             presión</p>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-valvula-alivio-mecanica')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver diseño mecánico (PRV)
-                    </button>
-                </div>
             </div>
             <!-- PRINCIPAL VÁLVULA DE ESTRANGULACIÓN -->
             <div id="mat-valvulaEstrangulacion-main" class="spec-sheet-container">
@@ -2959,12 +2945,7 @@ position: relative;">
                     <button class="btn-trigger-modal-premium"
                         onclick="switchMaterialById('mat-valvula-estrangulacion-fija')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver diseño fijo
-                    </button>
-                    <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-valvula-estrangulacion-ajustable')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver diseño ajustable
+                        Ver Estrangulador Fijo
                     </button>
                 </div>
             </div>
@@ -3056,7 +3037,7 @@ position: relative;">
                     <button class="btn-trigger-modal-premium"
                         onclick="switchMaterialById('mat-valvula-estrangulacion-ajustable')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver estrangulador ajustable
+                        Ver Estrangulador Ajustable
                     </button>
                 </div>
             </div>
@@ -3140,14 +3121,6 @@ position: relative;">
                             inyección de fluidos</p>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver estrangulador fijo
-                    </button>
-                </div>
             </div>
             <!-- PRINCIPAL VALVULA DE ESTRANGULACION Y REGULACION -->
             <div id="mat-valvulaEstrangulacionRegulacion-main" class="spec-sheet-container">
@@ -3204,14 +3177,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-estrangulacion-regulacion')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Estrangulador Fijo
-                    </button>
-                    <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Estrangulador Ajustable
+                        Ver Valvula De Estrangulacion y Regulación
                     </button>
                 </div>
             </div>
@@ -3291,15 +3259,6 @@ position: relative;">
                             Flujo</p>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Estrangulador Ajustable
-                    </button>
-                </div>
             </div>
             <!--PRINCIPAL ADAPTADOR DE ESTRANGULACION-->
             <div id="mat-adaptadorEstrangulacion-main" class="spec-sheet-container">
@@ -3351,14 +3310,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-estrangulador-fijo')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-adaptador-estrangulacion')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver estrangulador fijo
-                    </button>
-                    <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver estrangulador ajustable
+                        Ver Adaptador De Estrangulación
                     </button>
                 </div>
             </div>
@@ -3434,15 +3388,6 @@ position: relative;">
                             Hidráulica</p>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-estrangulador-ajustable')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Estrangulador Ajustable
-                    </button>
-                </div>
             </div>
             <!--PRINCIPAL VÁLVULA MARIPOSA-->
             <div id="mat-valvulaMariposa-main" class="spec-sheet-container">
@@ -3495,9 +3440,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-mariposa')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-mariposa-modelo-12')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Ficha de Válvula Mariposa
+                        Ver Válvula Mariposa Modelo 12
                     </button>
                 </div>
             </div>
@@ -3579,9 +3524,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-mariposa-modelo-12n')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Válvula Mariposa Modelo 12N
                     </button>
                 </div>
             </div>
@@ -3663,9 +3608,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-mariposa-modelo-22')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Válvula Mariposa Modelo 22
                     </button>
                 </div>
             </div>
@@ -3748,9 +3693,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvula-mariposa-modelo-22l')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Válvula Mariposa Modelo 22L
                     </button>
                 </div>
             </div>
@@ -3833,9 +3778,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-opciones-accionamiento-mariposa')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Opciones De Accionamiento
                     </button>
                 </div>
             </div>
@@ -3886,9 +3831,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-diseno-engranaje-helicoidal')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a válvula mariposa principal
+                        Ver Diseño Engranaje Helicoidal
                     </button>
                 </div>
             </div>
@@ -3961,9 +3906,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-actuador-veleta-modelo-200')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Actuador De Veleta Modelo 200
                     </button>
                 </div>
             </div>
@@ -4031,9 +3976,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-actuador-neumatico-doble-accion')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Actuador Neumatico De Doble Acción
                     </button>
                 </div>
             </div>
@@ -4102,9 +4047,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-manija-estandar-weco')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Manija Estandar
                     </button>
                 </div>
             </div>
@@ -4170,9 +4115,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-palanca-regulacion-weco')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
+                        Ver Palanca de Regulación Weco
                     </button>
                 </div>
             </div>
@@ -4240,14 +4185,6 @@ position: relative;">
                             del Cuerpo de la Válvula con Posiciones de Retención de Apertura/Cierre</p>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-valvulaMariposa-main')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Válvula Mariposa Principal
-                    </button>
-                </div>
             </div>
             <!-- PORTADA: ACCESORIOS DE CONEXIÓN (FITTINGS WECO®) -->
             <div id="mat-fittings-weco-main" class="spec-sheet-container">
@@ -4300,17 +4237,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-codo-weco')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-accesorios-conexion-weco')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Codo Weco®
-                    </button>
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-tee-weco')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Tee Weco®
-                    </button>
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-cruz-weco')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Cruz Weco®
+                        Ver Accesorios De Conexión
                     </button>
                 </div>
             </div>
@@ -4386,14 +4315,6 @@ position: relative;">
                             Estimulación<br>• Operaciones de Alta Presión y Altamente Abrasivas</p>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-fittings-weco-main')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Accesorios de Conexión Principal
-                    </button>
-                </div>
             </div>
             <!-- PORTADA: ADAPTADORES (CROSSOVERS & CHANGEOVERS) -->
             <div id="mat-adaptadores-main" class="spec-sheet-container">
@@ -4444,10 +4365,6 @@ position: relative;">
                     <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-crossover')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                         Ver Crossovers
-                    </button>
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-changeover')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Changeovers
                     </button>
                 </div>
             </div>
@@ -4512,9 +4429,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-adaptadores-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-changeover')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Adaptadores Principal
+                        Ver Changeovers
                     </button>
                 </div>
             </div>
@@ -4574,14 +4491,6 @@ position: relative;">
                             acuerdo al requerimiento operativo.</p>
                         <p style="margin-top: 8px;">• Se fabrican bajo previo pedido.</p>
                     </div>
-                </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-adaptadores-main')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Adaptadores Principal
-                    </button>
                 </div>
             </div>
             <!-- FICHA 030: DISEÑOS COMUNES (ADAPTADORES / CROSSOVERS & CHANGEOVERS) -->
@@ -4654,14 +4563,6 @@ position: relative;">
                         <p style="margin: 0; font-weight: bold;">(Hembra Weco x Brida API)</p>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-adaptadores-main')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Adaptadores Principal
-                    </button>
-                </div>
             </div>
             <!-- PORTADA: UNIONES DE GOLPE (HAMMER / WING UNIONS WECO®) -->
             <div id="mat-uniones-golpe-main" class="spec-sheet-container">
@@ -4706,9 +4607,9 @@ position: relative;">
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
                     <button class="btn-trigger-modal-premium"
-                        onclick="switchMaterialById('mat-disenos-comunes-adaptadores')"
+                        onclick="switchMaterialById('mat-figura-100')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Ver Diseños Comunes
+                        Ver Figura 100
                     </button>
                 </div>
             </div>
@@ -4789,9 +4690,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-200')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 200
                     </button>
                 </div>
             </div>
@@ -4876,9 +4777,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-206')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 206
                     </button>
                 </div>
             </div>
@@ -4963,9 +4864,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-207')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 207
                     </button>
                 </div>
             </div>
@@ -5038,9 +4939,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-400')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 400
                     </button>
                 </div>
             </div>
@@ -5137,9 +5038,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-602')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 602
                     </button>
                 </div>
             </div>
@@ -5228,9 +5129,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-1002')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 1002
                     </button>
                 </div>
             </div>
@@ -5336,9 +5237,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-1003')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 1003
                     </button>
                 </div>
             </div>
@@ -5440,9 +5341,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-1502')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 1502
                     </button>
                 </div>
             </div>
@@ -5544,9 +5445,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-2002')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 2002
                     </button>
                 </div>
             </div>
@@ -5624,9 +5525,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-2202')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura 2202
                     </button>
                 </div>
             </div>
@@ -5704,9 +5605,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-tank')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura Tank
                     </button>
                 </div>
             </div>
@@ -5791,9 +5692,9 @@ position: relative;">
 
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-figura-air-o-union')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Figura AIR O UNION
                     </button>
                 </div>
             </div>
@@ -5874,14 +5775,6 @@ position: relative;">
                         </table>
                     </div>
                 </div>
-
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
-                    </button>
-                </div>
             </div>
             <!-- PORTADA: RESTRICTORES TEMPORALES DE SEGURIDAD (TPR® System) -->
             <div id="mat-tpr-system-main" class="spec-sheet-container">
@@ -5939,9 +5832,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-sistema-sujencion-tpr')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a uniones de golpe principal
+                        Ver Sistema De Sujecion TPR
                     </button>
                 </div>
             </div>
@@ -6102,15 +5995,6 @@ position: relative;">
                         </ul>
                     </div>
                 </div>
-
-                <!-- Botones de navegación hacia las fichas específicas -->
-                <div class="sheet-navigation-buttons"
-                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
-                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
-                    </button>
-                </div>
             </div>
             <!-- PORTADA: MANIFOLDS (MÚLTIPLES) DE SUPERFICIE (Ground Manifolds®) -->
             <div id="mat-ground-manifolds-main" class="spec-sheet-container">
@@ -6171,9 +6055,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-manifold-empaque')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Manifold Empaque Grava
                     </button>
                 </div>
             </div>
@@ -6252,6 +6136,13 @@ position: relative;">
                             completación de pozos.</p>
                     </div>
                 </div>
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-manifold-retorno')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Retorno Flujo
+                    </button>
+                </div>
             </div>
             <!-- FICHA 46: RETORNO DE FLUJO / PRUEBA DE POZO / PRODUCCIÓN -->
             <div id="mat-manifold-retorno" class="spec-sheet-container">
@@ -6328,6 +6219,13 @@ position: relative;">
                             fluidos abrasivos y fuertes presiones<br>• Recolecta la mezcla de hidrocarburos de todos los
                             pozos en producción activa y la dirige hacia la planta de procesamiento central</p>
                     </div>
+                </div>
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-manifold-choke-saver')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Retorno Flujo Adaptador
+                    </button>
                 </div>
             </div>
             <!-- FICHA 47: RETORNO DE FLUJO / PRUEBA DE POZO / CON ADAPTADOR DE ESTRANGULACIÓN (Choke Saver®) -->
@@ -6406,6 +6304,13 @@ position: relative;">
                             forma segura</p>
                     </div>
                 </div>
+                 <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-manifold-retorno-fractura')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Retorno Flujo Fractura
+                    </button>
+                </div>
             </div>
             <!-- FICHA 48: RETORNO DE FLUJO DE FRACTURA -->
             <div id="mat-manifold-retorno-fractura" class="spec-sheet-container">
@@ -6467,6 +6372,13 @@ position: relative;">
                             a niveles seguros</p>
                     </div>
                 </div>
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-manifold-retorno-fractura')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Retorno Flujo Fractura
+                    </button>
+                </div>
             </div>
             <!-- FICHA 49: DESCARGA -->
             <div id="mat-manifold-descarga" class="spec-sheet-container">
@@ -6526,6 +6438,7 @@ position: relative;">
                             interrumpir el proceso de bombeo.</p>
                     </div>
                 </div>
+                
             </div>
             <!-- PORTADA: BOMBAS DE PISTÓN Y ÉMBOLO RECIPROCANTES (Desplazamiento Positivo) -->
             <div id="mat-bombas-reciprocantes-main" class="spec-sheet-container">
@@ -6598,9 +6511,9 @@ position: relative;">
                 <!-- Botones de navegación hacia las fichas específicas -->
                 <div class="sheet-navigation-buttons"
                     style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
-                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-uniones-golpe-main')"
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-bomba-wt2400')"
                         style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                        Volver a Uniones de Golpe Principal
+                        Ver Bomba Reciprocante Triplex
                     </button>
                 </div>
             </div>
@@ -6682,6 +6595,13 @@ position: relative;">
                             las tuberías de revestimiento.</p>
                     </div>
                 </div>
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-bomba-wq3000')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Bomba Reciprocante Quintuplex
+                    </button>
+                </div>
             </div>
             <!-- FICHA 51: BOMBA RECIPROCANTE DE ÉMBOLO QUINTUPLEX (TechnipFMC Modelo WQ3000) -->
             <div id="mat-bomba-wq3000" class="spec-sheet-container">
@@ -6762,6 +6682,13 @@ position: relative;">
                             Petroleros y Gasíferos</p>
                     </div>
                 </div>
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-fluid-end-geopro')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Fluid End GeoPro Estandar
+                    </button>
+                </div>
             </div>
             <!-- FICHA 52: FLUID END GEOPRO ESTÁNDAR -->
             <div id="mat-fluid-end-geopro" class="spec-sheet-container">
@@ -6833,6 +6760,13 @@ position: relative;">
                         <h5>Aplicación</h5>
                         <p>• Fractura Hidráulica<br>• Acidificación<br>• Cementación<br>• Mantenimiento de Pozos.</p>
                     </div>
+                </div>
+                <div class="sheet-navigation-buttons"
+                    style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px; justify-content: center; align-items: center; width: 100%; margin-top: 25px; box-sizing: border-box;">
+                    <button class="btn-trigger-modal-premium" onclick="switchMaterialById('mat-fluid-end-geopro-200l')"
+                        style="display: inline-block !important; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; margin: 0 !important; text-align: center; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                        Ver Fluid End GeoPro 200L
+                    </button>
                 </div>
             </div>
             <!-- FICHA 53: FLUID END MODELO GEOPRO 200L -->
