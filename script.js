@@ -676,17 +676,10 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
 
     modal.classList.add('modal-active');
 
-    // Generar la URL absoluta obligatoria para que el celular la reconozca
-    const absoluteGlbUrl = new URL(glbUrl, window.location.href).href;
-
     // --- Creación del Visor 3D ---
     const nuevoViewer = document.createElement('model-viewer');
     nuevoViewer.id = "modalViewer3D";
-    nuevoViewer.src = absoluteGlbUrl;
-
-    // NOTA: Si no tienes archivos .usdz físicos en tu servidor, 
-    // mantenemos 'ios-src' comentado para evitar que el iPhone falle al buscarlo.
-    // nuevoViewer.setAttribute('ios-src', absoluteGlbUrl.replace('.glb', '.usdz'));
+    nuevoViewer.src = glbUrl;
 
     nuevoViewer.setAttribute('camera-controls', '');
     nuevoViewer.setAttribute('auto-rotate', 'true');
@@ -694,35 +687,40 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
     nuevoViewer.setAttribute('shadow-intensity', '1');
     nuevoViewer.setAttribute('bounds', 'tight');
     nuevoViewer.setAttribute('ar', '');
-    nuevoViewer.setAttribute('ar-modes', 'scene-viewer quick-look webxr');
+    nuevoViewer.setAttribute('ar-modes', 'webxr scene-viewer quick-look');
+    nuevoViewer.setAttribute('xr-environment', '');
 
     nuevoViewer.style.width = "100%";
     nuevoViewer.style.height = "100%";
     nuevoViewer.style.display = "block";
 
-    // Hotspots condicionales (si aplica para este modelo)
+    // --- AÑADIR HOTSPOTS DE FORMA SEGURA (Sin usar innerHTML en el viewer) ---
     if (keyDatabase === 'mat-valvula-tapon') {
-        nuevoViewer.innerHTML = `
-            <button class="hotspot-punto" slot="hotspot-1" data-position="0.4m 0.9m 0m" data-normal="0m 0m 1m">
+        const hotspotsData = [
+            { slot: 'hotspot-1', pos: '0.4m 0.9m 0m', text: 'Tamaño: 2”x1”' },
+            { slot: 'hotspot-2', pos: '0.4m 0.5m 0m', text: 'Tamaño: 2”x2”' },
+            { slot: 'hotspot-3', pos: '0.4m 0.1m 0m', text: 'Tamaño: 3” y 4”' }
+        ];
+
+        hotspotsData.forEach(h => {
+            const button = document.createElement('button');
+            button.className = 'hotspot-punto';
+            button.slot = h.slot;
+            button.setAttribute('data-position', h.pos);
+            button.setAttribute('data-normal', '0m 0m 1m');
+            button.innerHTML = `
                 <div class="punto-star">★</div>
-                <div class="hotspot-tooltip">Tamaño: 2”x1”</div>
-            </button>
-            <button class="hotspot-punto" slot="hotspot-2" data-position="0.4m 0.5m 0m" data-normal="0m 0m 1m">
-                <div class="punto-star">★</div>
-                <div class="hotspot-tooltip">Tamaño: 2”x2”</div>
-            </button>
-            <button class="hotspot-punto" slot="hotspot-3" data-position="0.4m 0.1m 0m" data-normal="0m 0m 1m">
-                <div class="punto-star">★</div>
-                <div class="hotspot-tooltip">Tamaño: 3” y 4”</div>
-            </button>
-        `;
+                <div class="hotspot-tooltip">${h.text}</div>
+            `;
+            nuevoViewer.appendChild(button);
+        });
     }
 
-    // Botón de AR nativo estilizado mediante slot oficial
+    // --- Botón de AR ---
     const arButton = document.createElement('button');
     arButton.slot = "ar-button";
     arButton.innerText = "Ver en Realidad Aumentada";
-    arButton.style.cssText = "background: var(--esip-orange, #ea580c); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; position: absolute; bottom: 20px; left: 20px; z-index: 10; font-family: 'Montserrat', sans-serif; font-weight: 600;";
+    arButton.style.cssText = "background: var(--esip-orange, #ea580c); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; position: absolute; bottom: 20px; left: 20px; z-index: 10;";
     
     nuevoViewer.appendChild(arButton);
     contenedorVisor.appendChild(nuevoViewer);
