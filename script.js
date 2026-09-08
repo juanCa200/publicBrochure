@@ -686,43 +686,32 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
     nuevoViewer.setAttribute('interaction-prompt', 'none');
     nuevoViewer.setAttribute('shadow-intensity', '1');
     nuevoViewer.setAttribute('bounds', 'tight');
-    nuevoViewer.setAttribute('ar', '');
-    nuevoViewer.setAttribute('ar-modes', 'webxr scene-viewer quick-look');
     nuevoViewer.setAttribute('xr-environment', '');
 
     nuevoViewer.style.width = "100%";
     nuevoViewer.style.height = "100%";
     nuevoViewer.style.display = "block";
 
-    // --- HOTSPOTS SEGUROS (Sin usar innerHTML) ---
+    // --- NUEVO: CONDICIONAL PARA AÑADIR LOS PUNTOS/ESTRELLAS SOLO A ESTE MODELO ---
     if (keyDatabase === 'mat-valvula-tapon') {
-        const hotspots = [
-            { slot: 'hotspot-1', pos: '0.4m 0.9m 0m', text: 'Tamaño: 2”x1”' },
-            { slot: 'hotspot-2', pos: '0.4m 0.5m 0m', text: 'Tamaño: 2”x2”' },
-            { slot: 'hotspot-3', pos: '0.4m 0.1m 0m', text: 'Tamaño: 3” y 4”' }
-        ];
-
-        hotspots.forEach(h => {
-            const hotspotBtn = document.createElement('button');
-            hotspotBtn.className = 'hotspot-punto';
-            hotspotBtn.slot = h.slot;
-            hotspotBtn.setAttribute('data-position', h.pos);
-            hotspotBtn.setAttribute('data-normal', '0m 0m 1m');
-            hotspotBtn.innerHTML = `
+        // Coordenadas (data-position) de ejemplo: deberás ajustarlas según la posición 
+        // exacta de cada tamaño dentro de tu archivo .glb
+        nuevoViewer.innerHTML = `
+            <button class="hotspot-punto" slot="hotspot-1" data-position="0.4m 0.9m 0m" data-normal="0m 0m 1m">
                 <div class="punto-star">★</div>
-                <div class="hotspot-tooltip">${h.text}</div>
-            `;
-            nuevoViewer.appendChild(hotspotBtn);
-        });
+                <div class="hotspot-tooltip">Tamaño: 2”x1”</div>
+            </button>
+            <button class="hotspot-punto" slot="hotspot-2" data-position="0.4m 0.5m 0m" data-normal="0m 0m 1m">
+                <div class="punto-star">★</div>
+                <div class="hotspot-tooltip">Tamaño: 2”x2”</div>
+            </button>
+            <button class="hotspot-punto" slot="hotspot-3" data-position="0.4m 0.1m 0m" data-normal="0m 0m 1m">
+                <div class="punto-star">★</div>
+                <div class="hotspot-tooltip">Tamaño: 3” y4”</div>
+            </button>
+        `;
     }
 
-    // --- Botón de AR ---
-    const arButton = document.createElement('button');
-    arButton.slot = "ar-button";
-    arButton.innerText = "Ver en Realidad Aumentada";
-    arButton.style.cssText = "background: var(--esip-orange, #ea580c); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; position: absolute; bottom: 20px; left: 20px; z-index: 10;";
-    
-    nuevoViewer.appendChild(arButton);
     contenedorVisor.appendChild(nuevoViewer);
 }
 
