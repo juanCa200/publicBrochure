@@ -676,16 +676,17 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
 
     modal.classList.add('modal-active');
 
-    // --- CORRECCIÓN: Generar URLs absolutas obligatorias para el celular ---
+    // Generar la URL absoluta obligatoria para que el celular la reconozca
     const absoluteGlbUrl = new URL(glbUrl, window.location.href).href;
-    // Opcional: Si tienes tu versión .usdz con el mismo nombre, la enlazamos para iPhone
-    const absoluteUsdzUrl = absoluteGlbUrl.replace('.glb', '.usdz');
 
     // --- Creación del Visor 3D ---
     const nuevoViewer = document.createElement('model-viewer');
     nuevoViewer.id = "modalViewer3D";
     nuevoViewer.src = absoluteGlbUrl;
-    nuevoViewer.setAttribute('ios-src', absoluteUsdzUrl); // CRÍTICO para que funcione en iPhone
+
+    // NOTA: Si no tienes archivos .usdz físicos en tu servidor, 
+    // mantenemos 'ios-src' comentado para evitar que el iPhone falle al buscarlo.
+    // nuevoViewer.setAttribute('ios-src', absoluteGlbUrl.replace('.glb', '.usdz'));
 
     nuevoViewer.setAttribute('camera-controls', '');
     nuevoViewer.setAttribute('auto-rotate', 'true');
@@ -699,7 +700,7 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
     nuevoViewer.style.height = "100%";
     nuevoViewer.style.display = "block";
 
-    // Hotspots condicionales
+    // Hotspots condicionales (si aplica para este modelo)
     if (keyDatabase === 'mat-valvula-tapon') {
         nuevoViewer.innerHTML = `
             <button class="hotspot-punto" slot="hotspot-1" data-position="0.4m 0.9m 0m" data-normal="0m 0m 1m">
@@ -717,11 +718,11 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
         `;
     }
 
-    // Botón de AR nativo estilizado mediante slot
+    // Botón de AR nativo estilizado mediante slot oficial
     const arButton = document.createElement('button');
     arButton.slot = "ar-button";
     arButton.innerText = "Ver en Realidad Aumentada";
-    arButton.style.cssText = "background: var(--esip-orange, #ea580c); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; position: absolute; bottom: 20px; left: 20px; z-index: 10;";
+    arButton.style.cssText = "background: var(--esip-orange, #ea580c); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; position: absolute; bottom: 20px; left: 20px; z-index: 10; font-family: 'Montserrat', sans-serif; font-weight: 600;";
     
     nuevoViewer.appendChild(arButton);
     contenedorVisor.appendChild(nuevoViewer);
