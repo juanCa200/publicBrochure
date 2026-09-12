@@ -2707,46 +2707,30 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 }
 
 /* ==========================================================================
-   AJUSTE EXCLUSIVO PARA MÓVILES (BOTONES FUERA Y DEBAJO DE LA IMAGEN)
+   AJUSTE EXCLUSIVO PARA MÓVILES (OCULTAR VISOR 3D PARA EVITAR CRASHES)
    ========================================================================== */
 @media (max-width: 768px) {
 
-    /* 1. La imagen principal mantendrá su alto y no cortará los botones */
+    /* 1. La galería mantiene su altura normal solo con imágenes */
     .main-gallery-display {
         position: relative !important;
-        height: 200px !important; /* Alto de la imagen en celular */
-        margin-bottom: 120px !important; /* Crear espacio físico debajo de la imagen para los botones */
-        overflow: visible !important;
+        height: 280px !important;
+        margin-bottom: 0 !important;
+        overflow: hidden !important;
     }
 
-
-    .btn-trigger-modal-premium {
+    /* 2. Ocultar exclusivamente el botón de 3D en celulares */
+    .main-gallery-display .btn-trigger-modal-premium {
         display: none !important;
     }
-    
-    /* 2. Botón 3D: Se ubica justo al terminar la imagen */
-    .main-gallery-display .btn-trigger-modal-premium {
-        position: absolute !important;
-        top: calc(100% + 12px) !important; /* Empuja el botón 12px abajo del borde inferior de la imagen */
-        left: 0 !important;
-        right: 0 !important;
-        bottom: auto !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        justify-content: center !important;
-        z-index: 10 !important;
-    }
 
-    /* 3. Botón Comparar: Se ubica debajo del botón 3D */
+    /* 3. Mantener el botón de comparar funcional y bien ubicado */
     .main-gallery-display .btn-toggle-compare {
         position: absolute !important;
-        top: calc(100% + 64px) !important; /* Se ubica debajo del primer botón */
-        left: 0 !important;
-        right: 0 !important;
-        bottom: auto !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        justify-content: center !important;
+        bottom: 12px !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: auto !important;
         z-index: 10 !important;
     }
 }
