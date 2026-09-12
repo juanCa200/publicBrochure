@@ -2321,11 +2321,6 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     color: #000000;
 }
 
-.technical-data-table tr:hover td {
-    background: #f8fafc;
-    color: #000000;
-    font-weight: 600;
-}
 
 .technical-data-table td:first-child {
     font-weight: 700;

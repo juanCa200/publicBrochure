@@ -662,6 +662,26 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
     const contenedorVisor = document.getElementById('contenedorVisor3D');
 
     contenedorVisor.innerHTML = '<span class="pane-title-tag">VISTA INTERACTIVA 3D</span>';
+    contenedorVisor.style.position = 'relative';
+
+    // --- CREAR Y MOSTRAR LOADER MIENTRAS CARGA EL 3D ---
+    const loaderDiv = document.createElement('div');
+    loaderDiv.id = 'visorLoader3D';
+    loaderDiv.innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background: #f8f9fa; color: #333; font-family: inherit;">
+            <div class="spinner" style="width: 40px; height: 40px; border: 4px solid #ccc; border-top: 4px solid #0056b3; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 10px;"></div>
+            <p style="margin: 0; font-size: 14px; font-weight: 600;">Cargando modelo industrial...</p>
+        </div>
+    `;
+    loaderDiv.style.cssText = "position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; pointer-events: none;";
+    contenedorVisor.appendChild(loaderDiv);
+
+    if (!document.getElementById('loaderSpinStyle')) {
+        const styleSpin = document.createElement('style');
+        styleSpin.id = 'loaderSpinStyle';
+        styleSpin.innerHTML = `@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`;
+        document.head.appendChild(styleSpin);
+    }
 
     const datos = databaseEspecificaciones[keyDatabase];
     if (datos) {
@@ -676,26 +696,35 @@ function abrirModal3DSpecs(glbUrl, keyDatabase) {
 
     modal.classList.add('modal-active');
 
-    // --- Creación del Visor 3D ---
+    // --- Creación del Visor 3D Optimizado para Móviles ---
     const nuevoViewer = document.createElement('model-viewer');
     nuevoViewer.id = "modalViewer3D";
     nuevoViewer.src = glbUrl;
 
     nuevoViewer.setAttribute('camera-controls', '');
     nuevoViewer.setAttribute('auto-rotate', 'true');
-    nuevoViewer.setAttribute('interaction-prompt', 'none');
+    nuevoViewer.setAttribute('interaction-prompt', 'auto');
     nuevoViewer.setAttribute('shadow-intensity', '1');
     nuevoViewer.setAttribute('bounds', 'tight');
     nuevoViewer.setAttribute('xr-environment', '');
+    
+    // ATRIBUTOS PARA PROTEGER LA MEMORIA DEL CELULAR:
+    nuevoViewer.setAttribute('loading', 'lazy');
+    nuevoViewer.setAttribute('camera-orbit', '45deg 55deg 2.5m');
 
     nuevoViewer.style.width = "100%";
     nuevoViewer.style.height = "100%";
     nuevoViewer.style.display = "block";
 
-    // --- NUEVO: CONDICIONAL PARA AÑADIR LOS PUNTOS/ESTRELLAS SOLO A ESTE MODELO ---
+    // --- QUITAR EL LOADER CUANDO EL MODELO ESTÉ LISTO ---
+    nuevoViewer.addEventListener('load', () => {
+        const activeLoader = document.getElementById('visorLoader3D');
+        if (activeLoader) {
+            activeLoader.remove();
+        }
+    });
+
     if (keyDatabase === 'mat-valvula-tapon') {
-        // Coordenadas (data-position) de ejemplo: deberás ajustarlas según la posición 
-        // exacta de cada tamaño dentro de tu archivo .glb
         nuevoViewer.innerHTML = `
             <button class="hotspot-punto" slot="hotspot-1" data-position="0.4m 0.9m 0m" data-normal="0m 0m 1m">
                 <div class="punto-star">★</div>
@@ -1471,7 +1500,8 @@ const kitsData = {
         images: [
             "img/DRWeco.png",
             "img/kitsValvulaDR1.png",
-            "img/kitsValvulaDR2.png"
+            "img/kitsValvulaDR2.png",
+            "img/ValvulaDRKit.png"
         ]
     },
     5: {
