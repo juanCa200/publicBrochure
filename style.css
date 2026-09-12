@@ -2719,6 +2719,11 @@ grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
         overflow: visible !important;
     }
 
+    @media (max-width: 480px) {
+    .btn-trigger-modal-premium {
+        display: none !important;
+    }
+}
     /* 2. Botón 3D: Se ubica justo al terminar la imagen */
     .main-gallery-display .btn-trigger-modal-premium {
         position: absolute !important;
